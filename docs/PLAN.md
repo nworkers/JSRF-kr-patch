@@ -63,7 +63,9 @@ reJSRF의 작업 규칙과 라이선스를 그대로 가져와 이 저장소에 
 | 글자 그림 | `Title/LogoJ.dat`, `Title/Title.dat`, `Disp/SprNorm.*`, `Ending/tex_Jpn.dat`, `Mark/*_jpn.*` | 파일 확인, 내용 추정 |
 | 분석 스크립트 | reJSRF `scripts/analysis/text/`(`find_text.py`, `text_records.py`), `scripts/analysis/language/`(`code_diff.py`, `data_diff.py` 등). MIT라 복사해 써도 된다 | - |
 
-## 4. 결과물 형식 (설계 대상, issue #2에서 확정)
+## 4. 결과물 형식 (issue #2에서 확정)
+
+> **확정(2026-10-21)**: [설계 i002](design/20261021-i002-patcher.md). 아래는 처음 계획이고, 달라진 점은 설계 §3.4에 있다: `glyphs` 파일은 두지 않고 문장에서 계산한다, 입력 MD5는 `patch/manifest.json`에 둔다, `text/`는 TSV이고 자리를 `off:`·`va:`·`norm:`으로 적는다, `--iso`로 xiso도 만든다.
 
 * **도구**: `tools/patch.py <덤프 폴더> <출력 폴더>`
   1. 입력 검증: 일본판 `default.xbe` MD5, 바꿀 `Media` 파일마다 MD5. 다르면 멈춘다.
@@ -181,7 +183,9 @@ Changes to `AGENTS.md`:
 | Lettering pictures | `Title/LogoJ.dat`, `Title/Title.dat`, `Disp/SprNorm.*`, `Ending/tex_Jpn.dat`, `Mark/*_jpn.*` | files confirmed, content inferred |
 | Analysis scripts | reJSRF `scripts/analysis/text/` (`find_text.py`, `text_records.py`) and `scripts/analysis/language/` (`code_diff.py`, `data_diff.py` ...); MIT, so they can be copied | - |
 
-## 4. Deliverable format (to be designed, settled in issue #2)
+## 4. Deliverable format (settled in issue #2)
+
+> **Settled (2026-10-21)**: [design i002](design/20261021-i002-patcher.md). Below is the original plan; the differences are in design §3.4: no `glyphs` file (computed from the text), input MD5s in `patch/manifest.json`, `text/` is TSV with places written as `off:`, `va:` or `norm:`, and `--iso` also builds an xiso.
 
 * **Tool**: `tools/patch.py <dump folder> <output folder>`
   1. Checks the input: the Japanese `default.xbe` MD5 and the MD5 of every `Media` file it changes; stops on a mismatch.

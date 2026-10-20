@@ -4,9 +4,9 @@
 
 | 파일 | 하는 일 |
 |---|---|
-| `encode.py` | 한국어(UTF-8) → 게임 바이트열. 한글은 P3 고정 대응, 나머지는 cp932. 새 글리프 표에 없는 2바이트 코드와 1바이트 표에 없는 글자는 거부한다 |
-| `xiso.py` | XDVDFS(xiso) 읽기, 경로로 파일 찾기, 같은 크기 덮어쓰기. 단독 실행: 파일 목록과 MD5 |
 | `build_poc.py` | 명령줄: 입력 MD5 검증 → 글꼴 → 제자리 교체 → 섹션 요약값 → 출력 세 가지 |
+
+처음 만든 `encode.py`와 `xiso.py`는 P1(issue #2)에서 공용 패키지 [tools/jsrfkr/](../README.md)로 옮겼다. 정식 패치 도구는 [tools/patch.py](../patch.py)다. 이 도구는 reJSRF용 US XBE 폴더를 만드는 기능 때문에 남겨 둔다.
 
 패치 데이터는 [patch/poc/lines.tsv](../../patch/poc/lines.tsv)다. 열은 `file`(덤프 기준 경로), `where`(`off:0x…` 파일 위치 또는 `va:0x…` XBE 가상 주소), `orig_len`(원문 바이트 수), `orig_sha1`(원문 바이트의 SHA-1), `korean`, `pad`다. 원문은 넣지 않는다. 도구는 그 자리의 바이트가 해시와 같을 때만 바꾼다. `pad`는 남는 바이트를 무엇으로 채울지 정한다.
 
@@ -40,9 +40,9 @@ Tools that put a few Korean test lines in place and check them on screen. The de
 
 | File | What it does |
 |---|---|
-| `encode.py` | Korean (UTF-8) → game bytes; Hangul by the fixed P3 mapping, everything else as cp932; refuses double-byte codes missing from the new glyph table and characters missing from the single-byte table |
-| `xiso.py` | XDVDFS (xiso) reading, file lookup by path, same-size overwrite; run alone it lists files and MD5s |
 | `build_poc.py` | command line: input MD5 checks → font → in-place replacement → section digests → three outputs |
+
+The original `encode.py` and `xiso.py` moved to the shared package [tools/jsrfkr/](../README.md) in P1 (issue #2). The proper patcher is [tools/patch.py](../patch.py); this tool stays for building the US XBE folder for reJSRF.
 
 The patch data is [patch/poc/lines.tsv](../../patch/poc/lines.tsv), with the columns `file` (path in the dump), `where` (`off:0x…` file offset or `va:0x…` XBE virtual address), `orig_len` (original byte count), `orig_sha1` (SHA-1 of the original bytes), `korean` and `pad`. No original text is stored; the tool replaces a place only when its bytes match the hash. `pad` sets what fills the leftover bytes:
 

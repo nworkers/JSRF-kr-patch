@@ -43,8 +43,10 @@ flowchart TD
 
 ## 3. 문장과의 관계
 
-* 이벤트 문장은 `Media/Event/Event/e###.dat` 안의 `NORM` 항목에 있다. 많이 나오는 자리는 맨 위 `MULT`의 자식 2번의 항목 0(117개 파일), 자식 3번의 항목 0·7·9다.
-* 그 항목은 문자열만 모인 것이 아니라 정수 필드와 문자열이 섞인 이벤트 스크립트다(예: `e000.dat` 자식 2 항목 0은 349바이트이고 앞쪽이 `u32` 값들이다). 항목 안의 형식은 **미확정**이고 P5에서 다룬다.
+* 이벤트 문장은 `Media/Event/Event/e###.dat` 안의 `NORM` 항목에 있다(확인됨). 문장이 있는 117개 항목은 모두 맨 위 `MULT`의 항목 2 안의 항목 0(경로 `2/0`)이다. `e###.bin`(300개)에는 문장이 없다.
+* 그 항목은 앞쪽이 `u32` 값들이고(예: `e000.dat`은 100바이트), 그 뒤에 문장 한 줄(`$` 코드와 `$e`를 포함)이 **항목 데이터의 끝까지** 이어진다(확인됨, 117개 모두). NUL 종료는 항목 길이에 들어가지 않는다. 112개는 패딩의 0이 바로 뒤에 오지만, 5개는 데이터 길이가 16의 배수라 패딩이 없고 바로 다음 연결이 온다. 그러므로 게임은 NUL이 아니라 항목 길이(또는 앞쪽 값)로 문장의 끝을 아는 것으로 보인다(**추정**). 앞쪽 값들의 뜻은 **미확정**이고 P5에서 다룬다.
+* `tools/jsrfkr/textpatch.py`는 이 관찰에 맞춰 `norm:` 자리에서 문장이 항목 끝까지 가면 뒤의 NUL을 요구하지 않는다.
+* 그 밖의 파일에서 `$e`가 들어간 바이트열(효과, 적, 플레이어 파일 등)은 2진 자료가 우연히 같은 바이트가 된 것이다(문장 아님).
 * 컨테이너는 항목 길이가 바뀌어도 연결만 다시 계산하면 된다(§1의 규칙). 문장 길이를 바꾸는 재삽입(P5)은 항목 안의 형식만 풀면 된다.
 
 ## 4. 미확정
@@ -59,7 +61,7 @@ flowchart TD
 python -I tools/check_roundtrip.py "roms/Jet Set Radio Future"
 ```
 
-`MULT`/`NORM` 파일 전부를 읽고 다시 써서 비교한다(약 20초). 원문은 출력하지 않는다.
+`MULT`/`NORM` 파일 전부를 읽고 다시 써서 비교한다(파일이 캐시되어 있으면 몇 초). 원문은 출력하지 않는다.
 
 ---
 
@@ -98,8 +100,10 @@ Facts confirmed in issue #2 (P1). Input: the Japanese dump's `Media` (1,056 of i
 
 ## 3. Relation to text
 
-* Event text sits in `NORM` items inside `Media/Event/Event/e###.dat`. The most common places are item 0 of child 2 of the top-level `MULT` (117 files) and items 0, 7 and 9 of child 3.
-* Such an item is not a bare string list but an event script mixing integer fields and strings (for example item 0 of child 2 of `e000.dat` is 349 bytes starting with `u32` values). The item's internal format is **unresolved** and handled in P5.
+* Event text sits in `NORM` items inside `Media/Event/Event/e###.dat` (confirmed). All 117 items with text are item 0 inside item 2 of the top-level `MULT` (path `2/0`). The `e###.bin` files (300) hold no text.
+* Such an item starts with `u32` values (100 bytes in `e000.dat`, for example), followed by one line of text (with `$` codes and `$e`) that runs **to the end of the item's data** (confirmed, all 117). The NUL terminator is not counted in the item length: in 112 items the padding's zeros follow at once, but in 5 the data length is a multiple of 16, so there is no padding and the next link follows directly. The game therefore seems to find the end of the text by the item length (or the leading values), not by a NUL (**inferred**). The leading values' meaning is **unresolved** and handled in P5.
+* Following this, `tools/jsrfkr/textpatch.py` does not require a NUL after a string that runs to the end of a `norm:` item.
+* Byte runs containing `$e` in other files (effects, enemies, players and so on) are binary data that happen to match (not text).
 * When an item's length changes, the container only needs its links recomputed (the rules of §1); reinsertion with changed lengths (P5) only has to solve the item's internal format.
 
 ## 4. Unresolved
@@ -110,4 +114,4 @@ Facts confirmed in issue #2 (P1). Input: the Japanese dump's `Media` (1,056 of i
 
 ## 5. Reproducing
 
-The command above reads and rewrites every `MULT`/`NORM` file and compares them (about 20 s); it prints no original text.
+The command above reads and rewrites every `MULT`/`NORM` file and compares them (seconds once the files are cached); it prints no original text.
