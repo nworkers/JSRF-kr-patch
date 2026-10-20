@@ -13,7 +13,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from xbe import JP_MD5, US_MD5, load_checked  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from jsrfkr.xbe import JP_MD5, US_MD5, load_checked  # noqa: E402
 
 CODE_RANGES = [
     (0x2C040, 0x2C1D0, "jetfont loader (file table 0x1EDE3C, six textures)"),

@@ -2,7 +2,7 @@
 
 Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드는 프로젝트입니다. 화면 문장(메뉴, 미션, 대사 자막)을 한국어로 바꾸고, 음성은 일본어 그대로 둡니다.
 
-> **준비 중입니다.** 아직 패치 도구와 번역이 없습니다. 진행 계획은 [docs/PLAN.md](docs/PLAN.md)에 있습니다.
+> **준비 중입니다.** 패치 도구는 있지만 아직 번역이 없습니다. 진행 계획은 [docs/PLAN.md](docs/PLAN.md)에 있습니다.
 
 ## 게임 데이터는 포함되지 않습니다
 
@@ -19,16 +19,18 @@ Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드
 
 ## 사용법
 
-도구가 생기면 적습니다. 예정된 형태는 다음과 같습니다.
+Python 3.10 이상만 있으면 됩니다(외부 패키지 없음).
 
 ```
-python tools/patch.py <덤프 폴더> <출력 폴더>
+python -I tools/patch.py <덤프 폴더> out/<이름> [--iso <같은 디스크의 xiso>]
 ```
+
+입력 MD5를 검사한 뒤 `out/<이름>/`에 패치된 게임 폴더를, `--iso`를 주면 `out/<이름>.iso`도 만듭니다. 자세한 절차는 [docs/guides/apply-patch.md](docs/guides/apply-patch.md), 도구 안내는 [tools/README.md](tools/README.md)에 있습니다. 번역이 생기기 전까지 출력은 시험용입니다.
 
 ```mermaid
 flowchart LR
     DUMP["your dump<br/>JP default.xbe + Media"] --> TOOL["tools/patch.py"]
-    DATA["patch/<br/>Korean text, glyphs,<br/>XBE patches, OFL font"] --> TOOL
+    DATA["patch/<br/>manifest, Korean text,<br/>XBE patches, OFL font"] --> TOOL
     TOOL --> OUT["patched game folder"]
 ```
 
@@ -46,7 +48,7 @@ Jet Set Radio Future와 그 대본, 그림, 음성의 권리는 SEGA에 있습�
 
 A **Korean patch** for the Japanese release of the Xbox game **Jet Set Radio Future**. On-screen text (menus, missions, dialogue subtitles) becomes Korean; voice stays Japanese.
 
-> **In preparation.** There is no patcher or translation yet. The plan is in [docs/PLAN.md](docs/PLAN.md).
+> **In preparation.** The patcher exists, but there is no translation yet. The plan is in [docs/PLAN.md](docs/PLAN.md).
 
 ## No game data included
 
@@ -63,11 +65,13 @@ Git ignores a dump kept under `roms/`. Other releases' XBEs (US, PAL) are not su
 
 ## Usage
 
-To be written once the tool exists. The planned form:
+Only Python 3.10 or later is needed (no external packages).
 
 ```
-python tools/patch.py <dump folder> <output folder>
+python -I tools/patch.py <dump folder> out/<name> [--iso <the same disc's xiso>]
 ```
+
+After checking the input MD5s it writes the patched game folder to `out/<name>/`, and with `--iso` also `out/<name>.iso`. The procedure is in [docs/guides/apply-patch.md](docs/guides/apply-patch.md) and the tools are described in [tools/README.md](tools/README.md). Until there is a translation, the output is for testing.
 
 ## Related project
 

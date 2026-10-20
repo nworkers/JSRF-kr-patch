@@ -1,0 +1,13 @@
+{
+  "format": 1,
+  "target": {
+    "file": "default.xbe",
+    "md5": "d8490cdb75bd47b36c62effdf1461ae0"
+  },
+  "inputs": {
+    "Media/Event/TalkEvent/TE014.bin": "72ef062f506f31240f6fa6e80ee58e21",
+    "Media/Font/jetfont.dat": "bc566ef593dbf603e5332a7af346e2c8",
+    "Media/Mission/mssn0110.bin": "02b6f01cf70a23b8cfa3c3f93c60137e",
+    "default.xbe": "d8490cdb75bd47b36c62effdf1461ae0"
+  }
+}

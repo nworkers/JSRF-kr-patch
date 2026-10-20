@@ -10,7 +10,7 @@ to 4 bytes and 0xFF fills the rest of a sector.
 A plain xiso has the game partition at offset 0; a full disc image (redump)
 has it at 0x18300000.
 
-usage: python -I tools/poc/xiso.py <image.iso> [path]   (list the root, or show one file)
+usage: python -I tools/jsrfkr/xiso.py <image.iso> [path]   (list the root, or show one file)
 """
 import hashlib
 import struct

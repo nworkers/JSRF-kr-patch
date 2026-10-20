@@ -58,6 +58,14 @@
 
 * 일본판은 언어 전역 `0x251F58`에 쓰지 않는다. 일본판 빌드의 언어 설정이 Japanese 고정인 것과 맞는다.
 
+## P1 결과물 형식과 컨테이너 (issue #2)
+
+근거: [analysis/containers.md](analysis/containers.md), [design/20261021-i002-patcher.md](design/20261021-i002-patcher.md)
+
+* **`MULT`/`NORM` 컨테이너 형식(확인됨, 1,056개 파일 왕복)**: 머리 16바이트(마법값, 개수, 0, 0) 뒤에 16바이트 연결 `(start, end, size, flag)`이 사슬로 이어진다. 값은 그 컨테이너 머리 기준 상대값이고, 다음 연결은 앞 항목의 `end`에 있다. `MULT` 항목은 블록, `NORM` 항목은 데이터(16바이트 경계까지 0 패딩, 길이 0이면 `flag` 1). reJSRF `text-and-font.md`의 "레코드 머리에 시작·끝 오프셋과 크기"는 이 연결이다.
+* **이벤트 문장 자리(확인됨)**: `Media/Event/Event/e###.dat`의 항목 경로 `2/0`(맨 위 `MULT`의 항목 2 안의 `NORM` 항목 0), 117개 파일. 항목 앞쪽은 `u32` 값들이고 문장 한 줄이 항목 끝까지 간다. NUL 종료는 항목 길이에 들어가지 않고, 5개 항목은 패딩도 없다. reJSRF가 런타임에 문장을 바꿀 때는 항목 길이(연결의 `size`)를 기준으로 해야 한다(**추정**: 게임이 길이로 끝을 안다). `e###.bin`에는 문장이 없다.
+* 패치 데이터 형식(`patch/text/*.tsv`의 `off:`·`va:`·`norm:` 자리, `manifest.json`, `xbe/*.json`)은 reJSRF가 같은 문장을 런타임에 적용할 때 그대로 읽을 수 있게 정했다. 원문 대신 SHA-1이 있으므로, reJSRF는 그 자리의 원래 바이트를 해시로 확인한 뒤 바꾸면 된다.
+
 ---
 
 # Handoff to reJSRF
@@ -119,3 +127,11 @@ Basis: [analysis/text-files.md](analysis/text-files.md), [work log i008](work-lo
 | XBE `.data` `0x2216DC`, `0x2221D8` | the retry menu and B-button hint tables | not matched |
 
 * The Japanese build never writes the language global `0x251F58`, which agrees with the Japanese build's language being fixed to Japanese.
+
+## P1 deliverable format and containers (issue #2)
+
+Basis: [analysis/containers.md](analysis/containers.md), [design/20261021-i002-patcher.md](design/20261021-i002-patcher.md)
+
+* **The `MULT`/`NORM` container format (confirmed, round trip of 1,056 files)**: a 16-byte header (magic, count, 0, 0) followed by a chain of 16-byte links `(start, end, size, flag)`, relative to the container's header, each next link at the previous item's `end`. `MULT` items are blocks, `NORM` items data (zero-padded to 16 bytes; `flag` 1 for length 0). The "record headers with start and end offsets and a size" of reJSRF's `text-and-font.md` are these links.
+* **Where event text sits (confirmed)**: item path `2/0` of `Media/Event/Event/e###.dat` (`NORM` item 0 inside item 2 of the top-level `MULT`), 117 files. The item starts with `u32` values and one line of text runs to its end; the NUL terminator is not counted in the item length, and 5 items have no padding either. A run-time text replacement in reJSRF should go by the item length (the link's `size`) (**inferred**: the game finds the end by length). The `e###.bin` files hold no text.
+* The patch data format (`off:`, `va:` and `norm:` places in `patch/text/*.tsv`, `manifest.json`, `xbe/*.json`) is meant for reJSRF to read as it is when applying the same text at run time; with SHA-1 in place of the original text, reJSRF checks the original bytes at a place by hash before replacing them.

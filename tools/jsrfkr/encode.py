@@ -9,20 +9,19 @@
   * `$` control codes are plain single-byte characters here ('$' and the
     letters and digits after it are all in the single-byte table).
 """
-import os
-import sys
-
-HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "font"))
-sys.path.insert(0, os.path.join(HERE, "..", "analysis"))
-import font_tables  # noqa: E402
-import hangul  # noqa: E402
+import font_tables
+import hangul
 
 
 class Encoder:
-    def __init__(self, double_codes, xbe):
+    def __init__(self, double_codes, single_codes):
         self.double = set(double_codes)
-        self.single = {c for c, *_ in font_tables.single_table(xbe)} | {0x20}
+        self.single = set(single_codes) | {0x20}
+
+    @classmethod
+    def for_xbe(cls, double_codes, xbe):
+        """An encoder for the new double-byte codes and the XBE's single-byte table."""
+        return cls(double_codes, {c for c, *_ in font_tables.single_table(xbe)})
 
     def encode(self, text):
         out, bad = bytearray(), []
