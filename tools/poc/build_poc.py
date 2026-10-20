@@ -10,8 +10,10 @@ patch/poc/lines.tsv; writes under out/ (everything written holds game data):
                            default_jpn.xbe (Japanese build, --xbe default_jpn.xbe), and
                            Media with unchanged files as hard links
 
-Lines are replaced in place: the Korean bytes must fit in the original string,
-the rest is filled with NUL, and the original bytes must match orig_sha1.
+Lines are replaced in place: the Korean bytes must fit in the original bytes,
+which must match orig_sha1. The rest is filled by the pad column: `nul` (the
+default; a whole string, so a NUL must follow it) or `space` (0x20, for a
+message inside a longer string, such as one page of a talk event).
 
 --identity builds with the original glyph table and no lines (round trip:
 every output must equal its original).
@@ -102,15 +104,20 @@ def apply_lines(x, rows, encoder, files, game):
         else:
             off = int(value, 16)
         n = int(row["orig_len"])
-        if hashlib.sha1(data[off:off + n]).hexdigest() != row["orig_sha1"] or data[off + n] != 0:
+        pad = row.get("pad") or "nul"
+        if pad not in ("nul", "space"):
+            raise SystemExit(f"{name} {row['where']}: unknown pad '{pad}'")
+        if hashlib.sha1(data[off:off + n]).hexdigest() != row["orig_sha1"]:
             raise SystemExit(f"{name} {row['where']}: original bytes do not match orig_sha1")
+        if pad == "nul" and data[off + n] != 0:
+            raise SystemExit(f"{name} {row['where']}: no NUL after the string (use pad=space)")
         try:
             enc = encoder.encode(row["korean"])
         except ValueError as err:
             raise SystemExit(f"{name} {row['where']}: {err}")
         if len(enc) > n:
             raise SystemExit(f"{name} {row['where']}: Korean is {len(enc)} bytes, more than {n}")
-        data[off:off + n] = enc + bytes(n - len(enc))
+        data[off:off + n] = enc + (b"\0" if pad == "nul" else b" ") * (n - len(enc))
         print(f"  {name} {row['where']}: {len(enc)}/{n} bytes")
     return sections
 
