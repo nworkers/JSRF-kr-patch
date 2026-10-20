@@ -1,0 +1,22 @@
+# Game data. Nothing from the disc -- executable, assets, or the ISO -- is ever
+# committed. Users supply their own dump.
+roms/
+*.iso
+*.xbe
+*.xiso
+
+# Patched game folders the tool writes. They hold the original game files.
+out/
+
+# Original text extracted from the dump (Japanese, English) and other
+# intermediates. Derived from copyrighted data, so rebuilt locally.
+work/
+
+# Python.
+__pycache__/
+*.pyc
+
+# IDE and OS clutter.
+.vs/
+.vscode/
+*.tmp
