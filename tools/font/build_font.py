@@ -17,18 +17,18 @@ usage: python -I tools/font/build_font.py <game dir> <text.txt> <out dir> [--ide
 """
 import hashlib
 import os
-import struct
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, "..", "analysis"))
+sys.path.insert(0, os.path.join(HERE, ".."))
 sys.path.insert(0, HERE)
+import jsrfkr  # noqa: E402,F401  (puts tools/analysis on sys.path)
 import dxt3  # noqa: E402
 import glyph_table  # noqa: E402
 import hangul  # noqa: E402
 import jetfont  # noqa: E402
 import ttf  # noqa: E402
-from xbe import JP_MD5, load_checked  # noqa: E402
+from jsrfkr.xbe import JP_MD5, fix_digests, load_checked  # noqa: E402
 
 DEFAULT_FONT = os.path.join(HERE, "..", "..", "patch", "font", "DoHyeon-Regular.ttf")
 CELL, COLS, PER_PAGE, PAGES, PAGE_W = 26, 19, 361, 4, 512
@@ -143,16 +143,6 @@ def build(x, jf, text=None, font_path=DEFAULT_FONT):
         assert len(enc) == r["size"]
         new_jf[r["offset"]:r["offset"] + r["size"]] = enc
     return Font(new_jf, entries, bases, keep_kana, pages, renderer, border_ink)
-
-
-def fix_digests(x, image, names):
-    """Recompute the header SHA-1 of the named sections: SHA-1(u32 raw size + raw data)."""
-    hdr = struct.unpack_from("<I", x.data, 0x120)[0] - x.base
-    for name in names:
-        s = x.section(name)
-        k = x.sections.index(s)
-        digest = hashlib.sha1(struct.pack("<I", s.rsize) + image[s.raw:s.raw + s.rsize]).digest()
-        image[hdr + 56 * k + 0x24:hdr + 56 * k + 0x38] = digest
 
 
 def apply_table(x, font, image=None):

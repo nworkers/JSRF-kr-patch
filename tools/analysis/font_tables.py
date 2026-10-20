@@ -25,7 +25,8 @@ import struct
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from xbe import JP_MD5, US_MD5, Xbe  # noqa: E402
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from jsrfkr.xbe import JP_MD5, US_MD5, Xbe  # noqa: E402
 
 DBL_TABLE = 0x1F7088
 DBL_COUNT = 0x56E          # also an immediate in the class-0 search (JP 0x3C7AC)

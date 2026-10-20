@@ -28,14 +28,13 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
-sys.path.insert(0, os.path.join(HERE, "..", "font"))
-sys.path.insert(0, os.path.join(HERE, "..", "analysis"))
-sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, ".."))
+import jsrfkr  # noqa: E402,F401  (puts tools/font and tools/analysis on sys.path)
 import build_font  # noqa: E402
 import glyph_table  # noqa: E402
-import xiso  # noqa: E402
-from encode import Encoder  # noqa: E402
-from xbe import load_checked  # noqa: E402
+from jsrfkr import xiso  # noqa: E402
+from jsrfkr.encode import Encoder  # noqa: E402
+from jsrfkr.xbe import fix_digests, load_checked  # noqa: E402
 
 US_MD5 = "f4e366bfdceee551a09f42219c90d84e"
 XBE = "default.xbe"
@@ -181,8 +180,8 @@ def main():
     files = {XBE: build_font.apply_table(x, font), JETFONT: font.jetfont}
     if rows:
         print(f"{len(rows)} lines from {os.path.relpath(lines_path, ROOT)}:")
-        touched = apply_lines(x, rows, Encoder(font.codes(), x), files, game)
-        build_font.fix_digests(x, files[XBE], sorted(touched | {".data"}))
+        touched = apply_lines(x, rows, Encoder.for_xbe(font.codes(), x), files, game)
+        fix_digests(x, files[XBE], sorted(touched | {".data"}))
     print(f"glyphs: {sum(1 for e in font.entries if e.syllable)} Hangul, kana kept: {font.keep_kana}")
 
     os.makedirs(out, exist_ok=True)

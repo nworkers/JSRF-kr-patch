@@ -22,8 +22,9 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 import font_tables  # noqa: E402
-from xbe import Xbe  # noqa: E402
+from jsrfkr.xbe import Xbe  # noqa: E402
 
 GROUPS = ["Event/Event/*.dat", "Event/TalkEvent/*.bin", "Mission/*.bin", "Mission/*.dat"]
 STR = re.compile(rb"(?:[\x81-\x9f\xe0-\xef][\x40-\x7e\x80-\xfc]|[\x09\x20-\x7e])+(?=\x00)")

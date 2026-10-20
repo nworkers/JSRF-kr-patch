@@ -1,6 +1,6 @@
-"""Minimal read-only access to an Xbox XBE image: sections, VA <-> file offset.
+"""Minimal access to an Xbox XBE image: sections, VA <-> file offset, section digests.
 
-Only what the analysis scripts need. Standard library only.
+Standard library only.
 """
 import hashlib
 import struct
@@ -78,6 +78,16 @@ class Xbe:
 
     def in_image(self, v):
         return self.section_at(v) is not None
+
+
+def fix_digests(x, image, names):
+    """Recompute the header SHA-1 of the named sections: SHA-1(u32 raw size + raw data)."""
+    hdr = struct.unpack_from("<I", x.data, 0x120)[0] - x.base
+    for name in names:
+        s = x.section(name)
+        k = x.sections.index(s)
+        digest = hashlib.sha1(struct.pack("<I", s.rsize) + image[s.raw:s.raw + s.rsize]).digest()
+        image[hdr + 56 * k + 0x24:hdr + 56 * k + 0x38] = digest
 
 
 def load_checked(path, md5, label):
