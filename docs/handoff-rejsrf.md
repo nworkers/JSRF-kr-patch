@@ -28,6 +28,16 @@
   * `$` 코드 뜻은 text-renderer §6.
 * 렌더러가 두 빌드에서 같으므로, 이 저장소의 `jetfont.dat`·문장 파일 패치는 reJSRF(US XBE, 언어 0)에서 그대로 시험할 수 있다(**추정**, P4에서 확인). XBE 글리프 표 패치를 택하면(P3) reJSRF는 US판 같은 주소 `0x1F7088`의 표를 런타임에 바꾸면 된다.
 
+## P3 한국어 글꼴 (issue #6)
+
+근거: [design/20261020-i006-korean-font.md](design/20261020-i006-korean-font.md)
+
+* 방식 A′: 렌더러 코드는 그대로 두고 XBE `.data`의 글리프 표 `0x1F7088`(1,390 × 4바이트)과 부류 시작 순번 `0x1F8B80`~`0x1F8B8F`만 바꾼다. US판도 같은 주소, 같은 원래 바이트다.
+* 한글 코드: KS X 1001 2,350자의 k번째 → `0x8890`부터 둘째 바이트 `0x40`~`0x7E`·`0x80`~`0xFC`만 세어 k번째 코드(`tools/font/hangul.py`). reJSRF는 같은 규칙으로 계산하거나 이 저장소가 만든 표를 그대로 쓴다.
+* 표 배치: 한글(코드 순) → 빈 칸 → 히라가나·가타카나(칸이 남을 때) → 숫자·영대문자 → 기호(`tools/font/glyph_table.py`).
+* `jetfont.dat`: tex0~3만 새 표 순서로 다시 만든다. 남기는 칸은 원래 칸을 옮기고, 한글은 Do Hyeon(OFL)을 26×26 칸의 잉크 상자 (2,3)–(23,22)에 2,350자 공통 배율로 그린다. 같은 입력이면 같은 바이트가 나온다.
+* reJSRF에서: 런타임에 US판 `0x1F7088`·`0x1F8B80`에 같은 표를 쓰고, 이 저장소 도구가 만든 `jetfont.dat`를 `rexbox` 파일 계층에서 대신 내주면 된다(**추정**, P4에서 확인).
+
 ---
 
 # Handoff to reJSRF
@@ -59,3 +69,13 @@ Basis: [analysis/text-renderer.md](analysis/text-renderer.md)
   * "`TNRoman.bin` is a proportional Latin font" → a developer debug font; English text is drawn from `jetfont`'s single-byte pages.
   * The `$` codes' meaning: text-renderer §6.
 * Since the renderer is the same in both builds, this repository's `jetfont.dat` and text-file patches can be tested as they are in reJSRF (US XBE, language 0) (**inferred**, to be checked in P4). If P3 chooses the XBE glyph-table patch, reJSRF replaces the table at the same US address `0x1F7088` at run time.
+
+## P3 Korean font (issue #6)
+
+Basis: [design/20261020-i006-korean-font.md](design/20261020-i006-korean-font.md)
+
+* Option A′: the renderer code stays; only the XBE `.data` glyph table `0x1F7088` (1,390 × 4 bytes) and the class first indexes `0x1F8B80`–`0x1F8B8F` change. The US build has the same addresses and original bytes.
+* Hangul codes: the k-th of the 2,350 KS X 1001 syllables → the k-th code counting from `0x8890` with second bytes `0x40`–`0x7E` and `0x80`–`0xFC` only (`tools/font/hangul.py`). reJSRF can compute the same rule or take the table this repository builds.
+* Table layout: Hangul (code order) → padding → hiragana and katakana (when there is room) → digits and capitals → symbols (`tools/font/glyph_table.py`).
+* `jetfont.dat`: only tex0–3 are rebuilt in the new table order. Kept cells are moved; Hangul is drawn from Do Hyeon (OFL) into the ink box (2,3)–(23,22) of the 26×26 cell with one scale for all 2,350 syllables. The same input gives the same bytes.
+* In reJSRF: write the same table to the US `0x1F7088` and `0x1F8B80` at run time, and serve the `jetfont.dat` built by this repository's tool through the `rexbox` file layer (**inferred**, checked in P4).
