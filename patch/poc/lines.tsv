@@ -1,0 +1,12 @@
+# Proof-of-concept test lines (issue #8). In-place replacement: the Korean must encode to at most orig_len bytes.
+# Columns: file (path in the dump), where (off: file offset / va: XBE virtual address), orig_len, orig_sha1, korean,
+# pad (nul = whole string, the default; space = a message inside a longer string).
+# Test lines written for this repository, not a translation.
+file	where	orig_len	orig_sha1	korean	pad
+Media/Mission/mssn0110.bin	off:0x2228c	42	d7d54e99f755716ff60a7a222d18b7daea8fd96d	“도겐자카”를 그래피티로 칠해라！
+default.xbe	va:0x1d35f4	38	0c3939092defcca892cd9437fe14715575aeece3	도겐자카를 그래피티로 칠해라！
+default.xbe	va:0x1d2c8c	16	4630c365585b49f115ac6298f0102323bdb3ff3d	Ｂ로 돌아가기
+default.xbe	va:0x1d29e0	6	44eb36e715cc59a22319ec6b0de20b78ae2fd14c	저장
+default.xbe	va:0x1d24c8	16	796bb7ae003190af010de31c9c2dce1027967cd5	차고로 돌아가기
+default.xbe	va:0x1d24dc	18	fe902fc117d04e15e2349db9c6e434faa067cac1	타이틀로 갈까？
+Media/Event/TalkEvent/TE014.bin	off:0x88	18	f738af3fb8e3424443c1f2f76f81177923952dee	뭐야、무슨 볼일？	space

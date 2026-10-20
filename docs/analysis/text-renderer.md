@@ -3,7 +3,7 @@
 issue #3(P2)의 분석 결과다. 입력은 일본판 `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`), US판 `default_eng.xbe`(MD5 `f4e366bfdceee551a09f42219c90d84e`), `Media/Font/jetfont.dat`(MD5 `bc566ef593dbf603e5332a7af346e2c8`), `Media/Font/TNRoman.bin`(MD5 `8f2593685f21573197580b07b0350f0e`)이다. 스크립트는 [tools/analysis/](../../tools/analysis/README.md)에 있다. 작업 증거는 [작업 로그](../work-logs/20261020-i003-text-renderer.md)에 있다.
 
 * 주소는 일본판 가상 주소다. **이 문서의 코드와 글꼴 표는 US판에서도 같은 주소에 있다**(§8, `renderer_compare.py`의 바이트 비교로 확인). 다른 주소는 `.data`·bss 전역뿐이고, 그런 곳은 US 주소를 따로 적었다.
-* 근거는 정적 분석(디스어셈블리, 표 해독, 텍스처 해독)이다. 화면 결과는 아직 xemu로 보지 않았다. 화면에 어떻게 보이는지에 관한 문장은 **추정**으로 적었다.
+* 근거는 정적 분석(디스어셈블리, 표 해독, 텍스처 해독)이다. 화면에 어떻게 보이는지에 관한 문장은 **추정**으로 적었고, P4([text-files.md](text-files.md))에서 화면으로 확인한 것은 확인됨으로 바꿨다.
 
 ```mermaid
 flowchart TD
@@ -106,7 +106,7 @@ flowchart LR
 * 서술자 `0x1F8B20`: 페이지 4, 첫 텍스처 0, 텍스처 512, 페이지당 칸 361, 칸 26×26, 19열×19줄, UV 간격 26/512. 페이지 수 4는 `0x3CA8E`·`0x3D548`에서 상한으로 쓴다.
 * 실제로 쓸 수 있는 칸: 4×361 = 1,444칸 중 표가 1,390칸을 덮는다. 그중 41개(순번 1117~1157, 페이지 3)는 코드 0인 빈 칸, 6개는 앞에 같은 코드가 있거나(한자 4개 중복) 부류가 맞지 않아(`ヶ` `0x8396`, `ー` `0x815B`이 한자 구역에 있음) 찾을 수 없는 칸이다. **찾을 수 있는 서로 다른 코드는 1,343개**다.
 * 첫 바이트 범위: 표의 코드는 `0x81`~`0x9C`로 시작한다. `0xA0` 이상으로 시작하는 코드는 없다.
-* 특수 처리: 전각 공백 `0x8140`은 그리지 않고 한 칸만큼 나아간다(`0x3CF58`). 표에 없는 코드는 순번 −1이 되어 UV (0,0)~(1,1), 즉 페이지 0 전체를 한 칸 크기로 그린다(`0x3CB85`). 화면에서는 뭉개진 덩어리로 보일 것이다(**추정**).
+* 특수 처리: 전각 공백 `0x8140`은 그리지 않고 한 칸만큼 나아간다(`0x3CF58`). 표에 없는 코드는 순번 −1이 되어 UV (0,0)~(1,1), 즉 페이지 0 전체를 한 칸 크기로 그린다(`0x3CB85`). 화면에서는 칸 위에 작은 얼룩으로 보인다(**확인됨**, P4 Cxbx-Reloaded: 새 표에서 빠진 한자, [text-files §7](text-files.md)).
 * 일본어 문장 레코드 2,933개의 2바이트 글자는 `0x8140`을 빼면 모두 표에 있다(`text_codes.py`).
 * 레코드 안에서 1바이트로 읽히는 `0xA0` 이상 바이트는 6개뿐이고 모두 `mssn0514.bin`의 Latin-1 글자(`0xE1` `0xE2` `0xE9` = á â é)다. 그 레코드의 첫 구간은 유럽 언어 문장으로 보인다(**추정**).
 
@@ -232,7 +232,7 @@ python -I tools/analysis/text_codes.py "roms/Jet Set Radio Future" "roms/Jet Set
 Findings of issue #3 (P2). Inputs: the Japanese `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`), the US `default_eng.xbe` (MD5 `f4e366bfdceee551a09f42219c90d84e`), `Media/Font/jetfont.dat` (MD5 `bc566ef593dbf603e5332a7af346e2c8`) and `Media/Font/TNRoman.bin` (MD5 `8f2593685f21573197580b07b0350f0e`). The scripts are in [tools/analysis/](../../tools/analysis/README.md); the evidence is in the [work log](../work-logs/20261020-i003-text-renderer.md).
 
 * Addresses are Japanese virtual addresses. **Every piece of code and every font table in this document sits at the same address in the US build** (§8, a byte comparison by `renderer_compare.py`). Only `.data`/bss globals move; their US addresses are given where they appear.
-* The basis is static analysis (disassembly, table decoding, texture decoding). The screen has not been checked in xemu yet; statements about what appears on screen are marked **inferred**.
+* The basis is static analysis (disassembly, table decoding, texture decoding). Statements about what appears on screen are marked **inferred**, and those seen on screen in P4 ([text-files.md](text-files.md)) were changed to confirmed.
 
 ## 1. Summary
 
@@ -309,7 +309,7 @@ After the `NORM` header, a linked list of nodes starts at `0x10`. A node is 16 b
 * Descriptor `0x1F8B20`: 4 pages, first texture 0, texture size 512, 361 cells per page, 26×26 cells, 19 columns × 19 rows, UV step 26/512. The page count 4 is the upper bound checked at `0x3CA8E` and `0x3D548`.
 * Usable cells: of the 4×361 = 1,444, the table covers 1,390. Of those, 41 (indexes 1117–1157, page 3) are empty with code 0, and 6 cannot be found, because the same code comes earlier (4 duplicated kanji) or the class does not match (`ヶ` `0x8396` and `ー` `0x815B` sit in the kanji range). **1,343 distinct codes can be found.**
 * Lead bytes: the table's codes start with `0x81`–`0x9C`; none starts with `0xA0` or above.
-* Special cases: the full-width space `0x8140` is not drawn but advances one cell (`0x3CF58`). A code missing from the table gets index −1 and UV (0,0)–(1,1), i.e. the whole of page 0 drawn into one cell (`0x3CB85`); on screen this should look like a smudge (**inferred**).
+* Special cases: the full-width space `0x8140` is not drawn but advances one cell (`0x3CF58`). A code missing from the table gets index −1 and UV (0,0)–(1,1), i.e. the whole of page 0 drawn into one cell (`0x3CB85`); on screen it appears as a small smudge over the cell (**confirmed**, P4 in Cxbx-Reloaded: kanji left out of the new table, [text-files §7](text-files.md)).
 * In the 2,933 Japanese text records, every double-byte character except `0x8140` is in the table (`text_codes.py`).
 * Only 6 bytes of `0xA0` or above are read as single bytes inside records, all Latin-1 letters in `mssn0514.bin` (`0xE1` `0xE2` `0xE9` = á â é); that record's first section looks like European-language text (**inferred**).
 

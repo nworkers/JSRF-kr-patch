@@ -73,19 +73,8 @@ class Renderer:
         return bytearray(min(15, int(c * 15 + 0.5)) for c in cov)
 
 
-def main():
-    args = sys.argv[1:]
-    ident = "--identity" in args
-    if ident:
-        args.remove("--identity")
-    font_path = DEFAULT_FONT
-    if "--font" in args:
-        i = args.index("--font")
-        font_path = args[i + 1]
-        del args[i:i + 2]
-    if len(args) != 3:
-        raise SystemExit(__doc__)
-    game, text_path, out = args
+def load_inputs(game):
+    """The MD5-checked Japanese XBE and jetfont.dat bytes from a dump folder."""
     xbe_path = os.path.join(game, "default.xbe")
     if not os.path.exists(xbe_path) or md5(open(xbe_path, "rb").read()) != JP_MD5:
         xbe_path = os.path.join(game, "default_jpn.xbe")
@@ -94,19 +83,35 @@ def main():
     jf = open(font_file, "rb").read()
     if md5(jf) != jetfont.JETFONT_MD5:
         raise SystemExit(f"{font_file}: MD5 {md5(jf)} is not {jetfont.JETFONT_MD5}")
+    return x, jf
+
+
+class Font:
+    """Result of build(): new jetfont.dat bytes, the table entries and class bases."""
+
+    def __init__(self, jf, entries, bases, keep_kana, pages, renderer, border_ink):
+        self.jetfont, self.entries, self.bases, self.keep_kana = jf, entries, bases, keep_kana
+        self.pages, self.renderer, self.border_ink = pages, renderer, border_ink
+
+    def codes(self):
+        """Double-byte codes the renderer can find in the new table."""
+        return {e.code for e in self.entries[:glyph_table.TOTAL] if e.code}
+
+
+def build(x, jf, text=None, font_path=DEFAULT_FONT):
+    """Rebuild the double-byte pages for the Hangul in `text` (None = identity round trip)."""
     recs = jetfont.records(jf)[:PAGES]
     old_pages = [dxt3.decode_alpha(jf[r["offset"]:r["offset"] + r["size"]], PAGE_W, PAGE_W) for r in recs]
     if any(dxt3.colour_blocks(jf[r["offset"]:r["offset"] + r["size"]]) != {dxt3.WHITE_BLOCK} for r in recs):
         raise SystemExit("unexpected colour blocks in jetfont.dat")
 
-    if ident:
+    if text is None:
         entries, bases = glyph_table.identity(x)
         # The cells past the table on page 3 are copied too.
         entries += [glyph_table.Entry(0, source=i) for i in range(len(entries), PAGES * PER_PAGE)]
         keep_kana = True
         renderer = None
     else:
-        text = open(text_path, encoding="utf-8").read()
         used, bad = hangul.collect(text)
         if bad:
             raise SystemExit("syllables outside KS X 1001: " + " ".join(f"U+{ord(c):04X}" for c in bad))
@@ -137,18 +142,49 @@ def main():
         enc = dxt3.encode_alpha(img, PAGE_W, PAGE_W)
         assert len(enc) == r["size"]
         new_jf[r["offset"]:r["offset"] + r["size"]] = enc
+    return Font(new_jf, entries, bases, keep_kana, pages, renderer, border_ink)
 
-    new_xbe = bytearray(x.data)
-    tb = glyph_table.table_bytes(entries[:glyph_table.TOTAL])
-    bb = glyph_table.bases_bytes(bases)
-    to, bo = x.offset(glyph_table.TABLE_VA), x.offset(glyph_table.BASES_VA)
-    new_xbe[to:to + len(tb)] = tb
-    new_xbe[bo:bo + len(bb)] = bb
-    data = x.section(".data")
+
+def fix_digests(x, image, names):
+    """Recompute the header SHA-1 of the named sections: SHA-1(u32 raw size + raw data)."""
     hdr = struct.unpack_from("<I", x.data, 0x120)[0] - x.base
-    k = x.sections.index(data)
-    digest = hashlib.sha1(struct.pack("<I", data.rsize) + new_xbe[data.raw:data.raw + data.rsize]).digest()
-    new_xbe[hdr + 56 * k + 0x24:hdr + 56 * k + 0x38] = digest
+    for name in names:
+        s = x.section(name)
+        k = x.sections.index(s)
+        digest = hashlib.sha1(struct.pack("<I", s.rsize) + image[s.raw:s.raw + s.rsize]).digest()
+        image[hdr + 56 * k + 0x24:hdr + 56 * k + 0x38] = digest
+
+
+def apply_table(x, font, image=None):
+    """Write the new glyph table and class bases into an XBE image (same VAs in JP and US)."""
+    image = bytearray(x.data) if image is None else image
+    tb = glyph_table.table_bytes(font.entries[:glyph_table.TOTAL])
+    bb = glyph_table.bases_bytes(font.bases)
+    to, bo = x.offset(glyph_table.TABLE_VA), x.offset(glyph_table.BASES_VA)
+    image[to:to + len(tb)] = tb
+    image[bo:bo + len(bb)] = bb
+    fix_digests(x, image, [".data"])
+    return image
+
+
+def main():
+    args = sys.argv[1:]
+    ident = "--identity" in args
+    if ident:
+        args.remove("--identity")
+    font_path = DEFAULT_FONT
+    if "--font" in args:
+        i = args.index("--font")
+        font_path = args[i + 1]
+        del args[i:i + 2]
+    if len(args) != 3:
+        raise SystemExit(__doc__)
+    game, text_path, out = args
+    x, jf = load_inputs(game)
+    text = None if ident else open(text_path, encoding="utf-8").read()
+    font = build(x, jf, text, font_path)
+    new_jf, entries = font.jetfont, font.entries
+    new_xbe = apply_table(x, font)
 
     os.makedirs(out, exist_ok=True)
     open(os.path.join(out, "jetfont.dat"), "wb").write(new_jf)
@@ -159,14 +195,15 @@ def main():
             page, oy, ox = cell_origin(i)
             kind = "hangul" if e.syllable else ("kept" if e.source is not None and e.code else "empty")
             f.write(f"{i}\t{page}\t{oy // CELL}\t{ox // CELL}\t{e.code:04X}\t{kind}\t{e.syllable or ''}\n")
-    for n, img in enumerate(pages):
+    for n, img in enumerate(font.pages):
         jetfont.write_png(os.path.join(out, f"tex{n}.png"), bytearray(v * 17 for v in img), PAGE_W, PAGE_W)
 
     n_hangul = sum(1 for e in entries if e.syllable)
-    print(f"mode: {'identity (round trip)' if ident else 'Korean'}; Hangul {n_hangul}, kana kept: {keep_kana}, "
-          f"class bases (sym, Latin, hira, kata) = {bases}")
-    if renderer:
-        print(f"font {os.path.basename(font_path)}: scale {renderer.scale:.5f} px/unit, ink on cell borders: {border_ink} px")
+    print(f"mode: {'identity (round trip)' if ident else 'Korean'}; Hangul {n_hangul}, kana kept: {font.keep_kana}, "
+          f"class bases (sym, Latin, hira, kata) = {font.bases}")
+    if font.renderer:
+        print(f"font {os.path.basename(font_path)}: scale {font.renderer.scale:.5f} px/unit, "
+              f"ink on cell borders: {font.border_ink} px")
     print(f"jetfont.dat {md5(new_jf)} (original {md5(jf)}{', same' if new_jf == jf else ''})")
     print(f"default.xbe {md5(new_xbe)} (original {x.md5}{', same' if bytes(new_xbe) == x.data else ''})")
     print(f"wrote {out} (derived from game data: keep it under work/)")

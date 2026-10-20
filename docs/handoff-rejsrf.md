@@ -38,6 +38,26 @@
 * `jetfont.dat`: tex0~3만 새 표 순서로 다시 만든다. 남기는 칸은 원래 칸을 옮기고, 한글은 Do Hyeon(OFL)을 26×26 칸의 잉크 상자 (2,3)–(23,22)에 2,350자 공통 배율로 그린다. 같은 입력이면 같은 바이트가 나온다.
 * reJSRF에서: 런타임에 US판 `0x1F7088`·`0x1F8B80`에 같은 표를 쓰고, 이 저장소 도구가 만든 `jetfont.dat`를 `rexbox` 파일 계층에서 대신 내주면 된다(**추정**, P4에서 확인).
 
+## P4 개념 증명 (issue #8)
+
+근거: [analysis/text-files.md](analysis/text-files.md), [작업 로그 i008](work-logs/20261020-i008-poc.md), [guides/emulator-check.md](guides/emulator-check.md)
+
+* **reJSRF 일본판 빌드에서 확인됨**(reJSRF `4e2c0f2`, `build\win32_x86_jp` Release): 패치한 일본판 XBE(`out/poc/rejsrf/default_jpn.xbe`, `--xbe default_jpn.xbe`)와 패치한 `Media`로 차고의 로보이 대사 "뭐야、무슨 볼일？"이 한글로 나온다. 16:9 Hor+에서도 대사 칸과 글자는 가운데 제자리에 나온다. reJSRF는 인증서로 XBE를 알아보므로 서명을 고치지 않은 패치 XBE를 받는다.
+* 같은 출력이 Cxbx-Reloaded와 xemu에서도 같게 나온다. 그러므로 P3의 방식(글리프 표 `0x1F7088`·부류 순번 `0x1F8B80` 데이터 패치 + 새 `jetfont.dat`)은 reJSRF가 원본 렌더러를 그대로 돌려도 동작한다.
+* US XBE + `REJSRF_LANGUAGE=Japanese` 경로(`out/poc/rejsrf/default.xbe`, 같은 표를 넣은 US판)는 실행하지 않았다(**미확정**). US XBE의 메뉴 문자열은 주소가 달라 바꾸지 않았다.
+* **HDD 캐시**: 게임은 `Media` 파일을 처음 읽을 때 `Z:\Media\…`에 복사하고 그 뒤로는 캐시를 읽는다. reJSRF에서 패치를 시험할 때는 `hdd\`(또는 `REJSRF_HDD_ROOT`)에 원본이 캐시되어 있지 않아야 한다. 런타임 패치를 넣을 때도 캐시 경로(`Z:`)로 읽히는 파일까지 같은 내용을 내줘야 한다. `jetfont.dat`는 캐시되지 않는다.
+* 문장 자리(일본판, 제자리 교체로 확인):
+
+| 자리 | 내용 | US판 |
+|---|---|---|
+| `Media/Mission/mssn0110.bin` `0x2228C` | 첫 미션 목표(일본어 NUL 영어 NUL 짝) | 같은 `Media` |
+| `Media/Event/TalkEvent/TE014.bin` `0x88` | 로보이 첫 대사(한 문자열 안 메시지) | 같은 `Media` |
+| XBE `.rdata` `0x1D29E0` | "セーブ" | 미대응 |
+| XBE `.data` `0x221948` | 일시정지 메뉴 포인터 표(언어별) | 미대응 |
+| XBE `.data` `0x2216DC`, `0x2221D8` | 리트라이 메뉴, B 버튼 안내 표 | 미대응 |
+
+* 일본판은 언어 전역 `0x251F58`에 쓰지 않는다. 일본판 빌드의 언어 설정이 Japanese 고정인 것과 맞는다.
+
 ---
 
 # Handoff to reJSRF
@@ -79,3 +99,23 @@ Basis: [design/20261020-i006-korean-font.md](design/20261020-i006-korean-font.md
 * Table layout: Hangul (code order) → padding → hiragana and katakana (when there is room) → digits and capitals → symbols (`tools/font/glyph_table.py`).
 * `jetfont.dat`: only tex0–3 are rebuilt in the new table order. Kept cells are moved; Hangul is drawn from Do Hyeon (OFL) into the ink box (2,3)–(23,22) of the 26×26 cell with one scale for all 2,350 syllables. The same input gives the same bytes.
 * In reJSRF: write the same table to the US `0x1F7088` and `0x1F8B80` at run time, and serve the `jetfont.dat` built by this repository's tool through the `rexbox` file layer (**inferred**, checked in P4).
+
+## P4 proof of concept (issue #8)
+
+Basis: [analysis/text-files.md](analysis/text-files.md), [work log i008](work-logs/20261020-i008-poc.md), [guides/emulator-check.md](guides/emulator-check.md)
+
+* **Confirmed in reJSRF's Japanese build** (reJSRF `4e2c0f2`, `build\win32_x86_jp` Release): with the patched Japanese XBE (`out/poc/rejsrf/default_jpn.xbe`, `--xbe default_jpn.xbe`) and the patched `Media`, Roboy's line in the garage shows "뭐야、무슨 볼일？" in Hangul. At 16:9 Hor+ the speech box and letters stay centered in place. reJSRF identifies the XBE by its certificate, so it accepts the patched XBE with its signature left unfixed.
+* The same output looks the same in Cxbx-Reloaded and xemu. So the P3 approach (a data patch of the glyph table `0x1F7088` and the class first indexes `0x1F8B80`, plus a new `jetfont.dat`) works with reJSRF running the original renderer as it is.
+* The US XBE + `REJSRF_LANGUAGE=Japanese` path (`out/poc/rejsrf/default.xbe`, the US build with the same table) was not run (**unresolved**). The US XBE's menu strings sit at other addresses and were not changed.
+* **HDD cache**: the game copies a `Media` file to `Z:\Media\…` the first time it reads it and reads the cache afterwards. When testing the patch in reJSRF, `hdd\` (or `REJSRF_HDD_ROOT`) must not hold cached originals. A run-time patch must serve the same content for files read through the cache path (`Z:`) as well. `jetfont.dat` is never cached.
+* Text places (Japanese build, confirmed by in-place replacement):
+
+| Place | Content | US |
+|---|---|---|
+| `Media/Mission/mssn0110.bin` `0x2228C` | the first mission's objective (a Japanese NUL English NUL pair) | same `Media` |
+| `Media/Event/TalkEvent/TE014.bin` `0x88` | Roboy's first line (a message inside one string) | same `Media` |
+| XBE `.rdata` `0x1D29E0` | "セーブ" | not matched |
+| XBE `.data` `0x221948` | the pause menu pointer table (per language) | not matched |
+| XBE `.data` `0x2216DC`, `0x2221D8` | the retry menu and B-button hint tables | not matched |
+
+* The Japanese build never writes the language global `0x251F58`, which agrees with the Japanese build's language being fixed to Japanese.
