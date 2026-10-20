@@ -188,16 +188,16 @@ flowchart LR
 flowchart TD
     N["distinct Hangul syllables in the translation (measure in P5/P6)"] --> Q{"<= ~1,280?"}
     Q -->|yes| A["A: redraw existing cells<br/>no XBE change; text encoded with existing codes"]
-    Q -->|"<= ~1,380"| A2["A': rewrite table 0x1F7088 (XBE .data only)<br/>+ optional 4-byte immediate 0x3C7AC for 1,444 cells"]
+    Q -->|"<= 1,327"| A2["A': rewrite table 0x1F7088 (XBE .data only)<br/>1,390 entries; cannot grow (0x1F8640 follows)"]
     Q -->|"more"| B["B: renderer patch: more pages/textures<br/>loader 0x2C04A, object arrays, descriptors"]
 ```
 
-* 2바이트 칸은 최대 1,444개다. 이 수는 페이지 4장(서술자 값)과 텍스처 6장(로더 즉치), 글꼴 객체 안 고정 크기 배열이 함께 정한다.
+* 2바이트 칸은 최대 1,444개다. 이 수는 페이지 4장(서술자 값)과 텍스처 6장(로더 즉치), 글꼴 객체 안 고정 크기 배열이 함께 정한다. 다만 **표는 1,390개보다 늘릴 수 없다**: `0x1F7088 + 0x56E×4`가 정확히 1바이트 표 `0x1F8640`의 시작이다. 표를 옮기려면 표 주소를 쓰는 명령(`0x3C7F5`, `0x3C845`, `0x3CA44` 등)을 고쳐야 한다(issue #6에서 고침).
 * **A. 기존 칸 다시 그리기(코드·XBE 수정 없음)**: 한글 음절마다 지금 표에 있는 코드 하나를 배정하고, 그 칸에 한글을 그린다. 번역문은 그 코드로 쓴다. 찾을 수 있는 코드 1,343개 중 숫자 10개(`$g`가 직접 씀), 영대문자·기호 약 50개를 남기면 **한글 약 1,280자**까지 된다. 가나·한자 칸을 모두 쓰므로 번역하지 않은 일본어(XBE 문자열 포함)는 깨진다.
-* **A′. 표만 고치기(XBE `.data` 수정, 코드 수정 없음)**: `0x1F7088` 표와 부류 시작 순번(`0x1F8B80`~)을 다시 쓴다. 빈 칸 41개와 못 찾는 칸 6개를 살려 1,390칸, 즉치 `0x56E`(`0x3C7AC`, 4바이트)도 바꾸면 1,444칸이다. 한글을 부류 4(코드 `0x8890` 이상)에 몰아 두면 순차 검색 하나로 찾는다. 코드 배정을 우리가 정하므로 번역 파일과 도구가 단순해진다.
+* **A′. 표만 고치기(XBE `.data` 수정, 코드 수정 없음)**: `0x1F7088` 표와 부류 시작 순번(`0x1F8B80`~)을 다시 쓴다. 빈 칸 41개와 못 찾는 칸 6개를 살려 1,390칸을 모두 쓴다(기호·숫자 63칸을 빼면 한글 최대 1,327자, 가나도 남기면 1,158자). 한글을 부류 4(코드 `0x8890` 이상)에 몰아 두면 순차 검색 하나로 찾는다. 코드 배정을 우리가 정하므로 번역 파일과 도구가 단순해진다.
 * **B. 렌더러 수정(새 코드·새 아틀라스)**: 페이지를 늘리려면 로더의 고정 6장, 글꼴 객체의 페이지별 배열(크기 고정), 서술자, 1바이트 페이지 번호(첫 텍스처 4)를 함께 고쳐야 한다. 코드 패치가 크고, reJSRF도 같은 함수를 고쳐야 한다.
 * 두 방식 모두의 제약: 코드는 첫 바이트 `0x81`~`0x9F`여야 한다. 칸은 26×26이고 간격이 24픽셀이므로 글자 그림 폭을 24픽셀 안에 둔다. 띄어쓰기는 1바이트 공백 `0x20`(11.2픽셀)이 싸다. 자동 줄바꿈이 없으므로 번역문에 `$n`을 직접 넣고, 줄은 24자 안팎, 페이지는 0x100바이트보다 넉넉히 짧게 둔다.
-* **권장 입력(P3)**: A′를 기본으로 한다(코드 수정 없이 데이터만, 1,390칸, 필요하면 즉치 하나로 1,444칸). 번역문의 서로 다른 음절 수를 세어 1,380자를 넘으면 B를 검토한다. P4 개념 증명은 A(표도 안 고침)로 바로 할 수 있다.
+* **권장 입력(P3)**: A′를 기본으로 한다(코드 수정 없이 데이터만, 1,390칸). 번역문의 서로 다른 음절 수를 세어 1,327자를 넘으면 B를 검토한다. P4 개념 증명은 A(표도 안 고침)로 바로 할 수 있다.
 
 ## 10. 미확정
 
@@ -387,12 +387,12 @@ A code is `$` plus one character (`$b` plus two). The draw-string function (`0x3
 
 ## 9. What this means for the Korean font approach (P3)
 
-* At most 1,444 double-byte cells exist. The four pages (descriptor value), the six textures (loader immediate) and fixed-size arrays inside the font object set that number together.
+* At most 1,444 double-byte cells exist. The four pages (descriptor value), the six textures (loader immediate) and fixed-size arrays inside the font object set that number together. However, **the table cannot grow beyond 1,390 entries**: `0x1F7088 + 0x56E×4` is exactly where the single-byte table `0x1F8640` begins. Moving the table means changing the instructions that use its address (`0x3C7F5`, `0x3C845`, `0x3CA44` ...) (corrected in issue #6).
 * **A. Redraw existing cells (no code or XBE change)**: give each Hangul syllable one code already in the table and draw Hangul in that cell; the translation is written with those codes. Of the 1,343 findable codes, keeping the 10 digits (`$g` writes them directly) and about 50 capitals and symbols leaves room for **about 1,280 Hangul syllables**. All kana and kanji cells are used, so any untranslated Japanese (XBE strings included) turns into garbage.
-* **A′. Rewrite the table only (XBE `.data` change, no code change)**: rewrite the table `0x1F7088` and the class first indexes (`0x1F8B80`–). Reviving the 41 empty and 6 unfindable cells gives 1,390 cells; also changing the immediate `0x56E` (`0x3C7AC`, 4 bytes) gives 1,444. With all Hangul in class 4 (codes `0x8890` and up) one linear search finds them. Since we choose the codes, the translation files and the tool get simpler.
+* **A′. Rewrite the table only (XBE `.data` change, no code change)**: rewrite the table `0x1F7088` and the class first indexes (`0x1F8B80`–). Reviving the 41 empty and 6 unfindable cells uses all 1,390 (minus the 63 symbol and digit cells, at most 1,327 Hangul; 1,158 if the kana stay too). With all Hangul in class 4 (codes `0x8890` and up) one linear search finds them. Since we choose the codes, the translation files and the tool get simpler.
 * **B. Change the renderer (new codes, new atlas)**: more pages means changing the loader's fixed six, the font object's fixed-size per-page arrays, the descriptors and the single-byte page numbers (first texture 4) together. A large code patch, and reJSRF would have to change the same functions.
 * Constraints for every option: codes must have lead bytes `0x81`–`0x9F`. Cells are 26×26 with a 24 px advance, so glyph drawings should stay within 24 px. Spaces are cheapest as the single-byte `0x20` (11.2 px). There is no automatic wrapping, so translations carry their own `$n`; keep lines to about 24 characters and pages well under 0x100 bytes.
-* **Recommended input for P3**: take A′ as the default (data only, no code change, 1,390 cells; 1,444 with one immediate if needed). Count the distinct syllables of the translation and consider B only if they exceed about 1,380. The P4 proof of concept can be done right away with A (not even the table changes).
+* **Recommended input for P3**: take A′ as the default (data only, no code change, 1,390 cells). Count the distinct syllables of the translation and consider B only if they exceed 1,327. The P4 proof of concept can be done right away with A (not even the table changes).
 
 ## 10. Unresolved
 
