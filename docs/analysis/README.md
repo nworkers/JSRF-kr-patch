@@ -14,7 +14,9 @@ reJSRF에서 이어받은 사실은 [PLAN.md §3](../PLAN.md)과 reJSRF의 [text
 
 ## 문서
 
-아직 없다. 첫 문서는 `text-renderer.md`(issue #3)다.
+| 문서 | 내용 | issue |
+|---|---|---|
+| [text-renderer.md](text-renderer.md) | 텍스트 렌더러: 그리는 함수(일본판·US판 주소), 글리프 순서표 `0x1F7088`과 칸 계산, `jetfont.dat`의 텍스처 6장, `$` 코드, 줄 폭·페이지 크기 제한, `TNRoman.bin`(디버그 글꼴), 한국어 글꼴 방식에 주는 뜻 | #3 |
 
 ---
 
@@ -34,4 +36,6 @@ Facts carried over from reJSRF are in [PLAN.md §3](../PLAN.md) and reJSRF's [te
 
 ## Documents
 
-None yet. The first is `text-renderer.md` (issue #3).
+| Document | Content | Issue |
+|---|---|---|
+| [text-renderer.md](text-renderer.md) | the text renderer: drawing functions (Japanese and US addresses), the glyph order table `0x1F7088` and cell computation, the six textures in `jetfont.dat`, `$` codes, line-width and page-size limits, `TNRoman.bin` (a debug font), what it means for the Korean font approach | #3 |

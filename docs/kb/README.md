@@ -4,7 +4,12 @@
 
 ## 문서
 
-아직 없다. 번역 단계(P6)에서 `glossary.md`(캐릭터·장소·기술 이름 표기)를 만든다.
+| 문서 | 내용 |
+|---|---|
+| [shift-jis.md](shift-jis.md) | Shift-JIS(CP932) 바이트 구조와 구획, JSRF 렌더러의 2바이트 판정(`0x80`~`0x9F`) |
+| [dxt3.md](dxt3.md) | DXT3(BC2) 블록 압축, `jetfont.dat`의 흰색 + 4비트 alpha |
+
+번역 단계(P6)에서 `glossary.md`(캐릭터·장소·기술 이름 표기)를 만든다.
 
 ---
 
@@ -14,4 +19,9 @@ This directory collects general technical knowledge the project needs (character
 
 ## Documents
 
-None yet. The translation phase (P6) adds `glossary.md` (how character, place and trick names are written).
+| Document | Content |
+|---|---|
+| [shift-jis.md](shift-jis.md) | Shift-JIS (CP932) byte structure and blocks; the JSRF renderer's double-byte test (`0x80`–`0x9F`) |
+| [dxt3.md](dxt3.md) | DXT3 (BC2) block compression; white plus 4-bit alpha in `jetfont.dat` |
+
+The translation phase (P6) adds `glossary.md` (how character, place and trick names are written).

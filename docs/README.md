@@ -11,7 +11,7 @@
 | [guides/](guides/) | 사용자가 직접 수행하는 절차(패치 적용, 검증) |
 | [release-notes/](release-notes/) | 버전별 릴리스 노트 |
 
-`handoff-rejsrf.md`(reJSRF 인계 문서)는 P2 결과가 나오면 만든다.
+[handoff-rejsrf.md](handoff-rejsrf.md)는 reJSRF 인계 문서다(P2부터 단계마다 갱신).
 
 ---
 
@@ -28,4 +28,4 @@
 | [guides/](guides/) | procedures the user runs (applying the patch, verification) |
 | [release-notes/](release-notes/) | release notes per version |
 
-`handoff-rejsrf.md` (the reJSRF handoff) is created once P2 has results.
+[handoff-rejsrf.md](handoff-rejsrf.md) is the reJSRF handoff (updated each phase from P2 on).

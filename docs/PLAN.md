@@ -57,9 +57,9 @@ reJSRF의 작업 규칙과 라이선스를 그대로 가져와 이 저장소에 
 | 문장 위치 | `Media/Event/Event/e###.dat`(대사), `Media/Mission/mssn####.bin`(미션), `Media/Event/TalkEvent/TE###.bin`, `default.xbe`(메뉴·시스템·이름, 585개 문자열) | 확인됨 |
 | 문장 형식 | Shift-JIS, NUL 종료, `NORM` 레코드(머리에 시작·끝 오프셋과 크기). `$n` 줄바꿈, `$r` 페이지, `$e` 메시지 끝(`$r$e$r`), 그 밖에 `$p $b $c $a $g $s` | `$n $e` 확인됨, 나머지 추정·미확정 |
 | 분량 | 일본어 약 27,000자, 서로 다른 글자 800자(XBE 제외) | 확인됨 |
-| 글꼴 | `Media/Font/jetfont.dat`: `NORM` 머리 0x40바이트 + DXT3 512×2304, 흰색 + alpha, 26픽셀 간격 약 88줄, 글리프 약 1,500개, 아래 약 24줄 빈 공간 | 확인됨 |
-| 글리프 순서 | JIS 순서가 아니고 순서표가 파일에 없다. 코드 안의 표나 계산 | **미확정(첫 분석 대상)** |
-| `TNRoman.bin` | 16바이트 항목 352개. 영문 비례 글꼴 표로 보인다. US판 `sub_0005F350`이 연다 | 추정 |
+| 글꼴 | `Media/Font/jetfont.dat`: `NORM` 머리 0x40바이트 + DXT3 512×2304, 흰색 + alpha, 26픽셀 간격 약 88줄, 글리프 약 1,500개, 아래 약 24줄 빈 공간 | 확인됨. **P2에서 고침**: 텍스처 6장(512×512 네 장에 2바이트 1,390칸, 256×256 두 장에 1바이트 156자). [text-renderer §3](analysis/text-renderer.md) |
+| 글리프 순서 | JIS 순서가 아니고 순서표가 파일에 없다. 코드 안의 표나 계산 | **P2에서 확인**: XBE `.data` `0x1F7088`의 코드표, 표 순번 = 칸 번호(일본판·US판 같은 주소). [text-renderer §4](analysis/text-renderer.md) |
+| `TNRoman.bin` | 16바이트 항목 352개. 영문 비례 글꼴 표로 보인다. US판 `sub_0005F350`이 연다 | **P2에서 고침**: 개발용 디버그 글꼴(`Fps=%d` 등). 영어 문장은 `jetfont` 1바이트 페이지. [text-renderer §7](analysis/text-renderer.md) |
 | 글자 그림 | `Title/LogoJ.dat`, `Title/Title.dat`, `Disp/SprNorm.*`, `Ending/tex_Jpn.dat`, `Mark/*_jpn.*` | 파일 확인, 내용 추정 |
 | 분석 스크립트 | reJSRF `scripts/analysis/text/`(`find_text.py`, `text_records.py`), `scripts/analysis/language/`(`code_diff.py`, `data_diff.py` 등). MIT라 복사해 써도 된다 | - |
 
@@ -175,9 +175,9 @@ Changes to `AGENTS.md`:
 | Where text lives | `Media/Event/Event/e###.dat` (dialogue), `Media/Mission/mssn####.bin` (missions), `Media/Event/TalkEvent/TE###.bin`, `default.xbe` (menus, system, names; 585 strings) | confirmed |
 | Text format | Shift-JIS, NUL-terminated, in `NORM` records (headers with start and end offsets and a size); `$n` line, `$r` page, `$e` end of message (`$r$e$r`), and `$p $b $c $a $g $s` | `$n $e` confirmed, the rest inferred or unresolved |
 | Volume | about 27,000 Japanese characters, 800 distinct (XBE not counted) | confirmed |
-| Font | `Media/Font/jetfont.dat`: a 0x40-byte `NORM` header + DXT3 512×2304, white with alpha, about 88 rows at a 26-pixel pitch, about 1,500 glyphs, about 24 empty rows at the bottom | confirmed |
-| Glyph order | not JIS order, and no order table in the files; a table or computation in the code | **unresolved (the first analysis target)** |
-| `TNRoman.bin` | 352 entries of 16 bytes; looks like a proportional Latin font table; the US build's `sub_0005F350` opens it | inferred |
+| Font | `Media/Font/jetfont.dat`: a 0x40-byte `NORM` header + DXT3 512×2304, white with alpha, about 88 rows at a 26-pixel pitch, about 1,500 glyphs, about 24 empty rows at the bottom | confirmed. **Corrected in P2**: six textures (1,390 double-byte cells on four 512×512, 156 single-byte glyphs on two 256×256). [text-renderer §3](analysis/text-renderer.md) |
+| Glyph order | not JIS order, and no order table in the files; a table or computation in the code | **confirmed in P2**: a code table at XBE `.data` `0x1F7088`; table index = cell number (same address in the JP and US builds). [text-renderer §4](analysis/text-renderer.md) |
+| `TNRoman.bin` | 352 entries of 16 bytes; looks like a proportional Latin font table; the US build's `sub_0005F350` opens it | **corrected in P2**: a developer debug font (`Fps=%d` ...); English text uses `jetfont`'s single-byte pages. [text-renderer §7](analysis/text-renderer.md) |
 | Lettering pictures | `Title/LogoJ.dat`, `Title/Title.dat`, `Disp/SprNorm.*`, `Ending/tex_Jpn.dat`, `Mark/*_jpn.*` | files confirmed, content inferred |
 | Analysis scripts | reJSRF `scripts/analysis/text/` (`find_text.py`, `text_records.py`) and `scripts/analysis/language/` (`code_diff.py`, `data_diff.py` ...); MIT, so they can be copied | - |
 
