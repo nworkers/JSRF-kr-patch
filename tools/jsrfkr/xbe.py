@@ -21,7 +21,8 @@ class Section:
 class Xbe:
     def __init__(self, path):
         self.path = path
-        self.data = open(path, "rb").read()
+        with open(path, "rb") as f:
+            self.data = f.read()
         self.md5 = hashlib.md5(self.data).hexdigest()
         d = self.data
         if d[:4] != b"XBEH":

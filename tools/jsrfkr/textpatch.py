@@ -153,12 +153,23 @@ def replace_at(buf, off, row, encoder, end_terminates=False):
 
     end_terminates: the end of buf also ends a string (a NORM item's data
     length excludes its terminator; analysis containers.md §3)."""
+    _check(buf, off, row, end_terminates)
+    return put(buf, off, row, encode_row(row, encoder), end_terminates)
+
+
+def encode_row(row, encoder):
+    """The game bytes of a row's Korean; PatchError names the row on failure."""
+    try:
+        return encoder.encode(row.korean)
+    except ValueError as err:
+        raise PatchError(f"{row.source} {row.file} {format_where(row)}: {err}") from None
+
+
+def put(buf, off, row, enc, end_terminates=False):
+    """Write game bytes `enc` over row's original at buf[off:] in place, filling
+    the rest with NUL or spaces (row.pad); returns len(enc)."""
     n = row.orig_len
     label = _check(buf, off, row, end_terminates)
-    try:
-        enc = encoder.encode(row.korean)
-    except ValueError as err:
-        raise PatchError(f"{label}: {err}") from None
     if len(enc) > n:
         raise PatchError(f"{label}: Korean is {len(enc)} bytes, more than {n}")
     buf[off:off + n] = enc + (b"\0" if row.pad == "nul" else b" ") * (n - len(enc))
