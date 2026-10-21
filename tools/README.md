@@ -7,8 +7,9 @@
 | `patch.py` | **패치 도구**: 덤프 → 패치된 게임 폴더(`out/` 아래), 선택으로 xiso | #2 |
 | `extract_text.py` | **문장 추출**: 화면 문장 전부를 자리·해시와 함께 `work/text/`에(원문, 커밋 안 함), 원문 없는 번역 뼈대를 `work/text/skeleton/`에 | #11 |
 | `check_roundtrip.py` | 덤프의 `MULT`/`NORM` 파일 전체와 XBE 요약값 왕복, 패치 결과 폴더와 덤프 비교 | #2 |
+| `check_text.py` | **번역 검사**: 출력 없이 메모리에서 패치 과정을 돌려 진행률·모든 오류·경고·한글 음절 수를 보고, `--review`로 `work/text/review/` 검토 표(일본어·영어·한국어, 용어 힌트, 지킬 코드, 한도) | #15 |
 | `check_reinsert.py` | 재삽입 왕복: 모든 문장을 원문 그대로 넣으면 원본과 같은지, 미션·XBE 문자열을 일부러 모두 옮겨도 포인터·참조가 맞는지 | #13 |
-| `jsrfkr/` | 공용 모듈: `xbe`, `container`(`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso`(#2), `msgscript`(이벤트·대화 메시지 스크립트), `mission`(미션 파일 문장 명령), `xbetext`(XBE 문자열과 참조), `extract`(문장 단위)(#11), `reinsert`(길이가 바뀌는 문장 넣기), `xbeedit`(XBE 섹션 더하기), `screen`(줄 폭·페이지 검사)(#13) | #2, #11, #13 |
+| `jsrfkr/` | 공용 모듈: `xbe`, `container`(`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso`(#2), `msgscript`(이벤트·대화 메시지 스크립트), `mission`(미션 파일 문장 명령), `xbetext`(XBE 문자열과 참조), `extract`(문장 단위)(#11), `reinsert`(길이가 바뀌는 문장 넣기), `xbeedit`(XBE 섹션 더하기), `screen`(줄 폭·페이지 검사)(#13), `pipeline`(글꼴·인코딩 공용 단계), `glossary`(용어집 읽기)(#15) | #2, #11, #13, #15 |
 | `font/` | 한국어 글꼴(A′): 글리프 표와 `jetfont.dat` 만들기([README](font/README.md)) | #6 |
 | `analysis/` | 분석 스크립트([README](analysis/README.md)) | #3 |
 | `poc/` | 개념 증명 도구: reJSRF용 US XBE 폴더 포함([README](poc/README.md)) | #8 |
@@ -64,8 +65,9 @@ Standard library only (Python 3.10 or later; checked with 3.12). Run from the re
 | `patch.py` | **the patcher**: dump → patched game folder (under `out/`), optionally an xiso | #2 |
 | `extract_text.py` | **text extraction**: every on-screen string with its place and hash into `work/text/` (original text, never committed) and a translation skeleton without original text into `work/text/skeleton/` | #11 |
 | `check_roundtrip.py` | round trips of every `MULT`/`NORM` file in the dump and the XBE digests; compares a patched folder with the dump | #2 |
+| `check_text.py` | **translation check**: runs the patch steps in memory without output and reports progress, every error and warning and the Hangul syllable count; `--review` writes review tables to `work/text/review/` (Japanese, English, Korean, term hints, codes to keep, limits) | #15 |
 | `check_reinsert.py` | reinsertion round trips: every string put back unchanged equals the original, and moving all mission and XBE strings on purpose keeps every pointer and reference right | #13 |
-| `jsrfkr/` | shared modules: `xbe`, `container` (`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso` (#2); `msgscript` (event and talk message scripts), `mission` (mission-file text commands), `xbetext` (XBE strings and references), `extract` (text units) (#11); `reinsert` (text whose length changes), `xbeedit` (adding an XBE section), `screen` (line width and page checks) (#13) | #2, #11, #13 |
+| `jsrfkr/` | shared modules: `xbe`, `container` (`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso` (#2); `msgscript` (event and talk message scripts), `mission` (mission-file text commands), `xbetext` (XBE strings and references), `extract` (text units) (#11); `reinsert` (text whose length changes), `xbeedit` (adding an XBE section), `screen` (line width and page checks) (#13); `pipeline` (shared font and encoding steps), `glossary` (reading the glossary) (#15) | #2, #11, #13, #15 |
 | `font/` | the Korean font (A′): building the glyph table and `jetfont.dat` ([README](font/README.md)) | #6 |
 | `analysis/` | analysis scripts ([README](analysis/README.md)) | #3 |
 | `poc/` | the proof-of-concept tool, including the US XBE folder for reJSRF ([README](poc/README.md)) | #8 |

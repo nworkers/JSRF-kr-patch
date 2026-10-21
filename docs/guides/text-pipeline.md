@@ -59,6 +59,8 @@ total    units 2276, every place checked against the dump (2276)
 
 ## 2. ② 번역 파일 채우기
 
+> 번역자의 자세한 작업 절차(검토 표, 문체, 검사 도구 `check_text.py`)는 [translation.md](translation.md)에 있다. `patch/text/`에는 이미 뼈대가 들어 있으므로(issue #15) §2.1의 복사는 새로 시작할 때만 한다.
+
 ### 2.1 시작
 
 1. 뼈대를 패치 데이터 폴더로 복사한다. 이미 번역이 있는 파일은 덮어쓰지 않는다.
@@ -197,6 +199,8 @@ How to make the Korean text patch with this document and the repository's tools 
 * Columns of `work/text/<group>.tsv`: `file`, `where` (place), `orig_len` (original byte count), `orig_sha1` (original hash), `pad`, `kind`, `ref` (structural position: `part 0 page 1`, `sec 0x184 rec 10 op 0xbf`, `refs 2 data + 0 code`), `japanese`, `english`. For events and talk, `english` is all English pages of the same part joined with `$r`, so it can be longer than one Japanese page.
 
 ## 2. ② Fill the translation files
+
+> The translator's detailed procedure (review table, style, the check tool `check_text.py`) is in [translation.md](translation.md). `patch/text/` already holds the skeletons (issue #15), so the copy of §2.1 is only for a fresh start.
 
 ### 2.1 Starting
 
