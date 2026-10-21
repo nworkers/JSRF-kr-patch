@@ -8,7 +8,7 @@
 | [work-logs/](work-logs/) | 작업 로그(시간순 작업 증거) |
 | [analysis/](analysis/README.md) | 일본판 XBE·`Media` 분석: 확인됨·추정·미확정 구분, 주제별 누적 |
 | [kb/](kb/README.md) | 일반 기술 지식과 용어집 |
-| [guides/](guides/) | 사용자가 직접 수행하는 절차: [패치 적용](guides/apply-patch.md), [문장 번역 파이프라인](guides/text-pipeline.md), [에뮬레이터 확인](guides/emulator-check.md). AI 도움 없이 따라 할 수 있게 쓴다 |
+| [guides/](guides/) | 사용자가 직접 수행하는 절차: [패치 적용](guides/apply-patch.md), [문장 번역 파이프라인](guides/text-pipeline.md), [번역 작업](guides/translation.md), [에뮬레이터 확인](guides/emulator-check.md). AI 도움 없이 따라 할 수 있게 쓴다 |
 | [release-notes/](release-notes/) | 버전별 릴리스 노트 |
 
 [handoff-rejsrf.md](handoff-rejsrf.md)는 reJSRF 인계 문서다(P2부터 단계마다 갱신).
@@ -25,7 +25,7 @@
 | [work-logs/](work-logs/) | work logs (chronological evidence) |
 | [analysis/](analysis/README.md) | analysis of the Japanese XBE and `Media`, confirmed / inferred / unresolved, by topic |
 | [kb/](kb/README.md) | general technical knowledge and the glossary |
-| [guides/](guides/) | procedures the user runs: [applying the patch](guides/apply-patch.md), [the text translation pipeline](guides/text-pipeline.md), [emulator checks](guides/emulator-check.md); written to be followed without AI help |
+| [guides/](guides/) | procedures the user runs: [applying the patch](guides/apply-patch.md), [the text translation pipeline](guides/text-pipeline.md), [translation work](guides/translation.md), [emulator checks](guides/emulator-check.md); written to be followed without AI help |
 | [release-notes/](release-notes/) | release notes per version |
 
 [handoff-rejsrf.md](handoff-rejsrf.md) is the reJSRF handoff (updated each phase from P2 on).

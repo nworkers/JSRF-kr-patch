@@ -8,14 +8,18 @@
     only) or a code in the single-byte table (JP 0x1F8640).
   * `$` control codes are plain single-byte characters here ('$' and the
     letters and digits after it are all in the single-byte table).
+  * The full-width space 0x8140 is never in the glyph table: the renderer
+    advances one cell without drawing (JP 0x3CF58, text-renderer.md §4.1).
 """
 import font_tables
 import hangul
 
+FULL_WIDTH_SPACE = 0x8140
+
 
 class Encoder:
     def __init__(self, double_codes, single_codes):
-        self.double = set(double_codes)
+        self.double = set(double_codes) | {FULL_WIDTH_SPACE}
         self.single = set(single_codes) | {0x20}
 
     @classmethod

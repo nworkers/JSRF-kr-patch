@@ -8,6 +8,7 @@
 |---|---|
 | [shift-jis.md](shift-jis.md) | Shift-JIS(CP932) 바이트 구조와 구획, JSRF 렌더러의 2바이트 판정(`0x80`~`0x9F`) |
 | [dxt3.md](dxt3.md) | DXT3(BC2) 블록 압축, `jetfont.dat`의 흰색 + 4비트 alpha |
+| [glossary.md](glossary.md) | 용어집: 캐릭터·팀·장소·게임 용어·기술 이름의 한국어 표기, 쓸 수 있는 기호(#15) |
 
 번역 단계(P6)에서 `glossary.md`(캐릭터·장소·기술 이름 표기)를 만든다.
 
@@ -23,5 +24,6 @@ This directory collects general technical knowledge the project needs (character
 |---|---|
 | [shift-jis.md](shift-jis.md) | Shift-JIS (CP932) byte structure and blocks; the JSRF renderer's double-byte test (`0x80`–`0x9F`) |
 | [dxt3.md](dxt3.md) | DXT3 (BC2) block compression; white plus 4-bit alpha in `jetfont.dat` |
+| [glossary.md](glossary.md) | the glossary: Korean forms of characters, teams, places, game terms and trick names; usable symbols (#15) |
 
 The translation phase (P6) adds `glossary.md` (how character, place and trick names are written).

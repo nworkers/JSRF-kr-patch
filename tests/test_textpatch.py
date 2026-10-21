@@ -27,6 +27,7 @@ class EncoderTest(unittest.TestCase):
     def test_encode(self):
         e = encoder()
         self.assertEqual(e.encode("가 나！"), bytes((0x88, 0x90, 0x20)) + bytes.fromhex(f"{hangul.CODE_OF['나']:04x}") + b"\x81\x49")
+        self.assertEqual(e.encode("가　나"), bytes((0x88, 0x90, 0x81, 0x40)) + bytes.fromhex(f"{hangul.CODE_OF['나']:04x}"))
         for bad in ("다", "A", "漢", "é"):
             with self.subTest(bad), self.assertRaises(ValueError):
                 e.encode(bad)

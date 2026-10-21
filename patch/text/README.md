@@ -1,6 +1,6 @@
 # 문장 패치
 
-`tools/patch.py`가 읽는 한국어 문장이다. 이 폴더의 `*.tsv`를 파일 이름 순서로 모두 읽는다. 지금은 번역이 없어 비어 있다(P6에서 채운다). 개념 증명 시험 문장은 [../poc/lines.tsv](../poc/lines.tsv)에 따로 있다. 형식의 근거는 [설계 i002 §3.1](../../docs/design/20261021-i002-patcher.md)이다.
+`tools/patch.py`가 읽는 한국어 문장이다. 이 폴더의 `*.tsv`를 파일 이름 순서로 모두 읽는다. 추출 도구의 뼈대 네 개(`event.tsv` `talk.tsv` `mission.tsv` `xbe.tsv`)가 들어 있고(issue #15), `xbe.tsv`의 메뉴·안내·이름은 초벌 번역되어 있다. 대사는 사람이 채운다([guides/translation.md](../../docs/guides/translation.md)). 개념 증명 시험 문장은 [../poc/lines.tsv](../poc/lines.tsv)에 따로 있다. 형식의 근거는 [설계 i002 §3.1](../../docs/design/20261021-i002-patcher.md)이다.
 
 UTF-8, 탭으로 나눈다. `#`로 시작하는 줄은 설명이다. 첫 줄(설명 제외)은 열 이름이다.
 
@@ -23,7 +23,7 @@ UTF-8, 탭으로 나눈다. `#`로 시작하는 줄은 설명이다. 첫 줄(설
 
 # Text patches
 
-The Korean text `tools/patch.py` reads: every `*.tsv` in this folder, in file-name order. Empty for now, as there is no translation yet (filled in P6). The proof-of-concept test lines are kept apart in [../poc/lines.tsv](../poc/lines.tsv). The format rests on [design i002 §3.1](../../docs/design/20261021-i002-patcher.md).
+The Korean text `tools/patch.py` reads: every `*.tsv` in this folder, in file-name order. It holds the extraction tool's four skeletons (`event.tsv` `talk.tsv` `mission.tsv` `xbe.tsv`) (issue #15), with a first pass of the menus, notices and names in `xbe.tsv`; dialogue is filled by people ([guides/translation.md](../../docs/guides/translation.md)). The proof-of-concept test lines are kept apart in [../poc/lines.tsv](../poc/lines.tsv). The format rests on [design i002 §3.1](../../docs/design/20261021-i002-patcher.md).
 
 UTF-8, tab-separated; lines starting with `#` are comments; the first other line names the columns.
 

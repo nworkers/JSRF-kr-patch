@@ -1,0 +1,654 @@
+# Translation skeleton, group xbe (tools/extract_text.py). No original text.
+# Fill the korean column; an empty korean keeps the original. Keep $ codes as in work/text.
+file	where	orig_len	orig_sha1	korean	pad
+default.xbe	va:0x1ca9cc	14	6510c3d4631be997a97cb46fa8121a7a99f6c8f6	하드 디스크	nul
+default.xbe	va:0x1ca9dc	18	807057b6291e5e29f17e9064af3ee19ca210beb2	메모리 유닛 ４Ｂ	nul
+default.xbe	va:0x1ca9f0	18	3119158c76cbcd0136e6ff159041aa0c19a53680	메모리 유닛 ４Ａ	nul
+default.xbe	va:0x1caa04	18	215a24d0be050bb50897335f85d332104d3cd96f	메모리 유닛 ３Ｂ	nul
+default.xbe	va:0x1caa18	18	2b8129d4567e5663ac53d296042ff7de7f1ad1c0	메모리 유닛 ３Ａ	nul
+default.xbe	va:0x1caa2c	18	625d7de9a504b13897f82816cc90a683ab585541	메모리 유닛 ２Ｂ	nul
+default.xbe	va:0x1caa40	18	02e3a656d5ff8cebc1044bad1b0caf8494458a59	메모리 유닛 ２Ａ	nul
+default.xbe	va:0x1caa54	18	9fe48155f55799fe4bdcf670cfb088233490a23c	메모리 유닛 １Ｂ	nul
+default.xbe	va:0x1caa68	18	e444f22e0034519abb8441967e388a8f759f5b19	메모리 유닛 １Ａ	nul
+default.xbe	va:0x1cb318	86	3575f777f945d2fbfd3a023a8a1439c028c20803	저장 데이터를 불러오는 중입니다.$n메모리 유닛이나 컨트롤러를 빼지 마십시오.	nul
+default.xbe	va:0x1cb510	90	dd05d682532dc8a955ce23433ef35727f1a6284f	메모리 유닛 <%s>에 저장하는 중입니다.$n메모리 유닛이나 컨트롤러를 빼지 마십시오.	nul
+default.xbe	va:0x1cb640	124	637ffc8fd83b36cce4d17841fc8aa4588fb100ff	Xbox 메모리 유닛 <%s>이(가) 사용 중에 분리되었습니다.$n파일을 읽는 중에 문제가 생겼습니다.$nＡ 를 눌러 계속하십시오.	nul
+default.xbe	va:0x1cb718	90	e396c53f6df5a9cf0ee4949373e93ba32722de42	그래피티 데이터의 일부 또는$n전부를 읽을 수 없습니다.$nＡ 버튼을 눌러 계속하십시오.	nul
+default.xbe	va:0x1cb778	80	fdc9954c1f8e5d2e1dcc69d9ed165ec78ac40cdf	컨트롤러를 포트%d에 다시 연결하고$nＳＴＡＲＴ 버튼을 눌러$n계속하십시오.	nul
+default.xbe	va:0x1cb7cc	38	059133b4b7fb8a442110755789f8f485b6d80134	컨트롤러를 다시$n연결하십시오.	nul
+default.xbe	va:0x1cb7f8	86	dfd61cc2b4f0330145e4877541d0426138bc9b14	디스크에 문제가 있습니다.$n디스크가 더러워졌거나 흠집이$n났을 수 있습니다.	nul
+default.xbe	va:0x1cb850	48	5286341e7b2f50d1c072dd773f4e57d866519f83	컨트롤러를 포트%d에$n다시 연결하십시오.	nul
+default.xbe	va:0x1cb884	56	df1e6b7b89467a5ca0ae348ec8abe7ed25b9f8fd	저장을 마쳤습니다.$nＡ 버튼을 눌러 계속하십시오.	nul
+default.xbe	va:0x1cb8c0	22	5ebc7a77408e12da29ee8c25de420f31cda3dfe2	불러오기를 마쳤습니다.	nul
+default.xbe	va:0x1cb8e8	8	647a37a5438850d2b5bb801fab179479a9931660	저장 중.	nul
+default.xbe	va:0x1cb8f8	92	4db9c7e8c9f2f3519846f04e57cf39922d868bac	메모리 유닛 <%s>에 저장하는 중입니다.$n메모리 유닛이나 컨트롤러를 빼지 마십시오.	nul
+default.xbe	va:0x1cb958	214	ed687cea37d6c36c6325ad9ab44bfb97c9a0b86b	게임을 새로 저장하는 데 필요한$n빈 블록이 없습니다.$n게임을 저장하려면 %d블록의$n빈 용량이 더 필요합니다.$nＡ 버튼을 누르면 저장하지 않고 계속하고,$nＢ 버튼을 누르면 빈 블록을$n확보할 수 있습니다.	nul
+default.xbe	va:0x1cba30	126	c69d80bbe2887ebec1556ddfadcc8919592bc2bb	Xbox 메모리 유닛 <%s>이(가)$n사용 중에 분리되었습니다.$n파일을 읽는 중에 문제가 생겼습니다.$nＡ 를 눌러 계속하십시오.	nul
+default.xbe	va:0x1cbab0	73	a663da083e917c3f5791b643fdb74b4ce47a678e	JSRF Game Save Data를 읽을 수$n없습니다.$nＡ 버튼을 눌러 계속하십시오.	nul
+default.xbe	va:0x1cbafc	12	6146544566e5f4b04c95d78b15f7260d3cfef8f2	읽는 중.	nul
+default.xbe	va:0x1cbe64	20	d22dd6640054f17213350ba4639564e43f98ebc8	빈 블록 수：%d%s	nul
+default.xbe	va:0x1cbe7c	14	102b78a89f8e99659fd69ebf01ff80bb6350b80e	플레이 시간：	nul
+default.xbe	va:0x1cbe8c	12	9b01deae4a4db50d0ae0b28f01ebf9ed5875bc9a	챕터：	nul
+default.xbe	va:0x1cbe9c	30	85272a6a541448c54920f8d7272c46eb9d0bcb00	이 게임 데이터에 덮어쓴다	nul
+default.xbe	va:0x1cbebc	26	08fb6c786a8ad8b860dca7c9b3b4037f5b4d4eb7	새 게임 데이터를 만든다	nul
+default.xbe	va:0x1cbed8	30	4a664d5289406eb0eae00ce1fa90d7afd89f7459	이 게임 데이터를 불러온다	nul
+default.xbe	va:0x1cbef8	22	e12f07d1390b4532f62340d5336073219f5512ac	게임 데이터를 골라	nul
+default.xbe	va:0x1cbf10	14	2a8d2b345dbf3c6888b4350d04bfbff99519ae4e	게임 데이터 ３	nul
+default.xbe	va:0x1cbf20	14	bd7181b7593a8853c627ea9f3254fe86d25ba09f	게임 데이터 ２	nul
+default.xbe	va:0x1cbf30	14	d24183f547dae5544fd43fd667408cba85d0584d	게임 데이터 １	nul
+default.xbe	va:0x1cbf40	16	2a3c23620a712a3bbe6ff9a54fa457021f650c7f	새 게임 데이터	nul
+default.xbe	va:0x1cc3a8	14	48daea909dd24776b283e0d68f657f598148b34b	얼굴 표시 안함	nul
+default.xbe	va:0x1cc3b8	26	abe8e8b785025e8b4124f2a973389e3433754b56	황금 코뿔소：테이프 레코더	nul
+default.xbe	va:0x1cc3d4	14	93c00c1f82364a414b4d2e1c509abc7e7f8791cc	황금 코뿔소 통신관	nul
+default.xbe	va:0x1cc3e4	6	3dc051ca2e742d4854d4e8042df8da02bbea989a	아쿠무	nul
+default.xbe	va:0x1cc3ec	6	a43750decef64c280a978bf3586e55cebb9e845f	고지	nul
+default.xbe	va:0x1cc3f4	14	61824d56862492ccb31ac380c69a762ae89dd9bf		nul
+default.xbe	va:0x1cc404	12	eb83b04820860b61ded04b2b8e1f37dfced953a7	서치라이트	nul
+default.xbe	va:0x1cc414	6	241b6a8b7dedc02f5db749306cab392a81b65868	호송차	nul
+default.xbe	va:0x1cc41c	16	2b8bdb2e92ad708c250d836be8d0fd9118c752be	고압선바리케이드	nul
+default.xbe	va:0x1cc430	6	dfe673a2dea9118f957bc49c64b1b0700f35d1fa	로보이	nul
+default.xbe	va:0x1cc438	10	d94868b2b58c0295eb4a7a268f94f4da4f8d80bd	제로 비트	nul
+default.xbe	va:0x1cc444	14	637e8cd360cb5029b5c11fc9716565da33d10893	탑（최종보스）	nul
+default.xbe	va:0x1cc454	12	cb710258044922772821dfe3f8b2c1cbe27b198e	중장갑열차포	nul
+default.xbe	va:0x1cc464	10	eb652891d0d8d1a83eb77eb10dcd1d05a8418afb	암 괴인	nul
+default.xbe	va:0x1cc470	12	b8117c674483a64e32ad862361a52171720838d7	파이어 괴인	nul
+default.xbe	va:0x1cc480	8	1f52647f33dc382be1ef1541c40a639d6b980db7	해리어	nul
+default.xbe	va:0x1cc48c	10	542ab792057525f2070bf3248463d759389799bb	코뿔소병	nul
+default.xbe	va:0x1cc498	18	aee277bbcf88f8546bb9fcb15045c4fdf31c1b10	양산형 노이즈 탱크	nul
+default.xbe	va:0x1cc4ac	12	2165849ef9ce083280e12e29f23ffc694920ed8b	경찰 로봇	nul
+default.xbe	va:0x1cc4bc	4	eb9fb491736386b4b215d6d1d4aa533be458cbf1	경부	nul
+default.xbe	va:0x1cc4c4	8	3dd8410b78e72c077acf5d69d006ce8b67bd8c0f	순찰차	nul
+default.xbe	va:0x1cc4d0	4	4a0187ee7f2b772abc5a4faa83e9f33722b009f1	전차	nul
+default.xbe	va:0x1cc4d8	4	17249292500ff69c43fad2ccc46c11b400abaf5f	헬기	nul
+default.xbe	va:0x1cc4e0	4	bec865eb3446f66e7cc7bc238cf5a4482c1d1a9d	경관	nul
+default.xbe	va:0x1cc4e8	6	47c5c1da7173fe9ea547b067050145c51f6f5bde		nul
+default.xbe	va:0x1cc4f0	6	764225699c0c9e17f8607474ac9d8757a8588939	포츠	nul
+default.xbe	va:0x1cc4f8	16	d663e83a6647093eecb71f2acc25457ea7fc02d6	러브 쇼커즈	nul
+default.xbe	va:0x1cc50c	18	7780809a2b2d57d62c810158474d301a6cfa16f8	둠 라이더즈	nul
+default.xbe	va:0x1cc520	12	dc34b72e5962c9e7750648d0f986095a9b6cb78f	노이즈 탱크	nul
+default.xbe	va:0x1cc530	12	f89d0d0be1002f131623f5b7cceb5194d01f6f97	이모털즈	nul
+default.xbe	va:0x1cc540	12	2a9d211b87a31daea9c3cd8429389b1a67d32e50	래피드 ９９	nul
+default.xbe	va:0x1cc550	14	1ed1ec2e150946aca4255ffc65a886aeaeda9302	포이즌 잼	nul
+default.xbe	va:0x1cc560	6	09683d505968267f984e71a2e686b4fa0ed46a53	재즈	nul
+default.xbe	va:0x1cc568	8	755617c15d3ec92d2e001b2643bf76978f68313c	클러치	nul
+default.xbe	va:0x1cc574	6	fb381a39e0e7b8084c28d396d38c0a0c4a0a5dd4	소다	nul
+default.xbe	va:0x1cc57c	8	1739b41bedae6bc9616b0dffa8cae507931fc2b0	요요	nul
+default.xbe	va:0x1cc588	8	f4d2f0ab77b24792b48c195bebc0cc2d13d4f381	큐브	nul
+default.xbe	va:0x1cc594	4	867e17a1c2d0a5958e3c536cb9a208f4dcbf8708	리즈	nul
+default.xbe	va:0x1cc59c	6	ff8ce8c47747df10de8b80782e6e4a25d3774cc0	가람	nul
+default.xbe	va:0x1cc5a4	6	c12e9d5d613dbacf4ad47897e15baeac6f67374d	부기	nul
+default.xbe	va:0x1cc5ac	6	9f0c9c45b2bebe7d0cfa32f8f1667f623d85a2e2	콤보	nul
+default.xbe	va:0x1cc5b4	6	32f711030962bdd710e7525c5671f74b599695a6	콘	nul
+default.xbe	va:0x1cc5bc	4	d9c197cef0613f8e05c39b4f46c647a252852d44	검	nul
+default.xbe	va:0x1cc5c4	6	3616708ee368235b7373699fa32314cdf73ccadc	비트	nul
+default.xbe	va:0x1cc854	10	e4e210592e6a1d160a2edb91a64f4ad8d0672913	주십시오.	nul
+default.xbe	va:0x1cc860	36	c8521b908694571a92bb0e16aa996c6e87ae1a09	컨트롤러를 포트４에 다시 연결해	nul
+default.xbe	va:0x1cc888	36	dd9f84c722bbbe31d68cc10dc378ee008ce55c77	컨트롤러를 포트３에 다시 연결해	nul
+default.xbe	va:0x1cc8b0	36	3ea2a0a9f41d459aea4a9425faa2ce0b7ce68e85	컨트롤러를 포트２에 다시 연결해	nul
+default.xbe	va:0x1cc8d8	36	188137cf137377c59ef102f85f83e5b754a088ba	컨트롤러를 포트１에 다시 연결해	nul
+default.xbe	va:0x1cc9f8	20	e800b1a7ffb9bff45c4a28892e3443fcf09a1382	그래피티 바꾸기	nul
+default.xbe	va:0x1cca10	12	e406ffb13f2a5fe67802b76cceb5792106094aae	이걸로 돼？	nul
+default.xbe	va:0x1ccc40	15	d6e0ee78cd1ae6f010967bec7050364ed3e3ddec	게임 계속할래?	nul
+default.xbe	va:0x1ccd60	14	17a67d2c61a9a4fe75979394e1a96a3b60866101	다시 할래？	nul
+default.xbe	va:0x1ccda4	16	d6f9eb61eed8a5c3b5ee7b74d743fd3c6387d4c1	타이틀로 가기	nul
+default.xbe	va:0x1ccdb8	16	8a213fc212550682d8b470461ea3670de0e187ed	설정 다시 하기	nul
+default.xbe	va:0x1ccdcc	14	822b62265980632affbf794332971184b1d8eb75	게임으로 복귀	nul
+default.xbe	va:0x1ccddc	8	7bca0fb8ba2185db13b63e977d77e4b0f4cbf7a0	재도전	nul
+default.xbe	va:0x1cf4f0	12	7ecad01ddb023f81cf3329966a4a83ef10106cc1	점수 랭크	nul
+default.xbe	va:0x1cf500	12	8ca8d234d2f17daabbee8f1c52fea4280bd9f1a1	타임 랭크	nul
+default.xbe	va:0x1cf510	8	bb68ad92ec58919b22a1b1e6d7a912918c2ebaa2	제트	nul
+default.xbe	va:0x1cf51c	6	d41205caef9bfcd753bf073c3d7d08c1ac3f1d8f	니트로	nul
+default.xbe	va:0x1cf524	6	296a172ac184d927573d137a9de6cf7ec989e812	터보	nul
+default.xbe	va:0x1cf52c	8	e786c665429d68f4ee8cc72f2f85fd6171ff514b	엔진	nul
+default.xbe	va:0x1cf538	8	ba57b18308e8124957e5294b1e65b447224de667	모터	nul
+default.xbe	va:0x1cf544	8	579b600ae1884e50f6ba7468585891b3aeaa109b	태엽	nul
+default.xbe	va:0x1cf568	14	a1f6588a4c4d43eb58c72cbc5b9e8075f23030ff	「%s」 획득！	nul
+default.xbe	va:0x1cf580	16	5624f1dced7e856684f07390ddb288b4d859c2ec	러브 쇼커즈	nul
+default.xbe	va:0x1cf594	14	127cb634dd099d8c023c3dfdb12c0e8e4592fedb		nul
+default.xbe	va:0x1cf6f8	26	e98c1298eb0e296a072b811c95304416c719f38a	고층 빌딩가＆파라오 파크	nul
+default.xbe	va:0x1cf714	10	a12a2bc3508f71b6920bf0e143bb704c8ffb992d	국도０호	nul
+default.xbe	va:0x1cf720	20	6e97580969b46cd476202af481cc938065b360d3	엑스포 경기장 예정지	nul
+default.xbe	va:0x1cf738	18	39e41086aac40b284c5cec9a77046adc9153350a	상공 공룡 거리	nul
+default.xbe	va:0x1cf74c	8	ac9b4f3b11ea39b3c72e73db782c287e54ca5a3d	９９번가	nul
+default.xbe	va:0x1cf758	10	45a9130dbe3f6b151563bccaf8cdc5dfc0446fde	요새거주구	nul
+default.xbe	va:0x1cf764	28	e9cff78d2adbaab75581cd2fc8e5081d005c3d7f	도쿄 지하 하수 시설 최심부	nul
+default.xbe	va:0x1cf784	10	5cd3893c5df4652ba697abd6c23c2b11da80f3d2	기보가오카	nul
+default.xbe	va:0x1cf790	22	77dbc29f9d24946a48e8ba8440daf09c1a8c57bc	도쿄 지하 하수 시설	nul
+default.xbe	va:0x1cf7a8	10	9c80dbdbf96ab4d448b3fd841003d43b25abcb54	롯카쿠다이	nul
+default.xbe	va:0x1cf7b4	10	4f8f1ae91c8304a481bf768f29c4cf78a76d283b	히카게 거리	nul
+default.xbe	va:0x1cf7c0	10	a4bd8f95881b062620f97ba18a0a52f4dda7d878	도겐자카	nul
+default.xbe	va:0x1cf7cc	12	539c160b98f4c093fe0d89e06a2cd91ebc760409	주오 거리	nul
+default.xbe	va:0x1cf7dc	16	6b39ac128ef3071ce1fb54baa5197f00cb1df24b	시부야 터미널	nul
+default.xbe	va:0x1cf81c	14	97c18807269c1b8b1c9b0b4059fae0243faf9045	월 라이드	nul
+default.xbe	va:0x1cf82c	20	85932883480f86eadf362882f4b700582d31a36d	백사이드 록	nul
+default.xbe	va:0x1cf844	10	419c49f8a84d1623f2649f81a24e10ede7ebda3f	인버트	nul
+default.xbe	va:0x1cf994	2	223c91ac2f6a328e2b6767959e83416104821a16		nul
+default.xbe	va:0x1cfb24	14	837d47a566ffa8bcc286c364aee6c029a538c2f5	프런트사이드	nul
+default.xbe	va:0x1cfb34	32	c4eb3902c9bf17f44ab762468ee001c6a5d1d4e4	파사이드 앨리웁 유니티	nul
+default.xbe	va:0x1cfb58	22	f38b908543d8a970aa16ddf422435af22bf9e749	앨리웁 미스트리얼	nul
+default.xbe	va:0x1cfb70	12	bf44a4449156a47b606f858217448e8b86746144	스터브 솔	nul
+default.xbe	va:0x1cfb80	10	b5630df73127a2c648c0d76e3636af43eebebd25	퍼스트	nul
+default.xbe	va:0x1cfb8c	14	77cdff3569b5f38c58d83b62503ef5976c263189	토크 슬라이드	nul
+default.xbe	va:0x1cfb9c	26	12420cb7e86ca290e45a7bffaa90457207c46ee3	파사이드 토크 솔	nul
+default.xbe	va:0x1cfbb8	26	df0e0343b92e8529fbd2a6d20c14d6cfa6ec7370	파사이드 미스트리얼	nul
+default.xbe	va:0x1cfbd4	18	bcf518f8eedcf41c47b4828ffc9ffb63633f42f1	파사이드 미즈	nul
+default.xbe	va:0x1cfbe8	12	3f21445ff310e0354938b96f911ec99431911c9c	폰스타	nul
+default.xbe	va:0x1cfbf8	14	a37a2613871d3291ee535d9bd599348ec8590b74	앨리웁 미즈	nul
+default.xbe	va:0x1cfc08	22	3b480e6bfe6f0c23e04fb4e14440bc376474923b	파사이드 소이얼	nul
+default.xbe	va:0x1cfc20	30	4f1eda0eddb97aa95bf82cea6044fc7cd796a8df	파사이드 앨리웁 솔	nul
+default.xbe	va:0x1cfc40	34	5cb06b7233385d5c3f6066e815d2a316d5375c1e	파사이드 앨리웁 피시	nul
+default.xbe	va:0x1cfc64	12	0122b712c42757fc40421e35a9ba94fef59ac33b	록맥	nul
+default.xbe	va:0x1cfc74	10	a12354219ee6980a92e5e111e163455839ae517f	피시	nul
+default.xbe	va:0x1cfc80	28	42938d0a2a6ca7cbbb49545c2e263993bc236582	백사이드 백슬라이드	nul
+default.xbe	va:0x1cfca0	10	6a424af9bb6716b03d80c826ee29caffcb0c15c3	풀 토크	nul
+default.xbe	va:0x1cfcac	24	c54aaf06d5c74a688bbf886fe4a28d6f04a67e55	백사이드 유니티	nul
+default.xbe	va:0x1cfcc8	22	5d929a3533712a7669f5bf817b0576a60d6dfebc	백사이드 로열	nul
+default.xbe	va:0x1cfce0	22	9238d0e58616981d2ae05beae3247ee3c068b309	프런트사이드 레일	nul
+default.xbe	va:0x1cfcf8	12	cbbed64841b62a036f293ef080c56c4046453c1e	Ｘ 그라인드	nul
+default.xbe	va:0x1cfd08	8	c704e5ec42c8ecf0aa8763b39265ae421796ef43	애시드	nul
+default.xbe	va:0x1cfd14	6	2ba25bfdd981bc0607029075484b2ff0e1750b92	솔	nul
+default.xbe	va:0x1cfd1c	18	9d365dbad1de8194e8ab5d015f3205919e5568f3	앨리웁 유니티	nul
+default.xbe	va:0x1cfd30	36	9a0efb86e3dc78a4936a60a3e3702069a3a9496c	파사이드 앨리웁 미스트리얼	nul
+default.xbe	va:0x1cfd58	26	1966df326b8549a44f1feef983820982cb939d73	파사이드 스터브 솔	nul
+default.xbe	va:0x1cfd74	24	4deb7d5c27c4b0318752f2e5a74afe2c2cbf1540	백사이드 퍼스트	nul
+default.xbe	va:0x1cfd90	28	907a43f7faeeb2e800a2cce3016e0284f1b1a697	백사이드 토크 슬라이드	nul
+default.xbe	va:0x1cfdb0	12	b22099d64326e7293dd932397de9bd4148d872cf	토크 솔	nul
+default.xbe	va:0x1cfdc0	12	6e162a942c6c63ccee18b00733a0e0993285f259	미스트리얼	nul
+default.xbe	va:0x1cfdd0	4	428983a882c6032e7364b89672fb2dd24f0ecd0d	미즈	nul
+default.xbe	va:0x1cfdd8	26	f7e4a891b3a59ea86c9f6e2a8c2352e20b0a13b4	파사이드 폰스타	nul
+default.xbe	va:0x1cfdf4	28	2b85ecb492bd52cb9eb827a5b8a2bcfd51ee0143	파사이드 앨리웁 미즈	nul
+default.xbe	va:0x1cfe14	8	dbf917a16d81b9b7c864ecbbd2ae56d4f85932fc	소이얼	nul
+default.xbe	va:0x1cfe20	16	28d60cc0cdbc8f391d1d24458154017ad17042c1	앨리웁 솔	nul
+default.xbe	va:0x1cfe34	20	7a75310e0aa612cf3444040648e44a482f23fba6	앨리웁 피시	nul
+default.xbe	va:0x1cfe4c	26	622ade922d11100e5dbdfacd700e198cb924d59b	파사이드 록맥	nul
+default.xbe	va:0x1cfe68	24	82c331320660dae7e5fd85760c9f8baab9355c8b	파사이드 피시	nul
+default.xbe	va:0x1cfe84	14	d6a5fcd7e28d1abf5db5ba0130d6ebca4e8c06a0	백슬라이드	nul
+default.xbe	va:0x1cfe94	24	6d1d51d7e5849e8cc9fe54aea3604ff71c491b47	백사이드 풀 토크	nul
+default.xbe	va:0x1cfeb0	10	f38fa40ba7cdda601d0dcd66c219abad2a65624e	유니티	nul
+default.xbe	va:0x1cfebc	8	3711a214fa2a98503a301a300727bea66ce04822	로열	nul
+default.xbe	va:0x1cfec8	20	ff39c3839ac737b137feafca6defec96488bb231	백사이드 레일	nul
+default.xbe	va:0x1cfee0	26	6ba7839fb18204630a1df766de5843b6ec9740db	파사이드 Ｘ 그라인드	nul
+default.xbe	va:0x1cfefc	22	87b96045b8a34356a591100cbb08fce02f031f36	파사이드 애시드	nul
+default.xbe	va:0x1cff14	20	d2a5aa130ab72d82d69fd90db6e6979777961d50	파사이드 솔	nul
+default.xbe	va:0x1d0254	26	2c9cc39783f5a6adf69592cc6a2c2c4f27516952	플라잉 피시 １８０	nul
+default.xbe	va:0x1d0270	24	8b84a4ab0d934cfdddb48309973e46de731744a9	세이프티 뮤트 ５４０	nul
+default.xbe	va:0x1d028c	14	4e17c621038e1a745ba693e5d14772401637adee	뮤트 ５４０	nul
+default.xbe	va:0x1d029c	40	b171888b38b9397ca38ac9ebc8a23e7496a106fe	세이프티 뮤트 플랫스핀 ５４０	nul
+default.xbe	va:0x1d02c8	30	40761c133d226171714c52ecec01f78f5f0da76d	뮤트 플랫스핀 ５４０	nul
+default.xbe	va:0x1d02e8	20	6eec7bfbf7dc35d8abac684258eb2cfd9b361ac9	크로스 로켓 １８０	nul
+default.xbe	va:0x1d0300	22	7124eec98724873b1d042e542d9c9fb6ee60faec	스틸 주드 １８０	nul
+default.xbe	va:0x1d0318	24	8a7e32607c7bb2bd12f2443055dd9255ccda8282	바드믹 뮤트 １８０	nul
+default.xbe	va:0x1d0334	24	fc0e3daec4c37130768a236096863e347e9554c7	세이프티 뮤트 １８０	nul
+default.xbe	va:0x1d0350	22	1054dea626c768d9cd535edce1ba91700ae84886	스틸 뮤트 １８０	nul
+default.xbe	va:0x1d0368	18	9fd190b4b08dadb7611d2f94d2551efd7855a304	니어 뮤트 １８０	nul
+default.xbe	va:0x1d037c	14	b8e5d7563b668115ae9470671f2acf56e1b3d285	뮤트 １８０	nul
+default.xbe	va:0x1d038c	14	b8ebcad29b7159a67e03c01d77f75b437a0dee48	메서드 ５４０	nul
+default.xbe	va:0x1d039c	12	e32e127866c35664317db8a6d5229755823ba86c	가라테１８０	nul
+default.xbe	va:0x1d03ac	14	faced15342a30010a79926b85dadb3167875ac69	로켓 １８０	nul
+default.xbe	va:0x1d03bc	30	0dcb8a8877e30502b83f897705c59aac4794fdf4	메서드 백플립 １８０	nul
+default.xbe	va:0x1d03dc	32	4180112a307bbadf0e9f7990db22e5617b7ae371	류칸 백플립 １８０	nul
+default.xbe	va:0x1d0400	16	5724d28c733154ae8842e103338a4ec07fed1960	시프티 １８０	nul
+default.xbe	va:0x1d0414	24	8ce478057619cfa7a08b48ddde38796354f601c7	스틸피시 １８０	nul
+default.xbe	va:0x1d0430	20	17846ff8d5285705e7c0e8a803ca1ab2584b1a8f	앱스트랙트 ５４０	nul
+default.xbe	va:0x1d0448	16	21f6c390879a4df0cea85e6f57cbfd847d5bfe27	류칸 １８０	nul
+default.xbe	va:0x1d045c	8	5673b2bd33f3c1d3e74b06764ed3adaace5fa831		nul
+default.xbe	va:0x1d0468	6	f9f4bd826117e1322bb4b9c9af87f3436dc7f109		nul
+default.xbe	va:0x1d0470	6	0ba1d822e531d13cf46f1f3a0b0f8432590d82b8		nul
+default.xbe	va:0x1d0478	20	c75fe041f1997f0fe0a4217a17ae0b487ffac2bb	백플립 １８０	nul
+default.xbe	va:0x1d0490	10	87f15b1fc8a41988ad94f9a3ffda908d90422131	미스티	nul
+default.xbe	va:0x1d049c	26	6969ecd272f69e197d293ebcbd87408b1becf1a2	플라잉 피시 ３６０	nul
+default.xbe	va:0x1d04b8	24	5f1505a116c019a3b49d574d1f63a49cb3f783c2	세이프티 뮤트 ３６０	nul
+default.xbe	va:0x1d04d4	14	ca9d35d15a00bd9d90084f71a5a1931fb2d91cee	뮤트 ３６０	nul
+default.xbe	va:0x1d04e4	40	26ca7883a93b6ee57b6bac65c577864c361ef683	세이프티 뮤트 플랫스핀 ３６０	nul
+default.xbe	va:0x1d0510	30	05780db58213a50f0f03252473e08a50eeb5c3fe	뮤트 플랫스핀 ３６０	nul
+default.xbe	va:0x1d0530	18	f20dfe2bf3d881c647e641c84ff51dde105e224b	류칸 바이오	nul
+default.xbe	va:0x1d0544	16	22421c097b0c6f0de219f21353faa0d78bff21fc	주드 바이오	nul
+default.xbe	va:0x1d0558	26	14a629faa17b786897d274068b0ba2458e6d2979	세이프티 뮤트 바이오	nul
+default.xbe	va:0x1d0574	16	e110abb4e09409afe937a419d5ef040e239e21eb	뮤트 바이오	nul
+default.xbe	va:0x1d0588	6	425511a896fa46cde9dfea4befabd72fc7689b29	바이오	nul
+default.xbe	va:0x1d0590	34	51503d33ce9b597b27a2a13f7078075405a505c5	스틸 뮤트 코크스크루	nul
+default.xbe	va:0x1d05b4	36	49075722facdd0048967fdaf416d9121832b5425	세이프티 뮤트 코크스크루	nul
+default.xbe	va:0x1d05dc	26	8b77345c473d79b0082d21e0cc72be9e23d3d26a	뮤트 코크스크루	nul
+default.xbe	va:0x1d05f8	16	95f97ba51c3223269bfbbddf0fcef80c9b7d2592	코크스크루	nul
+default.xbe	va:0x1d060c	20	220c0d501ddcee05f26b80455ce46b91534d5015	크로스 로켓 ３６０	nul
+default.xbe	va:0x1d0624	16	79e0d5d9cd679594cfb7fc41943a7ed5664966bc	스틸 주드	nul
+default.xbe	va:0x1d0638	18	e1028876d79103fd7eb8f65a7e1c6fd7b6d3217b	바드믹 뮤트	nul
+default.xbe	va:0x1d064c	18	5119a28eaf84fc10cf692b92af03dcfe626148c2	세이프티 뮤트	nul
+default.xbe	va:0x1d0660	16	f748c0d2a89f6f778efd7663f9512fe6ce1b7282	스틸 뮤트	nul
+default.xbe	va:0x1d0674	12	29f0dfee2a57ba711700fc09db1c2c8ee59a35bf	니어 뮤트	nul
+default.xbe	va:0x1d0684	8	3a887a546477729aac3aaef06133d7601d4068a1	뮤트	nul
+default.xbe	va:0x1d0690	8	20b15270299bc825bfa7890f08cdb137b19ebd7e	메서드	nul
+default.xbe	va:0x1d069c	6	018d9c84ea7feb65d820c2accd29339358734b36	가라테	nul
+default.xbe	va:0x1d06a4	8	95880de722f2a7a9ea6c3c6d56e060e0b397bf3b	로켓	nul
+default.xbe	va:0x1d06b0	24	d758792906fb23aa4d4417794ffebd21bda2a2e6	메서드 백플립	nul
+default.xbe	va:0x1d06cc	26	7c321bda54e46a83dccc4abd9d05aef3e00f9779	류칸 백플립	nul
+default.xbe	va:0x1d06e8	10	8c712db3df9d0362109538980a486450af64b51a	시프티	nul
+default.xbe	va:0x1d06f4	18	c18f193ffd3e72d301acb6364f00133a835527bf	스틸피시	nul
+default.xbe	va:0x1d0708	20	8ef4c31cb048059c326b737b0338e5291ba77293	앱스트랙트 ３６０	nul
+default.xbe	va:0x1d0720	10	bf9bb6e0be26b8996fe7dd4482820b73e47e3a3f	류칸	nul
+default.xbe	va:0x1d072c	8	36b77c2ec8b1036bb603087a98fd62018758329f		nul
+default.xbe	va:0x1d0738	6	f1a9072c90d4fcae65d9d06c92a291f269a84cdf		nul
+default.xbe	va:0x1d0740	6	fdedf3a87be732cc65512604ea12a558906257e4		nul
+default.xbe	va:0x1d0748	14	8f1eaaec26765f733fe011dc26332f07eeaf4185	백플립	nul
+default.xbe	va:0x1d0758	16	306efbb992495e67bbccb86228365dc2936fb810	프런트플립	nul
+default.xbe	va:0x1d0894	10	b8b4d1d94eaa6b225ded66d91ecd333dd55a953a	어쩔래？	nul
+default.xbe	va:0x1d0934	24	ae390cd7bc9053f0df2923ffecebd8f07a58668b		nul
+default.xbe	va:0x1d0950	36	953c7a98fa2f050bab613f7be332e9f28db82c9d		nul
+default.xbe	va:0x1d0978	26	20328cdaba3a1140bd00329085a84d7de9b78491		nul
+default.xbe	va:0x1d09a8	68	d2f90b3781ff5c6c2a56e33d5429fe1cc40c4bd3		nul
+default.xbe	va:0x1d09f0	38	eb82276f7716fa6dbb5c77ca657e2d489a3442d7		nul
+default.xbe	va:0x1d0a18	38	62c81939759f2c5e090f67030e0a75f105408fc8		nul
+default.xbe	va:0x1d0a40	28	899c1d4e98cb5a9ccedc18e7bd1b2a84b28f3405		nul
+default.xbe	va:0x1d1354	30	1ebabe805fcdceb1568986b08bf079f1d0891cfb		nul
+default.xbe	va:0x1d1374	26	bfbb9a780932bba8ce905ccb24ad26a87bf07451		nul
+default.xbe	va:0x1d1390	26	0c70d4534feff24de05a7c2e1b14c41be6d9d411		nul
+default.xbe	va:0x1d13ac	28	842cb7f8c4b6ab89e5b9cc024e67d28607ee5a21		nul
+default.xbe	va:0x1d13cc	32	0f2ba2562695b20d1d8e8e53ffafa57270ab3e2d		nul
+default.xbe	va:0x1d13f0	34	63746158a921e779ae409354726cdaf7aa69518b		nul
+default.xbe	va:0x1d1414	34	a3092c3ae72e3266f16956a1c79a200a89c4952e		nul
+default.xbe	va:0x1d1438	22	8c02493913dbd2197f434abcb570e4182eba0d7a		nul
+default.xbe	va:0x1d1450	22	00aa1bc38404a363417d9d37f73e2c081b0903cb		nul
+default.xbe	va:0x1d1468	36	71c71852595d162e85574a1157cc5ec821070f74		nul
+default.xbe	va:0x1d1490	46	07117162e600319257213d3ec97235d18d61e75c		nul
+default.xbe	va:0x1d14c0	40	d6b0c46efb231f2c27ade809055d710ecf813a5e		nul
+default.xbe	va:0x1d14ec	32	22e592b1127cbe749c6d36b252bedc9f8e447d63		nul
+default.xbe	va:0x1d1510	32	b82f97fd5d2602c85db4539a516e5d2475e0f34d		nul
+default.xbe	va:0x1d1534	26	c04bcdd0f028a0c7dd43dccc0ebe6fee2e153ae6		nul
+default.xbe	va:0x1d1550	48	6e7457d89ffca81b333f581fedd9a77d5a524557		nul
+default.xbe	va:0x1d1584	26	07fe76ff61efe859a736eb8d90fc367002087461		nul
+default.xbe	va:0x1d15a0	86	540b340a9d8cf00791cc8c17955df4d7d655d949		nul
+default.xbe	va:0x1d15f8	46	1cddea333c28eed42614e4284ac626ec1b9bd6c2		nul
+default.xbe	va:0x1d1628	12	4b94df38570c0ef5476c981c3f24019152e77d47		nul
+default.xbe	va:0x1d1638	12	dcd42de0e341ad3f6e4eb49da41ae13ef9a1a773		nul
+default.xbe	va:0x1d1648	14	b942922e3a3b2e999b3d4a2271c2ae2ea2b6987d		nul
+default.xbe	va:0x1d1658	18	5d0ee644f8bcaa23ef5be50a8d8ba8e6f4a77d5c		nul
+default.xbe	va:0x1d166c	16	16e971f03b1310215b9f91efe2b780dbacf7aae5		nul
+default.xbe	va:0x1d1680	20	763ee53fef9b49c023d8d3d52f8edeb705c7e861		nul
+default.xbe	va:0x1d1698	18	ca30c3aff60e7b901f5d9f2cbc56c181c96cddb9		nul
+default.xbe	va:0x1d16ac	20	0ce1b9d669c5dd4ecc7144f85ee06a875537fecb		nul
+default.xbe	va:0x1d16c4	20	328dac3584e4fae8832c794d9e60cf04e8a01d46		nul
+default.xbe	va:0x1d16dc	26	23bbb97c07c874abe8f65fe406779b3d43a66a4f		nul
+default.xbe	va:0x1d16f8	42	ecbdf5b433379e01b9a5e25a41ed3087aa457d0a		nul
+default.xbe	va:0x1d1724	18	c5549631b848cb34ea2baf8e5e94ff9aa194ff18		nul
+default.xbe	va:0x1d1738	30	69309955c1a048168bd00c815b164b6149459a41		nul
+default.xbe	va:0x1d1758	20	7bd413f05df50dd25176dbc46b12bac0efca76d6		nul
+default.xbe	va:0x1d1770	38	374ddecd99dce67ff420eddfa897feece7eaf135		nul
+default.xbe	va:0x1d1798	32	b5897502954ee80727e989ecd0be7571751c6b12		nul
+default.xbe	va:0x1d17bc	46	afc391e5fad3a6e10c580a6a7723943031bf9445		nul
+default.xbe	va:0x1d17ec	52	9659a297ee9dd043c83e08863e96dabbe867a975		nul
+default.xbe	va:0x1d1824	28	7aba7ab4a205caf52c9c3a5c6274296a3de9cf62		nul
+default.xbe	va:0x1d1844	32	854b0ad04b4eeeec8f704683dcae2041f4dbe7ff		nul
+default.xbe	va:0x1d1868	12	ffaad05e681b8f1adbce4afc9f297d847eddda51		nul
+default.xbe	va:0x1d1878	22	656c48f95aac5639af02eded58925e7f1515d495		nul
+default.xbe	va:0x1d1890	26	7f3474f8e4bc5b25d824cb474b1c1e571732b27b		nul
+default.xbe	va:0x1d18ac	24	15864702a02b70171045c2a62d2b861e4804ec02		nul
+default.xbe	va:0x1d18c8	24	f3aba2f674f00a7d4a0517227dd8ebe26803bfe3		nul
+default.xbe	va:0x1d18e4	24	1e1981ee000313ad37014f065104f81d4f491ee8		nul
+default.xbe	va:0x1d1900	82	8511ec3191c59dddc07cff559e5e8bd117cc70b8		nul
+default.xbe	va:0x1d1954	40	e06e5e03364b7196c7b9b6d9ba8f1962078b5e50		nul
+default.xbe	va:0x1d1980	40	7b45e7ff8791fb4c325fe9e7eb698883422ff494		nul
+default.xbe	va:0x1d19ac	60	e4b2a971fc031e670ccedf17995d27e3d1e9e98d		nul
+default.xbe	va:0x1d19ec	44	521fd182a916b13554fe6ec127c003d527840563		nul
+default.xbe	va:0x1d1a1c	48	b1412e95aa60ad2e201b18c8cac592526094ab34		nul
+default.xbe	va:0x1d1a50	30	b1943beaaa95a9f84799071cfc234a1728407368		nul
+default.xbe	va:0x1d1a70	28	d5fc21b440594e33f8b2a274bb161f7ed4a93710		nul
+default.xbe	va:0x1d1a90	30	fa4371fbf3f241423cd788274c473913cfe6f15b		nul
+default.xbe	va:0x1d1ab0	28	44d6fdb336489c7146aaf985833838104d2d5019		nul
+default.xbe	va:0x1d1ad0	14	0e8c931595b994eb5f2b0fa816be3c41289442c1		nul
+default.xbe	va:0x1d1ae0	14	b6f4875e25a9ae40a559c57cc50f139974e37763		nul
+default.xbe	va:0x1d1af0	14	cbdb6278471aa2f6e89ae2dda0b2d6bb38b28ef9		nul
+default.xbe	va:0x1d1b00	14	4ee53287d4edd36319283111354ab0dff6f103cc		nul
+default.xbe	va:0x1d1b10	14	fcb50fdb580ca2e34d35698ef73c6d4505d56811		nul
+default.xbe	va:0x1d24c8	16	796bb7ae003190af010de31c9c2dce1027967cd5	차고로 돌아가기	nul
+default.xbe	va:0x1d24dc	18	fe902fc117d04e15e2349db9c6e434faa067cac1	타이틀로 갈래？	nul
+default.xbe	va:0x1d2674	8	73452b62b7dec8beadc2deeea8b06c333c704af7	아이템	nul
+default.xbe	va:0x1d2680	12	ba934c7db92a5baaa8031a269602a4f83aa01179	스프레이 캔	nul
+default.xbe	va:0x1d2690	10	7c99d7c1de43b40adf4b4ece3e37d043e2989601	체력	nul
+default.xbe	va:0x1d269c	6	218806ee007abfc0b63279960560de1e0e3f877d	점수	nul
+default.xbe	va:0x1d2744	18	7046f308679ee65e23b4bcd8a568a65ed4e73d83	게임을 시작한다	nul
+default.xbe	va:0x1d276c	26	24b880239fd34bd2e42a2c859df7a3e4b2cd932c	Ａ 버튼으로 게임 스타트！	nul
+default.xbe	va:0x1d29b4	10	872cd1d53eb538103167d8df382a6a62f837b1d1	지도 회전	nul
+default.xbe	va:0x1d29c0	14	8a7302d4bdf4aea913787b6b06b930d8975e7e0d	지도 전환	nul
+default.xbe	va:0x1d29d0	14	7a2d50bcd2ef718c9b018393953fce9cb7c6e857	ＧＧ 수첩 보기	nul
+default.xbe	va:0x1d29e0	6	44eb36e715cc59a22319ec6b0de20b78ae2fd14c	저장	nul
+default.xbe	va:0x1d29e8	20	6f17794c81c3d4214fd658a98a0a3af71f344a9c	캐릭터 체인지	nul
+default.xbe	va:0x1d2a90	18	c9345730d7b6e287538f9a731c302fccec40eb8d	처음부터 다시 하기	nul
+default.xbe	va:0x1d2c8c	16	4630c365585b49f115ac6298f0102323bdb3ff3d	Ｂ로 돌아가기	nul
+default.xbe	va:0x1d2ca0	46	a4a9ed226c80f21b83be0597edf338cb6e9a40ee	이모털즈의 그래피티를 전부 덮어 칠해라！	nul
+default.xbe	va:0x1d2cd0	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3	포이즌 잼의 그래피티를 전부 칠해 버려라！	nul
+default.xbe	va:0x1d2d00	23	b6b3ee5bc44f0ae89a65a43a69bf70b0b9fbfdd5	트릭 콤보로 50000점	nul
+default.xbe	va:0x1d2d18	32	9d0eed479c462815397ca28671f47ccd4a2c0713	전선 타고 시부야 터미널 한 바퀴	nul
+default.xbe	va:0x1d2d3c	30	e274faf19b5120f2654c37da3968fec4f6447e80	간판 ３개를 연속 월 라이드	nul
+default.xbe	va:0x1d2d5c	25	3e475791a05e531fb015c0f0df5b1295301180b2	에어 콤비네이션 x５	nul
+default.xbe	va:0x1d2d78	29	b3af0a719882f9fef02202b624ffd6a61c1fd5ff	그라인드 콤비네이션 x10	nul
+default.xbe	va:0x1d2d98	44	af014e63261a4f30d6d318fbcb3f2b2227cc9136	시부야 터미널의 그래피티를 덮어 칠해라！	nul
+default.xbe	va:0x1d2ed4	25	a9ac652a93f845437a967b96105b069872fdaa5c	"동남서북동" 게이트, 그라인드	nul
+default.xbe	va:0x1d2fa8	22	1d42340949634c9b8f8ff20f231bed42cfec7d37	"다루마상점가" 게이트	nul
+default.xbe	va:0x1d321c	24	0abb8c80517ef458d7b79044170f1f31dc081eed	왕의 광장, 원을 그리며, Ｘ 지점	nul
+default.xbe	va:0x1d3238	12	561c3cf946ef713ab388ea24a60885dd548dbc62		nul
+default.xbe	va:0x1d3248	16	510ff9ecdd4c1e28ac7634215fd382f1f879e38d	６５ 트릭	nul
+default.xbe	va:0x1d325c	24	6b4ca1f274d9238d569801578165b059b16b9634	월월월월월월	nul
+default.xbe	va:0x1d3278	10	4b45b61b10576e230f2e7ee3b523f9d817312e1e		nul
+default.xbe	va:0x1d3284	16	48d674dda544eda906a4aaba64c26904ff682321	７０ 트릭	nul
+default.xbe	va:0x1d3298	27	bd023a3458517c7140180f93fdd3bb0b42a5281d	에어 콤비네이션 x５	nul
+default.xbe	va:0x1d32b4	26	1093bf6c643e75cc030e10ded75526737de07e21	레일->바이킹->레일	nul
+default.xbe	va:0x1d32d0	10	a2f4ef5303f6532d5ced1703272907f288815ebf		nul
+default.xbe	va:0x1d32dc	27	dbce45c277be2fe3c209c7d2948222294c6213d3	에어 콤비네이션 x６	nul
+default.xbe	va:0x1d32f8	33	2cc443e256660cc70e27eb38c6e157e252e97d4f	그라인드 콤비네이션 x５０	nul
+default.xbe	va:0x1d331c	22	763ed5529ffc632e187384ec7253d21fd4656f53	동남서북동, 그라인드	nul
+default.xbe	va:0x1d3334	16	e8ea46a930d78cf233ad9b1accf9a77c8844f898	４０ 트릭	nul
+default.xbe	va:0x1d3348	33	ba86d6c4a63fde44239d08e2e21b3122bcb35766	그라인드 콤비네이션 x１５	nul
+default.xbe	va:0x1d336c	36	a3649752d3183962830f36c81b425c872d2e2921	９９번가를 그래피티로 칠해 버려라！	nul
+default.xbe	va:0x1d3394	28	edc1a4ca070a31e2f88744fdfccaee72b79558bd	도깨비 철탑, 그라인드로 올라	nul
+default.xbe	va:0x1d33b4	18	a30c335c98c1a1a975dcda10e2ef3913d3eb0f98	１００ 트릭	nul
+default.xbe	va:0x1d33c8	27	a82ea39355351c9e41a15696d78eb53ba405c44a	에어 콤비네이션 x８	nul
+default.xbe	va:0x1d33e4	42	c40c48180b6220603de3dc5ea4c83c12ee76d29b	스위치를 찾아내서 시한 장치를$n멈춰라！！	nul
+default.xbe	va:0x1d3410	10	465e0c51ef3b921ac9c1a6d64004bf1e40f6d118		nul
+default.xbe	va:0x1d341c	16	ad3e60ffa9fa816a2b4dce057d9e4a1e10579590	５０ 트릭	nul
+default.xbe	va:0x1d3430	10	c04e568ba8a6be73692f597c7233e9e05e28bf28	다루마 문	nul
+default.xbe	va:0x1d343c	12	5283c7a863100bfc7bcc96b679dbbb57f7599720		nul
+default.xbe	va:0x1d344c	16	f4238aedc97d4d83a27b51af00c00daef82c3e14	６０ 트릭	nul
+default.xbe	va:0x1d3460	12	814c42c5f4018d60b65d7e5f75b8b5a9d1269fbc		nul
+default.xbe	va:0x1d3470	16	2f5634841621e58fbe1b2fc5ab1b641710fc4737	４５ 트릭	nul
+default.xbe	va:0x1d3484	38	5ef7b320935b3da554b18c430d74eaf62a03735c	스위치를 찾아서 그래피티를 그려라！	nul
+default.xbe	va:0x1d34ac	22	8d1c6389ae7958603f944fc311c2cb4a98864069	굴뚝 １, 그라인드	nul
+default.xbe	va:0x1d34c4	10	24aed3c370ed23435f0c4553e5453217752111db		nul
+default.xbe	va:0x1d34d0	16	5381836ba26b1f54d26a38e95c885610d969422b	３５ 트릭	nul
+default.xbe	va:0x1d34e4	38	3aec794b01c65af04ca8af517e155713770d08d9	롯카쿠다이를 그래피티로 칠해 버려라！	nul
+default.xbe	va:0x1d350c	40	2a8681a39de07d0b6933bb912e168da05d975d3a	크레인 육교, 그라인드, 땅->꼭대기->땅	nul
+default.xbe	va:0x1d3538	12	1587a568f670ba13a349d7d90d245e161f097816		nul
+default.xbe	va:0x1d3548	16	b13aa1eaaea6b3ac1e63b70d74130b46d9d7afe0	５５ 트릭	nul
+default.xbe	va:0x1d355c	33	7e9bc4afa72910160f3b5523b76aa9c3a3b0d41b	그라인드 콤비네이션 x２０	nul
+default.xbe	va:0x1d3580	48	0ad51df914cc7b479dffcb12097506e74c656b76	이모털즈의 그래피티를$n전부 덮어 칠해라！	nul
+default.xbe	va:0x1d35b4	28	5f8e56fda66464d24862a4b82d320699aa9da135	큰길, 그라인드, 끝까지 내려가기	nul
+default.xbe	va:0x1d35d4	10	d8cfec3d6916a7f434a6666dfda15f414a298da4		nul
+default.xbe	va:0x1d35e0	16	3165b307bc4ca9c4a2c03d0f1a7392ea0456444f	２０ 트릭	nul
+default.xbe	va:0x1d35f4	38	0c3939092defcca892cd9437fe14715575aeece3	도겐자카를 그래피티로 칠해 버려라！	nul
+default.xbe	va:0x1d361c	36	ebb26c8a186209594cdcd57ab95502057839b886	그->월->그->월-> ～ ->->하수로 앞	nul
+default.xbe	va:0x1d3644	10	d75f987c6c63b61c45eca39acc6a329fbb3ae5f7		nul
+default.xbe	va:0x1d3650	16	6415e70e539a09001d285d3ef93ec20932fe703b	３０ 트릭	nul
+default.xbe	va:0x1d3664	27	c2565c83aaca7ebb3bf225c3ba24a3db108043d4	에어 콤비네이션 x４	nul
+default.xbe	va:0x1d3680	48	ab605baeebac8e514e2d5cad0df98597da313806	포이즌 잼의 그래피티를$n전부 칠해 버려라！	nul
+default.xbe	va:0x1d36b4	33	b97c67c245bc112b84849203d531f6c2911ae646	“승”지붕 x１３, 땅에 닿지 말 것	nul
+default.xbe	va:0x1d36d8	12	1961ea1429a9c127bf80cfb51fa30ce551f4ab44		nul
+default.xbe	va:0x1d36e8	16	290da6f5039e31c00d9b689ef345db6ccd508e91	２５ 트릭	nul
+default.xbe	va:0x1d36fc	27	fce9f829ceb603477524dda0141b65608afb3912	에어 콤비네이션 x３	nul
+default.xbe	va:0x1d3718	33	605a55b91e91afcef52fb8ffe1d6a543411d7eb8	그라인드 콤비네이션 x１０	nul
+default.xbe	va:0x1d373c	46	5416548d66e64e68d20f1927fba0cb1bb8502942	시부야 터미널의 그래피티를$n덮어 칠해라！	nul
+default.xbe	va:0x1d7c10	10	1b9f0d6da30539b0a26d562594ff51dd599c9fc9	Ｂ로 복귀	nul
+default.xbe	va:0x1d7cac	10	15195fef530caaf0076738beb637186883761e08	그라인드	nul
+default.xbe	va:0x1d7cb8	8	3d01472f4f1d411ea8667f5f428e12597a4fa70b	코너	nul
+default.xbe	va:0x1d7cc4	6	53b954c0f9763da87734e81b06b0334b91d82a82	가속	nul
+default.xbe	va:0x1d7ccc	12	768dfbf1e838fef6e2a3a7a553d6511558911ef4	그래피티	nul
+default.xbe	va:0x1d7cdc	8	2a9f0a31820473e69fec35f09582bb7e3d43f197	스프레이	nul
+default.xbe	va:0x1d7ce8	10	351a8db138a80f1cc7ea92a1ceabe5da3583199d	Ｇ스태미나	nul
+default.xbe	va:0x1d7cf4	8	7e75c7c909de19528e34d09290ace33169e5e68e	스태미나	nul
+default.xbe	va:0x1d8558	34	7f7a632dd855b7447dadb3fc4dcddb339a8c4ec6	트라이얼 미션에 도전할래？	nul
+default.xbe	va:0x1d857c	34	061d83d17f5a61949f747d54aa6a44845d6f6dbb	차고 파크의 음악을 바꿀 수 있지	nul
+default.xbe	va:0x1d85a0	30	a1a024bfee4636e0a5e1aa484983762fd576960b	그래피티라면 여기지	nul
+default.xbe	va:0x1d85c0	34	d1d6692443a9807ba0dffd48cb3d5291c7ce523f	기본 액션을 내가 가르쳐 줄게	nul
+default.xbe	va:0x1d85e4	36	81a8afa0dca147e9dc51c1143255d14f300cb0df	플레이어 캐릭터를 바꿀 수 있지	nul
+default.xbe	va:0x1d860c	40	cb28d6d0a15a5416e757463a24082c5b32d2c013	게임 저장과 여러 설정을 하는 기능이야	nul
+default.xbe	va:0x1d8744	16	1794bf66ae91a6337c4fadf0fd670992bdcc2efc	제트 플래그	nul
+default.xbe	va:0x1d8758	16	c6c52176993d7a9b4de375f583d3db30bac104de	제트 대시	nul
+default.xbe	va:0x1d876c	12	a854f0f427cfc8b927b0e2959166aacb70a136f1	제트 테크	nul
+default.xbe	va:0x1d877c	20	330b9c16846bf07ccfd8bb6d6a4a7ae78140f573	제트 그래피티	nul
+default.xbe	va:0x1d885c	14	4676ccfa527b44351e4d2e3ecd386173e5255f36	ＳＥ 음량	nul
+default.xbe	va:0x1d886c	16	fd697fa0833b2348ebfb9c242ce99cb7c8c89873	ＢＧＭ 음량	nul
+default.xbe	va:0x1d8880	16	b90be065d31a5647ca90bd96058a302f5c70fea1	진동	nul
+default.xbe	va:0x1d89e4	12	a7126575a483335e9d95c6df095e9d4d4c01df14	연속 에어	nul
+default.xbe	va:0x1d89f4	14	bb866486aff6feb2e8316da2674fcd4c7193e384	록 대시	nul
+default.xbe	va:0x1d8a04	42	2b82298dde51769fe94e6b9224991a3723935554	전봇대 그라인드$n      ー스텝 업 편ー	nul
+default.xbe	va:0x1d8a30	12	d475102b64f100b2dab9013c5f12d119c31fc21a	하프파이프	nul
+default.xbe	va:0x1d8a40	10	1463e10c24c78c3afc24cee2482daa7902ba09cf	수수께끼 테이프	nul
+default.xbe	va:0x1d8a4c	26	e901c79e07496f6842e757d46b9b5fb4822a1a2b	그라인드 콤비네이션	nul
+default.xbe	va:0x1d8a68	48	53eb4e6ee2940b69b6c696678d715a5548ff00bd	그래피티 그리는 법$n      ー스텝 업 편ー	nul
+default.xbe	va:0x1d8a9c	44	f894a12777f1c6ca9bc483993e0d1e912bf91fcf	경관과 배틀$n      ー스텝 업 편ー	nul
+default.xbe	va:0x1d8acc	14	08c7c45049f36b0e9577bfe1a9335817c70b7ed6	전봇대그라인드	nul
+default.xbe	va:0x1d8adc	6	e9ee517acf5076dfbcc55af67f94aef0e96342fb	턴	nul
+default.xbe	va:0x1d8ae4	34	4d38803bec7bff21b912e97e948d75fc8705544f	경관과 배틀$n      ー기본 편ー	nul
+default.xbe	va:0x1d8b08	8	f9ae71642f1b3e247ba82592c2415d1a1c046fac	기본조작	nul
+default.xbe	va:0x1d8bb0	16	02eec574ea160299a9444012b5907dd0a8fe692b	연습 １３	nul
+default.xbe	va:0x1d8bc4	16	d24064ced6aa24a107abb29ebd0facc8e71ae1dc	연습 １２	nul
+default.xbe	va:0x1d8bd8	16	c384cbcaada6e0b8ee6d2260c5e523ff8ac86e26	연습 １１	nul
+default.xbe	va:0x1d8bec	16	74e9dd22a7aa6e7297a4f42a405720d6595dacfc	연습 １０	nul
+default.xbe	va:0x1d8c00	14	946445d9d67b3fb183bf6b69f7eb43275f5ad0c4	연습 ９	nul
+default.xbe	va:0x1d8c10	14	617a22b1c9ab1290f0ca55af54475148e4ab352c	연습 ８	nul
+default.xbe	va:0x1d8c20	14	3823f003468e65dc84fe4c5fe1a47754dfec8751	연습 ７	nul
+default.xbe	va:0x1d8c30	14	4ceafd2f745291d4e69cf1cdfcded4c19be30435	연습 ６	nul
+default.xbe	va:0x1d8c40	14	c560a9a3c8a934fa9d7d318d689084026f283118	연습 ５	nul
+default.xbe	va:0x1d8c50	14	b7a5e635ed3558fc3552470851992c49202a7685	연습 ４	nul
+default.xbe	va:0x1d8c60	14	674e99414ba6adbbd2a6c27d62ed20072754d83f	연습 ３	nul
+default.xbe	va:0x1d8c70	14	0b66b27f73c75ec4a2399c61c4777b489902dc12	연습 ２	nul
+default.xbe	va:0x1d8c80	14	16ef8558fee589d11f742c8ee6fe34c789257dcb	연습 １	nul
+default.xbe	va:0x1d8e4c	32	d2c3f0f8d86d28395a2cd6568a38dd713ac483c2	데이터가 들어 있는 곳을 골라	nul
+default.xbe	va:0x1d8e70	22	29835c523e39245e5ccc8361c0a9cc2514cee79c	저장할 곳을 골라	nul
+default.xbe	va:0x1d9068	14	3e81bd7a5fd8f23abe60587fcd94c36714a24542	설정 바꾸기	nul
+default.xbe	va:0x1d9078	16	9ec8d71d93ea050e4d75b6107a28b24fdb4ab84d	게임 저장하기	nul
+default.xbe	va:0x1d9938	16	cae87e7cbe56eaf1c24414474090603fc39ac39a	아파도참아	nul
+default.xbe	va:0x1d994c	16	feea3f8ab486f90b43cff63607c3630178abfd7d	슈퍼 모타드	nul
+default.xbe	va:0x1d9960	8	c1b9a72918b6f26fa5e1a1ddf4d3c180e7f4124f	헬륨	nul
+default.xbe	va:0x1d996c	20	3e99804a4e3f486aea4a6d4069312b008a585d6f	티에프아이에이치	nul
+default.xbe	va:0x1d9984	10	52f3bc9631310a76b34fc79436100d675fbfb8ad	세일 투	nul
+default.xbe	va:0x1d9990	6	a0df36e3f22f902c28701de13db8e6e55087f030	래드	nul
+default.xbe	va:0x1d9998	10	7bee72e3c290ae116aaba6fe1087ae1a4639bb30	다이스케이	nul
+default.xbe	va:0x1d99a4	14	5490d7405edf8522e0362015a13ced1774474e2c	러부운부운	nul
+default.xbe	va:0x1d99b4	6	c25d125ad3ffbae6e3c8f9c2a1ec1948f22edac2	메갈로	nul
+default.xbe	va:0x1d99bc	16	f4495daf93133cb8947cdcd7e8a562f150178f4f	울트라 박스	nul
+default.xbe	va:0x1d99d0	18	f23bb2009c1be7b040b00731b69ff0de24f9634f	트랜스페어런츠	nul
+default.xbe	va:0x1d99e4	26	70f02ec0ad78c4e5275d118fd4f7b05907e5bfde	자연의힘을표현	nul
+default.xbe	va:0x1d9a00	4	9d2f1548ec1ce6bba2a54c0a9c503ee608cb27db	코즈	nul
+default.xbe	va:0x1d9a08	6	574d771e6c45116270c8995269cd30cdd1704065	엑타	nul
+default.xbe	va:0x1d9a10	20	8f65c3dcb61af24c0cd753ba5ab76c1072870fa4	시작될때의뜨거움	nul
+default.xbe	va:0x1d9a28	8	2d7a20b410be78df0df662b8063a5dd478974c73	이블	nul
+default.xbe	va:0x1d9a34	20	13d8e2d076a56635fea474b7102cb27be1aab6dd	뽀글뽀글한느낌으로	nul
+default.xbe	va:0x1d9a4c	18	bf53f4f167a789e5ed13af47bb8dc216e824735b	들쭉날쭉한조각	nul
+default.xbe	va:0x1d9a60	18	2acf34095c82d7198de44fae59636cd969f6c7bb	도쿄덴토	nul
+default.xbe	va:0x1d9a74	24	f302929e50c52645eafe0241b58ae0c08c6d1cab	우락부락한턱이엘레강트	nul
+default.xbe	va:0x1d9a90	18	1fc7c9bddc6b7a4ff8914e298f26f9b7e0bca660	칠칠 피스풀	nul
+default.xbe	va:0x1d9aa4	12	22435d2d6b843c93f567de33c561bc217a70c21b	안드로메다	nul
+default.xbe	va:0x1d9ab4	20	48089074491821425357b189b8d29cd6330ff5b2	차이나 신드롬	nul
+default.xbe	va:0x1d9acc	20	b20562d9b87471a64c3ea31c773a439588fd0c71	스페이스 로드스터	nul
+default.xbe	va:0x1d9ae4	12	73cc7fefe271fd40ebb244e4c75c35edef7987da	파워업	nul
+default.xbe	va:0x1d9af4	10	09cfc0fb241b1cd3ef190da19294c3681f22e060	다윈	nul
+default.xbe	va:0x1d9b00	4	9758362fb61ea509fec31290580f2c24a4673325	셀	nul
+default.xbe	va:0x1d9b08	14	ac37db201427d4016d4106effb40855f40c5bb01	팻 비츠	nul
+default.xbe	va:0x1d9b18	6	7a019c167d4d4e5844d47901c6abe06a1a5223f9	치즈	nul
+default.xbe	va:0x1d9b20	6	1daabafd90bfc1baf6f10fc2c0e714c1b87ac668	인도	nul
+default.xbe	va:0x1d9b28	22	1254b552134db19d30c299c9569e689893a9fd68	콤플렉스 블랙	nul
+default.xbe	va:0x1d9b40	16	25eaa4370cf9fe3379ff0b520e2005d95f15ad3f	노 클리어 아웃	nul
+default.xbe	va:0x1d9b54	8	1c491d11c6115dbd8fa6a6d6b7c833aa78a2b28e	쓰오그	nul
+default.xbe	va:0x1d9b60	24	9ebba88ff2ac21a112b44eba6b1f8b71dfcfec70	파충류계인류	nul
+default.xbe	va:0x1d9b7c	30	101705fe3223ce9f63190a39f9844f0d626da90e	눈에안띄지만뭔가셀것같다	nul
+default.xbe	va:0x1d9b9c	32	ad5cbc0d2e5ec4a333cf5b4949827fcf4cc756a4	밤비 크래시 선더 하나코	nul
+default.xbe	va:0x1d9bc0	16	98798f710093bb9f979ae83353e9d2189c225a96	매운맛한계	nul
+default.xbe	va:0x1d9bd4	24	9f3261b24a4715de73c83ee4314dcab8ac08fae4	소닉원격공격	nul
+default.xbe	va:0x1d9bf0	16	399459da06eb5c107eff9c5e671857e1dc6baad9	어디에든그릴게	nul
+default.xbe	va:0x1d9c04	12	022782ff59ce23ce0ecee7b6905ef2725303786a	무서워무서워	nul
+default.xbe	va:0x1d9c14	10	f2013e608c531b68468ff306888bf251c1f2f8b6	지하세계	nul
+default.xbe	va:0x1d9c20	14	ac9047e2635e5ce893902254c2a0fafe54f8465e	이계로의구멍	nul
+default.xbe	va:0x1d9c30	28	22834f915e4ce705c4c22bdf1fd80c8f66092c6a	잠깐저기까지다녀올게요	nul
+default.xbe	va:0x1d9c50	8	bdfdaa778652bf1fbf8a8951ff65611474bd4a2e	블레이즈	nul
+default.xbe	va:0x1d9c5c	12	e2550386816e839eb49f4b97ed606f4c82f08546	시네시네단	nul
+default.xbe	va:0x1d9c6c	28	a91c310cea59611e63c151c8abc0fe6cca33df2a	그거랑그거안떨어지게	nul
+default.xbe	va:0x1d9c8c	20	101cd4f9f3c9880b3d6add1dff327feeabfed360	저스트 라이크 댓	nul
+default.xbe	va:0x1d9ca4	16	83daa188001586f7b4c174e23942c02076776bf4	리젠트바라보기	nul
+default.xbe	va:0x1d9cb8	32	3f2645f1ba341445c0083ca75492b2cfa9c10703	과즙２퍼센트로가득	nul
+default.xbe	va:0x1d9cdc	16	376d9ede5429a8d61a57f5c53e31ff2abf4cd5c4	코스모를느껴	nul
+default.xbe	va:0x1d9cf0	6	1400ec85785d7011d519e9d8f8d34af4ed8b6b8b	메이드	nul
+default.xbe	va:0x1d9cf8	14	1f4030acc9723d61e1d8217f8668ba6567890f79	버블 레터즈	nul
+default.xbe	va:0x1d9d08	26	1580265cc76188961616e59f2119ffcff395073c	세살버릇여든까지	nul
+default.xbe	va:0x1d9d24	32	eb81ec419fd79ccdc3b042b0d853845de385850e	록혼넘치는그래피티	nul
+default.xbe	va:0x1d9d48	24	6cf8be6b630a3b4d9d79ff5d181ee8411ef114ef	베에이이부우마아안	nul
+default.xbe	va:0x1d9d64	12	c08faffdc54a8274ea3ffb990509b45047d77225	디펀	nul
+default.xbe	va:0x1d9d74	14	351be71809ec560a23cc11f2a17b37329c1d1f36	유아르에스	nul
+default.xbe	va:0x1d9d84	22	f903d6cc122975b34ce1024110189b3b2f749271	방해하지말아줘	nul
+default.xbe	va:0x1d9d9c	14	3130752c95ff621fe0dd21c26cc86628966ab5f0	슬라임 보이스	nul
+default.xbe	va:0x1d9dac	24	b4b73d48ff46ec5298764fbc8b6615b0b9ca7bef	천고마비의가을	nul
+default.xbe	va:0x1d9dc8	18	93b030e13bd8a3e191e6c6d687df351862f22d84	주사놓아요	nul
+default.xbe	va:0x1d9ddc	6	0b0e9ebfd2dbadca3b50a1d6264321fd549a9e41	테크	nul
+default.xbe	va:0x1d9de4	10	ba424aa69ab0685566b3acfbfe9dc810254f24b1	처음으로	nul
+default.xbe	va:0x1d9df0	10	4484fd29ad8dfd7a47ace696f768b2ab70cc3f8e	앗톤다	nul
+default.xbe	va:0x1d9dfc	28	ec9f1cadae279c23251a3cee10230dcedbcbe6d1	냥이랑같이반짝반짝	nul
+default.xbe	va:0x1d9e1c	20	04a377e2d7680131171d450bb214bf1e857a5fd2	빙글빙글슈비빈	nul
+default.xbe	va:0x1d9e34	24	ce9726b2500560baed07feb25dfd1c0c705067e8	불꽃의아프로짱	nul
+default.xbe	va:0x1d9e50	22	422aafcc405a2427bd3b4a5dcac6539c074ecf66	아름다운보디라인	nul
+default.xbe	va:0x1d9e68	14	5c1e04222d9ec74b337b58dcb614b64812ea78fa	비비스타	nul
+default.xbe	va:0x1d9e78	12	4754e6f12844b7863512d672c10c04a395eb1f10	펌프 아웃	nul
+default.xbe	va:0x1d9e88	26	14d0de56ebebc0c040862fe2cf4c0108ccbfbccd	골드금붕어피시	nul
+default.xbe	va:0x1d9ea4	14	697237e15494f0a2410bf257dbf90a624d9494f8	가우가우고붓	nul
+default.xbe	va:0x1d9eb4	20	43b2cc143a4977949ee0b87eb3dfcdff8b1b0bec	거기좀비켜줘	nul
+default.xbe	va:0x1d9ecc	22	613e41e4e4ecda9a927b8cc05c42b84a2d62d40d	마이요마이요의사건	nul
+default.xbe	va:0x1d9ee4	16	78d4356e8b959d38b20c75568d0e45202c53efd9	우게슈룸	nul
+default.xbe	va:0x1d9ef8	24	1afe6e81208fa1b24eaa62f2158239c0e9acd0da	위험도슈퍼Ｓ급	nul
+default.xbe	va:0x1d9f14	28	504fe6726b0d9f080d61b9f58216d70f96112772	초합금슈퍼두뇌	nul
+default.xbe	va:0x1d9f34	16	5696f6f8a5feaffd96a25a0c8084b8a6dcf00884	리에리에 드롭	nul
+default.xbe	va:0x1d9f48	16	ae3f2bc97fccc71a371bdee5b120e051fd6976b2	러키 하니엘	nul
+default.xbe	va:0x1d9f5c	10	4091a89fbe2c1e4ee4d456ced79ccaf31ce734fb	위그 태그	nul
+default.xbe	va:0x1d9f68	20	c26772f4415cb16e34ad9d1085cdfbe7d5437573	웰 잇츠 오버	nul
+default.xbe	va:0x1d9f80	16	0ea422bdea83d8ed5163594d25956a641a016276	쿠반아저씨	nul
+default.xbe	va:0x1d9f94	8	e09a2a0bc536c0df6c167041b855fe804cc65dd2	차슈	nul
+default.xbe	va:0x1d9fa0	32	517a75ebe21c6d8da5d6461518a41c34280c44b1	감염력강함오피엔	nul
+default.xbe	va:0x1d9fc4	14	b8f520976854ccdf9d06b9ac3f4371052595d2ec	닌자의규율	nul
+default.xbe	va:0x1d9fd4	22	52bc566b5a47a21c0d0a5a90ca2cba994bdf958c	그건좀아니지	nul
+default.xbe	va:0x1d9fec	18	cefd20c07c47e058ba2443797ddb3e5b4dd56f1c	솔개와유부	nul
+default.xbe	va:0x1da000	20	34f8e40bd9c21849e60132ffedf6593dad88f057	취미는가드닝	nul
+default.xbe	va:0x1da018	18	751a4a5b4fea90908bbf0bc23a35e75ff54e63c5	소머리뼈	nul
+default.xbe	va:0x1da02c	20	3c2e4ce466ccff22541d98039f8bf29155024d19	촌마게어때	nul
+default.xbe	va:0x1da044	8	379b0714d05d59e5ed6c047c52c6be78d27adfb0	와이엠	nul
+default.xbe	va:0x1da050	16	2c4e618e748ea6be77d24256c2756542b64a7552	레드 머스터드	nul
+default.xbe	va:0x1da064	12	c449ed0ba9ee9365ec86e25e6eaf42c518cb8a11	풀 마크	nul
+default.xbe	va:0x1da074	20	14397944721342c647e8cc600551d635bb1a7953	록해버릴거야	nul
+default.xbe	va:0x1da08c	26	67973aaad66824cceda989b70b22bd6cf306106c	의인화된뿔말이	nul
+default.xbe	va:0x1da0a8	18	d680ed3ec420ec35445e7e1a99c0cbacbdccc050	슈림프성인	nul
+default.xbe	va:0x1da0bc	16	310b769d13ddf89668e886ab22b0ee935c6a3e14	와일드 미스티	nul
+default.xbe	va:0x1da0d0	18	1e5d8e064a8308b02b8025e653b81e6a92724edc	활활보야보야	nul
+default.xbe	va:0x1da0e4	16	4b128e74e1d75693f24dc537409309a733743a58	그라인드 콘	nul
+default.xbe	va:0x1da0f8	24	342a749e674b7f4f3142ad1276c437a70f45a9c3	디보티드 투 유	nul
+default.xbe	va:0x1da114	8	1dbc8e13f88f69d0be708f6283fa1eae4bf5e427	바아암	nul
+default.xbe	va:0x1da120	26	2e3498f419e58d0f14a6ba85d3076ebac99b81e9	에스트지토피노트리	nul
+default.xbe	va:0x1da13c	6	7b0e0c6fe7f263d4cd5cba5f57d8f1b55f06d415	스핀	nul
+default.xbe	va:0x1da144	10	5d28626625e7453b28ae292a744d8ea7df0b290f	에스에이치	nul
+default.xbe	va:0x1da150	30	3030c29d59afef4b27aba15798d83ad50f0c4825	태양과피에로의믹스처	nul
+default.xbe	va:0x1da170	14	08be1fb877e32b2d09c66588afc1f1af1fe521e1	큐브 본	nul
+default.xbe	va:0x1da180	16	5729865281e2e459c146e03138a7e8d716128950	클린 스타일	nul
+default.xbe	va:0x1da194	16	c18dca1d823da3074e0d12ca9a2739885da0aa4e	돈사부로초	nul
+default.xbe	va:0x1da1a8	8	022101648455e354cc1b8dcfc7fed32f34c2ef92	상어이빨	nul
+default.xbe	va:0x1da1b4	12	c29fd4c4a9089ed025d5b9f9412920695155dc19	바이올렛	nul
+default.xbe	va:0x1da1c4	26	ab64722e3d643d9f24d613b48935c33999272177	이제부터점점커진다	nul
+default.xbe	va:0x1da1e0	18	e89a0061a5537ec0eadde2ac626402159a3357e5	반야 앵그리	nul
+default.xbe	va:0x1da1f4	12	322d978d03ac0f16f5b97f91816d7c5270ad0283	스크리민	nul
+default.xbe	va:0x1da204	10	a52f560a68bd803f958342d52368486094dc7595	유니콘	nul
+default.xbe	va:0x1da210	10	aff47b58e221164bc7f11b492ec4f9163a7c8f98	태깅	nul
+default.xbe	va:0x1da21c	6	b3ea434bcadda2a01bbf0a6a1c441351b64f4536	아르	nul
+default.xbe	va:0x1da224	6	70102c82737807ed7b78631ee0ef005e4b1cdd80	에스오	nul
+default.xbe	va:0x1da22c	28	5e72dcfb27cc7fcb62fd725e7b4df319929a9eae	그건넣어두세요	nul
+default.xbe	va:0x1da24c	8	e0344883ef0bd9c014bbca620bd4efc874373ff8	부엉이	nul
+default.xbe	va:0x1da258	18	8e4a76a4286d637313eeb4f2fe0ce97009bce96d	정의리더캠	nul
+default.xbe	va:0x1da26c	26	b6ab73902117cb67a0255f457a3f8aabf1452bf7	뉴 스테일 스플래시	nul
+default.xbe	va:0x1da288	6	4b31da2cdfec995565ce9462bb67cc87521fe715	헤이즈	nul
+default.xbe	va:0x1da290	20	53adeef2591f662c32830cb1c85f51682fd8d328	샤카샤카부슈	nul
+default.xbe	va:0x1da2a8	22	00f6baab27232ae146f3c4cf86ff8044ef969d76	회전이멈췄을때	nul
+default.xbe	va:0x1da658	18	a1120222bf32eaecb715f0d0932d2790c973e726	목록에서 골라	nul
+default.xbe	va:0x1da66c	16	c0768bcfe3b1ce58391bbe051782e76a09a24366	만든 그림 고르기	nul
+default.xbe	va:0x1da680	10	c0a38277a0aac0b61f4a2d31878b8bbb3941a776	ＸＬ사이즈	nul
+default.xbe	va:0x1da68c	8	d85b429af9ae7badfa2daeafa85854fe1520b876	Ｌ사이즈	nul
+default.xbe	va:0x1da698	8	9c80902c522be2491b3602fd029a2a4b3b536712	Ｍ사이즈	nul
+default.xbe	va:0x1da6a4	8	722da72c8debd400393178887f5ead7be08522f9	Ｓ사이즈	nul
+default.xbe	va:0x1da6b0	10	db0a13be16c09966843c9174e461c1fac0b925d9	ＳＳ사이즈	nul
+default.xbe	va:0x1dcd10	50	1562ff8781b2e9bc491ba13f936890da5d138fc9	방향 패드 좌우로 기능 선택　Ａ로 결정　　　　　　 	nul
+default.xbe	va:0x1dcd48	68	655ca8b7af3b85baed41c500bd20e30d828f9de2	방향 패드 좌우로 글자 선택　Ａ로 결정　　　　　　　　　　　　　　　 	nul
+default.xbe	va:0x1dcd90	78	9e909934d9918a442cf42e2a269b30272c691afc	방향 패드 좌우로 글자 선택　　왼쪽 스틱 상하로 무늬 선택　　　　　　　　　　　	nul
+default.xbe	va:0x1dcde0	54	eb448cfed4b117a197da9215c793f3cd375b63c0	왼쪽 스틱 상하로 렌즈 바꾸기　　　　　　　　　　　　　	nul
+default.xbe	va:0x1dce18	78	deead2a83c85bc8bbeced19e85642bca16982f70	방향 패드 좌우로 글자 선택　　왼쪽 스틱으로 글자 회전　　　　　　　　　　　　 	nul
+default.xbe	va:0x1dce68	78	2ea36aca4303cb3e889c682d1c3d3f7dbb7dd5d5	방향 패드 좌우로 글자 선택　　왼쪽 스틱으로 글자 크기 변경　　　　　　　　　　	nul
+default.xbe	va:0x1dceb8	78	af53367755ab42ef8ae028ee5a36450b7de5c277	방향 패드 좌우로 글자 선택　　왼쪽 스틱으로 글자 이동　　　　　　　　　　　　 	nul
+default.xbe	va:0x1dcf08	78	da8e512c6b74d7fd286d26fd7bcf6e9280c70a58	방향 패드 좌우로 글자 선택　　왼쪽 스틱 상하로 글꼴 선택　　　　　　　　　　　	nul
+default.xbe	va:0x1dcf58	58	591b377a0bc1440997be078663e79e3e2b0dbc76	방향 패드 상하좌우로 선택　Ａ로 결정　　　　　　　　　　　	nul
+default.xbe	va:0x1dcf94	44	2d06c0fa0c105c2542b40f3c4cbab0bbac135052	이 그림을 저장합니다　　　　　　　　　　　　	nul
+default.xbe	va:0x1dcfc8	44	de495814cfc47d4560ba1de6ddef0b1f4562a195	전부 지운다　　　　　　　　　　　　　　　　 	nul
+default.xbe	va:0x1dcff8	44	3df4da255d893acea7cd6bea526a6c91e7bd8d73	방향 패드 좌우로 선택　Ａ로 결정　　　　　　	nul
+default.xbe	va:0x1dd028	94	ca99f4c979d1f3f46e82b9426221688e70b67977	왼쪽 스틱으로 지우개 이동　　왼쪽 트리거로 지우개 크기 전환　　오른쪽 트리거로 지우기　　　　 	nul
+default.xbe	va:0x1dd088	72	2d4f9d927d2fd2270a36db793fb159eab2cc19a9	왼쪽 스틱으로 스탬프 이동　　오른쪽 트리거로 스탬프 찍기　　　　　　　　	nul
+default.xbe	va:0x1dd0d8	136	490ee680101685efb014b4d0845ec7dd4f304f49	방향 패드 상하좌우로 색 선택　　왼쪽 스틱으로 스프레이 캔 이동　　왼쪽 트리거로 스프레이 굵기 전환　　오른쪽 트리거로 스프레이　　　　　	nul
+default.xbe	va:0x1dd1f0	30	757677b7795a7e18e13daf82f8d04325dcf70796	전부 지워지는데 괜찮겠어？	nul
+default.xbe	va:0x1dd540	4	31c3ac1f3d7247130af55e33b276d0607aeff20a	삭제	nul
+default.xbe	va:0x1dd548	14	2ae34dd8f1fe01d88d72bbe1992dfbfecd83a488	무늬 바꾸기	nul
+default.xbe	va:0x1dd558	14	89b108f58d9e0a790bd85d8cb2559cad7470e639	렌즈 바꾸기	nul
+default.xbe	va:0x1dd568	10	242c37a2ba4d050e7b11419dda7c220ef149ad4c	글자 회전	nul
+default.xbe	va:0x1dd574	14	8f39c02274c53a425e094d587e9a6d88c560d9e1	크기 바꾸기	nul
+default.xbe	va:0x1dd584	10	9f6d987f963a489f1e5e910444d10a6ee8c26e34	글자 이동	nul
+default.xbe	va:0x1dd590	16	b43c771544fccd02ea03d0703240d4edade84866	글꼴 바꾸기	nul
+default.xbe	va:0x1dd5a4	6	d235a01b905dfd94a84d2377092912119fa672bb	이름	nul
+default.xbe	va:0x1dd5ac	6	1d4e84c98909e2cff08818daa27a8ab579e468ac	전부 지우기	nul
+default.xbe	va:0x1dd5b4	4	cdcb194a9678d08e610fb86c7dbd01c918bddc21	글자	nul
+default.xbe	va:0x1dd5bc	8	aee273fd38b6c8587f8306ce7b4f3d3c965016db	스탬프	nul
+default.xbe	va:0x1dd5c8	6	aeac05ef92ffe8a95ddf4741a5348c5b58b8d668	줌	nul
+default.xbe	va:0x1dd5d0	8	f54146eb38fab18a71195d99cac416dd186c820f	지우개	nul
+default.xbe	va:0x1dd6c0	14	64b0141cbf650cf9e124310ef58b58dd9801dbbc	여기면 돼？	nul
+default.xbe	va:0x1dd6d0	12	00c58f8db2b6af17c7f07a2697b731841de2f840	덮어쓴다	nul
+default.xbe	va:0x1dd79c	14	d61064a60c4d0618868e0805c37a4e7a2a27663f	이걸로 됐어？	nul
+default.xbe	va:0x1dd7ac	20	5fc42d543193dd600564358de0013ae8b46c18b3	고칠 그림을 골라	nul
+default.xbe	va:0x1dd7ec	6	0a01fb6b9d2e703c8f6d3811ad69391bf2bbb4a9	뒤로	nul
+default.xbe	va:0x1dd7f8	8	ea47d9fbfc8bf1de44d493ce129ee037f0f98f4b	결정	nul
+default.xbe	va:0x1dd890	16	d324cf3dca27ca0bd7ef5a251dee0befb2c770b7	크기를 골라	nul
+default.xbe	va:0x1dda08	30	44cf07da8d8fd8683388828d137656bff374d658	　　　그래피티 고치기　　　　 	nul
+default.xbe	va:0x1dda28	30	3634a9986aba0f7fe7bbb5937b9c68a03d139de3	　　　그래피티 만들기　　　　 	nul
+default.xbe	va:0x1dda48	30	d7493225c4faaa9976b057cf9e60ef7dff72080d	게임에서 쓸 그래피티 고르기　 	nul
+default.xbe	va:0x1ddb40	2	32cd3b5029e4cf404c7fc117cc48eca9b7ac512f		nul
+default.xbe	va:0x1ddb44	2	d1314f42b89428c8c1beda6e7e7c4a024ef1469c		nul
+default.xbe	va:0x1ddb48	2	0a06f1c43d9548c9d8358acf070dae98554ec5d6		nul
+default.xbe	va:0x1ddb4c	2	6b9d95349224ceebad4e3d9d05bdc879528647e0		nul
+default.xbe	va:0x1ddb50	2	a8c823700fe4c08d7be2e81ab53601999c636169		nul
+default.xbe	va:0x1ddb54	2	061004dadbf422e02a38518b65eb78639844f895		nul
+default.xbe	va:0x1ddb58	2	470aa9d4545ccff2d34d0c8e365696777d8eecce		nul
+default.xbe	va:0x1ddb5c	2	7d7ae283be7525a8796d50a64aefe5dbfb627607		nul
+default.xbe	va:0x1ddb60	2	59703b99f30bda89e187a08145d8c66f72afb118		nul
+default.xbe	va:0x1ddb64	2	4749f356cd1a663bf7381dc09a9efd2b1229e09f		nul
+default.xbe	va:0x1de00c	26	65776e4b1af6469878fc8f4ff901dacb52b638a5	주의하십시오.	nul
+default.xbe	va:0x1de028	50	699c9e212ba9d262e3d597c18c2f9245e41d6f17	그리고 Ｂ 버튼을 누르면 게임이 리셋되므로	nul
+default.xbe	va:0x1de05c	32	d41cc9a088fa602a45a9fc29c54a433a6ebb708d	빈 블록을 확보하십시오.	nul
+default.xbe	va:0x1de080	52	64c57e850e616128fa23a1536f3b4fbaa36af1ac	Ａ 버튼으로 저장하지 않고 계속하거나, Ｂ 버튼을 눌러	nul
+default.xbe	va:0x1de0b8	54	1e3939234e5539a6061632bc7d81b8d0a4e2b6a7	이를　위해서는　최대　　블록의 빈 용량이 필요합니다.	nul
+default.xbe	va:0x1de0f0	52	b6c55a98720ebe8377c3afcf9b8c38f6658ebc88	해당 크기의 그래피티 데이터를 새로 저장하려 합니다.	nul
+default.xbe	va:0x1de130	2	46ee3729d5f716c66134683b5628e7748f925ff2		nul
+default.xbe	va:0x1de134	2	7cea04579a25d1d179459f4a6eb3cbb7a7952e50		nul
+default.xbe	va:0x1de138	2	baa9e83961aa79c62060beaafbac98d60f7f92c7		nul
+default.xbe	va:0x1de16c	36	e1068edd25d3238365e01af4431cc8651c014866	Xbox 본체의 전원을 끄지 마십시오.	nul
+default.xbe	va:0x1de194	28	f89b79d0e1109d8d42a7ee45fc7e2df702cf2249	그림 데이터를 읽는 중입니다.	nul
+default.xbe	va:0x1de1b4	31	12cd325767df02b39d5818d78d314f48c24d5b2a	GRAFFITI     읽기 실패.	nul
+default.xbe	va:0x1de1d4	32	f8a50b255c7c2014f0938e9ba910b590cb064b4e	데이터를 쓰지 못했습니다.	nul
+default.xbe	va:0x1de1f8	32	d6c149bc9755885bb3e18123fd45eda1c99f44e1	Xbox의 전원을 끄지 마십시오.	nul
+default.xbe	va:0x1de21c	34	370f384d7e4f1bd74667d5aea190283edefc1e70	그래피티 데이터를 저장 중입니다.	nul
+default.xbe	va:0x1de240	32	4b7c34cafd0c3ace554399310b0476e6452cd971	Ａ 버튼을 눌러 계속하십시오.	nul
+default.xbe	va:0x1de264	34	9c8a0bfbc6c076f923d5fde1f6700d7b3cb00e47	필요한 빈 블록이 없습니다.	nul
+default.xbe	va:0x1de288	42	a6455efa2fea013fe041c372b0a2f2bce62b68d3	해당 크기의 그래피티 데이터를 저장하는 데	nul
+default.xbe	va:0x1de764	46	d4dbf3851f23339faa9a87667c887efef2b1cbe5	컨트롤러를 포트４에 다시 연결하십시오.	nul
+default.xbe	va:0x1de794	46	dd9696d1675089e0b7cb874a07f7e6008172ec69	컨트롤러를 포트３에 다시 연결하십시오.	nul
+default.xbe	va:0x1de7c4	46	e643ea54eaec8a71142c95e5a41e03e7d76800cb	컨트롤러를 포트２에 다시 연결하십시오.	nul
+default.xbe	va:0x1de7f4	46	7c0c839599d4d98f86cd14a7b842192888d7917e	컨트롤러를 포트１에 다시 연결하십시오.	nul
+default.xbe	va:0x1de868	48	8a65d6c90c4fae9b9a0076377c1fa3a097d82d37	컨트롤러를 포트４에$n다시 연결하십시오.	nul
+default.xbe	va:0x1de89c	48	b93974f100feb4e6c6a161782cab25749c7200b5	컨트롤러를 포트３에$n다시 연결하십시오.	nul
+default.xbe	va:0x1de8d0	48	8824ee8b7560811be8e5a6f8902ec87784309a19	컨트롤러를 포트２에$n다시 연결하십시오.	nul
+default.xbe	va:0x1de904	48	8ae47f9e10be481489a7df4fc782d3959184d018	컨트롤러를 포트１에$n다시 연결하십시오.	nul
+default.xbe	va:0x1de9a0	6	78ee759d59660bf89f4ee0e9c4823c3d9330163c		nul
+default.xbe	va:0x1de9a8	5	5d59bd9e04c16e51a7b2879c450ee182e423b835		nul
+default.xbe	va:0x1de9b0	5	eb3453defd99e3cdc3ce60ba9103d46c505febf2		nul
+default.xbe	va:0x1de9b8	5	13fbc23062af823200edbe3efc2ab65551ba0ca8		nul
+default.xbe	va:0x1de9c0	6	3dea7cf3c2df5f0b9637665a5d8fdb5cbdb8e78a		nul
+default.xbe	va:0x1de9c8	5	d5a20d01b454b69c8d7eaef76ec28ef6d005f866		nul
+default.xbe	va:0x1deb50	12	c9ef9c353d5d3c2d1444724519b818e91d68c678	２인 대전용	nul
+default.xbe	va:0x1deb60	16	0b0c37fb7bb446ae3b88ba8e48d3e2f5d7be77d9	최대 ２인 대전	nul
+default.xbe	va:0x1dec68	28	016063465e19e97785da2c99785289b6b022027a	도쿄 지하 하수 시설 조정구역	nul
+default.xbe	va:0x1dec88	14	0d9990f7408f0cab0ea02b63434246d4ae28a743	제２ 스타디움	nul
+default.xbe	va:0x1dec98	12	7e03136cebbfe7664fd07ee81fb880402c5dc917	쓰즈라 파크	nul
+default.xbe	va:0x1deca8	12	fff11aa06fb79db3455cb2e896824bcf2c825f16	라덴 파크	nul
+default.xbe	va:0x1decb8	14	46f3556aba7ec6f95415e99f2f5fcd69ad855fb8	쇼와 파크	nul
+default.xbe	va:0x1dee04	16	64c8fca6837b38ea0d0b9f3561114e1a03b7b5e0	테일 투 노즈	nul
+default.xbe	va:0x1dee18	18	4a650b1df78144afadb9c1aeb120dacc9e81979c	배틀 그래피티	nul
+default.xbe	va:0x1dee2c	8	cd1edadd75b4e9cc9a0fbd7c556c94f03af50572	플래그	nul
+default.xbe	va:0x1dee38	10	6ed5b92c91d1dd94e18dd20590014426567489f6	데스 볼	nul
+default.xbe	va:0x1dee44	8	db1bf0019f82353401475eb182ed1b1c1bf6f81f	대시	nul
+default.xbe	va:0x1deedc	8	5e9681db7adfd0fd4f37937cce499ede64bcff4c	연습하기	nul
+default.xbe	va:0x1deee8	8	d19a81fbe877d02736128dd481f9c832e067da53	대전하기	nul
+default.xbe	va:0x1def9c	36	6b342fda993e103398ee1c7e69d2e70a5bdb8e05	컨트롤러를 다시 연결하십시오.	nul
