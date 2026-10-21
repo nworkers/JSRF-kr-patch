@@ -1,0 +1,9 @@
+# Longer-than-original test lines (issue #13): one place per group, each Korean longer than its original,
+# so the event and talk pages are rebuilt, the mission string is appended at the end of its file and the
+# XBE string moves to the new section KRTEXT. Test lines written for this repository, not a translation.
+# Screens: docs/guides/emulator-check.md §4.
+file	where	orig_len	orig_sha1	korean	pad
+Media/Event/Event/e000.dat	norm:2/0+0x64	34	2bcb3f928f6c19531a1860bdb7b861e17485e3ba	시부야 터미널. 사람도 차도 끝없이 오가는$n거리의 한복판이다！	space
+Media/Event/TalkEvent/TE014.bin	off:0x88	18	f738af3fb8e3424443c1f2f76f81177923952dee	뭐야, 무슨 볼일이라도 있는 거야？	space
+Media/Mission/mssn0110.bin	off:0x2228c	42	d7d54e99f755716ff60a7a222d18b7daea8fd96d	“도겐자카”를 그래피티로 남김없이 칠해라！	nul
+default.xbe	va:0x1d29e0	6	44eb36e715cc59a22319ec6b0de20b78ae2fd14c	저장하기	nul

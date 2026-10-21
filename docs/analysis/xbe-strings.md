@@ -46,7 +46,8 @@ flowchart LR
 | 더 김 | 새 자리(새 섹션 등)에 쓰고 **그 문자열을 가리키는 `.data` 칸과 `push` 즉치를 모두** 새 주소로 바꾼다. 바뀐 섹션의 SHA-1 요약값을 다시 계산한다 |
 
 * 새 섹션을 더하려면 XBE 머리(섹션 수, 섹션 머리 표, 머리 크기, 이미지 크기)를 고쳐야 한다. 서명은 고치지 않아도 Cxbx-Reloaded·xemu가 실행한다(P4). 방법은 다음 issue에서 정한다.
-* `push` 즉치는 주소 4바이트만 바꾸며 원래 명령 바이트를 담지 않는다. 원래 값의 해시로 검사한다.
+* `push` 즉치는 주소 4바이트만 바꾸며 원래 명령 바이트를 담지 않는다. 바꾸기 전 값이 원래 주소인지 확인한다.
+* 구현(issue #13, `tools/jsrfkr/xbeedit.py`, `reinsert.py`): 섹션 머리 표를 머리 여유 자리 `0x988`로 옮겨 12개로 늘리고, 새 섹션 `KRTEXT`를 VA `0x289000`, 원시 위치 `0x22D000`, 깃발 `0x06`으로 더한다(이름과 공유 페이지 참조 수 둘은 표 뒤, 머리 크기 `0xC34`). 651개 문자열을 일부러 모두 옮겨도 모든 `.data` 칸과 `push` 즉치가 새 섹션의 원래 바이트로 이어지고, 머리·참조 밖의 바이트는 원본과 같다(`check_reinsert.py`). 섹션 요약값은 모두 맞다. **섹션을 더한 XBE가 에뮬레이터에서 실행되는지는 아직 확인하지 않았다(미확정).**
 
 ## 5. 미확정
 
@@ -99,7 +100,8 @@ Facts confirmed in issue #11 (P5-1). Input: the Japanese `default.xbe` (MD5 `d84
 | longer | write it in new space (a new section and the like) and change **every `.data` slot and `push` immediate referring to that string** to the new address; recompute the changed sections' SHA-1 digests |
 
 * Adding a section means changing the XBE header (section count, section header table, header size, image size). Cxbx-Reloaded and xemu run it without a fixed signature (P4). The method is settled in the next issue.
-* A `push` immediate change replaces only the 4 address bytes and carries no original instruction bytes; the original value is checked by hash.
+* A `push` immediate change replaces only the 4 address bytes and carries no original instruction bytes; the old value is checked to be the original address first.
+* Implemented (issue #13, `tools/jsrfkr/xbeedit.py`, `reinsert.py`): the section header table moves into the free header space at `0x988` and grows to 12 entries; the new section `KRTEXT` sits at VA `0x289000`, raw `0x22D000`, flags `0x06` (its name and two shared page reference counts follow the table; header size `0xC34`). Moving all 651 strings on purpose keeps every `.data` slot and `push` immediate leading to the original bytes in the new section, with no byte changed outside the header and references (`check_reinsert.py`); all section digests check. **Whether emulators run the XBE with the added section is not checked yet (unresolved).**
 
 ## 5. Unresolved
 

@@ -4,7 +4,10 @@
               (the Japanese default.xbe, jetfont.dat, every file the text
               patches touch) match the dump. Nothing is written on a mismatch.
   2. font     new glyph table and jetfont.dat for the Hangul in the text
-  3. text     in-place replacement of each place in patch/text/*.tsv
+  3. text     each place in patch/text/*.tsv (jsrfkr.reinsert): event and
+              talk pages rebuilt, mission strings in place or appended,
+              XBE strings in place or moved to a new section KRTEXT; page
+              buffer overruns stop, line width and line count warn
   4. XBE      glyph table, patch/xbe/*.json, va: places, section digests
   5. output   the whole dump folder copied, changed files written anew
               (--link: unchanged files hard-linked; editing them then edits
@@ -26,11 +29,12 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from jsrfkr import ROOT, textpatch, xbepatch, xiso  # noqa: E402
+from jsrfkr import ROOT, reinsert, screen, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
 from jsrfkr.digest import ManifestError, check_inputs, load_manifest, md5, md5_file, write_manifest  # noqa: E402
 from jsrfkr.encode import Encoder  # noqa: E402
-from jsrfkr.xbe import Xbe, fix_digests  # noqa: E402
+from jsrfkr.xbe import Xbe  # noqa: E402
 import build_font  # noqa: E402  (tools/font, on sys.path through jsrfkr)
+import font_tables  # noqa: E402  (tools/analysis, on sys.path through jsrfkr)
 
 XBE = "default.xbe"
 JETFONT = "Media/Font/jetfont.dat"
@@ -103,7 +107,7 @@ def build_files(game, rows, xbe_patches, ident):
         jf = f.read()
     text = None if ident else "".join(r.korean for r in rows)
     font = build_font.build(x, jf, text)
-    image = build_font.apply_table(x, font)
+    image = bytearray(build_font.apply_table(x, font))
     files = {XBE: image, JETFONT: bytearray(font.jetfont)}
     sections = {".data"}
 
@@ -111,17 +115,31 @@ def build_files(game, rows, xbe_patches, ident):
         with open(os.path.join(game, name), "rb") as f:
             return f.read()
 
+    encoder = Encoder.for_xbe(font.codes(), x)
+    changes, bad = [], []
+    for r in rows:
+        try:
+            changes.append(reinsert.Change(r, textpatch.encode_row(r, encoder)))
+        except textpatch.PatchError as err:
+            bad.append(str(err))
+    if bad:
+        raise SystemExit("\n".join(bad))
     try:
-        touched, done = textpatch.apply(rows, files, load, Encoder.for_xbe(font.codes(), x), x)
-        sections |= touched
+        result = reinsert.apply(changes, files, load, x, screen.single_widths(font_tables.single_table(x)))
+        sections |= result.sections
         sections |= xbepatch.apply(xbe_patches, x, image)
-    except (textpatch.PatchError, xbepatch.XbePatchError) as err:
+    except (textpatch.PatchError, xbepatch.XbePatchError, xbeedit.XbeEditError) as err:
         raise SystemExit(str(err))
-    fix_digests(x, image, sorted(sections))
-    for row, n in done:
-        print(f"  {row.file} {textpatch.format_where(row)}: {n}/{row.orig_len} bytes")
+    xbeedit.fix_digests(image, sorted(sections))
+    for d in result.done:
+        how = "" if d.how in ("in place", "page") else f", {d.how}"
+        print(f"  {d.row.file} {textpatch.format_where(d.row)}: {d.size}/{d.row.orig_len} bytes{how}")
+    for w in result.warnings:
+        print(f"warning: {w}")
     hangul = sum(1 for e in font.entries if e.syllable)
-    print(f"text: {len(rows)} places; glyphs: {hangul} Hangul, kana kept: {font.keep_kana}; "
+    moved = sum(1 for d in result.done if d.how in ("appended", "moved"))
+    print(f"text: {len(rows)} places ({moved} appended or moved, {len(result.warnings)} warnings); "
+          f"glyphs: {hangul} Hangul, kana kept: {font.keep_kana}; "
           f"XBE patches: {len(xbe_patches)}; XBE sections: {', '.join(sorted(sections))}")
     return {name: bytes(data) for name, data in files.items()}
 
@@ -162,7 +180,8 @@ def write_iso(src, dst, files, game):
     shutil.copyfile(src, dst)
     with xiso.Image(dst, "r+b") as img:
         for name, data in files.items():
-            img.replace(name, data)
+            if img.replace(name, data) == "moved":
+                print(f"  {name}: grew past its sectors, written at the end of the image")
     return md5_file(dst)
 
 

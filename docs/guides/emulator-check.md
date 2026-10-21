@@ -82,6 +82,29 @@ reJSRF는 XBE를 MD5가 아니라 인증서로 알아보므로 패치한 XBE도 
 * 볼 것: 한글이 나오는지, 칸 밖 번짐·잘림이 없는지, 기호(`、` `？` `“ ” ！`)와 공백이 맞는지.
 * 화면 캡처는 게임 그림이므로 커밋하지 않는다. 결과는 작업 로그에 글로 적는다.
 
+## 5. 원문보다 긴 문장 확인 (issue #13)
+
+[patch/poc/long.tsv](../../patch/poc/long.tsv)는 묶음마다 원문보다 긴 시험 문장 한 줄이다. 이벤트·대화 페이지는 다시 만들어지고, 미션 문장은 파일 끝에 붙고, XBE 문자열은 새 섹션 `KRTEXT`로 옮겨진다. 정식 패치 도구로 만든다.
+
+```bash
+python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr-long --text patch/poc/long.tsv --iso "roms/Jet Set Radio Future.iso"
+```
+
+* 출력 MD5(2026-10-21): `default.xbe` `b0b95c85b71a70fd638054997a1e640e`, `e000.dat` `9b629a939ab3612b088fea25c1f3afe2`, `TE014.bin` `757e044efee89fb1b6bed7f4e55fd087`, `mssn0110.bin` `665e7c6def6cf34b9368f8298b7b1067`, `jetfont.dat` `401a2efe5d3090672215d58945ba0f07`, xiso `80a4a3ee2ef50d5e23cf4b37f7fcdb8f`.
+* 캐시에서 뺄 파일(§2): `Media/Event/Event/e000.dat`, `Media/Event/TalkEvent/TE014.bin`, `Media/Mission/mssn0110.bin`.
+* 실행: Cxbx-Reloaded는 `out/jsrf-kr-long/default.xbe`, xemu는 `-dvd_path out/jsrf-kr-long.iso`.
+
+| 시험 문장 | 화면 | 가는 법 | 확인할 것 |
+|---|---|---|---|
+| (부팅) | 경고·타이틀 화면 | 그냥 실행 | **섹션을 더한 XBE가 실행되는가** |
+| 저장하기 | 일시정지 지도 화면 오른쪽 아래(§4의 "저장" 자리) | 차고나 미션 중 START | 새 섹션으로 옮긴 XBE 문자열 |
+| 뭐야, 무슨 볼일이라도 있는 거야？ | 차고 로보이 첫 대사 | 차고에서 로보이에게 다가가 A | 대화 페이지 다시 만들기(원문 18바이트 → 33바이트) |
+| “도겐자카”를 그래피티로 남김없이 칠해라！ | 일시정지 지도 화면 위쪽 목표 | 첫 미션(도겐자카) 중 START | 미션 파일 끝에 붙인 문자열 |
+| 시부야 터미널. 사람도 차도 끝없이 오가는 / 거리의 한복판이다！(2줄) | `e000` 이벤트의 첫 자막 | 새 게임을 시작한 뒤 처음 나오는 이벤트로 보인다(**추정**) | 이벤트 페이지 다시 만들기(34 → 61바이트) |
+
+* 볼 것: §4와 같다. 그리고 문장 끝이 잘리거나 뒤에 다른 글자가 붙지 않는지, 그 뒤의 대사·메뉴가 원래대로 이어지는지.
+* 확인한 뒤 결과(보였다/안 보였다, 에뮬레이터와 판)를 알려 주면 작업 로그와 분석 문서에 적는다.
+
 ---
 
 # Checking the patched output in an emulator
@@ -144,3 +167,22 @@ Build the Japanese variant in the reJSRF repository ([reJSRF build guide](https:
 
 * Look for: Hangul appearing, no ink outside cells or clipping, the symbols (`、` `？` `“ ” ！`) and spaces right.
 * Screen captures are game pictures and are not committed; write the results in the work log.
+
+## 5. Checking text longer than the original (issue #13)
+
+[patch/poc/long.tsv](../../patch/poc/long.tsv) holds one test line longer than its original per group: event and talk pages are rebuilt, the mission string is appended at the end of its file, and the XBE string moves to the new section `KRTEXT`. Build it with the patcher (command above).
+
+* Output MD5s (2026-10-21): `default.xbe` `b0b95c85b71a70fd638054997a1e640e`, `e000.dat` `9b629a939ab3612b088fea25c1f3afe2`, `TE014.bin` `757e044efee89fb1b6bed7f4e55fd087`, `mssn0110.bin` `665e7c6def6cf34b9368f8298b7b1067`, `jetfont.dat` `401a2efe5d3090672215d58945ba0f07`, xiso `80a4a3ee2ef50d5e23cf4b37f7fcdb8f`.
+* Files to take out of the cache (§2): `Media/Event/Event/e000.dat`, `Media/Event/TalkEvent/TE014.bin`, `Media/Mission/mssn0110.bin`.
+* Run: Cxbx-Reloaded with `out/jsrf-kr-long/default.xbe`; xemu with `-dvd_path out/jsrf-kr-long.iso`.
+
+| Test line | Screen | How to get there | What it checks |
+|---|---|---|---|
+| (boot) | warning and title screens | just run | **whether the XBE with an added section runs** |
+| 저장하기 | bottom right of the pause map screen (the "저장" place of §4) | START in the garage or a mission | an XBE string moved to the new section |
+| 뭐야, 무슨 볼일이라도 있는 거야？ | Roboy's first line in the garage | walk up to Roboy and press A | a rebuilt talk page (18 → 33 bytes) |
+| “도겐자카”를 그래피티로 남김없이 칠해라！ | the objective at the top of the pause map screen | START during the first mission (Dogenzaka) | a string appended to the mission file |
+| 시부야 터미널. 사람도 차도 끝없이 오가는 / 거리의 한복판이다！ (2 lines) | the first subtitle of event `e000` | apparently the first event after starting a new game (**inferred**) | a rebuilt event page (34 → 61 bytes) |
+
+* Look for: as in §4, plus no clipped endings or stray characters after the text, and the following lines and menus continuing as before.
+* Report the results (shown or not, emulator and version) so they go into the work log and the analysis documents.

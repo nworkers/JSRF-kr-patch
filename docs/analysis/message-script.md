@@ -55,6 +55,7 @@ flowchart TD
 | 대화 이벤트 언어 구간의 페이지 번호 | 그 구간의 `$bj` `$bo` `$s` 인자 |
 
 * 영어 구간(언어 1)은 바꾸지 않는다. 일본판은 늘 언어 0을 쓴다([text-files §5](text-files.md)).
+* 구현(issue #13, `tools/jsrfkr/reinsert.py`): 페이지 바이트만 바꾸고 페이지 수는 바꾸지 않는다(§3 표의 첫 줄). 368개 모두 원문 그대로 다시 넣으면 원본과 같다. 길어진 페이지의 화면 확인은 남았다(**미확정**).
 * 렌더러에는 자동 줄바꿈이 없고 페이지는 0x100바이트 버퍼에 복사된다([text-renderer §5](text-renderer.md)). 페이지 수를 바꾸지 않더라도 이 제한은 지켜야 한다.
 
 ## 4. 2,933개 레코드와의 관계
@@ -119,6 +120,7 @@ All values are little-endian `u32`.
 | page numbers in a talk event's language block | that block's `$bj` `$bo` `$s` arguments |
 
 * The English block (language 1) is not changed; the Japanese build always uses language 0 ([text-files §5](text-files.md)).
+* Implemented (issue #13, `tools/jsrfkr/reinsert.py`): only page bytes change, never page counts (the first row of the §3 table). All 368 put back unchanged equal the originals; a screen check of longer pages is pending (**unresolved**).
 * The renderer never wraps lines and copies each page into a 0x100-byte buffer ([text-renderer §5](text-renderer.md)); these limits hold even when the page count stays.
 
 ## 4. Relation to the 2,933 records

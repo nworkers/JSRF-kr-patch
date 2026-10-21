@@ -1,4 +1,4 @@
-"""Read an Xbox disc image (XDVDFS) and overwrite files in place at the same size.
+"""Read an Xbox disc image (XDVDFS) and overwrite files, which may grow.
 
 XDVDFS: 2048-byte sectors. The volume descriptor is at sector 32 of the game
 partition: "MICROSOFT*XBOX*MEDIA", u32 root directory sector, u32 root
@@ -9,6 +9,10 @@ to 4 bytes and 0xFF fills the rest of a sector.
 
 A plain xiso has the game partition at offset 0; a full disc image (redump)
 has it at 0x18300000.
+
+replace() writes a file over its old sectors when it still fits them, else at
+the end of the image (sector aligned); either way the directory entry gets
+the new start sector and size (design 20261021-i013 §4).
 
 usage: python -I tools/jsrfkr/xiso.py <image.iso> [path]   (list the root, or show one file)
 """
@@ -23,8 +27,9 @@ ATTR_DIR = 0x10
 
 
 class Entry:
-    def __init__(self, name, sector, size, attr):
+    def __init__(self, name, sector, size, attr, at=None):
         self.name, self.sector, self.size, self.attr = name, sector, size, attr
+        self.at = at        # image offset of the directory entry
 
     @property
     def is_dir(self):
@@ -71,7 +76,8 @@ class Image:
             left, right, start, length, attr, n = struct.unpack_from("<HHIIBB", table, off)
             if left == 0xFFFF:          # padding
                 continue
-            out.append(Entry(table[off + 14:off + 14 + n].decode("latin-1"), start, length, attr))
+            out.append(Entry(table[off + 14:off + 14 + n].decode("latin-1"), start, length, attr,
+                             self.base + sector * SECTOR + off))
             for child in (left, right):
                 if child:
                     todo.append(child * 4)
@@ -96,12 +102,25 @@ class Image:
         return self._read(e.sector, e.size)
 
     def replace(self, path, data):
-        """Overwrite a file's contents; the size must stay the same."""
+        """Overwrite a file's contents; returns 'in place' or 'moved' (to the end of the image)."""
         e = self.find(path)
-        if len(data) != e.size:
-            raise ValueError(f"{path}: size {len(data)} differs from {e.size} in the image")
-        self.f.seek(self.base + e.sector * SECTOR)
+        if e.is_dir:
+            raise IsADirectoryError(path)
+        sectors = lambda n: -(-n // SECTOR)
+        how, sector = "in place", e.sector
+        if sectors(len(data)) > sectors(e.size):
+            self.f.seek(0, 2)
+            end = self.f.tell()
+            sector = -(-(end - self.base) // SECTOR)
+            how = "moved"
+        self.f.seek(self.base + sector * SECTOR)
         self.f.write(data)
+        tail = -len(data) % SECTOR
+        if how == "moved" or len(data) < e.size:
+            self.f.write(bytes(tail))       # zero the rest of the last sector
+        self.f.seek(e.at + 4)
+        self.f.write(struct.pack("<II", sector, len(data)))
+        return how
 
 
 def main():
