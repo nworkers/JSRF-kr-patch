@@ -29,12 +29,10 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from jsrfkr import ROOT, reinsert, screen, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
+from jsrfkr import ROOT, pipeline, reinsert, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
 from jsrfkr.digest import ManifestError, check_inputs, load_manifest, md5, md5_file, write_manifest  # noqa: E402
-from jsrfkr.encode import Encoder  # noqa: E402
 from jsrfkr.xbe import Xbe  # noqa: E402
 import build_font  # noqa: E402  (tools/font, on sys.path through jsrfkr)
-import font_tables  # noqa: E402  (tools/analysis, on sys.path through jsrfkr)
 
 XBE = "default.xbe"
 JETFONT = "Media/Font/jetfont.dat"
@@ -105,8 +103,10 @@ def build_files(game, rows, xbe_patches, ident):
     x = Xbe(os.path.join(game, XBE))
     with open(os.path.join(game, JETFONT), "rb") as f:
         jf = f.read()
-    text = None if ident else "".join(r.korean for r in rows)
-    font = build_font.build(x, jf, text)
+    try:
+        font = pipeline.font_for(x, jf, rows, ident)
+    except ValueError as err:
+        raise SystemExit(str(err))
     image = bytearray(build_font.apply_table(x, font))
     files = {XBE: image, JETFONT: bytearray(font.jetfont)}
     sections = {".data"}
@@ -115,17 +115,11 @@ def build_files(game, rows, xbe_patches, ident):
         with open(os.path.join(game, name), "rb") as f:
             return f.read()
 
-    encoder = Encoder.for_xbe(font.codes(), x)
-    changes, bad = [], []
-    for r in rows:
-        try:
-            changes.append(reinsert.Change(r, textpatch.encode_row(r, encoder)))
-        except textpatch.PatchError as err:
-            bad.append(str(err))
+    changes, bad = pipeline.encode(rows, font, x)
     if bad:
         raise SystemExit("\n".join(bad))
     try:
-        result = reinsert.apply(changes, files, load, x, screen.single_widths(font_tables.single_table(x)))
+        result = reinsert.apply(changes, files, load, x, pipeline.single_widths(x))
         sections |= result.sections
         sections |= xbepatch.apply(xbe_patches, x, image)
     except (textpatch.PatchError, xbepatch.XbePatchError, xbeedit.XbeEditError) as err:
@@ -136,7 +130,7 @@ def build_files(game, rows, xbe_patches, ident):
         print(f"  {d.row.file} {textpatch.format_where(d.row)}: {d.size}/{d.row.orig_len} bytes{how}")
     for w in result.warnings:
         print(f"warning: {w}")
-    hangul = sum(1 for e in font.entries if e.syllable)
+    hangul = pipeline.hangul_count(font)
     moved = sum(1 for d in result.done if d.how in ("appended", "moved"))
     print(f"text: {len(rows)} places ({moved} appended or moved, {len(result.warnings)} warnings); "
           f"glyphs: {hangul} Hangul, kana kept: {font.keep_kana}; "
