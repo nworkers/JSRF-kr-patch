@@ -7,7 +7,9 @@ Columns: file, where, orig_len, orig_sha1, korean, pad
   pad    nul (default; a whole string, so a NUL must follow it)
          space (a message inside a longer string; the rest becomes 0x20)
 Lines starting with '#' are comments. No original text is stored: a place is
-replaced only when its bytes match orig_sha1.
+replaced only when its bytes match orig_sha1. A row whose korean is empty is
+untranslated: it is read and checked like any row but changes nothing, so a
+translation skeleton (tools/extract_text.py) can be applied while being filled.
 """
 import glob
 import os
@@ -95,11 +97,45 @@ def read_rows(paths):
     return rows
 
 
-def replace_at(buf, off, row, encoder, end_terminates=False):
-    """Replace row's original string at buf[off:] in place.
+def translated(rows):
+    """The rows that change something (korean not empty)."""
+    return [r for r in rows if r.korean]
 
-    end_terminates: the end of buf also ends a string (a NORM item's data
-    length excludes its terminator; analysis containers.md §3)."""
+
+def locate(row, data, xbe=None, tree=None):
+    """Resolve a row's place in a file's bytes -> (buffer, offset, end_terminates).
+
+    The buffer is `data` itself for off:/va: places and the NORM item's bytes
+    for norm: places (`tree` = container.parse(data), parsed once by callers
+    with many rows); end_terminates: the end of the buffer also ends a string."""
+    if row.kind == "va":
+        off = xbe.offset(row.offset) if xbe else None
+        if off is None:
+            raise PatchError(f"{row.source}: VA {row.offset:#x} has no file data")
+        return data, off, False
+    if row.kind == "off":
+        return data, row.offset, False
+    if tree is None:
+        if not container.is_container(data):
+            raise PatchError(f"{row.source}: {row.file} is not a MULT/NORM container")
+        tree = container.parse(data)
+    try:
+        item = tree.get(row.path)
+    except KeyError as err:
+        raise PatchError(f"{row.source}: {err}") from None
+    if isinstance(item, container.Block):
+        raise PatchError(f"{row.source}: {container.format_path(row.path)} is a block, not data")
+    return item, row.offset, True
+
+
+def check_original(row, data, xbe=None, tree=None):
+    """Raise PatchError unless the place holds the original (orig_len bytes with
+    orig_sha1, and for pad=nul a NUL or the end of a NORM item after it)."""
+    buf, off, end_terminates = locate(row, data, xbe, tree)
+    _check(buf, off, row, end_terminates)
+
+
+def _check(buf, off, row, end_terminates):
     n = row.orig_len
     label = f"{row.source} {row.file} {format_where(row)}"
     if off < 0 or off + n > len(buf):
@@ -109,6 +145,16 @@ def replace_at(buf, off, row, encoder, end_terminates=False):
     at_end = end_terminates and off + n == len(buf)
     if row.pad == "nul" and not at_end and (off + n >= len(buf) or buf[off + n] != 0):
         raise PatchError(f"{label}: no NUL after the string (use pad=space)")
+    return label
+
+
+def replace_at(buf, off, row, encoder, end_terminates=False):
+    """Replace row's original string at buf[off:] in place.
+
+    end_terminates: the end of buf also ends a string (a NORM item's data
+    length excludes its terminator; analysis containers.md §3)."""
+    n = row.orig_len
+    label = _check(buf, off, row, end_terminates)
     try:
         enc = encoder.encode(row.korean)
     except ValueError as err:
@@ -122,8 +168,10 @@ def replace_at(buf, off, row, encoder, end_terminates=False):
 def apply(rows, files, load, encoder, xbe=None):
     """Apply rows to `files` (name -> bytearray, filled from `load(name)` on first use).
 
-    `xbe` (jsrfkr.xbe.Xbe of the original) resolves va: places. Returns the XBE
-    section names touched and a list of (row, encoded length)."""
+    `xbe` (jsrfkr.xbe.Xbe of the original) resolves va: places. Rows with an
+    empty korean are skipped. Returns the XBE section names touched and a list
+    of (row, encoded length)."""
+    rows = translated(rows)
     sections, done = set(), []
     trees = {}
     kinds = {}

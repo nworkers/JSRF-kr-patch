@@ -44,7 +44,7 @@ flowchart TD
 ## 3. 문장과의 관계
 
 * 이벤트 문장은 `Media/Event/Event/e###.dat` 안의 `NORM` 항목에 있다(확인됨). 문장이 있는 117개 항목은 모두 맨 위 `MULT`의 항목 2 안의 항목 0(경로 `2/0`)이다. `e###.bin`(300개)에는 문장이 없다.
-* 그 항목은 앞쪽이 `u32` 값들이고(예: `e000.dat`은 100바이트), 그 뒤에 문장 한 줄(`$` 코드와 `$e`를 포함)이 **항목 데이터의 끝까지** 이어진다(확인됨, 117개 모두). NUL 종료는 항목 길이에 들어가지 않는다. 112개는 패딩의 0이 바로 뒤에 오지만, 5개는 데이터 길이가 16의 배수라 패딩이 없고 바로 다음 연결이 온다. 그러므로 게임은 NUL이 아니라 항목 길이(또는 앞쪽 값)로 문장의 끝을 아는 것으로 보인다(**추정**). 앞쪽 값들의 뜻은 **미확정**이고 P5에서 다룬다.
+* 그 항목은 앞쪽이 `u32` 값들이고(예: `e000.dat`은 100바이트), 그 뒤에 문장 한 줄(`$` 코드와 `$e`를 포함)이 **항목 데이터의 끝까지** 이어진다(확인됨, 117개 모두). NUL 종료는 항목 길이에 들어가지 않는다. 112개는 패딩의 0이 바로 뒤에 오지만, 5개는 데이터 길이가 16의 배수라 패딩이 없고 바로 다음 연결이 온다. 그러므로 게임은 NUL이 아니라 항목 길이(또는 앞쪽 값)로 문장의 끝을 아는 것으로 보인다(**추정**). 앞쪽 값들은 페이지 수와 페이지별 값이고, 게임은 그 페이지 수로 문장을 나눈다(**확인됨**, issue #11, [message-script.md](message-script.md)).
 * `tools/jsrfkr/textpatch.py`는 이 관찰에 맞춰 `norm:` 자리에서 문장이 항목 끝까지 가면 뒤의 NUL을 요구하지 않는다.
 * 그 밖의 파일에서 `$e`가 들어간 바이트열(효과, 적, 플레이어 파일 등)은 2진 자료가 우연히 같은 바이트가 된 것이다(문장 아님).
 * 컨테이너는 항목 길이가 바뀌어도 연결만 다시 계산하면 된다(§1의 규칙). 문장 길이를 바꾸는 재삽입(P5)은 항목 안의 형식만 풀면 된다.
@@ -53,7 +53,7 @@ flowchart TD
 
 * 머리의 두 0 필드와 연결의 `flag`를 게임이 읽는지. 지금은 관측대로 쓴다.
 * 블록 종류(텍스처, 모델, 스크립트)를 무엇으로 구별하는지. 컨테이너 층에는 종류 표시가 없다.
-* 이벤트 스크립트 항목의 형식(P5).
+* ~~이벤트 스크립트 항목의 형식~~ → 확인됨(issue #11, [message-script.md](message-script.md)). 나머지 183개 `e###.dat`의 항목 `2/0`에는 `$e`가 없다(문장 없음, 내용 미확정).
 
 ## 5. 재현
 
@@ -101,7 +101,7 @@ Facts confirmed in issue #2 (P1). Input: the Japanese dump's `Media` (1,056 of i
 ## 3. Relation to text
 
 * Event text sits in `NORM` items inside `Media/Event/Event/e###.dat` (confirmed). All 117 items with text are item 0 inside item 2 of the top-level `MULT` (path `2/0`). The `e###.bin` files (300) hold no text.
-* Such an item starts with `u32` values (100 bytes in `e000.dat`, for example), followed by one line of text (with `$` codes and `$e`) that runs **to the end of the item's data** (confirmed, all 117). The NUL terminator is not counted in the item length: in 112 items the padding's zeros follow at once, but in 5 the data length is a multiple of 16, so there is no padding and the next link follows directly. The game therefore seems to find the end of the text by the item length (or the leading values), not by a NUL (**inferred**). The leading values' meaning is **unresolved** and handled in P5.
+* Such an item starts with `u32` values (100 bytes in `e000.dat`, for example), followed by one line of text (with `$` codes and `$e`) that runs **to the end of the item's data** (confirmed, all 117). The NUL terminator is not counted in the item length: in 112 items the padding's zeros follow at once, but in 5 the data length is a multiple of 16, so there is no padding and the next link follows directly. The game therefore seems to find the end of the text by the item length (or the leading values), not by a NUL (**inferred**). The leading values are page counts and per-page values, and the game splits the text by those page counts (**confirmed**, issue #11, [message-script.md](message-script.md)).
 * Following this, `tools/jsrfkr/textpatch.py` does not require a NUL after a string that runs to the end of a `norm:` item.
 * Byte runs containing `$e` in other files (effects, enemies, players and so on) are binary data that happen to match (not text).
 * When an item's length changes, the container only needs its links recomputed (the rules of §1); reinsertion with changed lengths (P5) only has to solve the item's internal format.
@@ -110,7 +110,7 @@ Facts confirmed in issue #2 (P1). Input: the Japanese dump's `Media` (1,056 of i
 
 * Whether the game reads the header's two zero fields and the link `flag`; for now they are written as observed.
 * How block kinds (textures, models, scripts) are told apart; the container layer carries no kind marker.
-* The format of event script items (P5).
+* ~~The format of event script items~~ → confirmed (issue #11, [message-script.md](message-script.md)). The item `2/0` of the other 183 `e###.dat` holds no `$e` (no text; content unresolved).
 
 ## 5. Reproducing
 

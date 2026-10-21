@@ -138,6 +138,7 @@ If the requirement is a simple question or confirmation request, answer it direc
 * 계획 문서는 `docs/work-orders/` 아래에 둔다.
 * 작업 결과와 회고는 `docs/work-logs/` 아래에 둔다.
 * 사용자가 직접 수행하는 검증·패치 적용·운영 절차는 `docs/guides/` 아래에 둔다. 반복 수행 가능한 절차만 두고, 근거가 되는 작업 로그와 설계를 링크한다.
+* 가이드는 나중에 AI 도움 없이 가이드와 저장소 도구만으로 패치를 끝까지 만들 수 있게 단계별로 쓴다(정확한 명령, 입력과 출력, 성공을 확인하는 법, 오류 메시지의 뜻, 아직 안 되는 단계). 도구나 사용자가 하는 단계를 바꾸는 작업은 같은 작업에서 관련 가이드를 갱신한다.
 * 원본 XBE·`Media` 분석으로 확인한 사실, 가설, 미해결 질문은 `docs/analysis/` 아래에 주제별로 둔다.
 * 일반 기술 정의, 배경 지식, 용어집(`docs/kb/glossary.md`)은 `docs/kb/` 아래에 주제별로 두고, 외부 자료에서 왔으면 원문 링크를 단다.
 * 프로젝트의 큰 방향성과 단계는 `docs/PLAN.md`에 반영한다.
@@ -155,6 +156,7 @@ If the requirement is a simple question or confirmation request, answer it direc
 * Put work-order documents under `docs/work-orders/`.
 * Put work results and retrospectives under `docs/work-logs/`.
 * Put procedures the user runs themselves (verification, applying the patch, operations) under `docs/guides/`. Keep only repeatable procedures there, and link the design and work log they rest on.
+* Write guides step by step so that the patch can later be completed with the guides and the repository's tools alone, without AI help (exact commands, inputs and outputs, how to check success, what error messages mean, steps not available yet). A task that changes a tool or a step the user performs updates the related guide in the same task.
 * Put findings from the original XBE and `Media` (confirmed behavior, hypotheses, unresolved questions) under `docs/analysis/`, organized by topic.
 * Put generally applicable technical definitions, background and the glossary (`docs/kb/glossary.md`) under `docs/kb/`, organized by topic and linked to external sources when derived from them.
 * Reflect the project's broad direction and phases in `docs/PLAN.md`.

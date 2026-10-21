@@ -1,6 +1,6 @@
 # 패치 적용하기
 
-자기 덤프에 패치 도구를 돌려 한국어 패치된 게임 폴더(와 xiso)를 만드는 절차다. 근거는 [설계 i002](../design/20261021-i002-patcher.md)와 [작업 로그 i002](../work-logs/20261021-i002-patcher.md)다. 지금은 번역이 없으므로 기본 패치는 글리프 표와 `jetfont.dat`만 바꾼다. 새 표에는 한자 칸이 없으므로, 이 출력에서는 일본어 문장의 한자가 얼룩으로 나온다(가나는 그대로). 번역(P6)이 생기기 전까지 기본 출력은 시험용이다. 화면에서 한국어를 보려면 [개념 증명 시험 문장](../../patch/poc/lines.tsv)을 쓴다(§3).
+자기 덤프에 패치 도구를 돌려 한국어 패치된 게임 폴더(와 xiso)를 만드는 절차다. 근거는 [설계 i002](../design/20261021-i002-patcher.md)와 [작업 로그 i002](../work-logs/20261021-i002-patcher.md)다. 지금은 번역이 없으므로 기본 패치는 글리프 표와 `jetfont.dat`만 바꾼다. 새 표에는 한자 칸이 없으므로, 이 출력에서는 일본어 문장의 한자가 얼룩으로 나온다(가나는 그대로). 번역(P6)이 생기기 전까지 기본 출력은 시험용이다. 화면에서 한국어를 보려면 [개념 증명 시험 문장](../../patch/poc/lines.tsv)을 쓴다(§3). 번역 파일을 만드는 절차(추출 → 번역 → 재조합)는 [text-pipeline.md](text-pipeline.md)에 있다.
 
 ```mermaid
 flowchart LR
@@ -57,7 +57,7 @@ python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr-poc --text patc
 
 # Applying the patch
 
-How to run the patcher on your own dump to make a Korean-patched game folder (and xiso). It rests on [design i002](../design/20261021-i002-patcher.md) and [work log i002](../work-logs/20261021-i002-patcher.md). There is no translation yet, so the default patch changes only the glyph table and `jetfont.dat`. The new table has no kanji cells, so in this output the kanji of the Japanese text show as smudges (kana stay); until the translation (P6) exists, the default output is for testing only. To see Korean on screen, use the [proof-of-concept test lines](../../patch/poc/lines.tsv) (§3).
+How to run the patcher on your own dump to make a Korean-patched game folder (and xiso). It rests on [design i002](../design/20261021-i002-patcher.md) and [work log i002](../work-logs/20261021-i002-patcher.md). There is no translation yet, so the default patch changes only the glyph table and `jetfont.dat`. The new table has no kanji cells, so in this output the kanji of the Japanese text show as smudges (kana stay); until the translation (P6) exists, the default output is for testing only. To see Korean on screen, use the [proof-of-concept test lines](../../patch/poc/lines.tsv) (§3). The procedure for making the translation files (extract → translate → reassemble) is in [text-pipeline.md](text-pipeline.md).
 
 (The diagram above shows the steps: place the dump, run the patcher, which stops on an MD5 mismatch or writes the output folder and xiso, then run it in an emulator.)
 

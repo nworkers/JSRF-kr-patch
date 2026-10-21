@@ -58,6 +58,16 @@
 
 * 일본판은 언어 전역 `0x251F58`에 쓰지 않는다. 일본판 빌드의 언어 설정이 Japanese 고정인 것과 맞는다.
 
+## P5-1 문장 형식과 추출 (issue #11)
+
+근거: [analysis/message-script.md](analysis/message-script.md), [analysis/mission-files.md](analysis/mission-files.md), [analysis/xbe-strings.md](analysis/xbe-strings.md), [설계 i011](design/20261021-i011-text-extract.md)
+
+* **메시지 스크립트(확인됨, 368개 왕복)**: 이벤트 항목 `2/0`과 대화 이벤트 `TE###.bin`은 같은 형식이다. `u32` 머리 9개(`[1]` 언어 수, `[4]` 메시지 수), (언어 × 메시지)마다 필드 5개(필드 0 = 페이지 수), 페이지별 `u32` 값, 그 뒤 페이지마다 "바이트 + `$r`"이 데이터 끝까지. 게임은 머리의 페이지 수로 문장을 나눈다(P1의 "길이로 끝을 안다" 추정을 대신한다). reJSRF가 런타임에 페이지를 바꿀 때 페이지 수가 같으면 머리를 그대로 두면 된다.
+* **대화 이벤트 분기**: `$bc`/`$bj`/`$bo` 다음 1바이트와 `$s` 다음 2바이트는 2진 인자이고, `$bj` `$bo` `$s`의 인자는 같은 언어 구간 안의 페이지 번호로 보인다(**추정**). 문자열을 NUL이나 바이트열 검색으로 다루면 안 된다.
+* **미션 파일(확인됨, 정적)**: 로더 `0x25DD0`(파일 크기만큼 할당), 재배치 `0x4DB30`, 문장 명령 opcode `0xBE 0xBF 0xC0 0xE8 0xE9 0xEA 0xEF`의 언어별 포인터 7칸(칸 0 = 일본어). **US판도 같은 주소, 같은 바이트**(같은 주소 바이트 비교). reJSRF가 미션 문장을 바꿀 때는 `0x4DB30` 뒤 칸 0 포인터를 새 문자열로 돌리거나, 파일 끝에 붙인 파일을 내줘도 된다.
+* **XBE 문자열(확인됨, 일본판)**: `.rdata` 651개, `.data` 포인터 칸 1,083개 + `push` 23곳. US판 대응은 아직 없다(P8).
+* 추출 단위와 자리(`norm:2/0+…`, `off:…`, `va:…`)는 `tools/extract_text.py`가 만들고 `patch/text/*.tsv`에 그대로 쓴다.
+
 ## P1 결과물 형식과 컨테이너 (issue #2)
 
 근거: [analysis/containers.md](analysis/containers.md), [design/20261021-i002-patcher.md](design/20261021-i002-patcher.md)
@@ -127,6 +137,16 @@ Basis: [analysis/text-files.md](analysis/text-files.md), [work log i008](work-lo
 | XBE `.data` `0x2216DC`, `0x2221D8` | the retry menu and B-button hint tables | not matched |
 
 * The Japanese build never writes the language global `0x251F58`, which agrees with the Japanese build's language being fixed to Japanese.
+
+## P5-1 text formats and extraction (issue #11)
+
+Basis: [analysis/message-script.md](analysis/message-script.md), [analysis/mission-files.md](analysis/mission-files.md), [analysis/xbe-strings.md](analysis/xbe-strings.md), [design i011](design/20261021-i011-text-extract.md)
+
+* **Message scripts (confirmed, round trip of 368)**: event item `2/0` and talk events `TE###.bin` share one format: 9 `u32` header values (`[1]` languages, `[4]` messages), 5 fields per (language × message) (field 0 = page count), one `u32` per page, then each page as "bytes + `$r`" to the end of the data. The game splits the text by the header's page counts (replacing P1's "finds the end by length" inference). When reJSRF changes pages at run time with the page count unchanged, the header stays as it is.
+* **Talk-event branches**: the byte after `$bc`/`$bj`/`$bo` and the two bytes after `$s` are binary arguments; those of `$bj` `$bo` `$s` appear to be page numbers inside the same language block (**inferred**). Do not handle these strings by NUL or byte-pattern search.
+* **Mission files (confirmed, static)**: loader `0x25DD0` (allocates the file's size), relocation `0x4DB30`, and the 7 per-language pointers (slot 0 = Japanese) of text commands with opcodes `0xBE 0xBF 0xC0 0xE8 0xE9 0xEA 0xEF`. **The US build has the same code at the same addresses, byte for byte** (compared at the same address). To change a mission string, reJSRF can point slot 0 at a new string after `0x4DB30`, or serve a file with the string appended.
+* **XBE strings (confirmed, Japanese build)**: 651 in `.rdata`, referenced by 1,083 `.data` pointer slots and 23 `push`es; no US counterparts yet (P8).
+* The extraction units and places (`norm:2/0+…`, `off:…`, `va:…`) are produced by `tools/extract_text.py` and used as they are in `patch/text/*.tsv`.
 
 ## P1 deliverable format and containers (issue #2)
 
