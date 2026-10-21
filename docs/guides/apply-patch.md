@@ -35,7 +35,7 @@ python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr --iso "roms/Jet
 python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr-poc --text patch/poc/lines.tsv --iso "roms/Jet Set Radio Future.iso"
 ```
 
-출력 MD5가 [작업 로그 i008](../work-logs/20261020-i008-poc.md) §3의 값과 같아야 한다(`default.xbe` `cbb44a1188af507cc37b4234e5d9b09e` 등). 화면에서 볼 자리는 [emulator-check.md](emulator-check.md) §4다.
+출력 MD5가 [작업 로그 i008](../work-logs/20261020-i008-poc.md) §3의 값과 같아야 한다(`default.xbe` `cbb44a1188af507cc37b4234e5d9b09e` 등). 다만 v0.0.8(issue #13)부터 대화 페이지를 공백 없이 다시 만들므로 `Media/Event/TalkEvent/TE014.bin`은 `ef4ad91efec7a607a2b984d3b32aabc8`이고, 그에 따라 xiso의 MD5도 다르다. 원문보다 긴 시험 문장은 [emulator-check.md](emulator-check.md) §5. 화면에서 볼 자리는 [emulator-check.md](emulator-check.md) §4다.
 
 ## 4. 실행해 보기
 
@@ -79,7 +79,7 @@ How to run the patcher on your own dump to make a Korean-patched game folder (an
 
 ## 3. Checking the screen with the test lines
 
-(Command above.) The output MD5s must equal those in §3 of [work log i008](../work-logs/20261020-i008-poc.md) (`default.xbe` `cbb44a1188af507cc37b4234e5d9b09e` and so on). The places to look at are in [emulator-check.md](emulator-check.md) §4.
+(Command above.) The output MD5s must equal those in §3 of [work log i008](../work-logs/20261020-i008-poc.md) (`default.xbe` `cbb44a1188af507cc37b4234e5d9b09e` and so on), except that from v0.0.8 (issue #13) talk pages are rebuilt without padding, so `Media/Event/TalkEvent/TE014.bin` is `ef4ad91efec7a607a2b984d3b32aabc8` and the xiso's MD5 differs accordingly. Test lines longer than the original: [emulator-check.md](emulator-check.md) §5. The places to look at are in [emulator-check.md](emulator-check.md) §4.
 
 ## 4. Running it
 

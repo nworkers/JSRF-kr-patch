@@ -58,6 +58,13 @@
 
 * 일본판은 언어 전역 `0x251F58`에 쓰지 않는다. 일본판 빌드의 언어 설정이 Japanese 고정인 것과 맞는다.
 
+## P5-2 길이가 바뀌는 문장 재삽입 (issue #13)
+
+근거: [설계 i013](design/20261021-i013-text-reinsert.md), [작업 로그 i013](work-logs/20261021-i013-text-reinsert.md)
+
+* 이 저장소의 패치 출력에서 길이가 바뀐 파일: 이벤트 `e###.dat`(항목 `2/0`의 페이지와 컨테이너 연결), 대화 `TE###.bin`(파일 크기), 미션 `mssn####.bin`(파일 끝에 붙인 문자열과 칸 0 포인터), `default.xbe`(새 섹션 `KRTEXT` VA `0x289000`, 섹션 머리 표를 `0x988`로 옮김, 옮긴 문자열의 `.data` 칸과 `push` 즉치). 페이지 수는 바꾸지 않는다.
+* reJSRF는 US XBE를 실행하므로 XBE 쪽은 그대로 쓸 수 없다. 런타임에 같은 문자열 참조를 새 문자열로 바꾸는 방식이 필요하다(옮긴 문자열의 참조 목록은 `tools/jsrfkr/xbetext.py`가 일본판에서 만든다. US판 대응은 P8). `Media` 파일은 US판에서도 같은 코드가 읽으므로 그대로 쓸 수 있을 것이다(**추정**, 화면 확인 전).
+
 ## P5-1 문장 형식과 추출 (issue #11)
 
 근거: [analysis/message-script.md](analysis/message-script.md), [analysis/mission-files.md](analysis/mission-files.md), [analysis/xbe-strings.md](analysis/xbe-strings.md), [설계 i011](design/20261021-i011-text-extract.md)
@@ -137,6 +144,13 @@ Basis: [analysis/text-files.md](analysis/text-files.md), [work log i008](work-lo
 | XBE `.data` `0x2216DC`, `0x2221D8` | the retry menu and B-button hint tables | not matched |
 
 * The Japanese build never writes the language global `0x251F58`, which agrees with the Japanese build's language being fixed to Japanese.
+
+## P5-2 reinserting text whose length changes (issue #13)
+
+Basis: [design i013](design/20261021-i013-text-reinsert.md), [work log i013](work-logs/20261021-i013-text-reinsert.md)
+
+* Files whose length changes in this repository's patch output: events `e###.dat` (the pages of item `2/0` and the container links), talk `TE###.bin` (file size), missions `mssn####.bin` (strings appended at the end with slot-0 pointers), `default.xbe` (new section `KRTEXT` at VA `0x289000`, the section header table moved to `0x988`, the `.data` slots and `push` immediates of moved strings). Page counts never change.
+* reJSRF runs the US XBE, so the XBE side cannot be used as is; it needs the same string references swapped for new strings at run time (the reference lists of moved strings come from `tools/jsrfkr/xbetext.py` on the Japanese build; the US counterparts are P8). The `Media` files are read by the same code in the US build, so they should work as they are (**inferred**, before the screen check).
 
 ## P5-1 text formats and extraction (issue #11)
 

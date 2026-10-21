@@ -59,6 +59,7 @@ flowchart TD
 * 붙인 문자열 뒤에도 파일이 끝나므로 다른 구역의 위치는 바뀌지 않는다. 로더가 파일 크기만큼 버퍼를 잡으므로 커진 파일도 다 읽힌다(정적 확인, 화면 확인은 다음 issue).
 * 원래 자리는 남겨 두어도 된다(아무 포인터도 가리키지 않게 된다).
 * HDD 캐시는 파일 전체를 복사하므로 커진 파일도 같은 방식이다([text-files §6](text-files.md)). 시험 전에 캐시를 지운다.
+* 구현(issue #13, `tools/jsrfkr/reinsert.py`): 위 표대로. 미션 문자열 495개를 일부러 모두 파일 끝에 붙여도 모든 칸 0 포인터가 원래 바이트의 문자열로 이어지고, 포인터 밖의 바이트는 원본과 같다(`check_reinsert.py`). 커진 파일의 화면 확인은 남았다(**미확정**).
 
 ## 5. 2,933개 레코드와의 관계
 
@@ -126,6 +127,7 @@ Facts confirmed in issue #11 (P5-1). Inputs: the Japanese dump's 311 `mssn####.b
 * The appended string sits after everything else, so no other section moves. The loader allocates the file's size, so a grown file is read whole (static; the screen check is the next issue's).
 * The old place may stay as it is (no pointer refers to it any more).
 * The HDD cache copies whole files, so a grown file is handled the same way ([text-files §6](text-files.md)); clear the cache before testing.
+* Implemented (issue #13, `tools/jsrfkr/reinsert.py`) as in the table: appending all 495 mission strings on purpose keeps every slot-0 pointer leading to the original bytes, with no other byte changed (`check_reinsert.py`); a screen check of grown files is pending (**unresolved**).
 
 ## 5. Relation to the 2,933 records
 
