@@ -59,9 +59,13 @@ def take_flag(args, name):
 
 def read_text(text_path):
     try:
-        return textpatch.read_rows(textpatch.text_files(text_path))
+        rows = textpatch.read_rows(textpatch.text_files(text_path))
     except (OSError, textpatch.PatchError) as err:
         raise SystemExit(str(err))
+    done = textpatch.translated(rows)
+    if len(done) < len(rows):
+        print(f"text: {len(rows) - len(done)} untranslated rows (empty korean) left as the original")
+    return done
 
 
 def update_manifest(game, rows):

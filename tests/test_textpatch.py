@@ -116,6 +116,30 @@ class TextPatchTest(unittest.TestCase):
         textpatch.apply(rows, files, data.__getitem__, encoder())
         self.assertEqual(bytes(files["f"]), b"$p\x88\x90   $r")
 
+    def test_empty_korean_skipped(self):
+        # An untranslated skeleton row keeps the original, even for pad=nul.
+        data = {"f": b"\x01AB\0CD\0"}
+        rows = textpatch.read_rows([self.write("k.tsv", HEADER +
+                                              f"f\toff:0x1\t2\t{sha(b'AB')}\t\t\n"
+                                              f"f\toff:0x4\t2\t{sha(b'CD')}\t가\t\n")])
+        self.assertEqual(len(rows), 2)
+        self.assertEqual([r.offset for r in textpatch.translated(rows)], [4])
+        files = {}
+        _, done = textpatch.apply(rows, files, data.__getitem__, encoder())
+        self.assertEqual(len(done), 1)
+        self.assertEqual(bytes(files["f"]), b"\x01AB\0\x88\x90\0")
+        self.assertEqual(textpatch.apply(rows[:1], {}, data.__getitem__, encoder()), (set(), []))
+
+    def test_check_original(self):
+        tree = Block(b"MULT", [Block(b"NORM", [b"\x01\x02ABCD"])])
+        data = container.build(tree)
+        good = textpatch.read_rows([self.write("c.tsv", HEADER + f"e\tnorm:0/0+0x2\t4\t{sha(b'ABCD')}\t\t\n")])[0]
+        textpatch.check_original(good, data)
+        textpatch.check_original(good, data, tree=container.parse(data))
+        bad = good._replace(orig_sha1=sha(b"ABCE"))
+        with self.assertRaisesRegex(textpatch.PatchError, "orig_sha1"):
+            textpatch.check_original(bad, data)
+
     def test_mixed_places_rejected(self):
         tree = Block(b"MULT", [Block(b"NORM", [b"AB\0"])])
         data = {"e": container.build(tree)}
