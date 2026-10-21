@@ -3,7 +3,7 @@
 issue #8(P4) 개념 증명에서 확인한 사실이다. 입력은 일본판 `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`)와 그 `Media`다. 작업 증거는 [작업 로그](../work-logs/20261020-i008-poc.md), 문장을 그리는 쪽은 [text-renderer.md](text-renderer.md)에 있다.
 
 * 화면 확인은 Cxbx-Reloaded(585c49a)와 xemu 0.8.138에서 했다. 바꾼 자리는 [patch/poc/lines.tsv](../../patch/poc/lines.tsv)에 있다.
-* 미션·대화 이벤트 파일 구조는 시험 문장을 넣을 만큼만 봤다. 전체 형식은 P5(문장 추출·재삽입)에서 정한다.
+* 미션·대화 이벤트 파일 구조는 시험 문장을 넣을 만큼만 봤다. 전체 형식은 issue #11(P5-1)에서 확인했다: [message-script.md](message-script.md)(이벤트 항목 `2/0`, 대화 이벤트), [mission-files.md](mission-files.md), [xbe-strings.md](xbe-strings.md). 길이가 바뀔 때 다시 계산할 것은 [설계 i011 §2](../design/20261021-i011-text-extract.md)에 모았다.
 
 ```mermaid
 flowchart LR
@@ -38,14 +38,14 @@ flowchart LR
 ## 2. 미션 파일 `Media/Mission/mssn####.bin` (확인됨)
 
 * `NORM` 머리가 없다(`e###.dat` 같은 문장 레코드와 다르다).
-* 목표 문장은 일본어 문자열, NUL, 영어 문자열, NUL의 짝으로 들어 있다. 앞쪽에 오프셋 표로 보이는 값들(`…0800` 꼴)이 있다. 그 표의 구조는 **미확정**이다.
+* 목표 문장은 일본어 문자열, NUL, 영어 문자열, NUL의 짝으로 들어 있다. 앞쪽의 오프셋 표는 머리의 구역 표이고, 문장은 명령 레코드의 언어별 포인터 7칸이 가리킨다(**확인됨**, issue #11, [mission-files.md](mission-files.md)). "짝"은 칸 0(일본어)과 칸 1(영어) 문자열이 이어서 놓인 것이다.
 * 첫 미션(도겐자카) 목표 "“ドーゲン坂”をグラフィティで…"는 `mssn0110.bin` 파일 위치 `0x2228C`(42바이트) 한 곳에만 있다. "ドーゲン坂"가 들어간 `mssn0112`·`0721`·`0921`의 문장은 다른 미션(레이스)이다.
 * 이 자리를 34바이트 한국어로 바꾸고 남는 8바이트를 NUL로 채웠다. 일시정지 지도 화면 위쪽의 목표 줄에 "“도겐자카”를 그래피티로 칠해라！"가 나왔다(Cxbx-Reloaded). 따옴표가 있는 문장은 이 파일뿐이라(XBE의 같은 목표 `0x1D35F4`는 따옴표가 없다) 화면 문장이 미션 파일에서 왔음을 알 수 있다. 문장 뒤에 길이를 따로 쓰는 값은 없거나, 있어도 짧아진 문장에 영향이 없다.
 
 ## 3. 대화 이벤트 `Media/Event/TalkEvent/TE###.bin` (확인됨)
 
 * 한 문자열 안에 `$p$bc…$r` 머리, 메시지들(`$r$e$r`로 구분), 이어서 영어가 들어 있다. `$` 코드의 뜻은 [text-renderer §6](text-renderer.md).
-* 문자열 안에 `0x01` 바이트가 있다. 그래서 "NUL 사이 문자열"로 찾으면 시작을 잘못 잡는다. 문장을 추출할 때는 이 파일 형식을 따로 읽어야 한다.
+* 문자열 안에 `0x01` 바이트가 있다. 그래서 "NUL 사이 문자열"로 찾으면 시작을 잘못 잡는다. 이 바이트는 분기 코드 `$bc` `$bj` `$bo`의 2진 인자이고, 파일 전체는 이벤트 항목 `2/0`과 같은 메시지 스크립트다(**확인됨**, issue #11, [message-script.md](message-script.md)).
 * 차고의 로보이 첫 대사(`TE014.bin` 파일 위치 `0x88`, 18바이트)를 17바이트 한국어로 바꾸고 남는 1바이트를 공백 `0x20`으로 채웠다(`pad=space`). Cxbx-Reloaded와 xemu에서 "뭐야、무슨 볼일？"이 나왔다. `、` `？`와 1바이트 공백도 정상이다. 화자 이름 "ロボィ"는 이 문자열 밖에 있고 가나라서 그대로 나온다.
 
 ## 4. XBE 메뉴 문자열 (확인됨)
@@ -63,6 +63,7 @@ flowchart LR
 * "セーブ"(`.rdata` `0x1D29E0`, 6바이트)를 "저장"(4바이트)으로 바꾸면 일시정지 지도 화면 오른쪽 아래에 나온다(Cxbx-Reloaded). XBE는 서명을 고치지 않았는데도 Cxbx-Reloaded와 xemu 모두 실행한다. 바꾼 섹션의 SHA-1 요약값은 다시 계산했다.
 * 함께 바꾼 `0x1D2C8C`(Ｂ…モドる), `0x1D24C8`(ガレージに…), `0x1D24DC`(タイトルに…？), `0x1D35F4`(도겐자카 목표, 따옴표 없음)는 어느 화면에 나오는지 아직 보지 못했다(**미확정**).
 * 이 표들의 US판 주소는 아직 대응시키지 않았다(**미확정**). US판 메뉴 문자열 주소는 일본판과 다르다.
+* `.rdata`의 일본어 문자열 전체(651개)와 참조(`.data` 칸 1,083개, `push` 23곳)는 [xbe-strings.md](xbe-strings.md)(issue #11).
 
 ## 5. 언어 (확인됨, 정적)
 
@@ -85,8 +86,8 @@ flowchart LR
 
 ## 8. 미확정
 
-* 미션 파일 앞쪽 오프셋 표의 구조. 문장 길이를 바꾸는 재삽입(P5)에 필요하다.
-* 대화 이벤트 파일의 전체 형식(`0x01` 바이트의 뜻, 메시지 수).
+* ~~미션 파일 앞쪽 오프셋 표의 구조~~ → 확인됨(issue #11, [mission-files.md](mission-files.md)).
+* ~~대화 이벤트 파일의 전체 형식(`0x01` 바이트의 뜻, 메시지 수)~~ → 확인됨(issue #11, [message-script.md](message-script.md)).
 * XBE 문자열 4개(§4)가 나오는 화면. 메뉴 표들의 US판 주소.
 * xemu의 HDD 캐시를 지우는 방법.
 
@@ -97,7 +98,7 @@ flowchart LR
 Facts confirmed in the issue #8 (P4) proof of concept. Inputs: the Japanese `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`) and its `Media`. The evidence is in the [work log](../work-logs/20261020-i008-poc.md); the drawing side is in [text-renderer.md](text-renderer.md).
 
 * The screen was checked in Cxbx-Reloaded (585c49a) and xemu 0.8.138. The changed places are in [patch/poc/lines.tsv](../../patch/poc/lines.tsv).
-* The mission and talk-event structures were examined only as far as needed to place the test lines; the full formats are settled in P5 (text extraction and reinsertion).
+* The mission and talk-event structures were examined only as far as needed to place the test lines. The full formats were confirmed in issue #11 (P5-1): [message-script.md](message-script.md) (event item `2/0`, talk events), [mission-files.md](mission-files.md), [xbe-strings.md](xbe-strings.md); what to recompute when a length changes is gathered in [design i011 §2](../design/20261021-i011-text-extract.md).
 
 (The diagram above shows the files on `D:`, the HDD cache on `Z:` and which reads go where.)
 
@@ -116,14 +117,14 @@ Facts confirmed in the issue #8 (P4) proof of concept. Inputs: the Japanese `def
 ## 2. Mission files `Media/Mission/mssn####.bin` (confirmed)
 
 * No `NORM` header (unlike text records such as `e###.dat`).
-* Objectives sit as pairs: a Japanese string, NUL, an English string, NUL. Earlier in the file are what look like offset tables (`…0800` patterns); their structure is **unresolved**.
+* Objectives sit as pairs: a Japanese string, NUL, an English string, NUL. The offset tables earlier in the file are the header's section table, and the strings are pointed to by the 7 per-language pointer slots of command records (**confirmed**, issue #11, [mission-files.md](mission-files.md)); a "pair" is the slot-0 (Japanese) and slot-1 (English) strings placed one after the other.
 * The first mission's (Dogenzaka) objective "“ドーゲン坂”をグラフィティで…" is only at file offset `0x2228C` (42 bytes) of `mssn0110.bin`. The "ドーゲン坂" lines of `mssn0112`, `0721` and `0921` belong to other missions (races).
 * Replacing it with 34 bytes of Korean and filling the remaining 8 bytes with NUL shows "“도겐자카”를 그래피티로 칠해라！" in the objective line at the top of the pause map screen (Cxbx-Reloaded). Only this file has the quoted form (the XBE's copy of the objective at `0x1D35F4` has no quotes), so the line on screen comes from the mission file. Either no separate length follows the string, or one does not affect a shorter string.
 
 ## 3. Talk events `Media/Event/TalkEvent/TE###.bin` (confirmed)
 
 * One string holds a `$p$bc…$r` head, the messages (separated by `$r$e$r`), then the English. The `$` codes are in [text-renderer §6](text-renderer.md).
-* The string contains a `0x01` byte, so "string between NULs" scanning finds the wrong start; extraction has to read this file format on its own terms.
+* The string contains a `0x01` byte, so "string between NULs" scanning finds the wrong start. The byte is a binary argument of the branch codes `$bc` `$bj` `$bo`, and the whole file is the same message script as event item `2/0` (**confirmed**, issue #11, [message-script.md](message-script.md)).
 * Roboy's first line in the garage (`TE014.bin` file offset `0x88`, 18 bytes) was replaced with 17 bytes of Korean, the last byte filled with a space `0x20` (`pad=space`). Cxbx-Reloaded and xemu show "뭐야、무슨 볼일？"; `、`, `？` and the single-byte space are fine. The speaker name "ロボィ" is outside this string and is kana, so it is unchanged.
 
 ## 4. XBE menu strings (confirmed)
@@ -141,6 +142,7 @@ Facts confirmed in the issue #8 (P4) proof of concept. Inputs: the Japanese `def
 * Replacing "セーブ" (`.rdata` `0x1D29E0`, 6 bytes) with "저장" (4 bytes) shows it at the bottom right of the pause map screen (Cxbx-Reloaded). The XBE signature was not fixed, yet both Cxbx-Reloaded and xemu run it; the changed sections' SHA-1 digests were recomputed.
 * Which screens show the other changed strings, `0x1D2C8C` (Ｂ…モドる), `0x1D24C8` (ガレージに…), `0x1D24DC` (タイトルに…？) and `0x1D35F4` (the Dogenzaka objective without quotes), has not been seen (**unresolved**).
 * The US addresses of these tables have not been matched (**unresolved**); the US menu strings sit at other addresses than the Japanese ones.
+* All Japanese `.rdata` strings (651) and their references (1,083 `.data` slots, 23 `push`es) are in [xbe-strings.md](xbe-strings.md) (issue #11).
 
 ## 5. Language (confirmed, static)
 
@@ -163,7 +165,7 @@ Facts confirmed in the issue #8 (P4) proof of concept. Inputs: the Japanese `def
 
 ## 8. Unresolved
 
-* The structure of the offset tables at the front of mission files; needed for reinsertion with changed lengths (P5).
-* The full talk-event format (the meaning of the `0x01` byte, the message count).
+* ~~The structure of the offset tables at the front of mission files~~ → confirmed (issue #11, [mission-files.md](mission-files.md)).
+* ~~The full talk-event format (the meaning of the `0x01` byte, the message count)~~ → confirmed (issue #11, [message-script.md](message-script.md)).
 * The screens that show the four XBE strings of §4; the US addresses of the menu tables.
 * How to clear xemu's HDD cache.

@@ -68,8 +68,8 @@ flowchart LR
 
 * `work/text/<group>.tsv`(UTF-8, LF, 정해진 순서): `file`, `where`, `orig_len`, `orig_sha1`, `pad`, `kind`, `ref`, `japanese`, `english`.
   * `kind`: `page`(이벤트·대화), `objective`(`0xEF`, 추정)·`message`(`0xBF` `0xC0`, 추정), `string`(XBE).
-  * `ref`: 구조 위치. 이벤트·대화 `msg 1 page 2`, 미션 `sec 0x174 rec 5 op 0xef`, XBE `refs 2 data + 0 code`.
-  * `japanese`: cp932로 푼 원문(`$` 코드 그대로). `english`: 대응하는 영어(미션은 언어 1 칸, 이벤트·대화는 같은 메시지 번호의 영어 페이지를 `$r`로 이은 것, XBE는 비움).
+  * `ref`: 구조 위치. 이벤트·대화 `part 0 page 1`(부분 = 앞에 있는 `$e` 페이지 수, 페이지 = 언어 구간 안 번호로 분기 인자와 같은 번호), 미션 `sec 0x174 rec 5 op 0xef`, XBE `refs 2 data + 0 code`.
+  * `japanese`: cp932로 푼 원문(`$` 코드 그대로). `english`: 대응하는 영어(미션은 언어 1 칸, 이벤트·대화는 같은 부분 번호의 영어 페이지를 `$r`로 이은 것, XBE는 비움).
   * 탭·줄바꿈·백슬래시는 `\t` `\n` `\\`로 쓴다(지금 덤프에는 없을 것으로 보이며, 나오면 개수를 보고한다).
 * `work/text/skeleton/<group>.tsv`: **패치 형식 그대로**(`file`, `where`, `orig_len`, `orig_sha1`, `korean`, `pad`), `korean`은 비어 있다. 원문은 없다. `work/text/<group>.tsv`와 `file`+`where`로 맞춘다.
 * `work/text/summary.txt`와 표준 출력: 묶음별 파일 수, 레코드 수, 단위 수, 바이트 수, 그리고 text-renderer.md의 레코드 2,933개와 비교하는 수(§5).
@@ -196,8 +196,8 @@ In `.rdata`: NUL-terminated strings that follow a NUL, are 4-byte aligned, decod
 
 * `work/text/<group>.tsv` (UTF-8, LF, fixed order): `file`, `where`, `orig_len`, `orig_sha1`, `pad`, `kind`, `ref`, `japanese`, `english`.
   * `kind`: `page` (event, talk), `objective` (`0xEF`, inferred) or `message` (`0xBF` `0xC0`, inferred), `string` (XBE).
-  * `ref`: structural position: `msg 1 page 2` for events and talk, `sec 0x174 rec 5 op 0xef` for missions, `refs 2 data + 0 code` for the XBE.
-  * `japanese`: the original decoded as cp932 (`$` codes kept). `english`: the English counterpart (the language-1 slot for missions; the English pages of the same message number joined with `$r` for events and talk; empty for the XBE).
+  * `ref`: structural position: `part 0 page 1` for events and talk (part = the number of `$e` pages before it; page = the number inside the language block, the same numbering branch arguments use), `sec 0x174 rec 5 op 0xef` for missions, `refs 2 data + 0 code` for the XBE.
+  * `japanese`: the original decoded as cp932 (`$` codes kept). `english`: the English counterpart (the language-1 slot for missions; the English pages of the same part number joined with `$r` for events and talk; empty for the XBE).
   * Tabs, newlines and backslashes are written as `\t` `\n` `\\` (none expected in this dump; any found are counted).
 * `work/text/skeleton/<group>.tsv`: **exactly the patch format** (`file`, `where`, `orig_len`, `orig_sha1`, `korean`, `pad`) with `korean` empty and no original text; matched to `work/text/<group>.tsv` by `file`+`where`.
 * `work/text/summary.txt` and standard output: files, records, units and bytes per group, plus the numbers compared with text-renderer.md's 2,933 records (§5).

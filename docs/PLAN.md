@@ -87,7 +87,7 @@ reJSRF의 작업 규칙과 라이선스를 그대로 가져와 이 저장소에 
 | P2 | #3 | **텍스트 렌더러 분석(일본판 XBE)**: 문장을 그리는 함수, 글리프 대응(코드→칸), `$` 코드의 뜻, 한 줄 최대 폭, 글리프 크기 | `docs/analysis/text-renderer.md`에 주소(일본판·US판), 대응 방식, 확인/추정 구분 |
 | P3 | #4 | **글꼴 방식 결정과 생성**: (a) 기존 Shift-JIS 코드 칸을 한글로 다시 그리기(코드 패치 없음) 또는 (b) 렌더러를 고쳐 한글 전용 코드와 새 아틀라스를 쓰기. P2 결과로 고른다. OFL 글꼴로 DXT3 아틀라스를 만드는 도구 | 설계 문서에 선택과 이유. 생성한 아틀라스를 alpha 이미지로 확인 |
 | P4 | #5 | **개념 증명**: 미션 목표 한 줄(예: 첫 미션)과 메뉴 한 줄을 한국어로 바꾼 패치 | xemu에서 해당 화면에 한글이 나온 캡처. reJSRF(US XBE + Language=Japanese + 패치된 `Media`)에서도 같은 문장 확인 |
-| P5 | #6 | 문장 파이프라인 전체: 추출(`work/`로, 커밋 안 함) → 번역 파일 → 재삽입. 이벤트·미션·대화·XBE 문자열. 길이가 늘면 레코드 크기와 오프셋을 다시 계산, XBE는 빈 공간이나 새 섹션으로 옮기고 참조를 고친다 | 모든 문장을 원문 그대로 넣은 왕복이 원본과 같다. 길이가 다른 시험 문장이 깨지지 않는다 |
+| P5 | #6 | 문장 파이프라인 전체: 추출(`work/`로, 커밋 안 함) → 번역 파일 → 재삽입. 이벤트·미션·대화·XBE 문자열. 길이가 늘면 레코드 크기와 오프셋을 다시 계산, XBE는 빈 공간이나 새 섹션으로 옮기고 참조를 고친다. **진행**: 앞 절반(형식 분석·추출·번역 뼈대·[가이드](guides/text-pipeline.md))은 issue #11([설계 i011](design/20261021-i011-text-extract.md)), 재삽입은 다음 issue | 모든 문장을 원문 그대로 넣은 왕복이 원본과 같다. 길이가 다른 시험 문장이 깨지지 않는다 |
 | P6 | #7~ | 번역(사람). 용어집(`docs/kb/glossary.md`: 캐릭터·장소·기술 이름 표기) | 장(chapter) 단위로 issue를 나눈다 |
 | P7 | #8 | 글자 그림(로고 경고문, 타이틀, 메뉴 스프라이트, 엔딩): 목록과 우선순위, 새로 그린 그림만 패치 데이터로 | 선택 사항. 목록 문서부터 |
 | P8 | 수시 | reJSRF 인계 문서(§8) | 단계마다 갱신 |
@@ -207,7 +207,7 @@ Changes to `AGENTS.md`:
 | P2 | #3 | **analyse the text renderer (Japanese XBE)**: the function that draws text, the glyph mapping (code → cell), the `$` codes' meaning, the maximum line width, glyph size | `docs/analysis/text-renderer.md` with addresses (Japanese and US), the mapping, confirmed vs inferred |
 | P3 | #4 | **choose and build the font approach**: (a) redraw existing Shift-JIS code cells with Hangul (no code patch) or (b) change the renderer to use Hangul codes and a new atlas; chosen from P2. A tool that builds the DXT3 atlas from an OFL font | the choice and reasons in a design document; the built atlas checked as an alpha image |
 | P4 | #5 | **proof of concept**: a patch turning one mission objective line (the first mission, say) and one menu line into Korean | an xemu capture with Hangul on that screen; the same line in reJSRF (US XBE + Language=Japanese + patched `Media`) |
-| P5 | #6 | the full text pipeline: extract (to `work/`, never committed) → translation file → reinsert, for events, missions, talk and XBE strings. Longer text recomputes record sizes and offsets; XBE strings move to free space or a new section with their references fixed | a round trip with the original text equals the original; test lines of other lengths do not break |
+| P5 | #6 | the full text pipeline: extract (to `work/`, never committed) → translation file → reinsert, for events, missions, talk and XBE strings. Longer text recomputes record sizes and offsets; XBE strings move to free space or a new section with their references fixed. **Progress**: the first half (format analysis, extraction, translation skeleton, [guide](guides/text-pipeline.md)) is issue #11 ([design i011](design/20261021-i011-text-extract.md)); reinsertion is the next issue | a round trip with the original text equals the original; test lines of other lengths do not break |
 | P6 | #7+ | translation (by people); a glossary (`docs/kb/glossary.md`: character, place and trick names) | issues split by chapter |
 | P7 | #8 | lettering pictures (logo warning, title, menu sprites, ending): list and priorities; only newly drawn pictures as patch data | optional; starts with the list |
 | P8 | ongoing | the reJSRF handoff document (§8) | updated each phase |
