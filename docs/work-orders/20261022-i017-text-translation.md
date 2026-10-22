@@ -16,8 +16,10 @@
 | 3 | `patch/text/mission.tsv` | 495줄 | 미션 목표/무전 대사 번역 | `check_text.py` 오류 0 확인 |
 | 4 | `patch/text/talk.tsv` | 733줄 | NPC/크루 대화 번역 | `check_text.py` 오류 0 확인 |
 | 5 | 전체 검증 및 커밋 | 2,276줄 | 100% 완료 확인 및 검증 | `check_text.py`, `patch.py` 빌드 확인 |
+| 6 | 후속 정정 | 3줄 | `talk.tsv` DJ 프로페서 K / DJ-K 표기 정위 | `check_text.py`, `patch.py` 빌드 확인 |
 
 각 단계 완료 시마다 번역 진행률과 주요 샘플을 사용자에게 리포트한다.
+
 
 ---
 
@@ -39,5 +41,7 @@ Translate the Japanese/English original text in `work/text/` to fill the `korean
 | 3 | `patch/text/mission.tsv` | 495 lines | Mission objectives/radio | 0 errors in `check_text.py` |
 | 4 | `patch/text/talk.tsv` | 733 lines | NPC/crew dialogue | 0 errors in `check_text.py` |
 | 5 | Full check & commit | 2,276 lines | 100% completion & validation | `check_text.py`, `patch.py` build verification |
+| 6 | Follow-up refinement | 3 lines | Align DJ Professor K / DJ-K in `talk.tsv` | `check_text.py`, `patch.py` build verification |
 
 Report translation progress and sample lines to the user at the completion of each step.
+

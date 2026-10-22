@@ -40,6 +40,11 @@ Design: [20261022-i017](../design/20261022-i017-text-translation.md), Work Order
    - 적용 결과 0 오류, 0 경고 단번에 달성.
 6. **패치 빌드 검증 (`patch.py`)**:
    - `patch/manifest.json` 갱신 후 실제 게임 덤프에 전체 패치 적용 빌드(`out/test_patch`) 성공 확인.
+7. **후속 정정: DJ 프로페서 K / DJ-K 표기 정위**:
+   - `talk.tsv` 내 TE007(28행)과 TE159(418행)을 원문대로 `DJ 프로페서 K` 풀네임으로 반영.
+   - TE213(599행)은 원문 약칭에 맞춰 `DJ-K`로 반영.
+   - `docs/kb/glossary.md` 캐릭터 테이블에 풀네임(`DJ 프로페서 K`)과 약칭(`DJ-K`) 구분 명시.
+
 
 1. **Translation Tone & Style Implementation**:
    - Replaced stiff translationese with lively, youthful street slang fitting JSRF's inline and graffiti culture.
@@ -60,6 +65,11 @@ Design: [20261022-i017](../design/20261022-i017-text-translation.md), Work Order
    - Achieved 0 errors and 0 warnings on validation.
 6. **Patch Build Verification (`patch.py`)**:
    - Updated `patch/manifest.json` and successfully executed a test patch build (`out/test_patch`).
+7. **Follow-up Refinement: DJ Professor K / DJ-K Notation Alignment**:
+   - Updated TE007 (line 28) and TE159 (line 418) in `talk.tsv` to use the full name `DJ 프로페서 K`.
+   - Updated TE213 (line 599) to match the original abbreviation `DJ-K`.
+   - Updated character entry in `docs/kb/glossary.md` to distinguish full name (`DJ 프로페서 K`) and abbreviation (`DJ-K`).
+
 
 ## 3. 검증 결과 (Verification Results)
 

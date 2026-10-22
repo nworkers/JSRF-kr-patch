@@ -35,9 +35,9 @@ issue #15(P6-0)에서 만든 번역 표기 기준이다. 번역자는 이 표를
 | クラッチ | Clutch | 클러치 | |
 | ロボィ | Roboy | 로보이 | 차고의 로봇 |
 | ポッツ | Pots | 포츠 | 개 |
-| ゼロビート | Zero Beat | 제로 비트 | |
-| ＤＪＫ / DJK | Professor K | DJ K | 라디오 DJ |
-| ゴウジ | Gouji | 고지 | 롯카쿠 고지 |
+| ＤＪプロフェッサーＫ / DJ Professor K | Professor K | DJ 프로페서 K | 풀네임 (이벤트·대화) |
+| DJ-K | DJ-K | DJ-K | 대화 약칭 (TE213 등 원문 표기) |
+| ＤＪＫ / DJK | Professor K | DJ K | 시스템 이름/라디오 DJ |
 | アクム | | 아쿠무 | 확인 필요 |
 | 警部 | | 경부 | 경찰 계급 |
 | 警官 / ケーカン | | 경관 | |
