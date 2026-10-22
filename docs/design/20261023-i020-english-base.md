@@ -31,6 +31,8 @@ flowchart LR
 
 ### 2.1 XBE를 영어 모드로 만드는 방법 (사용자 결정 1)
 
+> **결정(2026-10-23): 안 B** — US판 XBE를 바탕으로 한다.
+
 | 안 | 방법 | 코드 패치 | 장점 | 단점 |
 |---|---|---|---|---|
 | **A. 일본판 XBE + 언어 값 1** | `.data`의 파일 자료를 `0x251F5C`까지 늘려(그 사이는 0, 언어 값만 1) bss였던 언어 값을 초기값 1로 만든다. 뒤 섹션(`DOLBY` 등)의 원시 위치를 옮긴다 | 없음(자료·머리만) | 입력 XBE가 지금과 같다(일본판 MD5) | 원시 자료 약 136KB 증가, 섹션 원시 위치 이동(새 섹션 더하기와 같은 종류의 머리 수정). reJSRF는 일본판 빌드로만 실행 |
@@ -40,6 +42,8 @@ flowchart LR
 * B에서도 글꼴 표·문장 패치 방식은 그대로다. `.data` 표 주소는 US판이 대부분 −0x20·−0x18·−0x8만큼 다르므로, XBE 자리는 US판 주소로 적는다.
 
 ## 3. 자산 언어 (사용자 결정 2)
+
+> **결정(2026-10-23): 2-a** — 영어 모드의 음성(영어판 음성 효과음)을 받아들인다. 그림 자산도 영어판을 쓴다. `AGENTS.md`의 범위 문장("음성은 일본어 그대로")은 "음성은 바꾸지 않는다(게임이 고른 언어의 원래 음성)"로 고친다.
 
 영어 모드에서는 문장 말고도 언어별 자산이 영어판으로 바뀐다(reJSRF §2·§8).
 
@@ -127,6 +131,8 @@ Basis: reJSRF [language.md](https://github.com/nworkers/reJSRF/blob/main/docs/an
 
 ### 2.1 Making the XBE run in English mode (user decision 1)
 
+> **Decided (2026-10-23): option B** — base on the US XBE.
+
 | Option | Method | Code patch | For | Against |
 |---|---|---|---|---|
 | **A. Japanese XBE + language value 1** | extend `.data`'s file data to `0x251F5C` (zeros in between, only the language value 1), turning the bss language value into an initial 1; move the raw positions of the later sections (`DOLBY` and so on) | none (data and header only) | the input XBE stays as now (Japanese MD5) | about 136 KB more raw data and moved raw positions (the same kind of header edit as adding a section); reJSRF runs it only with its Japanese build |
@@ -136,6 +142,8 @@ Basis: reJSRF [language.md](https://github.com/nworkers/reJSRF/blob/main/docs/an
 * Under B the font and text patching stay as they are; `.data` table addresses differ in the US build mostly by −0x20, −0x18 or −0x8, so XBE places are written as US addresses.
 
 ## 3. Asset language (user decision 2)
+
+> **Decided (2026-10-23): 2-a** — accept English mode's voices (the English voice sound effects); the English picture assets are used too. The scope sentence of `AGENTS.md` ("voice stays Japanese") becomes "voice is not changed (the original voice of the language the game uses)".
 
 In English mode the per-language assets change to the English ones as well as the text (reJSRF §2, §8).
 
