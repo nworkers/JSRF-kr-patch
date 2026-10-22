@@ -29,6 +29,9 @@ trip: the output folder must equal the dump; check with
 tools/check_roundtrip.py --output). --update-manifest records the dump's MD5
 for every file the text patches touch (the target default.xbe must match).
 
+In the standalone executable (jsrf-kr-patch, design 20261023-i022) the
+patch data is built in, and the output must be under out/ in the current folder.
+
 usage: python -I tools/patch.py <game dir> <out dir under out/> [--text f|dir] [--iso xiso]
                                 [--link] [--identity] [--japanese-places]
        python -I tools/patch.py <game dir> --update-manifest [--text f|dir]
@@ -38,7 +41,7 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from jsrfkr import ROOT, english, pipeline, reinsert, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
+from jsrfkr import COMPILED, ROOT, english, pipeline, reinsert, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
 from jsrfkr.digest import ManifestError, check_inputs, load_manifest, md5, md5_file, write_manifest  # noqa: E402
 from jsrfkr.xbe import JP_MD5, Xbe  # noqa: E402
 import build_font  # noqa: E402  (tools/font, on sys.path through jsrfkr)
@@ -48,7 +51,13 @@ JETFONT = "Media/Font/jetfont.dat"
 PATCH = os.path.join(ROOT, "patch")
 MANIFEST = os.path.join(PATCH, "manifest.json")
 EN_MAP = os.path.join(PATCH, "xbe-en.tsv")
-OUT_ROOT = os.path.join(ROOT, "out")
+OUT_ROOT = os.path.join(os.getcwd() if COMPILED else ROOT, "out")
+
+
+def usage():
+    if COMPILED:
+        return __doc__.replace("python -I tools/patch.py", "jsrf-kr-patch")
+    return __doc__
 
 
 def take_opt(args, name, default=None):
@@ -208,12 +217,15 @@ def main():
     japanese_places = take_flag(args, "--japanese-places")
     text_path = take_opt(args, "--text", os.path.join(PATCH, "text"))
     if update:
+        if COMPILED:
+            raise SystemExit("--update-manifest edits patch/manifest.json in the repository; "
+                             "run it with python -I tools/patch.py")
         if len(args) != 1 or ident or link or iso:
-            raise SystemExit(__doc__)
+            raise SystemExit(usage())
         update_manifest(args[0], read_text(text_path))
         return
     if len(args) != 2:
-        raise SystemExit(__doc__)
+        raise SystemExit(usage())
     game, out = args[0], os.path.abspath(args[1])
     check_out(out)
     iso_out = out + ".iso"

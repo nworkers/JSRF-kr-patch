@@ -21,3 +21,9 @@ __pycache__/
 .vscode/
 *.tmp
 scratch/
+
+# Release packages built by tools/release.py.
+dist/
+
+# Site built by tools/site/build_site.py.
+build/

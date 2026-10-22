@@ -1,0 +1,85 @@
+name: Pages
+
+# Issue #23 (design docs/design/20261023-i023-pages.md): builds the introduction
+# site from docs/sites/ and deploys it to GitHub Pages.
+#
+# The Pages source must be "GitHub Actions" (Settings -> Pages). Publishing a
+# branch's /docs folder instead would expose every internal document there.
+#
+# release.yml creates releases with GITHUB_TOKEN, and events caused by that token
+# start no other workflow, so `on: release` would never fire; the download
+# buttons are refreshed by chaining on the Release workflow instead.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/sites/**'
+      - 'docs/screenshots/**'
+      - 'docs/release-notes/**'
+      - 'tools/site/**'
+      - 'VERSION'
+      - '.github/workflows/pages.yml'
+  pull_request:
+    paths:
+      - 'docs/sites/**'
+      - 'docs/screenshots/**'
+      - 'tools/site/**'
+      - '.github/workflows/pages.yml'
+  workflow_run:
+    workflows: [Release]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'deploy' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    name: Build site
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Configure Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v6
+
+      - name: Build
+        env:
+          # Read-only use: the latest release's packages for the download buttons.
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python -I tools/site/build_site.py --out build/site
+
+      - name: Upload artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/site
+
+  deploy:
+    name: Deploy
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

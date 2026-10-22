@@ -13,6 +13,7 @@
 | `font/` | 한국어 글꼴(A′): 글리프 표와 `jetfont.dat` 만들기([README](font/README.md)) | #6 |
 | `analysis/` | 분석 스크립트([README](analysis/README.md)) | #3 |
 | `check_english.py` | 영어 모드 출력과 `--japanese-places` 출력을 비교해 영어 자리만 바뀌었는지, 모두 한국어를 가리키는지, XBE 요약값이 맞는지 본다 | #20 |
+| `release.py` | 릴리스 묶음: `notes`(릴리스 노트의 해결된 issue 확인), `python`(Python판 zip), `binary`(Nuitka 실행 파일 묶음, `release-requirements.txt` 필요), `sums`. 묶음은 결정적이고, 만든 뒤 풀어서 스스로 점검한다. 워크플로 `.github/workflows/ci.yml`, `release.yml` | #22 |
 | `poc/` | 개념 증명 도구: reJSRF용 US XBE 폴더 포함([README](poc/README.md)) | #8 |
 
 ## 패치 도구
@@ -72,6 +73,7 @@ Standard library only (Python 3.10 or later; checked with 3.12). Run from the re
 | `font/` | the Korean font (A′): building the glyph table and `jetfont.dat` ([README](font/README.md)) | #6 |
 | `analysis/` | analysis scripts ([README](analysis/README.md)) | #3 |
 | `check_english.py` | compares an English-mode output with a `--japanese-places` output: only English places changed, all pointing to Korean, XBE digests right | #20 |
+| `release.py` | release packages: `notes` (resolved issues in the release notes), `python` (Python-edition zip), `binary` (Nuitka executable package; needs `release-requirements.txt`), `sums`; packages are deterministic and self-checked after unpacking. Workflows `.github/workflows/ci.yml`, `release.yml` | #22 |
 | `poc/` | the proof-of-concept tool, including the US XBE folder for reJSRF ([README](poc/README.md)) | #8 |
 
 ## The patcher

@@ -6,10 +6,10 @@
 
 ## 1. 목적과 범위
 
-* Jet Set Radio Future **일본판** `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`)와 그 `Media`에 적용하는 **한국어 패치**를 만든다.
+* Jet Set Radio Future의 `default.xbe`와 그 `Media`에 적용하는 **한국어 패치**를 만든다. 처음(P0~P6-1)에는 일본판 `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`)를 대상으로 했고, P6-2(issue #20)부터 덤프의 US판 `default.xbe`(MD5 `f4e366bfdceee551a09f42219c90d84e`)를 바탕으로 영어 모드로 동작한다.
 * 결과물은 **패치 도구와 패치 데이터**다. 사용자가 자기 덤프에 도구를 돌려 패치된 게임 폴더를 만든다. 원본 바이트는 저장소와 배포물에 넣지 않는다.
 * 이 저장소의 결과(바꾼 주소, 데이터 형식, 글꼴 방식)를 reJSRF가 참고해 런타임 방식으로 다시 구현한다(§8). 두 저장소는 코드를 공유하지 않고 문서로 넘긴다.
-* 범위 밖: 한국어 음성. 음성은 일본어 그대로 두고 자막(화면 문장)만 번역한다.
+* 범위 밖: 한국어 음성. 음성은 바꾸지 않고(영어 모드라 영어 음성) 자막(화면 문장)만 번역한다.
 
 ```mermaid
 flowchart LR
@@ -91,7 +91,7 @@ reJSRF의 작업 규칙과 라이선스를 그대로 가져와 이 저장소에 
 | P6 | #7~ | 번역. **P6-0 준비**(issue #15): 용어집 `docs/kb/glossary.md`, 검사 도구 `tools/check_text.py`, 번역 지침 [guides/translation.md](guides/translation.md), 뼈대를 `patch/text/`에, XBE 기능 문구(메뉴·안내·이름) 초벌. **P6-1 전체 텍스트 번역**(issue #17): 미션(목표·안내 495), 대화(733), 이벤트(397), XBE(651) 총 2,276행 전수 번역 완료(`patch/text/*.tsv`). `check_text.py` 오류·경고 0. **P6-2 영문 모드 기반**(issue #20): 같은 디스크의 US판 XBE(언어 1)를 바탕으로 하고, 한국어를 영어 자리(메시지 스크립트 언어 1 구간, 미션 칸 1, XBE 영어 칸 695개)에도 쓴다. 음성·그림 자산은 영어판 | 묶음(필요하면 파일 범위) 단위로 issue를 나눈다. `check_text.py` 오류 0 |
 | P7 | #8 | 글자 그림(로고 경고문, 타이틀, 메뉴 스프라이트, 엔딩): 목록과 우선순위, 새로 그린 그림만 패치 데이터로 | 선택 사항. 목록 문서부터 |
 | P8 | 수시 | reJSRF 인계 문서(§8) | 단계마다 갱신 |
-| P9 | #9 | 배포: 도구 사용법 가이드, 권리 고지, 릴리스 | 사용자 결정(§7) 뒤 |
+| P9 | #9 | 배포: 도구 사용법 가이드, 권리 고지, 릴리스. **P9-1**(issue #22): GitHub Actions 릴리스 — Windows·Linux 단독 실행 파일(Nuitka 2.8.10)과 Python판 묶음, 사용 설명서·출처, 해결된 issue가 든 릴리스 노트. **P9-2**(issue #23): 소개 페이지(`docs/sites/`) | 공개 여부는 사용자 결정(§7) |
 
 ## 6. 검증 방법
 
@@ -136,10 +136,10 @@ Grounds: reJSRF's Korean patch review ([design i105](https://github.com/nworkers
 
 ## 1. Purpose and scope
 
-* Make a **Korean patch** for the **Japanese** Jet Set Radio Future `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`) and its `Media`.
+* Make a **Korean patch** for Jet Set Radio Future's `default.xbe` and its `Media`. At first (P0–P6-1) the target was the Japanese `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`); from P6-2 (issue #20) the dump's US `default.xbe` (MD5 `f4e366bfdceee551a09f42219c90d84e`) is the base and the game runs in English mode.
 * The deliverable is **a patcher and patch data**: users run the tool on their own dump to make a patched game folder. No original bytes go into the repository or a release.
 * reJSRF takes this repository's results (changed addresses, data formats, the font approach) as reference and reimplements them at run time (§8). The two repositories share no code; results pass through documents.
-* Out of scope: Korean voice. Voice stays Japanese; only on-screen text (subtitles) is translated.
+* Out of scope: Korean voice. Voice is not changed (English in English mode); only on-screen text (subtitles) is translated.
 
 ## 2. Repository setup (the first task, issue #1)
 
@@ -211,7 +211,7 @@ Changes to `AGENTS.md`:
 | P6 | #7+ | translation. **P6-0 preparation** (issue #15): the glossary `docs/kb/glossary.md`, the check tool `tools/check_text.py`, the guide [guides/translation.md](guides/translation.md), skeletons in `patch/text/`, a first pass of the XBE's functional strings. **P6-1 full text translation** (issue #17): missions (495), talk (733), events (397), XBE (651) - all 2,276 rows fully translated (`patch/text/*.tsv`); `check_text.py` 0 errors and warnings. **P6-2 English-mode base** (issue #20): the same disc's US XBE (language 1) is the base, and the Korean also goes into the English places (message-script language 1, mission slot 1, 695 XBE English slots); voices and picture assets are English | issues split by group (by file range if needed); `check_text.py` with 0 errors |
 | P7 | #8 | lettering pictures (logo warning, title, menu sprites, ending): list and priorities; only newly drawn pictures as patch data | optional; starts with the list |
 | P8 | ongoing | the reJSRF handoff document (§8) | updated each phase |
-| P9 | #9 | release: usage guide, rights notice, release | after the user's decision (§7) |
+| P9 | #9 | release: usage guide, rights notice, release. **P9-1** (issue #22): GitHub Actions releases — Windows and Linux standalone executables (Nuitka 2.8.10) and a Python edition, with user guide and sources, release notes with resolved issues. **P9-2** (issue #23): introduction page (`docs/sites/`) | publication is the user's decision (§7) |
 
 ## 6. Verification
 

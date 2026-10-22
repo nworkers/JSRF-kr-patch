@@ -30,7 +30,7 @@ import jetfont  # noqa: E402
 import ttf  # noqa: E402
 from jsrfkr.xbe import JP_MD5, fix_digests, load_checked  # noqa: E402
 
-DEFAULT_FONT = os.path.join(HERE, "..", "..", "patch", "font", "DoHyeon-Regular.ttf")
+DEFAULT_FONT = os.path.join(jsrfkr.ROOT, "patch", "font", "DoHyeon-Regular.ttf")
 CELL, COLS, PER_PAGE, PAGES, PAGE_W = 26, 19, 361, 4, 512
 # Ink box of the original kanji (measured: x 2..23, y 3..22).
 BOX_X, BOX_Y, BOX_W, BOX_H = 2, 3, 22, 20

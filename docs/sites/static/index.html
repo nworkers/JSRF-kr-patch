@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JSRF 한국어 패치</title>
+<meta name="description" content="Jet Set Radio Future 비공식 한국어 패치 — 메뉴, 미션, 대화, 이벤트 자막 2,276줄 전체 한국어화. An unofficial Korean patch for Jet Set Radio Future.">
+<meta property="og:title" content="JSRF 한국어 패치">
+<meta property="og:description" content="도쿄-토의 거리, 이제 한국어로. Jet Set Radio Future 비공식 한국어 패치.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Gothic+A1:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#features">본문으로 건너뛰기</a>
+
+<header class="hero">
+  <div class="hero-wall" aria-hidden="true">
+    <span class="spray s1"></span><span class="spray s2"></span><span class="spray s3"></span>
+  </div>
+  <nav class="topbar" aria-label="바로가기">
+    <span class="topbar-tag">JSRF-KR</span>
+    <a href="#features">기능</a>
+    <a href="#compare">전후</a>
+    <a href="#translation">번역</a>
+    <a href="#download">내려받기</a>
+    <a href="#howto">사용법</a>
+    <a href="#releases">릴리스</a>
+    <a href="https://github.com/nworkers/JSRF-kr-patch">GitHub</a>
+  </nav>
+  <div class="hero-body">
+    <p class="sticker sticker-fan">UNOFFICIAL FAN PATCH</p>
+    <h1 class="hero-title">
+      <span class="tag-line tag-lime">JET SET RADIO</span>
+      <span class="tag-line tag-pink">FUTURE</span>
+      <span class="hero-ko">한국어 패치</span>
+    </h1>
+    <p class="hero-lead">도쿄-토의 거리, 이제 한국어로.<br>메뉴부터 미션, 대화, 이벤트 자막까지 화면 문장 <strong>2,276줄</strong>을 모두 옮겼다.</p>
+    <p class="hero-lead-en" lang="en">The streets of Tokyo-to, now in Korean — every on-screen line, from menus to event subtitles.</p>
+    <div class="hero-actions">
+      <a class="btn btn-spray" href="#download">내려받기 <span lang="en">Download</span></a>
+      <a class="btn btn-ghost" href="#howto">사용법 보기</a>
+    </div>
+    <p class="hero-version">최신 <span data-version>v{version}</span> · Windows · Linux · Python</p>
+  </div>
+  <div class="tape tape-a" aria-hidden="true"></div>
+  <div class="tape tape-b" aria-hidden="true"></div>
+</header>
+
+<main>
+  <section class="stats" aria-label="숫자로 보는 패치">
+    <div class="stat st-lime"><b>2,276</b><span>번역한 줄</span></div>
+    <div class="stat st-pink"><b>907</b><span>한글 음절 글리프</span></div>
+    <div class="stat st-cyan"><b>119</b><span>용어집 항목</span></div>
+    <div class="stat st-yellow"><b>0</b><span>검사 오류·경고</span></div>
+  </section>
+
+  <section id="features" class="section">
+    <h2 class="section-title"><span>기능</span><em lang="en">Features</em></h2>
+    <div class="cards">
+      <article class="card c1">
+        <h3>전체 한국어화</h3>
+        <p>XBE 메뉴·안내 651줄, 이벤트 자막 397줄, 미션 목표·안내 495줄, 대화 733줄. 영어 모드에서 게임이 읽는 문장 자리를 모두 한국어로 채운다.</p>
+        <p class="en" lang="en">All 2,276 on-screen lines: menus, events, missions and talk.</p>
+      </article>
+      <article class="card c2">
+        <h3>영어 모드 기반</h3>
+        <p>게임을 영어 모드로 돌려 한자 그림 글자 없이 깔끔하다. 음성과 그림 자산은 영어판 원래 그대로.</p>
+        <p class="en" lang="en">Runs in English mode: no kanji lettering left; voices and art untouched.</p>
+      </article>
+      <article class="card c3">
+        <h3>길이 제한 없음</h3>
+        <p>한국어가 원문보다 길어도 들어간다. 대사 페이지는 다시 짓고, 미션 문장은 파일 끝에 붙이고, 메뉴 문자열은 새 섹션으로 옮긴다.</p>
+        <p class="en" lang="en">Longer lines fit: pages rebuilt, strings appended or moved to a new section.</p>
+      </article>
+      <article class="card c4">
+        <h3>한글 글꼴</h3>
+        <p>배민 도현체(Do Hyeon, OFL)로 게임 글꼴을 다시 그렸다. 렌더러 코드는 손대지 않고 글리프 표만 바꾼다.</p>
+        <p class="en" lang="en">Hangul drawn from Do Hyeon (OFL); only the glyph table changes.</p>
+      </article>
+      <article class="card c5">
+        <h3>원본은 안 담는다</h3>
+        <p>게임 데이터는 한 바이트도 배포하지 않는다. 덤프의 MD5를 확인하고, 내 덤프와 패치 데이터만으로 결과물을 다시 만든다.</p>
+        <p class="en" lang="en">No game data shipped: MD5-checked dump, output regenerated.</p>
+      </article>
+      <article class="card c6">
+        <h3>XBE + ISO 한 번에</h3>
+        <p>명령 한 줄로 패치된 게임 폴더와 xiso를 만든다. xemu, Cxbx-Reloaded, 그리고 reJSRF에서 확인했다.</p>
+        <p class="en" lang="en">One command for the game folder and xiso; checked in xemu, Cxbx-Reloaded and reJSRF.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="compare" class="section section-wall">
+    <h2 class="section-title"><span>전후 비교</span><em lang="en">Before / After</em></h2>
+    <p class="section-lead">손잡이를 끌거나 방향키로 원본과 한국어 화면을 비교한다. 원본은 영어 모드와 일본어판 중에서 고를 수 있다.</p>
+    <figure class="compare compare-main" data-before="screenshots/talk-en.jpg" data-after="screenshots/talk-ko.jpg">
+      <div class="compare-switch" role="group" aria-label="원본 언어">
+        <button type="button" aria-pressed="true" data-before-src="screenshots/talk-en.jpg" data-label="ENGLISH">원본: 영어</button>
+        <button type="button" aria-pressed="false" data-before-src="screenshots/talk-ja.jpg" data-label="日本語">원본: 일본어</button>
+      </div>
+      <div class="compare-stage" tabindex="0" role="slider" aria-label="차고 대화 전후 비교" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <div class="compare-pane pane-before"><span class="pane-label" data-before-label>ENGLISH</span></div>
+        <div class="compare-pane pane-after"><span class="pane-label">한국어</span></div>
+        <div class="compare-handle" aria-hidden="true"></div>
+      </div>
+      <figcaption>차고에서 콘의 대사 <span lang="en">Corn in the garage</span> · reJSRF 캡처</figcaption>
+    </figure>
+    <p class="compare-note">다른 장면(메뉴, 미션 목표, 이벤트 자막)은 reJSRF 캡처로 계속 더한다. <span lang="en">More scenes to come, captured with reJSRF.</span></p>
+  </section>
+
+  <section id="translation" class="section">
+    <h2 class="section-title"><span>번역의 특징</span><em lang="en">Translation</em></h2>
+    <div class="translation">
+      <div class="bubble b-main">
+        <p class="bubble-text">어이, 여긴 “GG”의 차고다.<br>피자 배달치곤 손이 가벼운데?</p>
+        <p class="bubble-who">— 콘, 차고에서</p>
+      </div>
+      <ul class="points">
+        <li><b>길거리 말투</b> 번역투를 걷어 내고, 인라인과 그래피티의 거리에 어울리는 젊고 가벼운 구어체로.</li>
+        <li><b>인물마다 다른 목소리</b> 해적방송의 DJ 프로페서 K, 십대 스케이터 GG 크루, 고압적인 경찰과 롯카쿠, 라이벌 크루까지 말투를 따로 잡았다.</li>
+        <li><b>용어집 119개</b> 캐릭터·장소·기술 이름을 한 가지로 통일했다. 예를 들어 정식 이름은 “DJ 프로페서 K”, 원문이 줄여 부르는 곳은 “DJ-K”.</li>
+        <li><b>게임 규칙 지키기</b> 페이지·메시지·분기 제어 코드와 줄 폭·줄 수 한도를 검사 도구로 확인했다. 오류 0, 경고 0.</li>
+      </ul>
+    </div>
+    <p class="en section-en" lang="en">A youthful street register without translationese, distinct voices per character and crew, a 119-entry glossary keeping names consistent, and every control code and line limit checked.</p>
+  </section>
+
+  <section id="download" class="section">
+    <h2 class="section-title"><span>내려받기</span><em lang="en">Download</em></h2>
+    <div class="downloads">
+<!-- DOWNLOADS -->
+    </div>
+    <p class="download-note">묶음마다 사용법과 출처가 적힌 <code>README.md</code>가 들어 있다. 게임 데이터는 들어 있지 않으니 직접 가진 디스크의 덤프가 필요하다. <span lang="en">Each package has a README with usage and sources; no game data is included.</span></p>
+  </section>
+
+  <section id="howto" class="section section-wall">
+    <h2 class="section-title"><span>사용법</span><em lang="en">How to patch</em></h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-no">1</span>
+        <div>
+          <h3>내려받기</h3>
+          <p><a href="#download">내려받기</a>에서 내 OS에 맞는 묶음을 받아 푼다. 실행 파일판은 Python이 필요 없다.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-no">2</span>
+        <div>
+          <h3>덤프 준비</h3>
+          <p>직접 가진 디스크의 덤프: <code>default.xbe</code>(US판, MD5 <code>f4e366bf…</code>)와 <code>Media/</code> 폴더, 그리고 ISO를 만들려면 xiso.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step-no">3</span>
+        <div>
+          <h3>한 줄 실행</h3>
+          <div class="tabs" data-tabs>
+            <div class="tab-buttons" role="tablist">
+              <button role="tab" aria-selected="true" data-tab="win">Windows</button>
+              <button role="tab" aria-selected="false" data-tab="linux">Linux</button>
+              <button role="tab" aria-selected="false" data-tab="py">Python</button>
+            </div>
+            <pre class="tab-panel" data-panel="win"><code>jsrf-kr-patch.exe "D:\dump\Jet Set Radio Future" out\jsrf-kr --iso "D:\dump\JSRF.iso"</code></pre>
+            <pre class="tab-panel" data-panel="linux" hidden><code>./jsrf-kr-patch "/path/Jet Set Radio Future" out/jsrf-kr --iso "/path/JSRF.iso"</code></pre>
+            <pre class="tab-panel" data-panel="py" hidden><code>python -I tools/patch.py "/path/Jet Set Radio Future" out/jsrf-kr --iso "/path/JSRF.iso"</code></pre>
+          </div>
+          <p>결과: <code>out/jsrf-kr/</code>(패치된 게임 폴더)와 <code>out/jsrf-kr.iso</code>. xemu는 ISO를, Cxbx-Reloaded는 <code>default.xbe</code>를 연다.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="releases" class="section">
+    <h2 class="section-title"><span>릴리스</span><em lang="en">Releases</em></h2>
+    <div class="timeline">
+<!-- RELEASES -->
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><b>Jet Set Radio Future</b>와 그 대본, 그림, 음성의 권리는 <b>SEGA</b>에 있다. 이 사이트와 패치는 SEGA와 관계가 없는 비공식 팬 번역이다. <span lang="en">Jet Set Radio Future belongs to SEGA; this is an unofficial fan translation, not affiliated with SEGA.</span></p>
+  <p>패치 도구: <a href="https://github.com/nworkers/JSRF-kr-patch/blob/main/LICENSE">MIT License</a> · 한글 글꼴: Do Hyeon (<a href="https://github.com/google/fonts/tree/main/ofl/dohyeon">SIL OFL 1.1</a>) · 분석 참고: <a href="https://github.com/nworkers/reJSRF">reJSRF</a> · <a href="https://github.com/nworkers/JSRF-kr-patch/blob/main/THIRD_PARTY_NOTICES.md">서드파티 고지</a></p>
+  <p class="footer-tag" aria-hidden="true">KEEP ON SKATING</p>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
