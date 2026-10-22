@@ -2,7 +2,7 @@
 
 issue #20(P6-2) 분석 단계의 결과다. 입력은 같은 디스크의 US판 `default_eng.xbe`(MD5 `f4e366bfdceee551a09f42219c90d84e`)와 `Media`다. 설계는 [design i020](../design/20261023-i020-english-base.md), 작업 증거는 [작업 로그 i020](../work-logs/20261023-i020-english-base.md)에 있다.
 
-* 근거는 정적 분석(바이트 조사, capstone 디스어셈블리)이다. 화면은 아직 보지 않았다.
+* 근거는 정적 분석(바이트 조사, capstone 디스어셈블리)이다. 구현(v0.0.12 예정) 뒤 Cxbx-Reloaded·xemu에서 사용자가 화면을 확인했다(2026-10-23, 메뉴·대화·미션 등 "다 괜찮아 보인다", xemu 정상). reJSRF US 빌드는 패치한 XBE로 부팅한다(경고 화면까지, 창 없이 30초).
 * 주소는 **US판 가상 주소**다(설계 안 B: US판 XBE를 바탕으로 한다). `.rdata`와 코드는 일본판과 같은 주소이고, `.data` 표는 대부분 일본판보다 −0x20·−0x18·−0x8 앞에 있다(reJSRF language §5).
 
 ```mermaid
@@ -65,6 +65,8 @@ flowchart TD
 
 ## 6. 미확정
 
+화면 확인(위)에서 영어가 남은 곳이나 넘치는 곳은 보고되지 않았다. 다만 아래는 모든 화면을 본 것이 아니므로 미확정으로 남긴다.
+
 * `push`로만 참조되는 21개가 영어 모드에서 어떤 문자열로 바뀌는지.
 * 표 밖 7개 구역이 정말 언어와 무관한지.
 * 영어 모드의 그리기 차이(배율, 줄 폭) 전체.
@@ -76,7 +78,7 @@ flowchart TD
 
 Findings of the issue #20 (P6-2) analysis step. Inputs: the same disc's US `default_eng.xbe` (MD5 `f4e366bfdceee551a09f42219c90d84e`) and `Media`. The design is [design i020](../design/20261023-i020-english-base.md); the evidence is in the [work log i020](../work-logs/20261023-i020-english-base.md).
 
-* The basis is static analysis (byte surveys, capstone disassembly); the screen has not been looked at yet.
+* The basis is static analysis (byte surveys, capstone disassembly). After the implementation (planned v0.0.12): The user checked the screen in Cxbx-Reloaded and xemu (2026-10-23: menus, talk, missions and so on "all look fine"; xemu works). reJSRF's US build boots the patched XBE (up to the warning screen, 30 s without a window).
 * Addresses are **US virtual addresses** (design option B: the US XBE is the base). `.rdata` and code sit at the same addresses as in the Japanese build; `.data` tables mostly sit −0x20, −0x18 or −0x8 before the Japanese ones (reJSRF language §5).
 
 (The diagram above shows the language object feeding the four table shapes that select JP or English strings.)
@@ -127,6 +129,8 @@ Tables indexed by the language come in four shapes.
 * That requires **keeping the Korean in the Japanese string places (the current method)** and repointing English slots on top of it; restoring the Japanese places to the original would leave language-independent references Japanese.
 
 ## 6. Unresolved
+
+The screen check (above) reported no English left and nothing spilling over; since not every screen was seen, the items below stay unresolved.
 
 * Which strings the 21 `push`-only references become in English mode.
 * Whether the seven out-of-table regions really are language-independent.

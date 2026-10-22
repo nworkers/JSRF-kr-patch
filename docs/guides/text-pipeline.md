@@ -24,7 +24,7 @@ flowchart LR
 
 1. Python 3.10 이상. 외부 패키지는 필요 없다. 명령은 모두 **저장소 루트**에서 `python -I`로 실행한다.
 2. 일본판 디스크 덤프를 `roms/Jet Set Radio Future/`에 둔다(`default.xbe`와 `Media/`). Git은 이 폴더를 무시한다.
-3. `default.xbe`의 MD5가 `d8490cdb75bd47b36c62effdf1461ae0`이어야 한다. 다르면 도구가 멈춘다(다른 판이나 고친 파일).
+3. `default.xbe`는 같은 디스크의 US판(`default_eng.xbe`를 복사)이고 MD5가 `f4e366bfdceee551a09f42219c90d84e`이어야 한다. 다르면 도구가 멈춘다. US판의 `.rdata` 문자열은 일본판과 같은 주소라 추출 자리와 번역 파일은 그대로다(issue #20).
 
 ## 1. ① 추출
 
@@ -146,7 +146,7 @@ python -I tools/check_reinsert.py "roms/Jet Set Radio Future"
 
 | 메시지 | 뜻과 할 일 |
 |---|---|
-| `MD5 … is not the Japanese default.xbe` | 덤프가 일본판 원본이 아니다 |
+| `MD5 … is not the US default.xbe the patch is based on` | 덤프의 `default.xbe`가 US판 원본이 아니다(`default_eng.xbe`를 복사했는지 본다) |
 | `the output must be a folder under …work` | 추출 출력은 `work/` 아래만 된다(원문이 들어 있어서) |
 | `original bytes do not match orig_sha1` | 그 자리의 원문이 번역 파일이 기대한 것과 다르다. 덤프가 다르거나, 열을 잘못 고쳤다 |
 | `characters not in the glyph table: U+…` | 쓸 수 없는 글자다. 다른 글자로 바꾼다(§2.2) |
@@ -154,7 +154,7 @@ python -I tools/check_reinsert.py "roms/Jet Set Radio Future"
 | `page counts cannot change` | `$r` `$e` 또는 분기 코드를 더하거나 뺐다(§2.2) |
 | `overrun the 0x100-byte page buffer` | 한 페이지가 너무 길다. 페이지를 나눌 수 없으니 문장을 줄인다 |
 | `not the start of a page` | 이벤트·대화 줄의 `where`가 고쳐졌다. 뼈대의 값으로 되돌린다 |
-| `no room for another section header` | XBE 머리에 자리가 없다(일본판 원본에서는 나오지 않는다) |
+| `no room for another section header` | XBE 머리에 자리가 없다(US판 원본에서는 나오지 않는다) |
 | `not in the manifest (run --update-manifest)` | §3의 1을 한다 |
 | `… is also at …` | 같은 자리가 두 줄(또는 두 파일)에 있다. 하나만 남긴다 |
 | `exists and is not an empty folder` | 출력 폴더를 지우고 다시 실행한다 |
@@ -176,7 +176,7 @@ How to make the Korean text patch with this document and the repository's tools 
 
 1. Python 3.10 or later, no external packages. Run every command from the **repository root** with `python -I`.
 2. Put the Japanese disc dump in `roms/Jet Set Radio Future/` (`default.xbe` and `Media/`); Git ignores that folder.
-3. `default.xbe` must have MD5 `d8490cdb75bd47b36c62effdf1461ae0`; otherwise the tools stop (another edition or a modified file).
+3. `default.xbe` must be the same disc's US build (a copy of `default_eng.xbe`) with MD5 `f4e366bfdceee551a09f42219c90d84e`; otherwise the tools stop. The US `.rdata` strings sit at the Japanese build's addresses, so the extracted places and translation files stay as they are (issue #20).
 
 ## 1. ① Extract
 
@@ -262,7 +262,7 @@ The translation files stay as they are; the tool in ③ puts each row in the way
 
 | Message | Meaning and what to do |
 |---|---|
-| `MD5 … is not the Japanese default.xbe` | the dump is not the original Japanese build |
+| `MD5 … is not the US default.xbe the patch is based on` | the dump's `default.xbe` is not the original US build (check that `default_eng.xbe` was copied) |
 | `the output must be a folder under …work` | extraction writes only under `work/` (it holds original text) |
 | `original bytes do not match orig_sha1` | the original at that place differs from what the translation file expects: another dump, or a column was edited by mistake |
 | `characters not in the glyph table: U+…` | an unusable character; replace it (§2.2) |
@@ -270,7 +270,7 @@ The translation files stay as they are; the tool in ③ puts each row in the way
 | `page counts cannot change` | `$r`, `$e` or a branch code was added or removed (§2.2) |
 | `overrun the 0x100-byte page buffer` | a page is too long; pages cannot be split, so shorten the text |
 | `not the start of a page` | the `where` of an event or talk row was edited; restore the skeleton's value |
-| `no room for another section header` | no room in the XBE header (does not happen with the original Japanese build) |
+| `no room for another section header` | no room in the XBE header (does not happen with the original US build) |
 | `not in the manifest (run --update-manifest)` | do step 1 of §3 |
 | `… is also at …` | the same place is on two rows (or in two files); keep one |
 | `exists and is not an empty folder` | delete the output folder and run again |

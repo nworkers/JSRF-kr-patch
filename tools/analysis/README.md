@@ -8,6 +8,7 @@
 | `jetfont.py` | `jetfont.dat`의 텍스처 6장을 나열하고, `--png`로 alpha를 PNG로 쓴다(`--grid`는 칸 격자) | #3 |
 | `renderer_compare.py` | 렌더러 코드 범위가 일본판과 US판에서 같은지(다른 바이트가 모두 재배치된 주소인지)와 글꼴 표가 같은지 확인한다 | #3 |
 | `text_codes.py` | 문장 레코드의 `$` 코드 수, 표에 없는 글자, 가장 넓은 줄(픽셀), 가장 긴 페이지(바이트)를 센다. 원문은 출력하지 않는다. **1분 30초쯤 걸린다** | #3 |
+| `en_slots.py` | US판 XBE에서 언어 표를 찾아, 일본어 문자열의 언어 0 칸마다 영어 모드가 대신 읽는 칸을 정한다. `--tsv`로 `patch/xbe-en.tsv`를 쓴다(주소만) | #20 |
 
 실행(저장소 루트에서, 덤프가 `roms/`에 있을 때):
 
@@ -31,5 +32,6 @@ Scripts for examining the Japanese XBE and `Media`. Standard library only. They 
 | `jetfont.py` | lists the six textures in `jetfont.dat`; `--png` writes their alpha as PNG (`--grid` draws the cell grid) | #3 |
 | `renderer_compare.py` | checks that the renderer code ranges are the same in the JP and US builds (every differing byte a relocated address) and that the font tables are identical | #3 |
 | `text_codes.py` | counts the `$` codes in the text records, characters missing from the table, the widest line (pixels) and the longest page (bytes); prints no original text. **Takes about 1.5 minutes** | #3 |
+| `en_slots.py` | finds the language tables in the US XBE and, for each language-0 slot of a Japanese string, the slot English mode reads instead; `--tsv` writes `patch/xbe-en.tsv` (addresses only) | #20 |
 
 Run from the repository root with the dump under `roms/` (commands above).
