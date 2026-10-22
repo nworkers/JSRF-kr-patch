@@ -63,6 +63,7 @@
 * 사용자 보고: "잘 된다". 캐시 시각으로 보면 대화(`TE014.bin` 00:30)와 미션(`mssn0110.bin` 00:29) 파일을 읽었다.
 * 결론: 섹션을 더하는 XBE 방식, 대화 페이지 다시 만들기, 미션 붙이기는 Cxbx-Reloaded에서 동작한다. 설계를 바꿀 필요가 없다.
 * 남은 것: 이벤트 자막 하나, xemu(HDD 이미지에 P4 캐시가 남아 있을 수 있어 깨끗한 HDD가 필요하다).
+* **추가(2026-10-23)**: 전체 번역 출력(issue #17, `KRTEXT`로 201곳 옮김)이 **xemu 0.8.139에서 부팅**하고 XBE 문구가 나온다([작업 로그 i017](20261022-i017-text-translation.md) §4). 섹션을 더하는 방식은 xemu에서도 동작한다.
 
 ---
 
@@ -131,3 +132,4 @@ Inputs: the Japanese dump `roms/Jet Set Radio Future` (`default.xbe` MD5 `d8490c
 * The user reported "it works". The cache times show the talk (`TE014.bin` 00:30) and mission (`mssn0110.bin` 00:29) files were read.
 * Conclusion: adding an XBE section, rebuilding talk pages and appending mission strings work in Cxbx-Reloaded; the design needs no change.
 * Left: the one event subtitle, and xemu (its HDD image may still hold P4 caches, so a clean HDD is needed).
+* **Added (2026-10-23)**: the full translation output (issue #17, 201 places moved or appended) **boots in xemu 0.8.139** and shows the XBE text ([work log i017](20261022-i017-text-translation.md) §4); adding a section works in xemu too.

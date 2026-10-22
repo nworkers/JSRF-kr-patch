@@ -84,3 +84,17 @@ Design: [20261022-i017](../design/20261022-i017-text-translation.md), Work Order
 * All files checked with `tools/check_text.py "roms/Jet Set Radio Future"`.
 * Test build executed with `python -I tools/patch.py "roms/Jet Set Radio Future" out/test_patch --link` (exit code 0).
 * `git status` verifies no game data or copyright text from `roms/`, `out/`, `work/` is staged.
+
+## 4. 화면 확인 (Screen Check, 2026-10-23)
+
+* 산출물: 브랜치 `i017-fix-dj-k`(`d278e77`)로 만든 `out/jsrf-kr-i017-fix-dj-k`. xiso MD5 `bb08de8a4f9f4064f66530feb6b216df`, `default.xbe` `5122b0f5c8e05a42e828861f0c93e322`, `jetfont.dat` `bf1d90ffe6a53881c6d359977a0ba2fa`. 2,276곳, 경고 0, 한글 907자. v0.0.10 출력과 비교하면 `TE007.bin`, `TE159.bin`, `TE213.bin`만 다르다.
+* Cxbx-Reloaded HDD 캐시에서 바뀌는 `Media` 파일 56개를 먼저 뺐다(백업 `EmuDisk\cache-bak-20261023\`).
+* **xemu 0.8.139: 확인됨**(사용자 캡처): 섹션 `KRTEXT`를 더한 XBE가 부팅하고, 세이브 선택 화면("게임 데이터를 골라", "게임 데이터 1/2", "챕터", "플레이 시간", "새 게임 데이터")이 한글로 나온다. 칸 밖 번짐·잘림 없음.
+* **DJ 프로페서 K / DJ-K 표기: 확인됨**(사용자 보고).
+* 화면 캡처는 게임 그림이므로 커밋하지 않는다.
+
+* Output: `out/jsrf-kr-i017-fix-dj-k`, built from branch `i017-fix-dj-k` (`d278e77`); xiso MD5 `bb08de8a4f9f4064f66530feb6b216df`, `default.xbe` `5122b0f5c8e05a42e828861f0c93e322`, `jetfont.dat` `bf1d90ffe6a53881c6d359977a0ba2fa`; 2,276 places, 0 warnings, 907 Hangul. Against the v0.0.10 output only `TE007.bin`, `TE159.bin` and `TE213.bin` differ.
+* The 56 changed `Media` files were first taken out of the Cxbx-Reloaded HDD cache (backup `EmuDisk\cache-bak-20261023\`).
+* **xemu 0.8.139: confirmed** (user's capture): the XBE with the added `KRTEXT` section boots, and the save selection screen ("게임 데이터를 골라", "게임 데이터 1/2", "챕터", "플레이 시간", "새 게임 데이터") shows in Hangul with no ink outside cells or clipping.
+* **The DJ Professor K / DJ-K notation: confirmed** (user's report).
+* Screen captures are game pictures and are not committed.
