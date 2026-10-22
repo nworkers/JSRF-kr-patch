@@ -109,6 +109,16 @@ flowchart LR
 * 언어 1 구간을 일본어 구조로 바꾸면, 영어 구간을 따로 가리키는 다른 자료(이벤트 명령의 영어 페이지 수 등)가 있다면 어긋난다. 왕복 시험 2의 "일본어 원문을 영어 자리에" 화면으로 먼저 확인한다.
 * 안 B는 프로젝트 전제(입력 = 일본판 XBE)를 바꾼다. `AGENTS.md`, README, PLAN, 가이드를 함께 고친다.
 
+## 9. 분석 뒤 고친 점 (2026-10-23)
+
+근거: [analysis/english-mode.md](../analysis/english-mode.md).
+
+* **일본어 자리의 한국어는 그대로 둔다**(§1의 "일본어 자리는 원문 그대로"를 바꿈). XBE에서 일본어 문자열 51개는 언어와 무관하게 그 문자열 자체로 참조되므로, 일본어 자리를 원문으로 되돌리면 영어 모드에서도 일본어가 남는다. 그래서 지금(v0.0.11)의 패치를 모두 적용한 **위에** 영어 자리를 한국어로 맞춘다.
+* 이벤트·대화(§4.1): 언어 1 구간 = 한국어를 넣은 언어 0 구간을 그대로 복사(필드 0~4, 페이지별 값, 페이지).
+* 미션(§4.2): 칸 1 포인터를 **칸 0이 가리키는 한국어 문자열**로 돌린다. 원래 영어 문자열은 그대로 남는다(가리키는 칸이 없어진다). 따로 붙이는 문자열이 늘지 않는다.
+* XBE(§4.3): 대응표는 분석 결과대로 언어 0 칸 695개 ↔ 영어 칸 695개(표 55개 + 특수 3곳). 영어 칸 값을 짝인 일본어 칸의 (패치 뒤) 값으로 바꾼다. 대응표는 분석 스크립트가 만들고 패치 데이터로 커밋한다(주소와 원래 포인터 값만).
+* `push`로만 참조되는 21개와 그리기 차이는 화면 확인 뒤에 다룬다.
+
 ---
 
 # Design: English-mode-based Korean patch (issue #20, P6-2)
@@ -208,3 +218,13 @@ The existing translations `patch/text/*.tsv` (keyed to Japanese places, 2,276 ro
 * English-mode layout (line width, automatic wrapping, an assumption of single-byte proportional glyphs) may not suit double-byte Hangul (**unresolved**).
 * If other data points at the English block separately (an English page count in event commands, say), giving language 1 the Japanese structure would break it; round trip 2's "Japanese original in the English place" screen check comes first.
 * Option B changes the project premise (input = the Japanese XBE); `AGENTS.md`, the README, PLAN and the guides change with it.
+
+## 9. Changes after the analysis (2026-10-23)
+
+Basis: [analysis/english-mode.md](../analysis/english-mode.md).
+
+* **The Korean in the Japanese places stays** (changing §1's "the Japanese places keep the original"). In the XBE, 51 Japanese strings are referenced as themselves regardless of language, so restoring the Japanese places would leave Japanese in English mode. So the English places are made Korean **on top of** the full current (v0.0.11) patch.
+* Events and talk (§4.1): language 1 = a copy of the Korean language-0 block (fields 0–4, per-page values, pages).
+* Missions (§4.2): slot 1 is repointed to **the Korean string slot 0 points to**; the original English string stays (nothing points to it any more), and no extra strings are appended.
+* XBE (§4.3): per the analysis, 695 language-0 slots ↔ 695 English slots (55 tables + 3 special places). Each English slot takes the (patched) value of its Japanese slot. The map is made by an analysis script and committed as patch data (addresses and original pointer values only).
+* The 21 `push`-only strings and drawing differences are dealt with after the screen check.
