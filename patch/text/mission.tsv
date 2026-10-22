@@ -1,498 +1,498 @@
 # Translation skeleton, group mission (tools/extract_text.py). No original text.
 # Fill the korean column; an empty korean keeps the original. Keep $ codes as in work/text.
 file	where	orig_len	orig_sha1	korean	pad
-Media/Mission/mssn0100.bin	off:0x2de3d	64	107469444229ec943b61111ba74abe7e936838d8		nul
-Media/Mission/mssn0101.bin	off:0xae4c	79	5dc9750f351f6c309e6e1cb4d631d82cbf315bad		nul
-Media/Mission/mssn0101.bin	off:0xaf0a	56	1922865f0734db2741a53614fb14590bd5ed76da		nul
-Media/Mission/mssn0101.bin	off:0xafb9	120	d4b0edccf7e8c66d910482b7fec7510a37b65a00		nul
-Media/Mission/mssn0101.bin	off:0xb0ca	190	f342d6a90fafa822a53dba2b74fbd83fbb9b4988		nul
-Media/Mission/mssn0101.bin	off:0xb2be	69	5ebb7ea2c6dfe74aafeaec92bbfbe3e2ad972197		nul
-Media/Mission/mssn0101.bin	off:0xb358	48	ff7f05f951d048cd71c129ee9f62884b25a93c52		nul
-Media/Mission/mssn0101.bin	off:0xb400	67	9651d139e4cffdc73c80ef57a93f029fdbfe90e1		nul
-Media/Mission/mssn0101.bin	off:0xb49f	310	4bf2e502e3e0f3bc242f2391a41ac9e326891624		nul
-Media/Mission/mssn0101.bin	off:0xb797	71	f293b54e11875a46d4f29ee1d24e6ae0ecd7b416		nul
-Media/Mission/mssn0101.bin	off:0xb83c	320	1e1e971bde7f5f3b1dfbcb7d81a699feecd8e897		nul
-Media/Mission/mssn0101.bin	off:0xbb01	95	d7b3f494d742f99a3acc26e1d3ce1a8f1228d041		nul
-Media/Mission/mssn0101.bin	off:0xbbe6	120	1c1c2d6928dce7af72fa0f5ed0c1e253b94e30bb		nul
-Media/Mission/mssn0101.bin	off:0xbcff	172	bb8290abe6b10ae42f5404d05d023348ffafbdb3		nul
-Media/Mission/mssn0101.bin	off:0xbea0	99	45afaedf8adb75e836ab78d0a99feec69e1dfe0e		nul
-Media/Mission/mssn0110.bin	off:0x2228c	42	d7d54e99f755716ff60a7a222d18b7daea8fd96d		nul
-Media/Mission/mssn0110.bin	off:0x222db	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028		nul
-Media/Mission/mssn0110.bin	off:0x22317	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028		nul
-Media/Mission/mssn0110.bin	off:0x2234c	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028		nul
-Media/Mission/mssn0110.bin	off:0x22381	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028		nul
-Media/Mission/mssn0110.bin	off:0x223c4	48	e5f7a4eb95b769efc006e5dba484a171e1f740e8		nul
-Media/Mission/mssn0110.bin	off:0x22422	60	6084dd976d87a6ca0322dde302bab06f9377d02d		nul
-Media/Mission/mssn0110.bin	off:0x224ad	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0		nul
-Media/Mission/mssn0110.bin	off:0x2250c	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0		nul
-Media/Mission/mssn0110.bin	off:0x2256b	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0		nul
-Media/Mission/mssn0110.bin	off:0x225ca	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0		nul
-Media/Mission/mssn0110.bin	off:0x22629	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0		nul
-Media/Mission/mssn0110.bin	off:0x22688	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0		nul
-Media/Mission/mssn0110.bin	off:0x226e7	34	fe8c8dd50672f94a8e8034c9f2a7377e9c0515f1		nul
-Media/Mission/mssn0110.bin	off:0x22753	42	40f9832803e8c0824b9e27ea21225fd82dc305cf		nul
-Media/Mission/mssn0110.bin	off:0x227c9	102	dbecb477ec0291e2f2534c458ef763fef6bbc311		nul
-Media/Mission/mssn0110.bin	off:0x228af	82	38c9671431c7a2f2cfa4c2d6739620bb1f0a5f75		nul
-Media/Mission/mssn0110.bin	off:0x22986	73	e5927926924c5b00363976eb856f9cc44273291e		nul
-Media/Mission/mssn0112.bin	off:0x3055c	38	ad2eb140cdbbcd294f9d72a1f1d553f41d75b472		nul
-Media/Mission/mssn0113.bin	off:0x20698	34	64c0c0c1d4cdede0f951646e53a1e654eae87896		nul
-Media/Mission/mssn0113.bin	off:0x206f2	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff		nul
-Media/Mission/mssn0113.bin	off:0x20776	106	822c80391c328421e05b1d71af6bf6239aacf3ae		nul
-Media/Mission/mssn0113.bin	off:0x20856	68	5e3f1fbebdf3f4f59230d9f3aba9f3eac07d5902		nul
-Media/Mission/mssn0113.bin	off:0x2091a	94	d572a77bc38e1841f1e6c1e7cf51d9bada3ff8dd		nul
-Media/Mission/mssn0120.bin	off:0x1e424	44	af014e63261a4f30d6d318fbcb3f2b2227cc9136		nul
-Media/Mission/mssn0120.bin	off:0x1e47e	44	af014e63261a4f30d6d318fbcb3f2b2227cc9136		nul
-Media/Mission/mssn0120.bin	off:0x1e4d8	26	9ca795ba1ceaf2fb7413400bf46b29c7c666cd30		nul
-Media/Mission/mssn0120.bin	off:0x1e54b	34	64c0c0c1d4cdede0f951646e53a1e654eae87896		nul
-Media/Mission/mssn0120.bin	off:0x1e5cf	54	3da1c4637cd8e9aa6cb5299e8f1ccd1ee2ee24b6		nul
-Media/Mission/mssn0120.bin	off:0x1e657	38	5213849953f22915dcf03cf6cb1708773bd1d043		nul
-Media/Mission/mssn0120.bin	off:0x1e79c	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff		nul
-Media/Mission/mssn0120.bin	off:0x1e812	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff		nul
-Media/Mission/mssn0122.bin	off:0x1ca14	34	64c0c0c1d4cdede0f951646e53a1e654eae87896		nul
-Media/Mission/mssn0122.bin	off:0x1ca6f	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff		nul
-Media/Mission/mssn0123.bin	off:0x1c47c	44	a1e1745f5000fa66a8846e90b11ace5d4f000110		nul
-Media/Mission/mssn0123.bin	off:0x1c4f9	50	6d80e7ba207b6651a6d6bad088f40d47f2a736ce		nul
-Media/Mission/mssn0200.bin	off:0x2e7af	64	107469444229ec943b61111ba74abe7e936838d8		nul
-Media/Mission/mssn0200.bin	off:0x2e843	76	3af61d29a801cc11e988e6a17c589f6212c67994		nul
-Media/Mission/mssn0210.bin	off:0x1b993	170	c130b32470dbf5a962ee472aa3c624462cfbdd7e		nul
-Media/Mission/mssn0220.bin	off:0x1f4ff	220	21733bf06124f6d8b1277a4c3eef95073e98fecb		nul
-Media/Mission/mssn0230.bin	off:0x23af4	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3		nul
-Media/Mission/mssn0230.bin	off:0x23b4f	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3		nul
-Media/Mission/mssn0230.bin	off:0x23baa	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3		nul
-Media/Mission/mssn0230.bin	off:0x23c1a	64	d1b4630c6f5e92b839fd5ca4c40cc9a45a806a6e		nul
-Media/Mission/mssn0230.bin	off:0x23ce2	142	14577597148e92f19fd7bd1de4bf5a9e2171ccda		nul
-Media/Mission/mssn0230.bin	off:0x23e0f	48	dd7f90792480c0e2e61520c8b1d3ce7b5176ff61		nul
-Media/Mission/mssn0230.bin	off:0x23e9a	68	4bdfb7a564996bb2e24e2ecf0b2d65193d414a09		nul
-Media/Mission/mssn0230.bin	off:0x23f5e	74	8b94a1ff91597138ac9ff6b05e2bc80c087452e5		nul
-Media/Mission/mssn0230.bin	off:0x2402a	64	d1b4630c6f5e92b839fd5ca4c40cc9a45a806a6e		nul
-Media/Mission/mssn0230.bin	off:0x240f2	82	fe2673d249250e49decf7604fb198b58eb37bbc1		nul
-Media/Mission/mssn0230.bin	off:0x241d6	74	8b94a1ff91597138ac9ff6b05e2bc80c087452e5		nul
-Media/Mission/mssn0230.bin	off:0x242a2	64	d1b4630c6f5e92b839fd5ca4c40cc9a45a806a6e		nul
-Media/Mission/mssn0230.bin	off:0x2436a	84	a5aed3259d52fa016b53973849d70c65cc1cde48		nul
-Media/Mission/mssn0230.bin	off:0x2442a	74	df0e020b429914f1339725fe16d7b0b865f2a293		nul
-Media/Mission/mssn0231.bin	off:0x23140	32	56dd96697f9fcf8a8bced75581c7c6e6971a171e		nul
-Media/Mission/mssn0231.bin	off:0x23181	38	896d28a92c6b246a09e547f1032aa0dab4cb7c6c		nul
-Media/Mission/mssn0231.bin	off:0x231ec	154	c8ddb6dae70cb6b2df4ec131cd39eead61e0f8ed		nul
-Media/Mission/mssn0231.bin	off:0x23379	58	3ce18d961c32224b3c81f2a701ef663ad109268b		nul
-Media/Mission/mssn0231.bin	off:0x2342c	136	9b24115b34975b0a7cb3fa66514b72895022ccd9		nul
-Media/Mission/mssn0232.bin	off:0x5a1c8	50	63884a3d9a16bdab92e69a889e36751021b3c22a		nul
-Media/Mission/mssn0240.bin	off:0x15d38	42	b39aeb85d46c2c23a551d51146f354f49efa6288		nul
-Media/Mission/mssn0240.bin	off:0x15d96	112	e5388e61a760c08e104c5c2f0433b12435d6560d		nul
-Media/Mission/mssn0240.bin	off:0x15ed5	60	947240aa6a37bc73992f27ee90eb22ae37f24062		nul
-Media/Mission/mssn0240.bin	off:0x15f6e	128	d81f36a8215d13133c60bc09c8f7b5ba2350149f		nul
-Media/Mission/mssn0240.bin	off:0x160a8	84	d2f0b5f7ab8b035e49456ff9256e31f060e9351b		nul
-Media/Mission/mssn0240.bin	off:0x16191	60	947240aa6a37bc73992f27ee90eb22ae37f24062		nul
-Media/Mission/mssn0240.bin	off:0x1622a	102	8d94d903b583fca74f06298144a1fa01c60c6f9b		nul
-Media/Mission/mssn0240.bin	off:0x1639a	74	df0e020b429914f1339725fe16d7b0b865f2a293		nul
-Media/Mission/mssn0240.bin	off:0x16456	64	289df9b0a236ff75dc58ad8edc9299f2bd5e35b0		nul
-Media/Mission/mssn0241.bin	off:0x13778	26	b67c90ba887e3c4998ae68e0cb5d77e34b84336c		nul
-Media/Mission/mssn0241.bin	off:0x137b3	32	4c792ea4b66e8338ba66bd428acc174e0256cac8		nul
-Media/Mission/mssn0241.bin	off:0x13818	54	03731dc4a1a7d61f85db5ed847f0d27d0f14b6c0		nul
-Media/Mission/mssn0241.bin	off:0x138ab	58	45acc7b029eb45a76cdf1bfab3b18028f2b88aed		nul
-Media/Mission/mssn0241.bin	off:0x1394a	48	6976f6c158e3f9ec6cfbffe06d370cdb6d7493a4		nul
-Media/Mission/mssn0250.bin	off:0x1d804	40	acbc8a7d64e10efe3b14d389f741a3f92c0c6d46		nul
-Media/Mission/mssn0250.bin	off:0x1d88c	58	e9a0196966d4026ee192d75373a334ad61fce392		nul
-Media/Mission/mssn0250.bin	off:0x1d918	148	a546368f5965fb15cac4c8de7e8d4564688e617e		nul
-Media/Mission/mssn0250.bin	off:0x1da65	96	16a0e4dba6ed3808cfd799c7e9611f39f4172cd3		nul
-Media/Mission/mssn0250.bin	off:0x1db7f	58	e9a0196966d4026ee192d75373a334ad61fce392		nul
-Media/Mission/mssn0250.bin	off:0x1dc0b	92	74e27f574ab18c7f3603c21984bcc74adc65ebb7		nul
-Media/Mission/mssn0250.bin	off:0x1dcf1	76	5b6932d7f3cff44cc2771987ace8d527147d095b		nul
-Media/Mission/mssn0250.bin	off:0x1ddf0	74	df0e020b429914f1339725fe16d7b0b865f2a293		nul
-Media/Mission/mssn0250.bin	off:0x1deac	84	d1fe13d03143ef0e276d905278dfc618d15d32c8		nul
-Media/Mission/mssn0250.bin	off:0x1df76	114	6d5f094f46e36e964e892d5b00c069c204c66434		nul
-Media/Mission/mssn0250.bin	off:0x1e087	84	a5aed3259d52fa016b53973849d70c65cc1cde48		nul
-Media/Mission/mssn0251.bin	off:0x1d56c	32	56dd96697f9fcf8a8bced75581c7c6e6971a171e		nul
-Media/Mission/mssn0251.bin	off:0x1d5ad	38	896d28a92c6b246a09e547f1032aa0dab4cb7c6c		nul
-Media/Mission/mssn0251.bin	off:0x1d618	130	4986e7ba624d35d111a3e78032194e8a763026dc		nul
-Media/Mission/mssn0252.bin	off:0xcaf58	36	a7f6bedea81a26e67e00e157877092074d612992		nul
-Media/Mission/mssn0300.bin	off:0x2dbab	100	2ed1244c6e96f88ad8b460646a33fdbd92e7fcb6		nul
-Media/Mission/mssn0310.bin	off:0x1b9e7	136	50c1905da540e26300a53003ef7224b63fd605f5		nul
-Media/Mission/mssn0310.bin	off:0x1bb39	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba		nul
-Media/Mission/mssn0320.bin	off:0x1f553	136	50c1905da540e26300a53003ef7224b63fd605f5		nul
-Media/Mission/mssn0320.bin	off:0x1f6a5	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba		nul
-Media/Mission/mssn0340.bin	off:0x13dd3	136	50c1905da540e26300a53003ef7224b63fd605f5		nul
-Media/Mission/mssn0340.bin	off:0x13f16	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba		nul
-Media/Mission/mssn0350.bin	off:0x1baaf	136	50c1905da540e26300a53003ef7224b63fd605f5		nul
-Media/Mission/mssn0350.bin	off:0x1bbf2	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba		nul
-Media/Mission/mssn0360.bin	off:0xbaac	38	5ef7b320935b3da554b18c430d74eaf62a03735c		nul
-Media/Mission/mssn0360.bin	off:0xbb81	38	5ef7b320935b3da554b18c430d74eaf62a03735c		nul
-Media/Mission/mssn0360.bin	off:0xbc56	92	f505e59f7712bd6e42bdeeef732feec23038c692		nul
-Media/Mission/mssn0360.bin	off:0xbe7c	56	b1138dabd1b1c0da7b9621f3f3be5c5d79548cda		nul
-Media/Mission/mssn0360.bin	off:0xbf93	56	b1138dabd1b1c0da7b9621f3f3be5c5d79548cda		nul
-Media/Mission/mssn0361.bin	off:0xa040	30	308546901c179ace035ab2746461f0560fc86d13		nul
-Media/Mission/mssn0361.bin	off:0xa0e3	99	b3bab3ccaee81c143975e57110b0bce29498d857		nul
-Media/Mission/mssn0361.bin	off:0xa1c6	62	3f0336425efaff2d8d48ab672474bf4cab69fd25		nul
-Media/Mission/mssn0361.bin	off:0xa24f	61	7931c3376040bba5d1826957019c6125f2a3e7ff		nul
-Media/Mission/mssn0361.bin	off:0xa2d2	116	9459a3d0a23e205947bc52c137675834511afadd		nul
-Media/Mission/mssn0361.bin	off:0xa3d4	107	6fd8fdda92a509267ddc37c9e5f0d5f78453733f		nul
-Media/Mission/mssn0361.bin	off:0xa4d9	64	0d9fc9c005f3f896d4d3c6c92a88bffd875009ed		nul
-Media/Mission/mssn0361.bin	off:0xa56e	69	c7c57c90102a89f5327a86fc7e16ec97a258e12e		nul
-Media/Mission/mssn0361.bin	off:0xa5fc	184	f5aca55732ea13d442194449736b71820d9266a1		nul
-Media/Mission/mssn0361.bin	off:0xa79b	91	1e81414dfc55ca1d3fc02e0d99eac4dc16a0a6da		nul
-Media/Mission/mssn0370.bin	off:0x8dec	36	2c13a46d2e5788b3982d660b553a6920a78bfc19		nul
-Media/Mission/mssn0370.bin	off:0x8e37	42	7311288ff4ebe1eb093a9bc762d9f890d54d0bf2		nul
-Media/Mission/mssn0370.bin	off:0x8eac	52	ea61c2e5af4a781eb6243df111480d8c4453cafb		nul
-Media/Mission/mssn0371.bin	off:0x2fc40	48	dd54cc0123e5172003359721700cdd9ae7f21a66		nul
-Media/Mission/mssn0371.bin	off:0x2fc95	154	f51f6e11ab37124ea3b887663540bd295aca5848		nul
-Media/Mission/mssn0371.bin	off:0x2fdea	74	4b6b42e1463341ae8414f2ed7123c47b569d2ec1		nul
-Media/Mission/mssn0400.bin	off:0x2e68b	62	ca1da32836362cb988f2740f13b88b4decf24947		nul
-Media/Mission/mssn0410.bin	off:0x1b99f	106	7fb45f1d4f710d7058fa7942d6af0242cd3bb68c		nul
-Media/Mission/mssn0415.bin	off:0x1f60b	98	064c754ec02b5c0ca0c95a0b737bfe270106847d		nul
-Media/Mission/mssn0415.bin	off:0x1f718	100	9da943283eefb61f059475e382ca469b966ff557		nul
-Media/Mission/mssn0415.bin	off:0x1f819	26	b1c935fbd20894feddb3fa275239c19a849474bd		nul
-Media/Mission/mssn0425.bin	off:0x13d8f	88	011bb7730a1b040ec9b754d8dca1944b8057894a		nul
-Media/Mission/mssn0440.bin	off:0x1baaf	98	febe81be991c0d547cffe4624732ce4145ed25ec		nul
-Media/Mission/mssn0450.bin	off:0x16dec	44	c33b9df6a2da7be476e6c217650c203a576d643b		nul
-Media/Mission/mssn0450.bin	off:0x16e47	44	c33b9df6a2da7be476e6c217650c203a576d643b		nul
-Media/Mission/mssn0450.bin	off:0x16ed3	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0		nul
-Media/Mission/mssn0450.bin	off:0x16f64	128	16ca1868c241417f7decb30e936cc5b6d9962862		nul
-Media/Mission/mssn0450.bin	off:0x170a4	38	3c443fbd7392a0bffbefab475f8b22462ce7578b		nul
-Media/Mission/mssn0450.bin	off:0x17132	76	c0cdca4e256f1310b87dd38a03c3ccf7423f45a1		nul
-Media/Mission/mssn0450.bin	off:0x171e7	119	2b6766e55bdbfe01d248ad42691b69435bc8d08d		nul
-Media/Mission/mssn0450.bin	off:0x17344	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0		nul
-Media/Mission/mssn0450.bin	off:0x173db	98	3c06290b3f4d9d1ad900bb4ddae320506e90cfa0		nul
-Media/Mission/mssn0450.bin	off:0x174d9	86	c7aacbc40f8ac33bd882967a1b530b0b627fd60b		nul
-Media/Mission/mssn0450.bin	off:0x175cc	24	2fb9d153c30f14c6d6bbd053dc699e7021176e38		nul
-Media/Mission/mssn0451.bin	off:0x167c0	24	d71054626898c3327d117bc26eefd16dbfb5e976		nul
-Media/Mission/mssn0451.bin	off:0x1680a	30	1e1bab8573c9ced0d317d00736ae23557099d628		nul
-Media/Mission/mssn0451.bin	off:0x1687e	96	64be55188cada39f9b9c5ad996e95493cda76d58		nul
-Media/Mission/mssn0452.bin	off:0x16840	26	b67c90ba887e3c4998ae68e0cb5d77e34b84336c		nul
-Media/Mission/mssn0452.bin	off:0x1688a	32	4c792ea4b66e8338ba66bd428acc174e0256cac8		nul
-Media/Mission/mssn0460.bin	off:0x1a664	44	c33b9df6a2da7be476e6c217650c203a576d643b		nul
-Media/Mission/mssn0460.bin	off:0x1a6f7	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0		nul
-Media/Mission/mssn0460.bin	off:0x1a78e	136	c8595b744d643e436f5a9855bce9db7987b29453		nul
-Media/Mission/mssn0460.bin	off:0x1a8b8	72	3281f46245243c359fe908c8957aa0c5e06b2558		nul
-Media/Mission/mssn0460.bin	off:0x1a97c	38	06af93faa1585a26db1aa90bf67a6360691dfcc9		nul
-Media/Mission/mssn0460.bin	off:0x1aa0f	50	f165f3f64ec073096f696224af9312261358ba89		nul
-Media/Mission/mssn0460.bin	off:0x1aa9e	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0		nul
-Media/Mission/mssn0460.bin	off:0x1ab2f	76	f6cf30581857d2eb4c1f9d38eacb2d0ea7162f95		nul
-Media/Mission/mssn0460.bin	off:0x1ac08	50	f165f3f64ec073096f696224af9312261358ba89		nul
-Media/Mission/mssn0460.bin	off:0x1ac97	86	c7aacbc40f8ac33bd882967a1b530b0b627fd60b		nul
-Media/Mission/mssn0460.bin	off:0x1ad8a	24	2fb9d153c30f14c6d6bbd053dc699e7021176e38		nul
-Media/Mission/mssn0461.bin	off:0x19d1c	32	56dd96697f9fcf8a8bced75581c7c6e6971a171e		nul
-Media/Mission/mssn0461.bin	off:0x19d6c	38	896d28a92c6b246a09e547f1032aa0dab4cb7c6c		nul
-Media/Mission/mssn0461.bin	off:0x19de6	98	098bca555578011620f1f7469245a3718f136232		nul
-Media/Mission/mssn0470.bin	off:0x13ec4	44	c33b9df6a2da7be476e6c217650c203a576d643b		nul
-Media/Mission/mssn0470.bin	off:0x13f57	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0		nul
-Media/Mission/mssn0470.bin	off:0x13fe8	124	398c70d1f9a15a5a102d9799059d10e993327aa2		nul
-Media/Mission/mssn0470.bin	off:0x1411d	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0		nul
-Media/Mission/mssn0470.bin	off:0x141af	106	fc3ce24a0c3483e536589d1c8defdcc711381034		nul
-Media/Mission/mssn0470.bin	off:0x142e5	86	c7aacbc40f8ac33bd882967a1b530b0b627fd60b		nul
-Media/Mission/mssn0470.bin	off:0x143d8	24	2fb9d153c30f14c6d6bbd053dc699e7021176e38		nul
-Media/Mission/mssn0471.bin	off:0x130f4	26	b67c90ba887e3c4998ae68e0cb5d77e34b84336c		nul
-Media/Mission/mssn0471.bin	off:0x1313e	32	4c792ea4b66e8338ba66bd428acc174e0256cac8		nul
-Media/Mission/mssn0472.bin	off:0x39190	40	251e305cc38ca99a3563d089ccb6c3882fbbde93		nul
-Media/Mission/mssn0472.bin	off:0x391f3	88	b8757ade13509ffe9b25f662656fe204cd759b52		nul
-Media/Mission/mssn0480.bin	off:0x10808	24	ce08c7fca2a5d67d9615eca5357f807bf5243fdd		nul
-Media/Mission/mssn0481.bin	off:0x2ec14	40	251e305cc38ca99a3563d089ccb6c3882fbbde93		nul
-Media/Mission/mssn0511.bin	off:0x7a67f	215	72d5bf7b5d9b567d2f89eb35a3a097f1c1a1b13e		nul
-Media/Mission/mssn0511.bin	off:0x7a866	64	9709491e7bff9a6434e970402c87a41161dab9eb		nul
-Media/Mission/mssn0511.bin	off:0x7a8e7	40	082e6ca40e8a4f75a611a3b03b01cf799e7c0bf2		nul
-Media/Mission/mssn0512.bin	off:0x7b4a3	68	59cdccdbb79874eebefbe86c6f46f70ccd6cca04		nul
-Media/Mission/mssn0512.bin	off:0x7b567	102	daadf040ce685f8f5ca1c971f84006b2b6f0e1f3		nul
-Media/Mission/mssn0512.bin	off:0x7b65e	28	48ea4521b350a0a008be65dfebfc9965a9331562		nul
-Media/Mission/mssn0512.bin	off:0x7b6c4	52	15364f1f04d66262f6784db1412539d6e6215673		nul
-Media/Mission/mssn0513.bin	off:0x7c777	120	a71075e606bba18eb7f46373e049f73a6fdad767		nul
-Media/Mission/mssn0513.bin	off:0x7c8b6	106	8971881167fcdd29beb1785f738e4616550cfeed		nul
-Media/Mission/mssn0513.bin	off:0x7c9d7	16	c8069266391753c41abd287783f530d0a7f5ecd6		nul
-Media/Mission/mssn0513.bin	off:0x7ca16	34	437ea4048ee061cd00287766aa2a950a4a642546		nul
-Media/Mission/mssn0514.bin	off:0x4700	32	4eb71c0819e79de36dfff0391bcd0d173bb95204		nul
-Media/Mission/mssn0514.bin	off:0x47c6	38	d2781e1fb1b4c8e445b910afb7610a7f0100639c		nul
-Media/Mission/mssn0514.bin	off:0x48b6	118	31b85b3eec3c03d946a9f1b6cb67fbbf974d3a7b		nul
-Media/Mission/mssn0514.bin	off:0x4b4c	138	b462e9b4aed1d28ae44a29c3706f137338cb2ccf		nul
-Media/Mission/mssn0515.bin	off:0x2bf24	202	2d629cc7795235abeb98904561ed8a57efddce3e		nul
-Media/Mission/mssn0515.bin	off:0x2c105	127	1b62ac8774efef87753ab7f6307de6c1352df7aa		nul
-Media/Mission/mssn0515.bin	off:0x2c236	304	15348eb544b9352c0470e1e70f014dcc430be645		nul
-Media/Mission/mssn0515.bin	off:0x2c49f	85	2be05b2ac94f47686b7fda7b3c5689a51f7facab		nul
-Media/Mission/mssn0610.bin	off:0x1c947	30	74e34c149d4ba7837a84d71b920198f30ccd40eb		nul
-Media/Mission/mssn0610.bin	off:0x1c9ac	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a		nul
-Media/Mission/mssn0610.bin	off:0x1ca8a	90	3721cebba5363adba77f79725c3af93f6fb50cb3		nul
-Media/Mission/mssn0610.bin	off:0x1cb81	34	2a585751260b409e85062d3d3da94fad184b362b		nul
-Media/Mission/mssn0610.bin	off:0x1cbf3	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb		nul
-Media/Mission/mssn0615.bin	off:0x2331b	30	74e34c149d4ba7837a84d71b920198f30ccd40eb		nul
-Media/Mission/mssn0615.bin	off:0x23380	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a		nul
-Media/Mission/mssn0615.bin	off:0x2345e	90	3721cebba5363adba77f79725c3af93f6fb50cb3		nul
-Media/Mission/mssn0615.bin	off:0x23555	34	2a585751260b409e85062d3d3da94fad184b362b		nul
-Media/Mission/mssn0615.bin	off:0x235c7	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb		nul
-Media/Mission/mssn0620.bin	off:0x2086b	30	74e34c149d4ba7837a84d71b920198f30ccd40eb		nul
-Media/Mission/mssn0620.bin	off:0x208d0	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a		nul
-Media/Mission/mssn0620.bin	off:0x209ae	90	3721cebba5363adba77f79725c3af93f6fb50cb3		nul
-Media/Mission/mssn0620.bin	off:0x20aa5	34	2a585751260b409e85062d3d3da94fad184b362b		nul
-Media/Mission/mssn0620.bin	off:0x20b17	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb		nul
-Media/Mission/mssn0630.bin	off:0x14b9f	30	74e34c149d4ba7837a84d71b920198f30ccd40eb		nul
-Media/Mission/mssn0630.bin	off:0x14c04	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a		nul
-Media/Mission/mssn0630.bin	off:0x14cd3	90	3721cebba5363adba77f79725c3af93f6fb50cb3		nul
-Media/Mission/mssn0630.bin	off:0x14dbb	34	2a585751260b409e85062d3d3da94fad184b362b		nul
-Media/Mission/mssn0630.bin	off:0x14e1e	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb		nul
-Media/Mission/mssn0655.bin	off:0x1cb6f	30	74e34c149d4ba7837a84d71b920198f30ccd40eb		nul
-Media/Mission/mssn0655.bin	off:0x1cbc5	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a		nul
-Media/Mission/mssn0655.bin	off:0x1cca3	90	3721cebba5363adba77f79725c3af93f6fb50cb3		nul
-Media/Mission/mssn0655.bin	off:0x1cd9a	34	2a585751260b409e85062d3d3da94fad184b362b		nul
-Media/Mission/mssn0655.bin	off:0x1ce0c	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb		nul
-Media/Mission/mssn0661.bin	off:0x2f070	40	340a8be4e5502b0931cae7f189017196fd247030		nul
-Media/Mission/mssn0661.bin	off:0x2f0c4	94	014233e1f5009271f34cff84ce0b3fd85fc0a744		nul
-Media/Mission/mssn0666.bin	off:0xf964	60	d5ba5d9334869d07412de4e204fb591997bbcf43		nul
-Media/Mission/mssn0671.bin	off:0x220c8	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4		nul
-Media/Mission/mssn0700.bin	off:0x2f55b	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0700.bin	off:0x2f5fc	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0700.bin	off:0x2f6e8	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0710.bin	off:0x1cab0	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b		nul
-Media/Mission/mssn0710.bin	off:0x1cb82	58	9f165979948acede49c120c39361a13868b717e5		nul
-Media/Mission/mssn0710.bin	off:0x1cc0c	72	9f592e7c507baaf358ce717890d04526c1f9a55f		nul
-Media/Mission/mssn0710.bin	off:0x1ccba	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0710.bin	off:0x1cd5b	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0710.bin	off:0x1ce47	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0715.bin	off:0x2312b	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0715.bin	off:0x231bd	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0715.bin	off:0x2329a	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0720.bin	off:0x200c8	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b		nul
-Media/Mission/mssn0720.bin	off:0x2019a	58	9f165979948acede49c120c39361a13868b717e5		nul
-Media/Mission/mssn0720.bin	off:0x20224	72	9f592e7c507baaf358ce717890d04526c1f9a55f		nul
-Media/Mission/mssn0720.bin	off:0x202d2	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0720.bin	off:0x20373	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0720.bin	off:0x2045f	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0721.bin	off:0x4d478	54	c0ab0fa8325749548cf37e76d8e467f788e5edc3		nul
-Media/Mission/mssn0725.bin	off:0x167eb	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0725.bin	off:0x1688c	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0725.bin	off:0x16978	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0726.bin	off:0xd6020	42	6b80fd4c857aaa8a5c31a304c0ae71bbd36a0e73		nul
-Media/Mission/mssn0730.bin	off:0x14cf0	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b		nul
-Media/Mission/mssn0730.bin	off:0x14df3	58	9f165979948acede49c120c39361a13868b717e5		nul
-Media/Mission/mssn0730.bin	off:0x14eae	72	9f592e7c507baaf358ce717890d04526c1f9a55f		nul
-Media/Mission/mssn0730.bin	off:0x14f5c	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0730.bin	off:0x14ffd	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0730.bin	off:0x150e9	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0735.bin	off:0xa087	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0735.bin	off:0xa128	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0735.bin	off:0xa214	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0740.bin	off:0x1aa33	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0740.bin	off:0x1aad4	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0740.bin	off:0x1abc0	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0745.bin	off:0x9113	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0745.bin	off:0x91b4	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0745.bin	off:0x92a0	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0746.bin	off:0x28738	52	a6f351738d867c2b59fe26f037fcf5b7fbfaa5ae		nul
-Media/Mission/mssn0750.bin	off:0x177bc	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165		nul
-Media/Mission/mssn0750.bin	off:0x17808	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165		nul
-Media/Mission/mssn0750.bin	off:0x17853	98	2a4de97bdc304380430a06e3a1556c236681c4cd		nul
-Media/Mission/mssn0750.bin	off:0x17973	30	983c13d2744fe9ab1fc181b4f5798f17d6149ca8		nul
-Media/Mission/mssn0750.bin	off:0x179d4	64	8d0fccc5dc08b3cd5436436e0ebfe4738cba9518		nul
-Media/Mission/mssn0750.bin	off:0x17a6e	112	74364b40ea0ee131e486479febe0f1e2cf9f6709		nul
-Media/Mission/mssn0750.bin	off:0x17b6b	24	729917b4632ca1fa839dbeaecd8b0afb2deed125		nul
-Media/Mission/mssn0750.bin	off:0x17bd3	36	889f7af358659f254a9c06866dbf820227959adc		nul
-Media/Mission/mssn0750.bin	off:0x17c55	42	17458f058d575910df8dbcfe825bdb3a260a7c62		nul
-Media/Mission/mssn0751.bin	off:0x1640c	28	5a676ed2448700be1f43879389c392f436596cb7		nul
-Media/Mission/mssn0751.bin	off:0x16464	34	09d7b804606cfe33800294f12db30794e2252024		nul
-Media/Mission/mssn0752.bin	off:0x16798	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165		nul
-Media/Mission/mssn0752.bin	off:0x167e4	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165		nul
-Media/Mission/mssn0755.bin	off:0x1c660	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b		nul
-Media/Mission/mssn0755.bin	off:0x1c732	58	9f165979948acede49c120c39361a13868b717e5		nul
-Media/Mission/mssn0755.bin	off:0x1c7bc	72	9f592e7c507baaf358ce717890d04526c1f9a55f		nul
-Media/Mission/mssn0755.bin	off:0x1c86a	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0755.bin	off:0x1c90b	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0755.bin	off:0x1c9f7	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0756.bin	off:0x62d90	40	251e305cc38ca99a3563d089ccb6c3882fbbde93		nul
-Media/Mission/mssn0760.bin	off:0xc62f	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0760.bin	off:0xc6d0	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0760.bin	off:0xc7bc	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0765.bin	off:0x4dd3	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0765.bin	off:0x4e74	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0765.bin	off:0x4f60	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0766.bin	off:0xf9e8	60	d5ba5d9334869d07412de4e204fb591997bbcf43		nul
-Media/Mission/mssn0770.bin	off:0x10ba7	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0770.bin	off:0x10c48	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0770.bin	off:0x10d34	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0771.bin	off:0x22174	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4		nul
-Media/Mission/mssn0775.bin	off:0x13af3	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a		nul
-Media/Mission/mssn0775.bin	off:0x13b94	90	0434a497f49f74bb106790d8a05985b61e691f80		nul
-Media/Mission/mssn0775.bin	off:0x13c80	98	435be6bbcb4fcba05a552ec41b5737db3fa30301		nul
-Media/Mission/mssn0810.bin	off:0x1c40f	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8		nul
-Media/Mission/mssn0810.bin	off:0x1c526	78	526065f6477f2826abaa46dfb797cf5cf48c337a		nul
-Media/Mission/mssn0810.bin	off:0x1c5f9	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c		nul
-Media/Mission/mssn0810.bin	off:0x1c6b4	34	09d7b804606cfe33800294f12db30794e2252024		nul
-Media/Mission/mssn0811.bin	off:0x7f60f	294	97f00fc504a4f2fb9cdb1ff934472b4e6ef2ef2c		nul
-Media/Mission/mssn0811.bin	off:0x7f8d8	9	49a6d064b97f715b2169f1402967cb4ffc3f36e5		nul
-Media/Mission/mssn0812.bin	off:0x7f448	34	d81f42e18bd15d9cc1e02d07519840fab990ca82		nul
-Media/Mission/mssn0812.bin	off:0x7f481	58	b3ad94314c8e5d908b208316120d49c928b37714		nul
-Media/Mission/mssn0812.bin	off:0x7f512	42	dc6b8b34f44a8b7c542ad81bb80ae533b97a73a3		nul
-Media/Mission/mssn0812.bin	off:0x7f584	50	8c8cfc9a91193b6b4a591e30fd9bf36be2251b5a		nul
-Media/Mission/mssn0812.bin	off:0x7f612	104	d3a476168c15d56e892092a7b2731c106e929e5c		nul
-Media/Mission/mssn0815.bin	off:0x227f7	54	2c28a469218119ececd316cfb9595133f354fe1f		nul
-Media/Mission/mssn0815.bin	off:0x22893	32	2a40f0fd6ce47e095c1df63ad31cbc051c3abbc4		nul
-Media/Mission/mssn0815.bin	off:0x228f4	26	9e1542cdec95ea0fb43e7c53e6a8252598d1464b		nul
-Media/Mission/mssn0815.bin	off:0x22956	56	6191b59e28c96cfeac0ffdc2ef8d20c8daa608eb		nul
-Media/Mission/mssn0816.bin	off:0x22bf0	22	67bc691fbbf51f30d98aa52936f3fdb985764354		nul
-Media/Mission/mssn0816.bin	off:0x22c42	28	553ce47ea167196fdf23a97a09c4dbd21c354c1a		nul
-Media/Mission/mssn0820.bin	off:0x1f9eb	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8		nul
-Media/Mission/mssn0820.bin	off:0x1fb11	78	526065f6477f2826abaa46dfb797cf5cf48c337a		nul
-Media/Mission/mssn0820.bin	off:0x1fbf3	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c		nul
-Media/Mission/mssn0820.bin	off:0x1fcbd	34	09d7b804606cfe33800294f12db30794e2252024		nul
-Media/Mission/mssn0830.bin	off:0x145df	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8		nul
-Media/Mission/mssn0830.bin	off:0x146f6	78	526065f6477f2826abaa46dfb797cf5cf48c337a		nul
-Media/Mission/mssn0830.bin	off:0x147c9	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c		nul
-Media/Mission/mssn0830.bin	off:0x14884	34	09d7b804606cfe33800294f12db30794e2252024		nul
-Media/Mission/mssn0846.bin	off:0x2873c	52	a6f351738d867c2b59fe26f037fcf5b7fbfaa5ae		nul
-Media/Mission/mssn0855.bin	off:0x1c067	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8		nul
-Media/Mission/mssn0855.bin	off:0x1c17e	78	526065f6477f2826abaa46dfb797cf5cf48c337a		nul
-Media/Mission/mssn0855.bin	off:0x1c251	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c		nul
-Media/Mission/mssn0855.bin	off:0x1c30c	34	09d7b804606cfe33800294f12db30794e2252024		nul
-Media/Mission/mssn0866.bin	off:0xf9f4	60	d5ba5d9334869d07412de4e204fb591997bbcf43		nul
-Media/Mission/mssn0870.bin	off:0x10b7b	54	2c28a469218119ececd316cfb9595133f354fe1f		nul
-Media/Mission/mssn0870.bin	off:0x10c08	32	2a40f0fd6ce47e095c1df63ad31cbc051c3abbc4		nul
-Media/Mission/mssn0870.bin	off:0x10c5a	26	9e1542cdec95ea0fb43e7c53e6a8252598d1464b		nul
-Media/Mission/mssn0870.bin	off:0x10cad	56	6191b59e28c96cfeac0ffdc2ef8d20c8daa608eb		nul
-Media/Mission/mssn0871.bin	off:0x22128	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4		nul
-Media/Mission/mssn0872.bin	off:0x109d0	22	67bc691fbbf51f30d98aa52936f3fdb985764354		nul
-Media/Mission/mssn0872.bin	off:0x10a13	32	6a25e09435e7b58a26f9f7252d81ce939d705583		nul
-Media/Mission/mssn0880.bin	off:0x1634	44	b3e032fa141164e1201501372df6ee65a015779a		nul
-Media/Mission/mssn0890.bin	off:0x1520	5	8b71973e835cd0718827238b1cf89f0079e44dae		nul
-Media/Mission/mssn0921.bin	off:0x4d3e4	54	c0ab0fa8325749548cf37e76d8e467f788e5edc3		nul
-Media/Mission/mssn0926.bin	off:0xd5ffc	42	6b80fd4c857aaa8a5c31a304c0ae71bbd36a0e73		nul
-Media/Mission/mssn0946.bin	off:0x2873c	52	a6f351738d867c2b59fe26f037fcf5b7fbfaa5ae		nul
-Media/Mission/mssn0956.bin	off:0x62c94	46	e41e81a6a90fe9d2a050bb33a81a1de47d10452b		nul
-Media/Mission/mssn0966.bin	off:0xf9f0	60	d5ba5d9334869d07412de4e204fb591997bbcf43		nul
-Media/Mission/mssn0971.bin	off:0x220d0	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4		nul
-Media/Mission/mssn2000.bin	off:0xc8e4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2001.bin	off:0xc8e4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2002.bin	off:0xc8e4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2010.bin	off:0x135c4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2011.bin	off:0x135c4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2012.bin	off:0x135c4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2020.bin	off:0x12e3c	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2021.bin	off:0x12e3c	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2022.bin	off:0x12e3c	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2030.bin	off:0x1b30c	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2040.bin	off:0x21be0	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2050.bin	off:0x12d20	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2100.bin	off:0x1305c	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2110.bin	off:0x1ffd4	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2120.bin	off:0x202a8	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2130.bin	off:0x2b8b0	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2140.bin	off:0x39f68	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2150.bin	off:0x1de58	26	ac5a475ea1fd2d327b328c0172227828912bab29		nul
-Media/Mission/mssn2200.bin	off:0xbfc0	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2210.bin	off:0x12c9c	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2220.bin	off:0x12534	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2300.bin	off:0x32344	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2301.bin	off:0x58ca4	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2310.bin	off:0x61284	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2311.bin	off:0xb05f4	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2320.bin	off:0x4703c	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2321.bin	off:0x7c45c	54	9aaa2676b9853b92dd8bac8934e4395265af0772		nul
-Media/Mission/mssn2400.bin	off:0xec04	32	141ada25035f7993fa776d1f61e7f1318be397e6		nul
-Media/Mission/mssn2410.bin	off:0xb00c	32	141ada25035f7993fa776d1f61e7f1318be397e6		nul
-Media/Mission/mssn2420.bin	off:0xbf24	32	141ada25035f7993fa776d1f61e7f1318be397e6		nul
-Media/Mission/mssn2500.bin	off:0x306d4	32	141ada25035f7993fa776d1f61e7f1318be397e6		nul
-Media/Mission/mssn2510.bin	off:0x3952c	32	141ada25035f7993fa776d1f61e7f1318be397e6		nul
-Media/Mission/mssn2520.bin	off:0x26d14	32	141ada25035f7993fa776d1f61e7f1318be397e6		nul
-Media/Mission/mssn2600.bin	off:0x1359c	38	6b653567d099dccc86edaf9b243c560025c2a940		nul
-Media/Mission/mssn2610.bin	off:0xdcd8	38	6b653567d099dccc86edaf9b243c560025c2a940		nul
-Media/Mission/mssn2620.bin	off:0x10c2c	38	6b653567d099dccc86edaf9b243c560025c2a940		nul
-Media/Mission/mssn2700.bin	off:0x26658	38	6b653567d099dccc86edaf9b243c560025c2a940		nul
-Media/Mission/mssn2710.bin	off:0x17adc	38	6b653567d099dccc86edaf9b243c560025c2a940		nul
-Media/Mission/mssn2720.bin	off:0x21010	38	6b653567d099dccc86edaf9b243c560025c2a940		nul
-Media/Mission/mssn2830.bin	off:0xeb54	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc		nul
-Media/Mission/mssn2840.bin	off:0xaf5c	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc		nul
-Media/Mission/mssn2850.bin	off:0xbe74	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc		nul
-Media/Mission/mssn2930.bin	off:0x24204	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc		nul
-Media/Mission/mssn2940.bin	off:0x1adbc	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc		nul
-Media/Mission/mssn2950.bin	off:0x1ba8c	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc		nul
-Media/Mission/mssn3010.bin	off:0x165ac	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3011.bin	off:0x1a414	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3012.bin	off:0x12c38	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3013.bin	off:0xc4dc	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3020.bin	off:0xd924	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3021.bin	off:0x6f98	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3022.bin	off:0xf2d0	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3023.bin	off:0x53a4	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3024.bin	off:0x1179c	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3030.bin	off:0xec9c	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3031.bin	off:0x9478	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3033.bin	off:0x8c6c	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3034.bin	off:0x7b3c	32	b133c72d13ae8b2c0e108ea013116361e972c421		nul
-Media/Mission/mssn3110.bin	off:0x10ce4	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3111.bin	off:0x13f70	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3112.bin	off:0xd260	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3113.bin	off:0x73c4	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3120.bin	off:0x8474	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3121.bin	off:0x5134	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3122.bin	off:0xdb68	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3123.bin	off:0x2ecc	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3124.bin	off:0xb608	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3130.bin	off:0xa9fc	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3131.bin	off:0x534c	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3133.bin	off:0x5efc	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3134.bin	off:0x692c	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab		nul
-Media/Mission/mssn3211.bin	off:0x1acd4	22	caac8e15bd8de5762f159cd65131267bdd0035bd		nul
-Media/Mission/mssn3212.bin	off:0xe4ac	22	caac8e15bd8de5762f159cd65131267bdd0035bd		nul
-Media/Mission/mssn3222.bin	off:0x136c0	22	caac8e15bd8de5762f159cd65131267bdd0035bd		nul
-Media/Mission/mssn3223.bin	off:0xa050	22	caac8e15bd8de5762f159cd65131267bdd0035bd		nul
-Media/Mission/mssn3231.bin	off:0x64b8	22	caac8e15bd8de5762f159cd65131267bdd0035bd		nul
-Media/Mission/mssn3233.bin	off:0x6740	22	caac8e15bd8de5762f159cd65131267bdd0035bd		nul
-Media/Mission/mssn3310.bin	off:0x10ce8	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3313.bin	off:0x74e4	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3320.bin	off:0x8520	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3321.bin	off:0x51e0	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3324.bin	off:0xb6a4	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3330.bin	off:0xab2c	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3334.bin	off:0x69d8	36	dad994aa4a195e42578f7a2c587f336b324a3e88		nul
-Media/Mission/mssn3400.bin	off:0x9341	79	7309fd39cdf56dd7fca1dcc69b08c80db1a7d142		nul
-Media/Mission/mssn3400.bin	off:0x93ff	54	a1b10564394d6c2c1f5cdc04b653929c4cd574ea		nul
-Media/Mission/mssn3400.bin	off:0x94ac	85	177e4666f88964bf8b742a979d91020114542e3f		nul
-Media/Mission/mssn3400.bin	off:0x9577	190	ea75b9259dfcbd302cbcca99b4f13a7179143362		nul
-Media/Mission/mssn3400.bin	off:0x976a	71	afd055cc89c794d64b012fa5c572d6598a749780		nul
-Media/Mission/mssn3400.bin	off:0x9806	34	daddfafd63314b67103933ca554dbf7c1f087f26		nul
-Media/Mission/mssn3400.bin	off:0x98a0	65	a4ff7a0d0283292743c4890cbfdcfb95d0be766e		nul
-Media/Mission/mssn3400.bin	off:0x993d	178	6d3005dda03a76f912a90a7b7172a50098a3adc9		nul
-Media/Mission/mssn3400.bin	off:0x9ae9	67	74f4ebb68024de0bd099070b06ab1db76178bf9f		nul
-Media/Mission/mssn3400.bin	off:0x9b8a	242	d22e1a67baba3bf3a9a812d403a756d65c7b66fb		nul
-Media/Mission/mssn3400.bin	off:0x9dae	97	5b4931776ef49692eabd9cbab8f696fc731531f9		nul
-Media/Mission/mssn3400.bin	off:0x9e9b	118	0d821744bb1342a0d14a41bc3aab41c32fa97436		nul
-Media/Mission/mssn3400.bin	off:0x9fb2	148	8451de347b0ec59f331908936570fcc3afc525e4		nul
-Media/Mission/mssn3400.bin	off:0xa140	99	f50116703decc162547cec5609e8b5475ba84dac		nul
-Media/Mission/mssn3401.bin	off:0x8c69	71	7115fbaffc15662034c101ce406645327e80e362		nul
-Media/Mission/mssn3401.bin	off:0x8d10	46	f82864c9c0837f35dbcbede799a98be0c0a5f7c0		nul
-Media/Mission/mssn3401.bin	off:0x8db1	71	85ed0b4c8903a30c8804ac50cbc41a20cdd3b256		nul
-Media/Mission/mssn3401.bin	off:0x8e58	264	45ccca1ffeab1ea91f94f5172b121bb52ad8f652		nul
-Media/Mission/mssn3401.bin	off:0x912b	111	89e6ffcb516aa31341c9265c5117556c05cf097d		nul
-Media/Mission/mssn3402.bin	off:0x87c1	73	4627e6a5cabed7953209d9dee3fb4549b1ee26a0		nul
-Media/Mission/mssn3402.bin	off:0x8876	42	4291a6bb5f6c48bcff8287d4260d25eb2818a2b1		nul
-Media/Mission/mssn3402.bin	off:0x8913	55	9c5f5cf8188cb0a81d02c30847016b24d5febe39		nul
-Media/Mission/mssn3403.bin	off:0x87a1	81	d35f97f14562366b93a1169e6bc0da39751b6aca		nul
-Media/Mission/mssn3403.bin	off:0x8851	128	259cb518998070fb9f2ffe329dbff323517e6792		nul
-Media/Mission/mssn3403.bin	off:0x89b3	87	416763b4991df76e4bdc6b429c911c50a52a357d		nul
-Media/Mission/mssn3404.bin	off:0x87c1	89	80b2083d01ac5beb2cc9e6929626e20a64833e61		nul
-Media/Mission/mssn3404.bin	off:0x887b	48	fde012848e655f8c65bdbde16d4840b0af5b2294		nul
-Media/Mission/mssn3404.bin	off:0x8935	87	03cd57e3c222f3bd8025f55aaa3af00d903de49f		nul
-Media/Mission/mssn3405.bin	off:0x8c65	101	6371ce53d7a27d90fc1670559c53236971c746ec		nul
-Media/Mission/mssn3405.bin	off:0x8d5b	212	a873fea2c0b4415f1fa0f4c04f42fb8d6acab796		nul
-Media/Mission/mssn3405.bin	off:0x8f79	73	4ad8776b90ec81560ed34935bcc759a0f796fcb4		nul
-Media/Mission/mssn3405.bin	off:0x903b	248	e2d02f53bf11042fa62422b86ccf9bb6ea94600a		nul
-Media/Mission/mssn3405.bin	off:0x92a6	107	636be8cd9e9125f9558b7a49f1b6eb4d56daf0db		nul
-Media/Mission/mssn3406.bin	off:0x8c3d	109	b12a52170e0791ed3063f6542a51abc903d73d77		nul
-Media/Mission/mssn3406.bin	off:0x8d40	92	dcca87d42ace9519df26bffed8c45e3968a8acda		nul
-Media/Mission/mssn3406.bin	off:0x8e96	105	f9f941c3cd0568a3a7788d8eb60c2f058b83ab01		nul
-Media/Mission/mssn3406.bin	off:0x8f8e	190	32fe32741cb3cb603380a7cf528224f1e8dbc7dd		nul
-Media/Mission/mssn3406.bin	off:0x9150	93	d1f233363cd4b74bec767d0b20e6846685a6457e		nul
-Media/Mission/mssn3406.bin	off:0x9228	220	5f654aaffe3a066339bc972a8addb8168f6ce128		nul
-Media/Mission/mssn3407.bin	off:0x87a1	75	a3407e79c737fb4b6b3b1ef919e75bea40ad9da5		nul
-Media/Mission/mssn3407.bin	off:0x885b	282	80b7b4f1a52ae3985817646c7b394721adbd6562		nul
-Media/Mission/mssn3407.bin	off:0x8ab6	127	6fda339f46e1dd079c9d987d37213157fe28f802		nul
-Media/Mission/mssn3409.bin	off:0x8e09	111	e085d3f8b8dbf733c41e7f9a257d32ba2d5c8592		nul
-Media/Mission/mssn3409.bin	off:0x8f01	170	dd3a95620dd74f12aad3d2ad931fc844ba9f7d6f		nul
-Media/Mission/mssn3409.bin	off:0x90e4	131	c5fa914621a9d9cbdba5c2adcd0edbb2ea0f3dd8		nul
-Media/Mission/mssn3409.bin	off:0x920a	38	aa535f3a4ee56710a9bfe6dd89d75f12be3f899f		nul
-Media/Mission/mssn3409.bin	off:0x9292	89	bff87a6231b9216dd373630e4b81e84c50c0fc56		nul
-Media/Mission/mssn3410.bin	off:0x87a1	75	73f6206de443d613971ed5c927f381afc7abf95f		nul
-Media/Mission/mssn3410.bin	off:0x8852	48	2655e1d524d68ecdc6f59cdd6ffd3b30e8491751		nul
-Media/Mission/mssn3410.bin	off:0x8900	75	e4d5b9c16505c0eaedaa9aa02978cd9c844c9280		nul
-Media/Mission/mssn3411.bin	off:0x15170	108	a5b39e32f3b3b4d58035df276b166e594e5aa210		nul
-Media/Mission/mssn3411.bin	off:0x15284	200	a8b81bdc897a44c4580bb6b25463e359f658ff30		nul
-Media/Mission/mssn3411.bin	off:0x1549c	61	9c8a7348216995f21cb0854cd282a7ed0757a539		nul
-Media/Mission/mssn3411.bin	off:0x1553e	164	039f81c968cbe57a4d05a0c178b2ef4213a9da46		nul
-Media/Mission/mssn3411.bin	off:0x156da	83	6a2b9636b4d848f96eee45d5c2df63ad7bf05c78		nul
-Media/Mission/mssn3411.bin	off:0x157ab	120	fe3f8f7176093ababc941d529fa0f13c532e0f0a		nul
-Media/Mission/mssn3411.bin	off:0x158d8	65	a4be27fee5ed438b342a04a73891e4c566b5b168		nul
-Media/Mission/mssn3412.bin	off:0x87a1	91	cc04164b975c33f001e0a83442cd15d06440f684		nul
-Media/Mission/mssn3412.bin	off:0x888b	72	266a6390e15d18726dc1867771004bf269085d0a		nul
-Media/Mission/mssn3412.bin	off:0x895d	117	94c6bc8d534c798a2edcfadb032e238604237914		nul
+Media/Mission/mssn0100.bin	off:0x2de3d	64	107469444229ec943b61111ba74abe7e936838d8	야, 새 기술 가르쳐줄 테니까$n이 형님 있는 데로 와봐라.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xae4c	79	5dc9750f351f6c309e6e1cb4d631d82cbf315bad	 $n　$n　$n　$n　$n　$n$c5“A 버튼”$c1을 눌러서 딱 한 번 뛰어봐!$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xaf0a	56	1922865f0734db2741a53614fb14590bd5ed76da	나이스!$n이번엔 $c5３번 점프$c1해봐.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xafb9	120	d4b0edccf7e8c66d910482b7fec7510a37b65a00	                    　              $n　$n　$n　$n　$n　$n$c5“A 버튼”$c1을 눌러서 $c5３번 점프$c1해봐!$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb0ca	190	f342d6a90fafa822a53dba2b74fbd83fbb9b4988	뭐 이 정도는 기본이지.$a$r다음은 엄청 중요한 테크닉인$n$c5「그라인드」$c1야.$a$r$c5점프해서 난간이나 가드레일에$c1$n$c5올라타 봐$c1.$a$r제대로 타면 그 위를 미끄러질 거야.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb2be	69	5ebb7ea2c6dfe74aafeaec92bbfbe3e2ad972197	 $n　$n　$n　$n　$n　$n레일에 올라타서 $c5그라인드$c1해봐!$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb358	48	ff7f05f951d048cd71c129ee9f62884b25a93c52	나쁘지 않네.$a$r$c5한 번 더$c1 해봐.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb400	67	9651d139e4cffdc73c80ef57a93f029fdbfe90e1	 $n　$n　$n　$n　$n　$n$c5다시 한 번$c1 그라인드해봐!$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb49f	310	4bf2e502e3e0f3bc242f2391a41ac9e326891624	실력 괜찮은데?$a$r마지막으로 $c5「그래피티」$c1$n그리는 법이야.$a$r저기서 뱅글뱅글 도는 건$n스트리트의 「소울」이,$a$r모습을 드러낸 스프레이 캔이야.$n우리 눈에만 보이지.$a$r우선 $c5스프레이 캔을 １０개$c1$n$c5모아봐$c1.$a$r부딪히면 주울 수 있어.$n그게 없으면 $c5그래피티$c1를 못 그려.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb797	71	f293b54e11875a46d4f29ee1d24e6ae0ecd7b416	 $n　$n　$n　$n　$n　$n스프레이 캔을 $c5“１０개”$c1 모아봐!$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xb83c	320	1e1e971bde7f5f3b1dfbcb7d81a699feecd8e897	스프레이 캔은 다 모았네.$n그럼 $c5그래피티$c1를 그려보자.$a$r$c5동그란 마크가 있는 곳$c1까지$n가봐.$a$r거기 $c5가까이 다가가 “우측 트리거”$c1를$n당기면 $c5그래피티$c1를 그릴 수 있어.$a$r그래피티를 그리면,$n스트리트의 「소울」은$a$r해방되는 거야.$a$r동그란 마크가 다 사라지면$n그래피티 완성이야.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xbb01	95	d7b3f494d742f99a3acc26e1d3ce1a8f1228d041	 $n　$n　$n　$n　$n　$n마크 근처에서 $c5“우측 트리거”$c1로$n$c5그래피티$c1를 그려봐!$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xbbe6	120	1c1c2d6928dce7af72fa0f5ed0c1e253b94e30bb	$c5스프레이 캔$c1이 없으면 그래피티는$n못 그려.$a$r$c5스프레이 캔$c1을 모아서$n$c5그래피티$c1를 그려봐.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xbcff	172	bb8290abe6b10ae42f5404d05d023348ffafbdb3	그렇지! 그렇게 하는 거야.$n아, 하나 깜빡했네.$a$r$c5「부스트 대시」$c1를 알려줄게.$a$r$c5스프레이 캔을 １０개 모아서$c1$n$c5“B 버튼”$c1을 눌러봐.$r$e$r	nul
+Media/Mission/mssn0101.bin	off:0xbea0	99	45afaedf8adb75e836ab78d0a99feec69e1dfe0e	 $n　$n　$n　$n　$n　$n캔 １０개를 모으고 $c5“B 버튼”$c1으로$n$c5부스트 대시$c1다!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x2228c	42	d7d54e99f755716ff60a7a222d18b7daea8fd96d	“도겐자카”를 그래피티로 덮어버려!	nul
+Media/Mission/mssn0110.bin	off:0x222db	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028	소문의 그 녀석을 쫓아라!	nul
+Media/Mission/mssn0110.bin	off:0x22317	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028	소문의 그 녀석을 쫓아라!	nul
+Media/Mission/mssn0110.bin	off:0x2234c	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028	소문의 그 녀석을 쫓아라!	nul
+Media/Mission/mssn0110.bin	off:0x22381	28	41f756e2b7a85b0c777d0f20c0cda8eba94bf028	소문의 그 녀석을 쫓아라!	nul
+Media/Mission/mssn0110.bin	off:0x223c4	48	e5f7a4eb95b769efc006e5dba484a171e1f740e8	“시부야 터미널”의 그래피티를 덮어써라!	nul
+Media/Mission/mssn0110.bin	off:0x22422	60	6084dd976d87a6ca0322dde302bab06f9377d02d	$c5“도겐자카”$c1를 $c5그래피티$c1로 덮어버려!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x224ad	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0	소문의 그 녀석을 쫓아라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x2250c	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0	소문의 그 녀석을 쫓아라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x2256b	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0	소문의 그 녀석을 쫓아라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x225ca	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0	소문의 그 녀석을 쫓아라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x22629	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0	소문의 그 녀석을 쫓아라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x22688	34	72b72d58effc3e0fffce6e3b460a35ab3a5963b0	소문의 그 녀석을 쫓아라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x226e7	34	fe8c8dd50672f94a8e8034c9f2a7377e9c0515f1	이걸 봤다면 요코야마에게 １…$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x22753	42	40f9832803e8c0824b9e27ea21225fd82dc305cf	$c5“시부야 터미널”$c1로 향해라!$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x227c9	102	dbecb477ec0291e2f2534c458ef763fef6bbc311	소문의 그 녀석, 비트는$n레코드 가게 앞을 빠져나가서$a$r하수로 너머로 튀었다고.$n쫓아갈 거지?$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x228af	82	38c9671431c7a2f2cfa4c2d6739620bb1f0a5f75	$c5“시부야 터미널”$c1이 묘하게 구린$n그래피티로 도배되어 있다고.$r$e$r	nul
+Media/Mission/mssn0110.bin	off:0x22986	73	e5927926924c5b00363976eb856f9cc44273291e	$c5“시부야 터미널”$c1로 가서$n수상한 그래피티를 덮어써라!$r$e$r	nul
+Media/Mission/mssn0112.bin	off:0x3055c	38	ad2eb140cdbbcd294f9d72a1f1d553f41d75b472	비트보다 빠르게 도겐자카를 한 바퀴 돌아라!	nul
+Media/Mission/mssn0113.bin	off:0x20698	34	64c0c0c1d4cdede0f951646e53a1e654eae87896	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0113.bin	off:0x206f2	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0113.bin	off:0x20776	106	822c80391c328421e05b1d71af6bf6239aacf3ae	경관에게 $c5몸통 박치기$c1를 날려!$a$r$c5쓰러진 녀석이 있으면 가까이 가서$n그래피티$c1를 먹여줘!$r$e$r	nul
+Media/Mission/mssn0113.bin	off:0x20856	68	5e3f1fbebdf3f4f59230d9f3aba9f3eac07d5902	속도를 붙여서 들이받아!$n느리면 바로 붙잡힌다고.$r$e$r	nul
+Media/Mission/mssn0113.bin	off:0x2091a	94	d572a77bc38e1841f1e6c1e7cf51d9bada3ff8dd	$c5“좌측 트리거”를 당겨$c1봐!$a$r$c5커서가 붙은 경관$c1을$n계속 주시할 수 있다고!$r$e$r	nul
+Media/Mission/mssn0120.bin	off:0x1e424	44	af014e63261a4f30d6d318fbcb3f2b2227cc9136	시부야 터미널의 그래피티를 덮어써라!	nul
+Media/Mission/mssn0120.bin	off:0x1e47e	44	af014e63261a4f30d6d318fbcb3f2b2227cc9136	시부야 터미널의 그래피티를 덮어써라!	nul
+Media/Mission/mssn0120.bin	off:0x1e4d8	26	9ca795ba1ceaf2fb7413400bf46b29c7c666cd30	포이즌 잼을 찾아내라!	nul
+Media/Mission/mssn0120.bin	off:0x1e54b	34	64c0c0c1d4cdede0f951646e53a1e654eae87896	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0120.bin	off:0x1e5cf	54	3da1c4637cd8e9aa6cb5299e8f1ccd1ee2ee24b6	“시부야 터미널”의 그래피티를 덮어써라!$r$e$r	nul
+Media/Mission/mssn0120.bin	off:0x1e657	38	5213849953f22915dcf03cf6cb1708773bd1d043	$c5포이즌 잼$c1을 찾아내라!$r$e$r	nul
+Media/Mission/mssn0120.bin	off:0x1e79c	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0120.bin	off:0x1e812	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0122.bin	off:0x1ca14	34	64c0c0c1d4cdede0f951646e53a1e654eae87896	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0122.bin	off:0x1ca6f	40	43e0cab6ed74bb21e0f49381d48412de839cb8ff	롯카쿠 경찰 조무래기들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0123.bin	off:0x1c47c	44	a1e1745f5000fa66a8846e90b11ace5d4f000110	땅에 떨어지지 말고 콤보의 루트를 따라가라!	nul
+Media/Mission/mssn0123.bin	off:0x1c4f9	50	6d80e7ba207b6651a6d6bad088f40d47f2a736ce	땅에 떨어지지 말고 콤보의 루트를 따라가라!$r$e$r	nul
+Media/Mission/mssn0200.bin	off:0x2e7af	64	107469444229ec943b61111ba74abe7e936838d8	야, 새 기술 가르쳐줄 테니까$n이 형님 있는 데로 와봐라.$r$e$r	nul
+Media/Mission/mssn0200.bin	off:0x2e843	76	3af61d29a801cc11e988e6a17c589f6212c67994	야, 그러고 보니 중요한 걸$n말 안 해줬네.$a$r내 쪽으로 와봐.$r$e$r	nul
+Media/Mission/mssn0210.bin	off:0x1b993	170	c130b32470dbf5a962ee472aa3c624462cfbdd7e	라디오 볼륨은 최대! 최악의$n이웃 민폐 수준!!$a$r어때? 심장이 뜨겁게 고동치고$n있나?$a$r내 목소리가 들리냐고?$a$r너의 멋진 모습을 보여줘 봐!$n기대하고 있을 테니까.$r$e$r	nul
+Media/Mission/mssn0220.bin	off:0x1f4ff	220	21733bf06124f6d8b1277a4c3eef95073e98fecb	라디오 볼륨은 최대! 최악의$n이웃 민폐 수준!!$a$r어때? 심장이 뜨겁게 고동치고$n있나?$a$r내 목소리가 들리냐고?$a$r너의 멋진 모습을 보여줘 봐!$n기대하고 있을 테니까.$r$e$r!$n어때? 가슴이 뜨겁게 뛰고 있냐고?$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x23af4	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3	포이즌 잼의 그래피티를 전부 덮어버려!	nul
+Media/Mission/mssn0230.bin	off:0x23b4f	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3	포이즌 잼의 그래피티를 전부 덮어버려!	nul
+Media/Mission/mssn0230.bin	off:0x23baa	46	685b588d6063b9237fde89eb362fa5cdc98bd6d3	포이즌 잼의 그래피티를 전부 덮어버려!	nul
+Media/Mission/mssn0230.bin	off:0x23c1a	64	d1b4630c6f5e92b839fd5ca4c40cc9a45a806a6e	$c5포이즌 잼$c1의 $c5그래피티$c1를 전부 덮어버려!$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x23ce2	142	14577597148e92f19fd7bd1de4bf5a9e2171ccda	１１２ 신고 접수, 본부에서 각국에…$a$r『주오 거리』에서 폭주하는 자들이$n있다는 신고다.$a$r인근 차량은 현장으로 급행하라.$n반복한다, 관내…$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x23e0f	48	dd7f90792480c0e2e61520c8b1d3ce7b5176ff61	하야시가 본부에 알린다,$n탱크 있는 대로 싹 다 끌고 나와!$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x23e9a	68	4bdfb7a564996bb2e24e2ecf0b2d65193d414a09	라져! 알겠습니다!$a$r본부에서 기갑특대,$n전 차량 긴급 출동하라.$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x23f5e	74	8b94a1ff91597138ac9ff6b05e2bc80c087452e5	특대장이 전 대원에게…$a$r애송이들을 발견하면 가차없이 쏴버려!$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x2402a	64	d1b4630c6f5e92b839fd5ca4c40cc9a45a806a6e	$c5포이즌 잼$c1의 $c5그래피티$c1를 전부 덮어버려!$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x240f2	82	fe2673d249250e49decf7604fb198b58eb37bbc1	하야시다.$n애송이가 이쪽으로 다시 돌아왔잖아?$a$r너희 월급 값은 제대로 하라고.$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x241d6	74	8b94a1ff91597138ac9ff6b05e2bc80c087452e5	특대장이 전 대원에게…$a$r애송이들을 발견하면 가차없이 쏴버려!$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x242a2	64	d1b4630c6f5e92b839fd5ca4c40cc9a45a806a6e	$c5포이즌 잼$c1의 $c5그래피티$c1를 전부 덮어버려!$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x2436a	84	a5aed3259d52fa016b53973849d70c65cc1cde48	포이즌 잼 녀석들이 이번엔$n“롯카쿠다이”에서 날뛰고 있어!$a$r당연히 털러 갈 거지?$r$e$r	nul
+Media/Mission/mssn0230.bin	off:0x2442a	74	df0e020b429914f1339725fe16d7b0b865f2a293	포이즌 잼의 숙적, $c5래피드 ９９$c1가$n“９９번가”에 나타났어.$r$e$r	nul
+Media/Mission/mssn0231.bin	off:0x23140	32	56dd96697f9fcf8a8bced75581c7c6e6971a171e	롯카쿠 경찰 녀석들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0231.bin	off:0x23181	38	896d28a92c6b246a09e547f1032aa0dab4cb7c6c	롯카쿠 경찰 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0231.bin	off:0x231ec	154	c8ddb6dae70cb6b2df4ec131cd39eead61e0f8ed	골치 아픈 탱크 녀석 때문에$n애먹고 있는 거 아냐?$a$r제대로 $c5“좌측 트리거”를 당겨서$c1$n탱크를 계속 시야에 둬.$a$r바라보면서 빙 둘러서$n접근하는 거야!$r$e$r	nul
+Media/Mission/mssn0231.bin	off:0x23379	58	3ce18d961c32224b3c81f2a701ef663ad109268b	탱크는 먼저 $c5좌우 차체$c1에$n그래피티를 갈겨!$r$e$r	nul
+Media/Mission/mssn0231.bin	off:0x2342c	136	9b24115b34975b0a7cb3fa66514b72895022ccd9	탱크 차체에 그래피티는$n다 그렸냐?$a$r$c5위에 위험한 거 들고 있는 녀석$c1$n한테도 그래피티를 먹여.$a$r아주 혼쭐을 내주라고!$r$e$r	nul
+Media/Mission/mssn0232.bin	off:0x5a1c8	50	63884a3d9a16bdab92e69a889e36751021b3c22a	포이즌 잼보다 먼저 “주오 거리”를 한 바퀴 돌아라!	nul
+Media/Mission/mssn0240.bin	off:0x15d38	42	b39aeb85d46c2c23a551d51146f354f49efa6288	“롯카쿠다이”를 그래피티로 덮어버려!	nul
+Media/Mission/mssn0240.bin	off:0x15d96	112	e5388e61a760c08e104c5c2f0433b12435d6560d	어이! 포이즌 잼 녀석들이$n“주오 거리”에서 날뛰고$a$r있다는 소식이야!$n설마 그냥 보고만 있진 않겠지?$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x15ed5	60	947240aa6a37bc73992f27ee90eb22ae37f24062	$c5“롯카쿠다이”$c1를 $c5그래피티$c1로 덮어버려!$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x15f6e	128	d81f36a8215d13133c60bc09c8f7b5ba2350149f	본부에서 순찰차량에 알린다…$a$r『롯카쿠다이』에서 소년 발견!$n『롯카쿠다이』 전역에 긴급 배치.$a$r반복한다, 전역에…$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x160a8	84	d2f0b5f7ab8b035e49456ff9256e31f060e9351b	또 그 녀석들이냐.$n제발 봐줘라 진짜.$a$r아, 또 아침밥 못 먹었네.$n뭐, 됐어.$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x16191	60	947240aa6a37bc73992f27ee90eb22ae37f24062	$c5“롯카쿠다이”$c1를 $c5그래피티$c1로 덮어버려!$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x1622a	102	8d94d903b583fca74f06298144a1fa01c60c6f9b	본부에서 순찰차량에 알린다…$n소년이 『롯카쿠다이』에 재침입!$a$r경계 요원은 담당 구역을$n견수하라.$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x1639a	74	df0e020b429914f1339725fe16d7b0b865f2a293	포이즌 잼의 숙적, $c5래피드 ９９$c1가$n“９９번가”에 나타났어.$r$e$r	nul
+Media/Mission/mssn0240.bin	off:0x16456	64	289df9b0a236ff75dc58ad8edc9299f2bd5e35b0	이제 “９９번가”만 남았네.$n“９９번가”를 덮어버려!!$r$e$r	nul
+Media/Mission/mssn0241.bin	off:0x13778	26	b67c90ba887e3c4998ae68e0cb5d77e34b84336c	롯카쿠 경찰을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0241.bin	off:0x137b3	32	4c792ea4b66e8338ba66bd428acc174e0256cac8	롯카쿠 경찰을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0241.bin	off:0x13818	54	03731dc4a1a7d61f85db5ed847f0d27d0f14b6c0	거기 $c5검은 갑옷$c1 입은 녀석들이$n보이지?$r$e$r	nul
+Media/Mission/mssn0241.bin	off:0x138ab	58	45acc7b029eb45a76cdf1bfab3b18028f2b88aed	그 녀석들한테는 $c5부스트 대시로$n들이받아$c1 버려!$r$e$r	nul
+Media/Mission/mssn0241.bin	off:0x1394a	48	6976f6c158e3f9ec6cfbffe06d370cdb6d7493a4	들이받아서 넘어뜨리지 않으면$n그래피티를 못 그린다구!$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1d804	40	acbc8a7d64e10efe3b14d389f741a3f92c0c6d46	“９９번가”를 그래피티로 덮어버려!	nul
+Media/Mission/mssn0250.bin	off:0x1d88c	58	e9a0196966d4026ee192d75373a334ad61fce392	$c5“９９번가”$c1를 $c5그래피티$c1로 덮어버려!$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1d918	148	a546368f5965fb15cac4c8de7e8d4564688e617e	본부에서 각국에 알린다…$a$r관내 『９９번가』 부근에서 누군가$n스케이트 주행 중이라는 신고 접수.$a$r인근 차량은 현장 급행하라.$n반복한다, 관내…$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1da65	96	16a0e4dba6ed3808cfd799c7e9611f39f4172cd3	중대장이 전 대원에게…$a$r아무래도 그 소년이 접근 중인 듯하다.$n전 대원은 위치에서 신호를 대기하라.$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1db7f	58	e9a0196966d4026ee192d75373a334ad61fce392	$c5“９９번가”$c1를 $c5그래피티$c1로 덮어버려!$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1dc0b	92	74e27f574ab18c7f3603c21984bcc74adc65ebb7	본부에서 각 순찰차량에 알린다…$a$r소년이 다시 『９９번가』에 침입한$n것으로 보인다, 경계를 늦추지 마라.$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1dcf1	76	5b6932d7f3cff44cc2771987ace8d527147d095b	중대장이 전 대원에게!$a$r그 소년이 재접근 중이다.$n각 대원은 위치에서 대기하라.$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1ddf0	74	df0e020b429914f1339725fe16d7b0b865f2a293	포이즌 잼의 숙적, $c5래피드 ９９$c1가$n“９９번가”에 나타났어.$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1deac	84	d1fe13d03143ef0e276d905278dfc618d15d32c8	$c5그래피티 소울$c1을 $c5앞으로 $g25개$c1 더 모아서$n래피드 ９９를 만나러 가라!$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1df76	114	6d5f094f46e36e964e892d5b00c069c204c66434	어이!$n포이즌 잼 녀석들이$a$r“주오 거리”에서 날뛰고$n있다던데!$a$r설마 가만히 놔두진 않겠지?$r$e$r	nul
+Media/Mission/mssn0250.bin	off:0x1e087	84	a5aed3259d52fa016b53973849d70c65cc1cde48	포이즌 잼 녀석들이 이번엔$n“롯카쿠다이”에서 날뛰고 있어!$a$r당연히 털러 갈 거지?$r$e$r	nul
+Media/Mission/mssn0251.bin	off:0x1d56c	32	56dd96697f9fcf8a8bced75581c7c6e6971a171e	롯카쿠 경찰 녀석들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0251.bin	off:0x1d5ad	38	896d28a92c6b246a09e547f1032aa0dab4cb7c6c	롯카쿠 경찰 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0251.bin	off:0x1d618	130	4986e7ba624d35d111a3e78032194e8a763026dc	하!$n완전 스타가 된 기분이겠는데!$a$r$c5받침 철기둥을 그라인드$c1하는 등$n잘 써먹어서,$a$r$c5조명 부위에 그래피티를 갈겨$c1!$r$e$r	nul
+Media/Mission/mssn0252.bin	off:0xcaf58	36	a7f6bedea81a26e67e00e157877092074d612992	래피드 ９９보다 깃발을 더 많이 챙겨라!	nul
+Media/Mission/mssn0300.bin	off:0x2dbab	100	2ed1244c6e96f88ad8b460646a33fdbd92e7fcb6	어이, $c5“지하 하수 시설”$c1로 가기 전에$n중요한 기술 하나 전수해 줄 테니,$a$r이 몸이 계신 곳으로 와보시지.$r$e$r	nul
+Media/Mission/mssn0310.bin	off:0x1b9e7	136	50c1905da540e26300a53003ef7224b63fd605f5	가슴은 뜨겁게 드럼 비트를 치고,$n피는 격렬하게 멜로디를 연주하냐?$a$r오늘 전파의 파도는 빅 웨이브라고!$n너, 이 파도를 탈 준비 됐냐?$r$e$r	nul
+Media/Mission/mssn0310.bin	off:0x1bb39	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba	포이즌 잼의 아지트이자$n“롯카쿠다이” 지하에 위치한$a$r$c5“도쿄 지하 하수 시설”$c1로$n향해라!$r$e$r	nul
+Media/Mission/mssn0320.bin	off:0x1f553	136	50c1905da540e26300a53003ef7224b63fd605f5	가슴은 뜨겁게 드럼 비트를 치고,$n피는 격렬하게 멜로디를 연주하냐?$a$r오늘 전파의 파도는 빅 웨이브라고!$n너, 이 파도를 탈 준비 됐냐?$r$e$r	nul
+Media/Mission/mssn0320.bin	off:0x1f6a5	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba	포이즌 잼의 아지트이자$n“롯카쿠다이” 지하에 위치한$a$r$c5“도쿄 지하 하수 시설”$c1로$n향해라!$r$e$r	nul
+Media/Mission/mssn0340.bin	off:0x13dd3	136	50c1905da540e26300a53003ef7224b63fd605f5	가슴은 뜨겁게 드럼 비트를 치고,$n피는 격렬하게 멜로디를 연주하냐?$a$r오늘 전파의 파도는 빅 웨이브라고!$n너, 이 파도를 탈 준비 됐냐?$r$e$r	nul
+Media/Mission/mssn0340.bin	off:0x13f16	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba	포이즌 잼의 아지트이자$n“롯카쿠다이” 지하에 위치한$a$r$c5“도쿄 지하 하수 시설”$c1로$n향해라!$r$e$r	nul
+Media/Mission/mssn0350.bin	off:0x1baaf	136	50c1905da540e26300a53003ef7224b63fd605f5	가슴은 뜨겁게 드럼 비트를 치고,$n피는 격렬하게 멜로디를 연주하냐?$a$r오늘 전파의 파도는 빅 웨이브라고!$n너, 이 파도를 탈 준비 됐냐?$r$e$r	nul
+Media/Mission/mssn0350.bin	off:0x1bbf2	105	1a4feb4825bd01c0ff3b5fa9c87c864c81c317ba	포이즌 잼의 아지트이자$n“롯카쿠다이” 지하에 위치한$a$r$c5“도쿄 지하 하수 시설”$c1로$n향해라!$r$e$r	nul
+Media/Mission/mssn0360.bin	off:0xbaac	38	5ef7b320935b3da554b18c430d74eaf62a03735c	스위치를 찾아서 그래피티를 그려라!	nul
+Media/Mission/mssn0360.bin	off:0xbb81	38	5ef7b320935b3da554b18c430d74eaf62a03735c	스위치를 찾아서 그래피티를 그려라!	nul
+Media/Mission/mssn0360.bin	off:0xbc56	92	f505e59f7712bd6e42bdeeef732feec23038c692	밖으로 못 나가겠다고?$a$r아무래도 래피드 ９９한테 제대로$n한 방 먹은 모양이군, 으하하하!$r$e$r	nul
+Media/Mission/mssn0360.bin	off:0xbe7c	56	b1138dabd1b1c0da7b9621f3f3be5c5d79548cda	$c5스위치$c1를 찾아서 $c5그래피티$c1를 그려라!$r$e$r	nul
+Media/Mission/mssn0360.bin	off:0xbf93	56	b1138dabd1b1c0da7b9621f3f3be5c5d79548cda	$c5스위치$c1를 찾아서 $c5그래피티$c1를 그려라!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa040	30	308546901c179ace035ab2746461f0560fc86d13	하프파이프 트릭을 작렬시켜라!	nul
+Media/Mission/mssn0361.bin	off:0xa0e3	99	b3bab3ccaee81c143975e57110b0bce29498d857	 $n　$n　$n　$n　$n　$n옆으로 솟구쳐 오르며 $c5점프$c1해서$n$c5에어$c1를 날려봐라!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa1c6	62	3f0336425efaff2d8d48ab672474bf4cab69fd25	오케이!$a$r그 기세로 에어를 ３번$n내리 꽂아봐!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa24f	61	7931c3376040bba5d1826957019c6125f2a3e7ff	 $n　$n　$n　$n　$n　$n$c5에어를 ３번$c1 성공시켜 봐.$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa2d2	116	9459a3d0a23e205947bc52c137675834511afadd	나이스!$a$r다음은 「핸드플랜트」를$n해보는 거다.$a$r“X 버튼”을 누른 채로$n치고 올라가면 될 거다.$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa3d4	107	6fd8fdda92a509267ddc37c9e5f0d5f78453733f	 $n　$n　$n　$n　$n　$n$c5“X 버튼”$c1을 누른 채 치고 올라가서$n$c5핸드플랜트$c1를 작렬시켜 봐!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa4d9	64	0d9fc9c005f3f896d4d3c6c92a88bffd875009ed	바로 그거야!$a$r앞으로 ３번 더 「핸드플랜트」$n를 꽂아봐!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa56e	69	c7c57c90102a89f5327a86fc7e16ec97a258e12e	 $n　$n　$n　$n　$n　$n$c5핸드플랜트를 ３번$c1 성공시켜 봐!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa5fc	184	f5aca55732ea13d442194449736b71820d9266a1	좋았어! 마지막은 두 가지를$n조합한 테크닉이다.$a$r「핸드플랜트」를 하면$n가속이 붙으니까,$a$r그 기세로 「에어」를$n작렬시켜 봐.$a$r엄청 높은 「에어」가$n터져 나올 거다!$r$e$r	nul
+Media/Mission/mssn0361.bin	off:0xa79b	91	1e81414dfc55ca1d3fc02e0d99eac4dc16a0a6da	 $n　$n　$n　$n　$n　$n$c5핸드플랜트$c1로 가속해서$n$c5높은 에어$c1를 날려봐!$r$e$r	nul
+Media/Mission/mssn0370.bin	off:0x8dec	36	2c13a46d2e5788b3982d660b553a6920a78bfc19	포이즌 잼의 아지트를 찾아내라!	nul
+Media/Mission/mssn0370.bin	off:0x8e37	42	7311288ff4ebe1eb093a9bc762d9f890d54d0bf2	이 근처는 포이즌 잼 녀석들의$n안마당이야.$r$e$r	nul
+Media/Mission/mssn0370.bin	off:0x8eac	52	ea61c2e5af4a781eb6243df111480d8c4453cafb	어딘가에 포이즌 잼의 아지트가$n틀림없이 있을 거야.$r$e$r	nul
+Media/Mission/mssn0371.bin	off:0x2fc40	48	dd54cc0123e5172003359721700cdd9ae7f21a66	포이즌 잼 전원의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0371.bin	off:0x2fc95	154	f51f6e11ab37124ea3b887663540bd295aca5848	하수도엔 온갖 것들이$n흘러들어오지…$a$r별의별 쓰레기…$n버려진 잡동사니…$a$r가끔 현금이나 보석, 동물 사체,$n화학 약품, 그리고 저 녀석들도.$r$e$r	nul
+Media/Mission/mssn0371.bin	off:0x2fdea	74	4b6b42e1463341ae8414f2ed7123c47b569d2ec1	저 녀석들은 평범하게 자란$n인간들이랑 근본부터 달라.$a$r꽤 섹시하지 않아?$r$e$r	nul
+Media/Mission/mssn0400.bin	off:0x2e68b	62	ca1da32836362cb988f2740f13b88b4decf24947	어이, 한 수 가르쳐줄 테니$n이 몸이 있는 곳까지 와봐라.$r$e$r	nul
+Media/Mission/mssn0410.bin	off:0x1b99f	106	7fb45f1d4f710d7058fa7942d6af0242cd3bb68c	붕대 감은 녀석들, 이모털즈의 구역$n“히카게 거리”엔 가봤냐?$a$r“히카게 거리”는 바로 옆이라고!$r$e$r	nul
+Media/Mission/mssn0415.bin	off:0x1f60b	98	064c754ec02b5c0ca0c95a0b737bfe270106847d	도쿄는 완전 세탁기 통 속이야!$n줄어든 셔츠는 버려지는 법이지.$a$r살아남는 팀은 과연 누구일까?$r$e$r	nul
+Media/Mission/mssn0415.bin	off:0x1f718	100	9da943283eefb61f059475e382ca469b966ff557	“히카게 거리”, “기보가오카”,$n“고층 빌딩가”에 있는$a$r이모털즈의 그래피티를 지워버리고,$r$e$r	nul
+Media/Mission/mssn0415.bin	off:0x1f819	26	b1c935fbd20894feddb3fa275239c19a849474bd	요요를 찾아내라!$r$e$r	nul
+Media/Mission/mssn0425.bin	off:0x13d8f	88	011bb7730a1b040ec9b754d8dca1944b8057894a	이모털즈 녀석들의 구역은$n“지하 하수 시설” 너머에 있어!$a$r가는 방법은 이미 알고 있지?$r$e$r	nul
+Media/Mission/mssn0440.bin	off:0x1baaf	98	febe81be991c0d547cffe4624732ce4145ed25ec	이모털즈 녀석들한테 인사하러$n갔다 왔냐?$a$r만나러 갈 거면 딴 데 새지 말고$n곧장 앞으로 쭉 가!$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x16dec	44	c33b9df6a2da7be476e6c217650c203a576d643b	이모털즈의 그래피티를 전부 덮어써라!	nul
+Media/Mission/mssn0450.bin	off:0x16e47	44	c33b9df6a2da7be476e6c217650c203a576d643b	이모털즈의 그래피티를 전부 덮어써라!	nul
+Media/Mission/mssn0450.bin	off:0x16ed3	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0	$c5이모털즈의 그래피티$c1를 전부 덮어써라!$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x16f64	128	16ca1868c241417f7decb30e936cc5b6d9962862	본부에서 각 순찰차량에 알린다!$a$r『히카게 거리』에서 소년 발견,$n『히카게 거리』 전역에 긴급 배치.$a$r반복한다,$n『히카게 거리』 전역에…$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x170a4	38	3c443fbd7392a0bffbefab475f8b22462ce7578b	하야시다.$a$r신형기로 출격한다!$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x17132	76	c0cdca4e256f1310b87dd38a03c3ccf7423f45a1	겨, 경부님!$n이 녀석은 아직 무리입니다…$a$r………………끄악!$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x171e7	119	2b6766e55bdbfe01d248ad42691b69435bc8d08d	보, 본부 수신 완료!$a$r본부에서 각 순찰차량,$n프로토타입이 긴급 출동한다!$a$r목표 지점은 S-HC002,$n부근 경계 요원은 대피하라.$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x17344	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0	$c5이모털즈의 그래피티$c1를 전부 덮어써라!$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x173db	98	3c06290b3f4d9d1ad900bb4ddae320506e90cfa0	본부에서 각 순찰차량,$a$r『히카게 거리』에서 다시 소년 확인.$a$r각 경계 요원은 총력을 다해$n체포하라!$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x174d9	86	c7aacbc40f8ac33bd882967a1b530b0b627fd60b	드디어 이모털즈 녀석들이$n“고층 빌딩가, 파라오 파크”에서$a$r기나긴 잠에서 깨어났다고.$r$e$r	nul
+Media/Mission/mssn0450.bin	off:0x175cc	24	2fb9d153c30f14c6d6bbd053dc699e7021176e38	과연 기적을 볼 수 있을까?$r$e$r	nul
+Media/Mission/mssn0451.bin	off:0x167c0	24	d71054626898c3327d117bc26eefd16dbfb5e976	경찰 로봇을 파괴해라!	nul
+Media/Mission/mssn0451.bin	off:0x1680a	30	1e1bab8573c9ced0d317d00736ae23557099d628	경찰 로봇을 파괴해라!$r$e$r	nul
+Media/Mission/mssn0451.bin	off:0x1687e	96	64be55188cada39f9b9c5ad996e95493cda76d58	그 고물 로봇 녀석은$n발에서부터 그라인드할 수 있어.$a$r발부터 타고 올라가서$n그래피티를 갈겨버려!$r$e$r	nul
+Media/Mission/mssn0452.bin	off:0x16840	26	b67c90ba887e3c4998ae68e0cb5d77e34b84336c	롯카쿠 경찰을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0452.bin	off:0x1688a	32	4c792ea4b66e8338ba66bd428acc174e0256cac8	롯카쿠 경찰을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1a664	44	c33b9df6a2da7be476e6c217650c203a576d643b	이모털즈의 그래피티를 전부 덮어써라!	nul
+Media/Mission/mssn0460.bin	off:0x1a6f7	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0	$c5이모털즈의 그래피티$c1를 전부 덮어써라!$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1a78e	136	c8595b744d643e436f5a9855bce9db7987b29453	１１２ 신고 접수, 본부에서 각국에,$a$r『기보가오카』에서 폭주하는 자가$n있다는 신고 접수.$a$r인근 차량은 현장 급행하라.$n반복한다, 관내…$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1a8b8	72	3281f46245243c359fe908c8957aa0c5e06b2558	항공 기동대에서 본부…$a$r목표 포착 완료!$n지금부터 공격을 개시한다.$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1a97c	38	06af93faa1585a26db1aa90bf67a6360691dfcc9	하야시다.$n헬기 부숴먹지 마라.$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1aa0f	50	f165f3f64ec073096f696224af9312261358ba89	항공 기동대에서 하야시 경부,$n라져! 알겠습니다.$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1aa9e	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0	$c5이모털즈의 그래피티$c1를 전부 덮어써라!$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1ab2f	76	f6cf30581857d2eb4c1f9d38eacb2d0ea7162f95	어라?$n애송이가 또 기어들어온 모양이군.$a$r너희들, 아주 박살을 내버려라.$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1ac08	50	f165f3f64ec073096f696224af9312261358ba89	항공 기동대에서 하야시 경부,$n라져! 알겠습니다.$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1ac97	86	c7aacbc40f8ac33bd882967a1b530b0b627fd60b	드디어 이모털즈 녀석들이$n“고층 빌딩가, 파라오 파크”에서$a$r기나긴 잠에서 깨어났다고.$r$e$r	nul
+Media/Mission/mssn0460.bin	off:0x1ad8a	24	2fb9d153c30f14c6d6bbd053dc699e7021176e38	과연 기적을 볼 수 있을까?$r$e$r	nul
+Media/Mission/mssn0461.bin	off:0x19d1c	32	56dd96697f9fcf8a8bced75581c7c6e6971a171e	롯카쿠 경찰 녀석들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0461.bin	off:0x19d6c	38	896d28a92c6b246a09e547f1032aa0dab4cb7c6c	롯카쿠 경찰 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0461.bin	off:0x19de6	98	098bca555578011620f1f7469245a3718f136232	시끄러운 매미 녀석들을 쫓아내!$a$r유리창에 그래피티를 갈겨서$n앞이 안 보이게 만들어버려!$r$e$r	nul
+Media/Mission/mssn0470.bin	off:0x13ec4	44	c33b9df6a2da7be476e6c217650c203a576d643b	이모털즈의 그래피티를 전부 덮어써라!	nul
+Media/Mission/mssn0470.bin	off:0x13f57	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0	$c5이모털즈의 그래피티$c1를 전부 덮어써라!$r$e$r	nul
+Media/Mission/mssn0470.bin	off:0x13fe8	124	398c70d1f9a15a5a102d9799059d10e993327aa2	본부에서 각국에 알린다…$n스케이트 주행 중인 소년 확인,$a$r현재 『파라오 파크』 부근을$n이동 중이다.$a$r인근 차량은 현장 급행하라.$r$e$r	nul
+Media/Mission/mssn0470.bin	off:0x1411d	56	aa00acffbca0e3ec5737f221dcbc6490d39dc0d0	$c5이모털즈의 그래피티$c1를 전부 덮어써라!$r$e$r	nul
+Media/Mission/mssn0470.bin	off:0x141af	106	fc3ce24a0c3483e536589d1c8defdcc711381034	하야시다.$n야야, 또 그 애송이잖아.$a$r작작 하고 당장 잡아와!$n이번에 실패하면 전원 감봉이다.$r$e$r	nul
+Media/Mission/mssn0470.bin	off:0x142e5	86	c7aacbc40f8ac33bd882967a1b530b0b627fd60b	드디어 이모털즈 녀석들이$n“고층 빌딩가, 파라오 파크”에서$a$r기나긴 잠에서 깨어났다고.$r$e$r	nul
+Media/Mission/mssn0470.bin	off:0x143d8	24	2fb9d153c30f14c6d6bbd053dc699e7021176e38	과연 기적을 볼 수 있을까?$r$e$r	nul
+Media/Mission/mssn0471.bin	off:0x130f4	26	b67c90ba887e3c4998ae68e0cb5d77e34b84336c	롯카쿠 경찰을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0471.bin	off:0x1313e	32	4c792ea4b66e8338ba66bd428acc174e0256cac8	롯카쿠 경찰을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0472.bin	off:0x39190	40	251e305cc38ca99a3563d089ccb6c3882fbbde93	이모털즈의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0472.bin	off:0x391f3	88	b8757ade13509ffe9b25f662656fe204cd759b52	이모털즈, 녀석들은 왕가의$n미라인 줄 착각… 아 실례,$a$r굳게 믿고 있는 족속들이지!$r$e$r	nul
+Media/Mission/mssn0480.bin	off:0x10808	24	ce08c7fca2a5d67d9615eca5357f807bf5243fdd	이모털즈를 찾아내라!	nul
+Media/Mission/mssn0481.bin	off:0x2ec14	40	251e305cc38ca99a3563d089ccb6c3882fbbde93	이모털즈의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0511.bin	off:0x7a67f	215	72d5bf7b5d9b567d2f89eb35a3a097f1c1a1b13e	지옥의 헬멧 집단,$n둠 라이더즈.$a$r지옥의 바이커 집단이었는데,$n롯카쿠 경찰과 대치 중 사고로$a$r두개골이 바스러져서,$n머리 대신 헬멧을$a$r쓰고 다닌다던가? 으악, 무셔!$r$e$r	nul
+Media/Mission/mssn0511.bin	off:0x7a866	64	9709491e7bff9a6434e970402c87a41161dab9eb	죽음의 투어링으로 지옥까지$n보내주마! 부르르릉!$r$e$r	nul
+Media/Mission/mssn0511.bin	off:0x7a8e7	40	082e6ca40e8a4f75a611a3b03b01cf799e7c0bf2	엑셀 풀 스로틀이다!$n부르르르릉!$r$e$r	nul
+Media/Mission/mssn0512.bin	off:0x7b4a3	68	59cdccdbb79874eebefbe86c6f46f70ccd6cca04	이모털즈, 녀석들의 흉악함은$n나일강도 바싹 말려버릴 정도야.$r$e$r	nul
+Media/Mission/mssn0512.bin	off:0x7b567	102	daadf040ce685f8f5ca1c971f84006b2b6f0e1f3	우리가 왜 이모털즈라 불리는지$n아직도 깨닫지 못한 모양이군.$a$r우리는 몇 번이고 되살아난다.$r$e$r	nul
+Media/Mission/mssn0512.bin	off:0x7b65e	28	48ea4521b350a0a008be65dfebfc9965a9331562	어이 어이! 왜 그러냐!$r$e$r	nul
+Media/Mission/mssn0512.bin	off:0x7b6c4	52	15364f1f04d66262f6784db1412539d6e6215673	너희들의 뒤에서$n사신이 미소 짓고 있다구!$r$e$r	nul
+Media/Mission/mssn0513.bin	off:0x7c777	120	a71075e606bba18eb7f46373e049f73a6fdad767	사랑을 부정하고 죽음을 부르는$n사이코 아마조네스 팀,$a$r러브 쇼커즈!!$a$r오늘의 노예는 마음에 드시려나?$r$e$r	nul
+Media/Mission/mssn0513.bin	off:0x7c8b6	106	8971881167fcdd29beb1785f738e4616550cfeed	오호호호!$a$r우리 손에 쓰러지는 건$n오히려 영광인 줄 알아.$a$r너희는 그냥 여기서 고이$n죽는 게 나을걸.$r$e$r	nul
+Media/Mission/mssn0513.bin	off:0x7c9d7	16	c8069266391753c41abd287783f530d0a7f5ecd6	죽어버려.$r$e$r	nul
+Media/Mission/mssn0513.bin	off:0x7ca16	34	437ea4048ee061cd00287766aa2a950a4a642546	끈질긴 남자는 딱 질색이야.$r$e$r	nul
+Media/Mission/mssn0514.bin	off:0x4700	32	4eb71c0819e79de36dfff0391bcd0d173bb95204	롯카쿠의 고물 머신을 박살내라!	nul
+Media/Mission/mssn0514.bin	off:0x47c6	38	d2781e1fb1b4c8e445b910afb7610a7f0100639c	롯카쿠의 고물 머신을 박살내라!$r$e$r	nul
+Media/Mission/mssn0514.bin	off:0x48b6	118	31b85b3eec3c03d946a9f1b6cb67fbbf974d3a7b	야, $c5“좌측 트리거”를 당겨서$c1$n그 녀석을 계속 주시해.$a$r한눈팔다간 $c5빔$c1에 구워져$n버릴 테니까.$r$e$r	nul
+Media/Mission/mssn0514.bin	off:0x4b4c	138	b462e9b4aed1d28ae44a29c3706f137338cb2ccf	HEY! 작업은 잘 돼가나?$n긴급 속보다!$a$r어떤 정보통에 따르면…$a$r그 녀석은 $c5４군데에 그래피티를$n그릴 수 있다$c1는군!$r$e$r	nul
+Media/Mission/mssn0515.bin	off:0x2bf24	202	2d629cc7795235abeb98904561ed8a57efddce3e	우선 저기 공을 주워봐.$a$r$c5공을 쥐고 나한테 다가오면$c1$n커서가 생기잖아.$a$r커서가 떴을 때 $c5“B 버튼”$c1을$n누르면,$a$r나한테 $c5패스$c1할 수 있어.$n한번 해봐.$r$e$r	nul
+Media/Mission/mssn0515.bin	off:0x2c105	127	1b62ac8774efef87753ab7f6307de6c1352df7aa	 $n　$n　$n　$n　$n　$n$c5공$c1을 줍고 $c5「재즈」$c1에게 커서가 뜨면$n$c5“B 버튼”$c1으로 $c5패스$c1해봐!$r$e$r	nul
+Media/Mission/mssn0515.bin	off:0x2c236	304	15348eb544b9352c0470e1e70f014dcc430be645	그렇지! 그렇게 패스하는 거야.$a$r물론 달리면서도 패스할 수 있어.$a$r단, 너무 멀어지면 커서가$n안 뜨니까 기억해둬.$a$r커서가 없을 때 던져버리면$a$r내가 공을 받아낼 수가 없으니까.$a$r그럼 실제로 패스 주고받으며$n코스를 한번 달려보자구.$r$e$r	nul
+Media/Mission/mssn0515.bin	off:0x2c49f	85	2be05b2ac94f47686b7fda7b3c5689a51f7facab	 $n　$n　$n　$n　$n　$n$c5「재즈」$c1와 함께 달리며 $c5패스 연습$c1을 해봐!$r$e$r	nul
+Media/Mission/mssn0610.bin	off:0x1c947	30	74e34c149d4ba7837a84d71b920198f30ccd40eb	노이즈 탱크를 파괴해라!$r$e$r	nul
+Media/Mission/mssn0610.bin	off:0x1c9ac	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a	고철 덩어리 청소는 잘 돼가나?$n아직도 우글우글 남아있다고!$r$e$r	nul
+Media/Mission/mssn0610.bin	off:0x1ca8a	90	3721cebba5363adba77f79725c3af93f6fb50cb3	HEY! 제법 깔끔해졌는데!$a$r조금만 더 하면 모범 시민상$n받겠어, 으하하하!$r$e$r	nul
+Media/Mission/mssn0610.bin	off:0x1cb81	34	2a585751260b409e85062d3d3da94fad184b362b	…$c5마지막 １０개$c1…$r$e$r	nul
+Media/Mission/mssn0610.bin	off:0x1cbf3	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb	누군가 $c5“고층 빌딩가”$c1에서$n$c5요요$c1와 배틀 중인 것 같다!$a$r$c5“고층 빌딩가”$c1로 서둘러!$r$e$r	nul
+Media/Mission/mssn0615.bin	off:0x2331b	30	74e34c149d4ba7837a84d71b920198f30ccd40eb	노이즈 탱크를 파괴해라!$r$e$r	nul
+Media/Mission/mssn0615.bin	off:0x23380	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a	고철 덩어리 청소는 잘 돼가나?$n아직도 우글우글 남아있다고!$r$e$r	nul
+Media/Mission/mssn0615.bin	off:0x2345e	90	3721cebba5363adba77f79725c3af93f6fb50cb3	HEY! 제법 깔끔해졌는데!$a$r조금만 더 하면 모범 시민상$n받겠어, 으하하하!$r$e$r	nul
+Media/Mission/mssn0615.bin	off:0x23555	34	2a585751260b409e85062d3d3da94fad184b362b	…$c5마지막 １０개$c1…$r$e$r	nul
+Media/Mission/mssn0615.bin	off:0x235c7	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb	누군가 $c5“고층 빌딩가”$c1에서$n$c5요요$c1와 배틀 중인 것 같다!$a$r$c5“고층 빌딩가”$c1로 서둘러!$r$e$r	nul
+Media/Mission/mssn0620.bin	off:0x2086b	30	74e34c149d4ba7837a84d71b920198f30ccd40eb	노이즈 탱크를 파괴해라!$r$e$r	nul
+Media/Mission/mssn0620.bin	off:0x208d0	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a	고철 덩어리 청소는 잘 돼가나?$n아직도 우글우글 남아있다고!$r$e$r	nul
+Media/Mission/mssn0620.bin	off:0x209ae	90	3721cebba5363adba77f79725c3af93f6fb50cb3	HEY! 제법 깔끔해졌는데!$a$r조금만 더 하면 모범 시민상$n받겠어, 으하하하!$r$e$r	nul
+Media/Mission/mssn0620.bin	off:0x20aa5	34	2a585751260b409e85062d3d3da94fad184b362b	…$c5마지막 １０개$c1…$r$e$r	nul
+Media/Mission/mssn0620.bin	off:0x20b17	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb	누군가 $c5“고층 빌딩가”$c1에서$n$c5요요$c1와 배틀 중인 것 같다!$a$r$c5“고층 빌딩가”$c1로 서둘러!$r$e$r	nul
+Media/Mission/mssn0630.bin	off:0x14b9f	30	74e34c149d4ba7837a84d71b920198f30ccd40eb	노이즈 탱크를 파괴해라!$r$e$r	nul
+Media/Mission/mssn0630.bin	off:0x14c04	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a	고철 덩어리 청소는 잘 돼가나?$n아직도 우글우글 남아있다고!$r$e$r	nul
+Media/Mission/mssn0630.bin	off:0x14cd3	90	3721cebba5363adba77f79725c3af93f6fb50cb3	HEY! 제법 깔끔해졌는데!$a$r조금만 더 하면 모범 시민상$n받겠어, 으하하하!$r$e$r	nul
+Media/Mission/mssn0630.bin	off:0x14dbb	34	2a585751260b409e85062d3d3da94fad184b362b	…$c5마지막 １０개$c1…$r$e$r	nul
+Media/Mission/mssn0630.bin	off:0x14e1e	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb	누군가 $c5“고층 빌딩가”$c1에서$n$c5요요$c1와 배틀 중인 것 같다!$a$r$c5“고층 빌딩가”$c1로 서둘러!$r$e$r	nul
+Media/Mission/mssn0655.bin	off:0x1cb6f	30	74e34c149d4ba7837a84d71b920198f30ccd40eb	노이즈 탱크를 파괴해라!$r$e$r	nul
+Media/Mission/mssn0655.bin	off:0x1cbc5	70	7cdfbec28fc1e7f9411100ed0fb184e5ba888f7a	고철 덩어리 청소는 잘 돼가나?$n아직도 우글우글 남아있다고!$r$e$r	nul
+Media/Mission/mssn0655.bin	off:0x1cca3	90	3721cebba5363adba77f79725c3af93f6fb50cb3	HEY! 제법 깔끔해졌는데!$a$r조금만 더 하면 모범 시민상$n받겠어, 으하하하!$r$e$r	nul
+Media/Mission/mssn0655.bin	off:0x1cd9a	34	2a585751260b409e85062d3d3da94fad184b362b	…$c5마지막 １０개$c1…$r$e$r	nul
+Media/Mission/mssn0655.bin	off:0x1ce0c	106	14a72e7c1572fc7d18a9337d02f5318b18aefcdb	누군가 $c5“고층 빌딩가”$c1에서$n$c5요요$c1와 배틀 중인 것 같다!$a$r$c5“고층 빌딩가”$c1로 서둘러!$r$e$r	nul
+Media/Mission/mssn0661.bin	off:0x2f070	40	340a8be4e5502b0931cae7f189017196fd247030	노이즈 탱크의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0661.bin	off:0x2f0c4	94	014233e1f5009271f34cff84ce0b3fd85fc0a744	가면을 벗겨내니 정체는 가짜 요요,$n아니 노이즈 탱크였잖아.$a$r열받아서 오버히트 직전이라고.$r$e$r	nul
+Media/Mission/mssn0666.bin	off:0xf964	60	d5ba5d9334869d07412de4e204fb591997bbcf43	재즈보다 빨리 “엑스포 경기장 예정지”를 １주하라!	nul
+Media/Mission/mssn0671.bin	off:0x220c8	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4	소다보다 빨리 “국도０호”를 １바퀴 돌아라!	nul
+Media/Mission/mssn0700.bin	off:0x2f55b	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0700.bin	off:0x2f5fc	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0700.bin	off:0x2f6e8	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0710.bin	off:0x1cab0	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b	$c5그래피티 소울$c1을 모아서$n네 쿨한 실력을 증명해 봐!$r$e$r	nul
+Media/Mission/mssn0710.bin	off:0x1cb82	58	9f165979948acede49c120c39361a13868b717e5	$c5그래피티 소울$c1을 앞으로 $c5$g40개$c1 더 모아라!$r$e$r	nul
+Media/Mission/mssn0710.bin	off:0x1cc0c	72	9f592e7c507baaf358ce717890d04526c1f9a55f	도망친 $c5클러치$c1를 쫓아서$n$c5그래피티 소울$c1을 되찾아라!$r$e$r	nul
+Media/Mission/mssn0710.bin	off:0x1ccba	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0710.bin	off:0x1cd5b	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0710.bin	off:0x1ce47	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0715.bin	off:0x2312b	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0715.bin	off:0x231bd	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0715.bin	off:0x2329a	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0720.bin	off:0x200c8	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b	$c5그래피티 소울$c1을 모아서$n네 쿨한 실력을 증명해 봐!$r$e$r	nul
+Media/Mission/mssn0720.bin	off:0x2019a	58	9f165979948acede49c120c39361a13868b717e5	$c5그래피티 소울$c1을 앞으로 $c5$g40개$c1 더 모아라!$r$e$r	nul
+Media/Mission/mssn0720.bin	off:0x20224	72	9f592e7c507baaf358ce717890d04526c1f9a55f	도망친 $c5클러치$c1를 쫓아서$n$c5그래피티 소울$c1을 되찾아라!$r$e$r	nul
+Media/Mission/mssn0720.bin	off:0x202d2	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0720.bin	off:0x20373	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0720.bin	off:0x2045f	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0721.bin	off:0x4d478	54	c0ab0fa8325749548cf37e76d8e467f788e5edc3	둠 라이더즈보다 빠르게 “도겐자카”를 한 바퀴 돌아라!	nul
+Media/Mission/mssn0725.bin	off:0x167eb	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0725.bin	off:0x1688c	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0725.bin	off:0x16978	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0726.bin	off:0xd6020	42	6b80fd4c857aaa8a5c31a304c0ae71bbd36a0e73	러브 쇼커즈보다 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn0730.bin	off:0x14cf0	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b	$c5그래피티 소울$c1을 모아서$n네 쿨한 실력을 증명해 봐!$r$e$r	nul
+Media/Mission/mssn0730.bin	off:0x14df3	58	9f165979948acede49c120c39361a13868b717e5	$c5그래피티 소울$c1을 앞으로 $c5$g40개$c1 더 모아라!$r$e$r	nul
+Media/Mission/mssn0730.bin	off:0x14eae	72	9f592e7c507baaf358ce717890d04526c1f9a55f	도망친 $c5클러치$c1를 쫓아서$n$c5그래피티 소울$c1을 되찾아라!$r$e$r	nul
+Media/Mission/mssn0730.bin	off:0x14f5c	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0730.bin	off:0x14ffd	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0730.bin	off:0x150e9	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0735.bin	off:0xa087	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0735.bin	off:0xa128	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0735.bin	off:0xa214	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0740.bin	off:0x1aa33	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0740.bin	off:0x1aad4	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0740.bin	off:0x1abc0	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0745.bin	off:0x9113	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0745.bin	off:0x91b4	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0745.bin	off:0x92a0	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0746.bin	off:0x28738	52	a6f351738d867c2b59fe26f037fcf5b7fbfaa5ae	큐브보다 빨리 “지하 하수 시설 최심부”를 １주하라!	nul
+Media/Mission/mssn0750.bin	off:0x177bc	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165	장치를 찾아내 그래피티를 그려라!	nul
+Media/Mission/mssn0750.bin	off:0x17808	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165	장치를 찾아내 그래피티를 그려라!	nul
+Media/Mission/mssn0750.bin	off:0x17853	98	2a4de97bdc304380430a06e3a1556c236681c4cd	나 진짜 요요랑 똑같이$n보이지 않냐?$a$r그런 것보다 폭탄이 먼저라고!$n서둘러!$r$e$r	nul
+Media/Mission/mssn0750.bin	off:0x17973	30	983c13d2744fe9ab1fc181b4f5798f17d6149ca8	$c5시한장치$c1를 멈춰라!$r$e$r	nul
+Media/Mission/mssn0750.bin	off:0x179d4	64	8d0fccc5dc08b3cd5436436e0ebfe4738cba9518	우선 $c5파란 장치$c1에 스프레이를 뿌려$n$c5장치를 정지시켜라$c1!$r$e$r	nul
+Media/Mission/mssn0750.bin	off:0x17a6e	112	74364b40ea0ee131e486479febe0f1e2cf9f6709	일단 $c5파란 장치$c1는 멈춘$n모양이군.$a$r남은 $c5빨간 장치$c1를 찾아서$n$c5장치를 정지시켜라$c1!$r$e$r	nul
+Media/Mission/mssn0750.bin	off:0x17b6b	24	729917b4632ca1fa839dbeaecd8b0afb2deed125	시한폭탄 해체 성공!$r$e$r	nul
+Media/Mission/mssn0750.bin	off:0x17bd3	36	889f7af358659f254a9c06866dbf820227959adc	후우, 식은땀 쫙 뺐네 진짜.$r$e$r	nul
+Media/Mission/mssn0750.bin	off:0x17c55	42	17458f058d575910df8dbcfe825bdb3a260a7c62	붙잡혀 있는 요요를 풀어줘라!$r$e$r	nul
+Media/Mission/mssn0751.bin	off:0x1640c	28	5a676ed2448700be1f43879389c392f436596cb7	황금 코뿔소 녀석들을 전부 쓰러뜨려라!	nul
+Media/Mission/mssn0751.bin	off:0x16464	34	09d7b804606cfe33800294f12db30794e2252024	황금 코뿔소 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0752.bin	off:0x16798	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165	장치를 찾아내 그래피티를 그려라!	nul
+Media/Mission/mssn0752.bin	off:0x167e4	34	48ab6a90b317e0704cf53f8fcfab78da7fc24165	장치를 찾아내 그래피티를 그려라!	nul
+Media/Mission/mssn0755.bin	off:0x1c660	68	8f6d58e86b7fca86d3cfe8fd379993f0e8faa11b	$c5그래피티 소울$c1을 모아서$n네 쿨한 실력을 증명해 봐!$r$e$r	nul
+Media/Mission/mssn0755.bin	off:0x1c732	58	9f165979948acede49c120c39361a13868b717e5	$c5그래피티 소울$c1을 앞으로 $c5$g40개$c1 더 모아라!$r$e$r	nul
+Media/Mission/mssn0755.bin	off:0x1c7bc	72	9f592e7c507baaf358ce717890d04526c1f9a55f	도망친 $c5클러치$c1를 쫓아서$n$c5그래피티 소울$c1을 되찾아라!$r$e$r	nul
+Media/Mission/mssn0755.bin	off:0x1c86a	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0755.bin	off:0x1c90b	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0755.bin	off:0x1c9f7	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0756.bin	off:0x62d90	40	251e305cc38ca99a3563d089ccb6c3882fbbde93	이모털즈의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0760.bin	off:0xc62f	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0760.bin	off:0xc6d0	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0760.bin	off:0xc7bc	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0765.bin	off:0x4dd3	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0765.bin	off:0x4e74	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0765.bin	off:0x4f60	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0766.bin	off:0xf9e8	60	d5ba5d9334869d07412de4e204fb591997bbcf43	재즈보다 빨리 “엑스포 경기장 예정지”를 １주하라!	nul
+Media/Mission/mssn0770.bin	off:0x10ba7	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0770.bin	off:0x10c48	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0770.bin	off:0x10d34	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0771.bin	off:0x22174	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4	소다보다 빨리 “국도０호”를 １바퀴 돌아라!	nul
+Media/Mission/mssn0775.bin	off:0x13af3	60	6dd64e78711c431d38cc44a168cc89c86eb4bf4a	클러치는 $c5“기보가오카”$c1에서$n놀고 있는 모양이야.$r$e$r	nul
+Media/Mission/mssn0775.bin	off:0x13b94	90	0434a497f49f74bb106790d8a05985b61e691f80	신출귀몰한 $c5클러치$c1.$a$r이번엔 $c5“고층 빌딩가”$c1를 어슬렁$n거리고 있다는 소식이야.$r$e$r	nul
+Media/Mission/mssn0775.bin	off:0x13c80	98	435be6bbcb4fcba05a552ec41b5737db3fa30301	“ＧＧ”가 애먹고 있는 $c5클러치$c1는$n$c5“주오 거리”$c1를 내달리고$a$r있다는 얘기야!$r$e$r	nul
+Media/Mission/mssn0810.bin	off:0x1c40f	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8	스트리트라는 만화에$n슈퍼 히어로 따윈 없어.$a$r너 자신이 직접 주연을 맡는 수밖에!$r$e$r	nul
+Media/Mission/mssn0810.bin	off:0x1c526	78	526065f6477f2826abaa46dfb797cf5cf48c337a	“주오 거리”에서 미친 놈들이 난동을!$a$r“국도０호”는 불바다가 됐다고!$r$e$r	nul
+Media/Mission/mssn0810.bin	off:0x1c5f9	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c	거리를 무차별로 파괴하는$n황금 코뿔소를 저지하라!$r$e$r	nul
+Media/Mission/mssn0810.bin	off:0x1c6b4	34	09d7b804606cfe33800294f12db30794e2252024	황금 코뿔소 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0811.bin	off:0x7f60f	294	97f00fc504a4f2fb9cdb1ff934472b4e6ef2ef2c	이예에에에에에에엣!!!$a$r자 마음을 가다듬고 가보자고!$a$r부활 신생 제트 셋 라디오,$n우리 손으로 미래를! 이름하여$a$r“JET SET RADIO FUTURE”다!$a$r미래라는 건 이 녀석이나 예언가가$n정해둔 각본 따위가 아니야,$a$r미래란 바로 새하얀 일기장이지.$n새 페이지는 네 손으로 직접 써내려가라!$r$e$r	nul
+Media/Mission/mssn0811.bin	off:0x7f8d8	9	49a6d064b97f715b2169f1402967cb4ffc3f36e5	NON$r$e$r	nul
+Media/Mission/mssn0812.bin	off:0x7f448	34	d81f42e18bd15d9cc1e02d07519840fab990ca82	모든 녀석들의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0812.bin	off:0x7f481	58	b3ad94314c8e5d908b208316120d49c928b37714	제 아들들은 천재랍니다.$n부디 조심하십시오.$r$e$r	nul
+Media/Mission/mssn0812.bin	off:0x7f512	42	dc6b8b34f44a8b7c542ad81bb80ae533b97a73a3	너,$n내가 미쳤다고 생각하냐?$r$e$r	nul
+Media/Mission/mssn0812.bin	off:0x7f584	50	8c8cfc9a91193b6b4a591e30fd9bf36be2251b5a	내가 보기엔 너희들이야말로$n미쳐 날뛰고 있는 거다.$r$e$r	nul
+Media/Mission/mssn0812.bin	off:0x7f612	104	d3a476168c15d56e892092a7b2731c106e929e5c	사물이란 네 쪽에서 보면 좌측$n이지만, 내 쪽에선 우측인 법이지.$a$r목소리 큰 놈이 언제나 정의다!$r$e$r	nul
+Media/Mission/mssn0815.bin	off:0x227f7	54	2c28a469218119ececd316cfb9595133f354fe1f	고층 빌딩가 방면에서$n지지지치지지직……$r$e$r	nul
+Media/Mission/mssn0815.bin	off:0x22893	32	2a40f0fd6ce47e095c1df63ad31cbc051c3abbc4	전파 상태가 영 지지지-$r$e$r	nul
+Media/Mission/mssn0815.bin	off:0x228f4	26	9e1542cdec95ea0fb43e7c53e6a8252598d1464b	뭐야, 너희들!!$r$e$r	nul
+Media/Mission/mssn0815.bin	off:0x22956	56	6191b59e28c96cfeac0ffdc2ef8d20c8daa608eb	지지크아아악지지지지지지직$n지지……$r$e$r	nul
+Media/Mission/mssn0816.bin	off:0x22bf0	22	67bc691fbbf51f30d98aa52936f3fdb985764354	황금 코뿔소의 간부를 쓰러뜨려라!	nul
+Media/Mission/mssn0816.bin	off:0x22c42	28	553ce47ea167196fdf23a97a09c4dbd21c354c1a	황금 코뿔소의 간부를 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0820.bin	off:0x1f9eb	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8	스트리트라는 만화에$n슈퍼 히어로 따윈 없어.$a$r너 자신이 직접 주연을 맡는 수밖에!$r$e$r	nul
+Media/Mission/mssn0820.bin	off:0x1fb11	78	526065f6477f2826abaa46dfb797cf5cf48c337a	“주오 거리”에서 미친 놈들이 난동을!$a$r“국도０호”는 불바다가 됐다고!$r$e$r	nul
+Media/Mission/mssn0820.bin	off:0x1fbf3	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c	거리를 무차별로 파괴하는$n황금 코뿔소를 저지하라!$r$e$r	nul
+Media/Mission/mssn0820.bin	off:0x1fcbd	34	09d7b804606cfe33800294f12db30794e2252024	황금 코뿔소 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0830.bin	off:0x145df	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8	스트리트라는 만화에$n슈퍼 히어로 따윈 없어.$a$r너 자신이 직접 주연을 맡는 수밖에!$r$e$r	nul
+Media/Mission/mssn0830.bin	off:0x146f6	78	526065f6477f2826abaa46dfb797cf5cf48c337a	“주오 거리”에서 미친 놈들이 난동을!$a$r“국도０호”는 불바다가 됐다고!$r$e$r	nul
+Media/Mission/mssn0830.bin	off:0x147c9	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c	거리를 무차별로 파괴하는$n황금 코뿔소를 저지하라!$r$e$r	nul
+Media/Mission/mssn0830.bin	off:0x14884	34	09d7b804606cfe33800294f12db30794e2252024	황금 코뿔소 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0846.bin	off:0x2873c	52	a6f351738d867c2b59fe26f037fcf5b7fbfaa5ae	큐브보다 빨리 “지하 하수 시설 최심부”를 １주하라!	nul
+Media/Mission/mssn0855.bin	off:0x1c067	98	e5de7ea37f06e9f0d1528e3781cc4ba36baa69e8	스트리트라는 만화에$n슈퍼 히어로 따윈 없어.$a$r너 자신이 직접 주연을 맡는 수밖에!$r$e$r	nul
+Media/Mission/mssn0855.bin	off:0x1c17e	78	526065f6477f2826abaa46dfb797cf5cf48c337a	“주오 거리”에서 미친 놈들이 난동을!$a$r“국도０호”는 불바다가 됐다고!$r$e$r	nul
+Media/Mission/mssn0855.bin	off:0x1c251	52	039f538fc7d7cd5354aeb035f4c0d0876a44b08c	거리를 무차별로 파괴하는$n황금 코뿔소를 저지하라!$r$e$r	nul
+Media/Mission/mssn0855.bin	off:0x1c30c	34	09d7b804606cfe33800294f12db30794e2252024	황금 코뿔소 녀석들을 전부 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0866.bin	off:0xf9f4	60	d5ba5d9334869d07412de4e204fb591997bbcf43	재즈보다 빨리 “엑스포 경기장 예정지”를 １주하라!	nul
+Media/Mission/mssn0870.bin	off:0x10b7b	54	2c28a469218119ececd316cfb9595133f354fe1f	고층 빌딩가 방면에서$n지지지치지지직……$r$e$r	nul
+Media/Mission/mssn0870.bin	off:0x10c08	32	2a40f0fd6ce47e095c1df63ad31cbc051c3abbc4	전파 상태가 영 지지지-$r$e$r	nul
+Media/Mission/mssn0870.bin	off:0x10c5a	26	9e1542cdec95ea0fb43e7c53e6a8252598d1464b	뭐야, 너희들!!$r$e$r	nul
+Media/Mission/mssn0870.bin	off:0x10cad	56	6191b59e28c96cfeac0ffdc2ef8d20c8daa608eb	지지크아아악지지지지지지직$n지지……$r$e$r	nul
+Media/Mission/mssn0871.bin	off:0x22128	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4	소다보다 빨리 “국도０호”를 １바퀴 돌아라!	nul
+Media/Mission/mssn0872.bin	off:0x109d0	22	67bc691fbbf51f30d98aa52936f3fdb985764354	황금 코뿔소의 간부를 쓰러뜨려라!	nul
+Media/Mission/mssn0872.bin	off:0x10a13	32	6a25e09435e7b58a26f9f7252d81ce939d705583	황금 코뿔소의 간부들을 쓰러뜨려라!$r$e$r	nul
+Media/Mission/mssn0880.bin	off:0x1634	44	b3e032fa141164e1201501372df6ee65a015779a	황금 코뿔소의 폭주 거대 열차를 격파하라!	nul
+Media/Mission/mssn0890.bin	off:0x1520	5	8b71973e835cd0718827238b1cf89f0079e44dae	?????	nul
+Media/Mission/mssn0921.bin	off:0x4d3e4	54	c0ab0fa8325749548cf37e76d8e467f788e5edc3	둠 라이더즈보다 빠르게 “도겐자카”를 한 바퀴 돌아라!	nul
+Media/Mission/mssn0926.bin	off:0xd5ffc	42	6b80fd4c857aaa8a5c31a304c0ae71bbd36a0e73	러브 쇼커즈보다 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn0946.bin	off:0x2873c	52	a6f351738d867c2b59fe26f037fcf5b7fbfaa5ae	큐브보다 빨리 “지하 하수 시설 최심부”를 １주하라!	nul
+Media/Mission/mssn0956.bin	off:0x62c94	46	e41e81a6a90fe9d2a050bb33a81a1de47d10452b	이모털즈 전원의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn0966.bin	off:0xf9f0	60	d5ba5d9334869d07412de4e204fb591997bbcf43	재즈보다 빨리 “엑스포 경기장 예정지”를 １주하라!	nul
+Media/Mission/mssn0971.bin	off:0x220d0	42	8b6daa1d2f5ccd45145f7540cb5ab6d1e508ebd4	소다보다 빨리 “국도０호”를 １바퀴 돌아라!	nul
+Media/Mission/mssn2000.bin	off:0xc8e4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2001.bin	off:0xc8e4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2002.bin	off:0xc8e4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2010.bin	off:0x135c4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2011.bin	off:0x135c4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2012.bin	off:0x135c4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2020.bin	off:0x12e3c	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2021.bin	off:0x12e3c	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2022.bin	off:0x12e3c	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2030.bin	off:0x1b30c	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2040.bin	off:0x21be0	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2050.bin	off:0x12d20	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2100.bin	off:0x1305c	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2110.bin	off:0x1ffd4	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2120.bin	off:0x202a8	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2130.bin	off:0x2b8b0	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2140.bin	off:0x39f68	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2150.bin	off:0x1de58	26	ac5a475ea1fd2d327b328c0172227828912bab29	라이벌보다 빠르게 ３바퀴를 돌아라!	nul
+Media/Mission/mssn2200.bin	off:0xbfc0	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2210.bin	off:0x12c9c	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2220.bin	off:0x12534	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2300.bin	off:0x32344	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2301.bin	off:0x58ca4	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2310.bin	off:0x61284	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2311.bin	off:0xb05f4	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2320.bin	off:0x4703c	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2321.bin	off:0x7c45c	54	9aaa2676b9853b92dd8bac8934e4395265af0772	공을 쥔 채 라이벌을 따돌리고 코스를 １바퀴 돌아라!	nul
+Media/Mission/mssn2400.bin	off:0xec04	32	141ada25035f7993fa776d1f61e7f1318be397e6	라이벌보다 더 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn2410.bin	off:0xb00c	32	141ada25035f7993fa776d1f61e7f1318be397e6	라이벌보다 더 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn2420.bin	off:0xbf24	32	141ada25035f7993fa776d1f61e7f1318be397e6	라이벌보다 더 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn2500.bin	off:0x306d4	32	141ada25035f7993fa776d1f61e7f1318be397e6	라이벌보다 더 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn2510.bin	off:0x3952c	32	141ada25035f7993fa776d1f61e7f1318be397e6	라이벌보다 더 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn2520.bin	off:0x26d14	32	141ada25035f7993fa776d1f61e7f1318be397e6	라이벌보다 더 많은 깃발을 챙겨라!	nul
+Media/Mission/mssn2600.bin	off:0x1359c	38	6b653567d099dccc86edaf9b243c560025c2a940	라이벌보다 더 많은 그래피티를 그려라!	nul
+Media/Mission/mssn2610.bin	off:0xdcd8	38	6b653567d099dccc86edaf9b243c560025c2a940	라이벌보다 더 많은 그래피티를 그려라!	nul
+Media/Mission/mssn2620.bin	off:0x10c2c	38	6b653567d099dccc86edaf9b243c560025c2a940	라이벌보다 더 많은 그래피티를 그려라!	nul
+Media/Mission/mssn2700.bin	off:0x26658	38	6b653567d099dccc86edaf9b243c560025c2a940	라이벌보다 더 많은 그래피티를 그려라!	nul
+Media/Mission/mssn2710.bin	off:0x17adc	38	6b653567d099dccc86edaf9b243c560025c2a940	라이벌보다 더 많은 그래피티를 그려라!	nul
+Media/Mission/mssn2720.bin	off:0x21010	38	6b653567d099dccc86edaf9b243c560025c2a940	라이벌보다 더 많은 그래피티를 그려라!	nul
+Media/Mission/mssn2830.bin	off:0xeb54	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc	라이벌의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn2840.bin	off:0xaf5c	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc	라이벌의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn2850.bin	off:0xbe74	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc	라이벌의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn2930.bin	off:0x24204	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc	라이벌의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn2940.bin	off:0x1adbc	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc	라이벌의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn2950.bin	off:0x1ba8c	36	b3a7a5863d3c26e95a4b55332b823c40d253eddc	라이벌의 등에 그래피티를 그려라!	nul
+Media/Mission/mssn3010.bin	off:0x165ac	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3011.bin	off:0x1a414	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3012.bin	off:0x12c38	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3013.bin	off:0xc4dc	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3020.bin	off:0xd924	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3021.bin	off:0x6f98	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3022.bin	off:0xf2d0	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3023.bin	off:0x53a4	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3024.bin	off:0x1179c	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3030.bin	off:0xec9c	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3031.bin	off:0x9478	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3033.bin	off:0x8c6c	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3034.bin	off:0x7b3c	32	b133c72d13ae8b2c0e108ea013116361e972c421	어쨌든 빠르게 그래피티를 완성하라!	nul
+Media/Mission/mssn3110.bin	off:0x10ce4	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3111.bin	off:0x13f70	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3112.bin	off:0xd260	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3113.bin	off:0x73c4	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3120.bin	off:0x8474	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3121.bin	off:0x5134	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3122.bin	off:0xdb68	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3123.bin	off:0x2ecc	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3124.bin	off:0xb608	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3130.bin	off:0xa9fc	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3131.bin	off:0x534c	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3133.bin	off:0x5efc	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3134.bin	off:0x692c	22	d2f056a7d85a3aee36e891f4dd686b8ab12747ab	어쨌든 점수를 쓸어 담아라!	nul
+Media/Mission/mssn3211.bin	off:0x1acd4	22	caac8e15bd8de5762f159cd65131267bdd0035bd	어쨌든 빠르게 １바퀴 완주하라!	nul
+Media/Mission/mssn3212.bin	off:0xe4ac	22	caac8e15bd8de5762f159cd65131267bdd0035bd	어쨌든 빠르게 １바퀴 완주하라!	nul
+Media/Mission/mssn3222.bin	off:0x136c0	22	caac8e15bd8de5762f159cd65131267bdd0035bd	어쨌든 빠르게 １바퀴 완주하라!	nul
+Media/Mission/mssn3223.bin	off:0xa050	22	caac8e15bd8de5762f159cd65131267bdd0035bd	어쨌든 빠르게 １바퀴 완주하라!	nul
+Media/Mission/mssn3231.bin	off:0x64b8	22	caac8e15bd8de5762f159cd65131267bdd0035bd	어쨌든 빠르게 １바퀴 완주하라!	nul
+Media/Mission/mssn3233.bin	off:0x6740	22	caac8e15bd8de5762f159cd65131267bdd0035bd	어쨌든 빠르게 １바퀴 완주하라!	nul
+Media/Mission/mssn3310.bin	off:0x10ce8	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3313.bin	off:0x74e4	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3320.bin	off:0x8520	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3321.bin	off:0x51e0	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3324.bin	off:0xb6a4	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3330.bin	off:0xab2c	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3334.bin	off:0x69d8	36	dad994aa4a195e42578f7a2c587f336b324a3e88	어쨌든 서둘러 모든 깃발을 확보하라!	nul
+Media/Mission/mssn3400.bin	off:0x9341	79	7309fd39cdf56dd7fca1dcc69b08c80db1a7d142	 $n　$n　$n　$n　$n　$n$c5“A 버튼”$c1을 눌러서 딱 한 번 뛰어봐라.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x93ff	54	a1b10564394d6c2c1f5cdc04b653929c4cd574ea	그렇지.$n이번엔 $c5３번 점프$c1해봐라.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x94ac	85	177e4666f88964bf8b742a979d91020114542e3f	 $n　$n　$n　$n　$n　$n$c5“A 버튼”$c1을 누르고 $c5３번$c1 점프해봐라!$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9577	190	ea75b9259dfcbd302cbcca99b4f13a7179143362	후딱 다음 가보자고.$a$r엄청나게 중요한 테크닉인$n$c5「그라인드」$c1다.$a$r$c5점프해서 난간이나 가드레일에$n올라타 봐라$c1.$a$r제대로 타면 그 위를$n미끄러져 달린다구.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x976a	71	afd055cc89c794d64b012fa5c572d6598a749780	 $n　$n　$n　$n　$n　$n레일에 올라타서 $c5그라인드$c1해봐라.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9806	34	daddfafd63314b67103933ca554dbf7c1f087f26	$c5한 번 더$c1 해봐라.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x98a0	65	a4ff7a0d0283292743c4890cbfdcfb95d0be766e	 $n　$n　$n　$n　$n　$n다시 한 번 $c5그라인드$c1해봐라!$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x993d	178	6d3005dda03a76f912a90a7b7172a50098a3adc9	다음이다.$n$c5「그래피티」$c1 그리는 법이다.$a$r우선 저기 굴러다니는 $c5스프레이 캔$n을 １０개 모아봐라$c1.$a$r부딪히면 주울 수 있다.$a$r이게 없으면 $c5그래피티$c1는$n손도 못 댄다구.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9ae9	67	74f4ebb68024de0bd099070b06ab1db76178bf9f	 $n　$n　$n　$n　$n　$n스프레이 캔을 $c5“１０개”$c1 모아봐라!$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9b8a	242	d22e1a67baba3bf3a9a812d403a756d65c7b66fb	다 모았냐?$n그럼 $c5그래피티$c1를 그려보자구.$a$r$c5노란 원형 마크가 있는 곳$c1까지$n가봐라.$a$r거기 $c5다가가서 “우측 트리거”$c1를$n당기면 $c5그래피티$c1를 그릴 수 있다.$a$r동그란 마크가 전부 사라지면$n그래피티 완성이야.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9dae	97	5b4931776ef49692eabd9cbab8f696fc731531f9	 $n　$n　$n　$n　$n　$n마크 근처에서 $c5“우측 트리거”$c1로$n$c5그래피티$c1를 그려봐라!$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9e9b	118	0d821744bb1342a0d14a41bc3aab41c32fa97436	$c5스프레이 캔$c1이 없으면 그래피티는$n못 그린다구.$a$r$c5스프레이 캔$c1을 모아서$n$c5그래피티$c1를 그려라.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0x9fb2	148	8451de347b0ec59f331908936570fcc3afc525e4	일단 그렸군.$a$r마지막으로 $c5「부스트 대시」$c1를$n알려주지.$a$r$c5스프레이 캔을 １０개 모아서$c1,$n$c5“B 버튼”$c1을 눌러봐라.$r$e$r	nul
+Media/Mission/mssn3400.bin	off:0xa140	99	f50116703decc162547cec5609e8b5475ba84dac	 $n　$n　$n　$n　$n　$n캔 １０개를 모으고 $c5“B 버튼”$c1으로$n$c5부스트 대시$c1다!$r$e$r	nul
+Media/Mission/mssn3401.bin	off:0x8c69	71	7115fbaffc15662034c101ce406645327e80e362	 $n　$n　$n　$n　$n　$n$c5경찰 인형$c1에게 $c5몸통 박치기$c1를 해봐라.$r$e$r	nul
+Media/Mission/mssn3401.bin	off:0x8d10	46	f82864c9c0837f35dbcbede799a98be0c0a5f7c0	흥.$n뭐, $c5한 번 더$c1 해봐라.$r$e$r	nul
+Media/Mission/mssn3401.bin	off:0x8db1	71	85ed0b4c8903a30c8804ac50cbc41a20cdd3b256	 $n　$n　$n　$n　$n　$n$c5경찰 인형$c1에게 $c5몸통 박치기$c1를 해봐라!$r$e$r	nul
+Media/Mission/mssn3401.bin	off:0x8e58	264	45ccca1ffeab1ea91f94f5172b121bb52ad8f652	뭐 이 정도면 됐어.$a$r경찰 인형을 날려버렸으면$n녀석이 $c5일어나기 전에 다가가서$c1,$a$r$c5“우측 트리거”를 당겨라$c1!$a$r그래피티를 갈겨서 재기불능$n으로 만들어버릴 수 있지.$a$r아, 당연한 소리지만$n$c5스프레이 캔$c1 챙겨두는 건$a$r잊지 말라고.$r$e$r	nul
+Media/Mission/mssn3401.bin	off:0x912b	111	89e6ffcb516aa31341c9265c5117556c05cf097d	 $n　$n　$n　$n　$n　$n$c5경찰 인형$c1을 $c5들이받고$c1,$n$c5일어나기 전에 그래피티$c1를 그려라!$r$e$r	nul
+Media/Mission/mssn3402.bin	off:0x87c1	73	4627e6a5cabed7953209d9dee3fb4549b1ee26a0	 $n　$n　$n　$n　$n　$n달리면서 $c5“Y 버튼”$c1을 눌러봐라.$r$e$r	nul
+Media/Mission/mssn3402.bin	off:0x8876	42	4291a6bb5f6c48bcff8287d4260d25eb2818a2b1	그게 턴이다. 앞으로 세 번 더 해봐라.$r$e$r	nul
+Media/Mission/mssn3402.bin	off:0x8913	55	9c5f5cf8188cb0a81d02c30847016b24d5febe39	 $n　$n　$n　$n　$n　$n$c5３번 턴$c1해봐라.$r$e$r	nul
+Media/Mission/mssn3403.bin	off:0x87a1	81	d35f97f14562366b93a1169e6bc0da39751b6aca	 $n　$n　$n　$n　$n　$n$c5간판$c1에 뛰어들어 $c5월 라이드$c1해봐라.$r$e$r	nul
+Media/Mission/mssn3403.bin	off:0x8851	128	259cb518998070fb9f2ffe329dbff323517e6792	그게 너 같은 놈도 할 수 있는$n기술, $c5「월 라이드」$c1다.$a$r앞으로 １００번, 아니 $c5３번$c1만$n더 해봐라.$r$e$r	nul
+Media/Mission/mssn3403.bin	off:0x89b3	87	416763b4991df76e4bdc6b429c911c50a52a357d	 $n　$n　$n　$n　$n　$n$c5간판$c1에 뛰어들어$n$c5３번 월 라이드$c1해봐라!$r$e$r	nul
+Media/Mission/mssn3404.bin	off:0x87c1	89	80b2083d01ac5beb2cc9e6929626e20a64833e61	 $n　$n　$n　$n　$n　$n달리면서 $c5전봇대$c1에 올라타 $c5그라인드$c1해봐라.$r$e$r	nul
+Media/Mission/mssn3404.bin	off:0x887b	48	fde012848e655f8c65bdbde16d4840b0af5b2294	그거다 그거!$n$c5한 번 더$c1 해봐라.$r$e$r	nul
+Media/Mission/mssn3404.bin	off:0x8935	87	03cd57e3c222f3bd8025f55aaa3af00d903de49f	 $n　$n　$n　$n　$n　$n달리면서 $c5전봇대$c1에 올라타 $c5그라인드$c1해봐라!$r$e$r	nul
+Media/Mission/mssn3405.bin	off:0x8c65	101	6371ce53d7a27d90fc1670559c53236971c746ec	 $n　$n　$n　$n　$n　$n경찰 인형에 $c5커서$c1가 붙으면$n$c5“좌측 트리거”$c1를 당겨봐라.$r$e$r	nul
+Media/Mission/mssn3405.bin	off:0x8d5b	212	a873fea2c0b4415f1fa0f4c04f42fb8d6acab796	그렇지.$a$r커서가 「빨간색」이 되면서$n인형을 계속 쳐다보게 되지?$a$r「너한테 푹 빠져서 눈을 뗄 수가$n없잖아!」라는 소리다.$a$r다음은 $c5커서를 빨갛게 둔 채$c1,$n$c5인형 주위를 빙 돌아봐라$c1.$r$e$r	nul
+Media/Mission/mssn3405.bin	off:0x8f79	73	4ad8776b90ec81560ed34935bcc759a0f796fcb4	 $n　$n　$n　$n　$n　$n경찰 인형을 $c5주시하면서 돌아봐라$c1.$r$e$r	nul
+Media/Mission/mssn3405.bin	off:0x903b	248	e2d02f53bf11042fa62422b86ccf9bb6ea94600a	좋아.$a$r그게 요즘 유행하는 미니$n강강술래…$a$r라는 농담은 치워두고, 마지막으로$n$c5「대시 어택」$c1을 알려주마.$a$r$c5커서를 빨갛게 띄우고 인형 주위를$n달리면서 부스트 대시를$a$r날려봐라$c1.$a$r인형 쪽으로 돌진할 거다.$r$e$r	nul
+Media/Mission/mssn3405.bin	off:0x92a6	107	636be8cd9e9125f9558b7a49f1b6eb4d56daf0db	 $n　$n　$n　$n　$n　$n경찰 인형을 $c5주시하며 달리면서$c1$n$c5부스트 대시$c1를 꽂아봐라!$r$e$r	nul
+Media/Mission/mssn3406.bin	off:0x8c3d	109	b12a52170e0791ed3063f6542a51abc903d73d77	 $n　$n　$n　$n　$n　$n달리면서 $c5“좌측 엄지스틱 클릭”$c1으로$n$c5셔플$c1을 해봐라!$r$e$r	nul
+Media/Mission/mssn3406.bin	off:0x8d40	92	dcca87d42ace9519df26bffed8c45e3968a8acda	그게 $c5「셔플」$c1이다.$a$r우연일지도 모르니까,$n$c5한 번 더$c1 해봐라.$r$e$r	nul
+Media/Mission/mssn3406.bin	off:0x8e96	105	f9f941c3cd0568a3a7788d8eb60c2f058b83ab01	 $n　$n　$n　$n　$n　$n달리면서 $c5“좌측 엄지스틱 클릭”$c1으로$n$c5셔플$c1을 해라!$r$e$r	nul
+Media/Mission/mssn3406.bin	off:0x8f8e	190	32fe32741cb3cb603380a7cf528224f1e8dbc7dd	좋아.$n다음은 $c5「그라인드 속도 조절」$c1이다.$a$r그라인드 중에 $c5“좌측 엄지스틱”을$n뒤쪽으로 당겨$c1봐라.$a$r그라인드 도중에 브레이크를$n밟는 느낌으로 조작하면 된다.$r$e$r	nul
+Media/Mission/mssn3406.bin	off:0x9150	93	d1f233363cd4b74bec767d0b20e6846685a6457e	 $n　$n　$n　$n　$n　$n그라인드 중에 $c5“좌측 엄지스틱”을$n뒤로 계속 당겨$c1라.$r$e$r	nul
+Media/Mission/mssn3406.bin	off:0x9228	220	5f654aaffe3a066339bc972a8addb8168f6ce128	그렇지.$a$r방금 가르쳐준 기술을 잘$n써먹으면,$a$r그래피티를 덜 그리고 지나쳐$n버리는 일도 없을 거다.$a$r연습 삼아 그래피티를 단숨에$n그려보는 연습을 해봐라.$a$r$c5그만두고 싶으면 나한테$n말을 걸어라$c1.$r$e$r	nul
+Media/Mission/mssn3407.bin	off:0x87a1	75	a3407e79c737fb4b6b3b1ef919e75bea40ad9da5	 $n　$n　$n　$n　$n　$n그라인드 중에 $c5“X 버튼”$c1을 눌러봐라.$r$e$r	nul
+Media/Mission/mssn3407.bin	off:0x885b	282	80b7b4f1a52ae3985817646c7b394721adbd6562	어떠냐, 아무리 너라도$n이 정도는 쉽지?$a$r이번엔 $c5３번 연속$c1으로 터뜨려봐라.$a$r단, 무작정 연타만 한다고$n되는 건 아니다.$a$r포인트는 그라인드 폼이 완전히$n바뀌는 타이밍에 맞춰서,$a$r다음 버튼을 입력하는 거다.$a$r「탁, 탁, 탁」하는 템포다.$r$e$r	nul
+Media/Mission/mssn3407.bin	off:0x8ab6	127	6fda339f46e1dd079c9d987d37213157fe28f802	 $n　$n　$n　$n　$n　$n그라인드 중에 $c5“X 버튼”$c1을 박자 맞춰$n눌러서 $c5콤비네이션을 ３연속$c1 성공시켜라!$r$e$r	nul
+Media/Mission/mssn3409.bin	off:0x8e09	111	e085d3f8b8dbf733c41e7f9a257d32ba2d5c8592	 $n　$n　$n　$n　$n　$n$c5하프파이프$c1를 옆으로 타고 올라가며$n점프해서 $c5에어$c1를 날려봐라!$r$e$r	nul
+Media/Mission/mssn3409.bin	off:0x8f01	170	dd3a95620dd74f12aad3d2ad931fc844ba9f7d6f	좋아.$a$r다음은 $c5「핸드플랜트」$c1다.$a$r$c5“X 버튼”을 누른 채 하프파이프를$n옆으로 타고 올라가$c1봐라.$a$r끝자락에서 포즈를 딱 잡고$n멈추면 성공이다.$r$e$r	nul
+Media/Mission/mssn3409.bin	off:0x90e4	131	c5fa914621a9d9cbdba5c2adcd0edbb2ea0f3dd8	 $n　$n　$n　$n　$n　$n$c5“X 버튼”$c1을 누른 채 $c5하프파이프$c1를$n타고 올라가 $c5핸드플랜트$c1를 꽂아봐라!$r$e$r	nul
+Media/Mission/mssn3409.bin	off:0x920a	38	aa535f3a4ee56710a9bfe6dd89d75f12be3f899f	이해했냐?$n그럼 한번 해봐라.$r$e$r	nul
+Media/Mission/mssn3409.bin	off:0x9292	89	bff87a6231b9216dd373630e4b81e84c50c0fc56	 $n　$n　$n　$n　$n　$n$c5핸드플랜트$c1 성공 후 바로$n$c5에어$c1를 날려봐라!$r$e$r	nul
+Media/Mission/mssn3410.bin	off:0x87a1	75	73f6206de443d613971ed5c927f381afc7abf95f	 $n　$n　$n　$n　$n　$n$c5전봇대를 타고 오를 때 점프$c1해봐라.$r$e$r	nul
+Media/Mission/mssn3410.bin	off:0x8852	48	2655e1d524d68ecdc6f59cdd6ffd3b30e8491751	그거다 그거!$n$c5한 번 더$c1 해봐라.$r$e$r	nul
+Media/Mission/mssn3410.bin	off:0x8900	75	e4d5b9c16505c0eaedaa9aa02978cd9c844c9280	 $n　$n　$n　$n　$n　$n$c5전봇대를 타고 오를 때 점프$c1해봐라!$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x15170	108	a5b39e32f3b3b4d58035df276b166e594e5aa210	 $n $n　$n　$n　$n$c5스프레이 캔을 １０개$c1 모으고, 커서가$n붙으면 $c5“좌측 트리거”$c1를 당겨봐라.$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x15284	200	a8b81bdc897a44c4580bb6b25463e359f658ff30	그렇지.$a$r커서가 빨개지면서 이 몸을$n계속 쳐다보게 되지?$a$r딱히 부끄러워하는 건 아니다.$a$r다음은 $c5커서를 빨갛게 둔 채로$c1,$n$c5이 몸의 주위를$a$r빙글 돌아봐라$c1.$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x1549c	61	9c8a7348216995f21cb0854cd282a7ed0757a539	 $n　$n　$n　$n　$n　$n이 몸을 $c5계속 쳐다보면서 돌아라$c1!$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x1553e	164	039f81c968cbe57a4d05a0c178b2ef4213a9da46	이번엔 $c5커서를 빨갛게 둔 채,$n부스트 대시$c1해봐라.$a$r이 몸한테 착 달라붙듯이$n부스트 대시가 나갈 테니까.$a$r참, $c5캔 없으면 안 된다$c1고.$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x156da	83	6a2b9636b4d848f96eee45d5c2df63ad7bf05c78	 $n　$n　$n　$n　$n　$n이 몸을 $c5주시한 상태로$n부스트 대시$c1를 꽂아봐라!$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x157ab	120	fe3f8f7176093ababc941d529fa0f13c532e0f0a	그 기세다.$a$r이 $c5「록 대시」$c1로$n뒤를 잡은 다음,$a$r이 몸의 $c5등짝에 그래피티$c1를$n그려봐라.$r$e$r	nul
+Media/Mission/mssn3411.bin	off:0x158d8	65	a4be27fee5ed438b342a04a73891e4c566b5b168	 $n　$n　$n　$n　$n　$n이 몸에게 $c5그래피티$c1를 먹여봐라!$r$e$r	nul
+Media/Mission/mssn3412.bin	off:0x87a1	91	cc04164b975c33f001e0a83442cd15d06440f684	 $n　$n　$n　$n　$n　$n에어를 날리고 끝나갈 때쯤에$n$c5“X 버튼”$c1을 눌러봐라!$r$e$r	nul
+Media/Mission/mssn3412.bin	off:0x888b	72	266a6390e15d18726dc1867771004bf269085d0a	바로 그 요령이다.$a$r이번엔 $c5３연속$c1으로 $c5에어$c1를$n터뜨려봐라.$r$e$r	nul
+Media/Mission/mssn3412.bin	off:0x895d	117	94c6bc8d534c798a2edcfadb032e238604237914	 $n　$n　$n　$n　$n　$n에어 중에 $c5“X 버튼”$c1을 타이밍 맞춰$n눌러서 $c5에어를 ３연속$c1 성공시켜라!$r$e$r	nul

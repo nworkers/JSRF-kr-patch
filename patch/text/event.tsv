@@ -1,400 +1,400 @@
 # Translation skeleton, group event (tools/extract_text.py). No original text.
 # Fill the korean column; an empty korean keeps the original. Keep $ codes as in work/text.
 file	where	orig_len	orig_sha1	korean	pad
-Media/Event/Event/e000.dat	norm:2/0+0x64	34	2bcb3f928f6c19531a1860bdb7b861e17485e3ba		space
-Media/Event/Event/e000.dat	norm:2/0+0x88	66	535216fd50ca8cd23e36c54024703916f4951e51		space
-Media/Event/Event/e001.dat	norm:2/0+0x80	69	bcf7f8798273a91aafdb56a61c8c0be257445863		space
-Media/Event/Event/e001.dat	norm:2/0+0xc7	68	92619c7bb70238d18b3d327a4de86c96b2d8e54b		space
-Media/Event/Event/e001.dat	norm:2/0+0x10d	32	3e5ab23be9a8ba367e9cb9fd4db4f03d830d8dee		space
-Media/Event/Event/e001.dat	norm:2/0+0x12f	72	054846b9975790441af7d611802db58bf94322c6		space
-Media/Event/Event/e002.dat	norm:2/0+0x60	56	fd3ba020bccdd41c76ec80742cf45bbed052d343		space
-Media/Event/Event/e003.dat	norm:2/0+0xb8	44	7aefeb86a59de5a2f108a5ef98b8dc98a8ba2ded		space
-Media/Event/Event/e003.dat	norm:2/0+0xe6	58	3a1d5ab960050adfd707ae211ee2f4a607fce1a8		space
-Media/Event/Event/e003.dat	norm:2/0+0x126	38	5ba58836a3897b7679cc05f2cfa307928c934da7		space
-Media/Event/Event/e003.dat	norm:2/0+0x14e	50	cc3b2693e5377afb5743c3506249551de8c8efa9		space
-Media/Event/Event/e003.dat	norm:2/0+0x182	26	28fd9a68e111424a0fc321bd85aeede3d35bafee		space
-Media/Event/Event/e003.dat	norm:2/0+0x19e	56	21b79c5f038dc41ee561adda00918b85ee2bc25b		space
-Media/Event/Event/e004.dat	norm:2/0+0x6c	50	e06a81abe582b3b7c2646e4d25b263492aaa649e		space
-Media/Event/Event/e004.dat	norm:2/0+0xa0	52	1718a2a15c41d6c9aeef6030d70fd415f2bd4446		space
-Media/Event/Event/e004.dat	norm:2/0+0xd6	60	ad816ec2f312298e337a6032d4f2a39cadf3705c		space
-Media/Event/Event/e008.dat	norm:2/0+0x64	48	a9060b0c71eb32e4c95b980ca04a42044cc3adcd		space
-Media/Event/Event/e008.dat	norm:2/0+0x96	20	046a0faa912c5616c3d2b227455683caacba4ed2		space
-Media/Event/Event/e009.dat	norm:2/0+0x5c	8	0b3c25d612415d82bc1ced81912600a429eb6be4		space
-Media/Event/Event/e010.dat	norm:2/0+0x68	52	18f773943d2074e7959bdb141b64032f67e38870		space
-Media/Event/Event/e010.dat	norm:2/0+0x9e	52	f7e34b68a1a6390f1ece39f9ae861337f88fc8f9		space
-Media/Event/Event/e024.dat	norm:2/0+0xbc	18	f8fbd9eb0797080b70a9a6c3c1e0fa2a3ef74a6e		space
-Media/Event/Event/e024.dat	norm:2/0+0xd0	70	fed53dfde181e89a750af32f88dba793d8786dee		space
-Media/Event/Event/e024.dat	norm:2/0+0x118	42	b66539d7a11eec8096f3c6bb585599afd2fa03cc		space
-Media/Event/Event/e024.dat	norm:2/0+0x148	46	a023a808bf1e077355bc59c30584d8976bd0a8e6		space
-Media/Event/Event/e024.dat	norm:2/0+0x178	32	03f67caad84c346fced6e74bde754f5d0d732047		space
-Media/Event/Event/e024.dat	norm:2/0+0x19a	56	bc9c88e0a65e4ba18439fa44500b2b7696a6597e		space
-Media/Event/Event/e025.dat	norm:2/0+0x6c	10	6045c08a9856829e105bbc0d127cf651aece2be9		space
-Media/Event/Event/e025.dat	norm:2/0+0x78	58	1df7eb0733e6a24b23de35819b1b44fa2d70c5a7		space
-Media/Event/Event/e025.dat	norm:2/0+0xb4	28	d71bd3162b8bb160856fe91cfeb2253fc72eb84a		space
-Media/Event/Event/e026.dat	norm:2/0+0x5c	20	8e63e020e8064cf27f968ef17144370307d833c8		space
-Media/Event/Event/e027.dat	norm:2/0+0x64	54	559c7bf489fbc4f406509e310ce5b0767722599f		space
-Media/Event/Event/e027.dat	norm:2/0+0x9c	48	d0bf727b3f1de2907eaf60de9434e6245ed2d6b1		space
-Media/Event/Event/e028.dat	norm:2/0+0xa8	18	e801c26aef62c4fd48d0910483ffc1d9f7f8d7a2		space
-Media/Event/Event/e028.dat	norm:2/0+0xbc	38	274dddec750838d1a9326777e92da1fdd9fab2a0		space
-Media/Event/Event/e028.dat	norm:2/0+0xe8	72	dced920ca669b53cce009703032313aa9fc5a0a7		space
-Media/Event/Event/e028.dat	norm:2/0+0x132	54	662ec4b3742defd005a96f0ee6311e1b1cfabb10		space
-Media/Event/Event/e029.dat	norm:2/0+0x5c	16	ea51056a93ad070ad66a908493e343fac5e906ff		space
-Media/Event/Event/e030.dat	norm:2/0+0x60	66	b8dd4d7c9e1d01fa1e6b9a99355ee380ee441b09		space
-Media/Event/Event/e031.dat	norm:2/0+0x5c	64	5219a08a1899c002c688561acdcbaae22c716766		space
-Media/Event/Event/e032.dat	norm:2/0+0x6c	56	b3c6ac97874925a5815342655b40616b2fa21a68		space
-Media/Event/Event/e032.dat	norm:2/0+0xa6	58	482488f4e54841c87a9c3ed14be57057ae4d47db		space
-Media/Event/Event/e032.dat	norm:2/0+0xe2	64	a69f18bebc08baaafdcb94f027a81ee01222289c		space
-Media/Event/Event/e035.dat	norm:2/0+0x5c	18	12248a6c91d096530db3fcd14be12ef6d28fc1c8		space
-Media/Event/Event/e036.dat	norm:2/0+0x88	54	6ae2f5426e2d8c6986598e45265a1eddcde29d30		space
-Media/Event/Event/e036.dat	norm:2/0+0xc0	68	96ca8e7a20da357ce2e6d84658b9870c51ca9bb5		space
-Media/Event/Event/e036.dat	norm:2/0+0x106	38	5c3be6a8d0c13d69f5390901c148e5dec809f16a		space
-Media/Event/Event/e036.dat	norm:2/0+0x12e	42	e3cfd742b37b93ae7154799af4725725d84d87b3		space
-Media/Event/Event/e036.dat	norm:2/0+0x15a	40	acbc8a7d64e10efe3b14d389f741a3f92c0c6d46		space
-Media/Event/Event/e037.dat	norm:2/0+0x64	40	8618a32296c2b8c13444e9c5810342850a143025		space
-Media/Event/Event/e037.dat	norm:2/0+0x8e	48	4dc68d93c7e602f09f4e571e4d676db0897da6bb		space
-Media/Event/Event/e038.dat	norm:2/0+0x5c	12	3c2d5e67f21ed20d80a4015409a000f6e3f5028d		space
-Media/Event/Event/e039.dat	norm:2/0+0x64	34	d03e497c0e26cd77fb5031da7f8e2c3e3b115c93		space
-Media/Event/Event/e039.dat	norm:2/0+0x88	54	004b8f9d4c85ec29195557d87bcfa75ce83f0dcc		space
-Media/Event/Event/e040.dat	norm:2/0+0x64	40	e9dfbe4e9e9bfc8fe54f9467c7be045fa50efbff		space
-Media/Event/Event/e040.dat	norm:2/0+0x8e	34	3910d0a5c65f6b9abe808cedb655051a4f52a572		space
-Media/Event/Event/e041.dat	norm:2/0+0xac	60	6fcead360d2d41e6779cdefc3035f2e45b795c52		space
-Media/Event/Event/e041.dat	norm:2/0+0xea	38	7966d03544da818396e8dac394e0e7274541ae8b		space
-Media/Event/Event/e041.dat	norm:2/0+0x116	42	1f188a0903893e4b825856dbc7e9d6f8e2e98890		space
-Media/Event/Event/e041.dat	norm:2/0+0x142	52	9df95fb6bc53f0ad7ece9094313da84804557a19		space
-Media/Event/Event/e041.dat	norm:2/0+0x178	54	5c93e59edec06edfbd679c99480253a5b43e525e		space
-Media/Event/Event/e042.dat	norm:2/0+0x5c	40	c9e63ced448eea80b3b29cd82346f14d8188a2fe		space
-Media/Event/Event/e043.dat	norm:2/0+0x6c	58	1d597cc4ab09af0b4972783731f8b322a1d3e248		space
-Media/Event/Event/e043.dat	norm:2/0+0xa8	60	c4182e628d3cd38e93258f5ff65eeaf4f43b38c9		space
-Media/Event/Event/e043.dat	norm:2/0+0xe6	52	06502b83fe92c24730ec5bf7da844ad8ebb97a8f		space
-Media/Event/Event/e045.dat	norm:2/0+0x60	42	2f06cccfed8879f1f695e649cde37b38bf689105		space
-Media/Event/Event/e046.dat	norm:2/0+0x98	26	ed7532140569092e55eb1d48d76a3021ac6e1315		space
-Media/Event/Event/e046.dat	norm:2/0+0xb4	48	d170a460a2443c01bad1ae384a690fe7fb7eaf8c		space
-Media/Event/Event/e046.dat	norm:2/0+0xe6	26	a6eed10cfa56db29ad97f1f351cb8ff32f148ab9		space
-Media/Event/Event/e046.dat	norm:2/0+0x102	32	68ff0d87a6cd1fa71554b563f8aa3d4569fa9d3a		space
-Media/Event/Event/e046.dat	norm:2/0+0x124	40	da3c94bd149c2c2a023b22e5e7e2c3ec431a9636		space
-Media/Event/Event/e046.dat	norm:2/0+0x14e	60	b7c6d925b3c68d028137f01ec17b9354e7f2d5c3		space
-Media/Event/Event/e046.dat	norm:2/0+0x18c	22	7865474ca44b3653ff27373e8536898ae791d9c3		space
-Media/Event/Event/e046.dat	norm:2/0+0x1a4	64	ea87e557a0f9815f78fae36f5a2180056fc77190		space
-Media/Event/Event/e047.dat	norm:2/0+0x5c	24	530325010ad023a1f8cc9102bc8e490bf1cd50e8		space
-Media/Event/Event/e048.dat	norm:2/0+0x6c	74	210cafcb75eea61564f0914f6b7995c5e922f088		space
-Media/Event/Event/e048.dat	norm:2/0+0xb8	38	ba2ca05620df7331a2771e148c6a23873f2ae88a		space
-Media/Event/Event/e048.dat	norm:2/0+0xe0	52	90a66b8b094ad5511ab9a1feea70f8a508840f16		space
-Media/Event/Event/e049.dat	norm:2/0+0x74	36	5dbdc84905f6d0383e657d618c6d6411fb3c2df5		space
-Media/Event/Event/e049.dat	norm:2/0+0x9a	36	8b0c38452563ec57285f8538c2107baf2c324b20		space
-Media/Event/Event/e049.dat	norm:2/0+0xc0	44	6f55fea4ade2dcfb5b459b9b382aabf89bc6e523		space
-Media/Event/Event/e049.dat	norm:2/0+0xee	58	6b080b40fe999173189e2560facf16a98504815d		space
-Media/Event/Event/e050.dat	norm:2/0+0xa0	68	c8f88708ac3c8265adf430fed1568f3e3bcb43fa		space
-Media/Event/Event/e050.dat	norm:2/0+0xea	42	1204ec129dc1ad0e86c16b53170c7c655bfcf111		space
-Media/Event/Event/e050.dat	norm:2/0+0x116	58	edf35d079216bf3b73b7e5e32e91f2e461b1b9d7		space
-Media/Event/Event/e051.dat	norm:2/0+0xa0	22	e8654bb7fa452b158aa913500fd15def12f54e82		space
-Media/Event/Event/e051.dat	norm:2/0+0xb8	36	9884647449107bc58d26927956e9794f15ff72f4		space
-Media/Event/Event/e051.dat	norm:2/0+0xe2	58	8053c0bce66665a823f91905707b842c2aad4f87		space
-Media/Event/Event/e051.dat	norm:2/0+0x11e	34	c3d102f7c37f0e8789631d68f0c12609902f0405		space
-Media/Event/Event/e052.dat	norm:2/0+0x68	70	569e43225a180f4c92b2a23c26827853919d4e58		space
-Media/Event/Event/e052.dat	norm:2/0+0xb0	54	2f2957c850931436344ad8838e9df49baa53de29		space
-Media/Event/Event/e053.dat	norm:2/0+0x98	58	a89cc24da1094860ef5b6bf24c92c63e1a084f02		space
-Media/Event/Event/e053.dat	norm:2/0+0xd8	58	cec070cf51af394a20410086c8a3e0a24ad1c76f		space
-Media/Event/Event/e055.dat	norm:2/0+0x70	56	d55b0ab2f238a9e80b7889e860c0f95671bbba68		space
-Media/Event/Event/e055.dat	norm:2/0+0xaa	56	134a7df4015204c3fd2d62d15bed94cbf0ea8f06		space
-Media/Event/Event/e055.dat	norm:2/0+0xe4	54	8019b5b74d18707b7e0b14d260637726e5e80904		space
-Media/Event/Event/e056.dat	norm:2/0+0x5c	58	95c3983d38ee27338f0ca429160b6d31865b99d2		space
-Media/Event/Event/e057.dat	norm:2/0+0xa0	64	2e8a379dd968079702442bfeb74ecd1ef20d2c85		space
-Media/Event/Event/e057.dat	norm:2/0+0xe6	46	7a73c013121ab546e14d92eb252e8f40a434889b		space
-Media/Event/Event/e057.dat	norm:2/0+0x116	60	0ec2e594b4a521a896cd71d430950b3d6110626b		space
-Media/Event/Event/e058.dat	norm:2/0+0x64	46	246d22e208670acc3f0f4a8d8acaf961ec9895a2		space
-Media/Event/Event/e058.dat	norm:2/0+0x94	18	34ad5a96eb6a01ea9e3de1975578f3cf99a5fd34		space
-Media/Event/Event/e059.dat	norm:2/0+0x5c	26	c01bf0611e72ce99904932e3f4f9dcaac2e63328		space
-Media/Event/Event/e060.dat	norm:2/0+0xac	50	b7c07fa18ff2636240f0cf8b63384be82cc01400		space
-Media/Event/Event/e060.dat	norm:2/0+0xe0	46	550e928e1eaec034c1f07d9a2427c379a38bf87d		space
-Media/Event/Event/e060.dat	norm:2/0+0x110	62	e49ccce7081f894e9ba2c66b91bcd4515494b123		space
-Media/Event/Event/e060.dat	norm:2/0+0x154	60	77d7c3f09cef9356512f94dafe82fdeaca3803a3		space
-Media/Event/Event/e061.dat	norm:2/0+0x5c	18	3b0537073a9d740eff9012780f62b817beaa2025		space
-Media/Event/Event/e062.dat	norm:2/0+0x7c	70	05210e1aab91c154e3906471b636272ab31b5d2a		space
-Media/Event/Event/e062.dat	norm:2/0+0xc4	65	865ad11c4a797642dd878f6ba8473a221769d97c		space
-Media/Event/Event/e062.dat	norm:2/0+0x107	68	dbd421ff8cf45b3e6502d4c8f6fdaf76fa6a8ab7		space
-Media/Event/Event/e062.dat	norm:2/0+0x14d	22	efc45421c1f811dd95fd9b51363f0bf537292fa9		space
-Media/Event/Event/e063.dat	norm:2/0+0x6c	21	cc74a80f45516532b574a925c40abf768bf0f39d		space
-Media/Event/Event/e063.dat	norm:2/0+0x83	64	55599a34997bb663d9e5177fb3fd7772742a2a8d		space
-Media/Event/Event/e063.dat	norm:2/0+0xc5	26	2e2d8ca357e3792df5df03ffbee3b8938c3f3f6d		space
-Media/Event/Event/e064.dat	norm:2/0+0x6c	16	b52b44082d2bb1f5f9a068a42f6a093f9b609222		space
-Media/Event/Event/e064.dat	norm:2/0+0x7e	48	9f96da32152517abf5ef81ba734e46afd2c16d85		space
-Media/Event/Event/e064.dat	norm:2/0+0xb0	28	fa87af759cdea704aeabeb7142918607e42cd4a8		space
-Media/Event/Event/e065.dat	norm:2/0+0x6c	50	827e1f2e64166ef2a0c0d9357e0c6f4ebbc93939		space
-Media/Event/Event/e065.dat	norm:2/0+0xa0	56	8567b9dc5587142aeb8995a496af09ab8b86b9f6		space
-Media/Event/Event/e066.dat	norm:2/0+0x78	52	a2da4b5eff756c175e4805aebc15a6174f8970f3		space
-Media/Event/Event/e066.dat	norm:2/0+0xae	28	5de32715fab1832f2e5890a4e040d8cd1bb45e82		space
-Media/Event/Event/e066.dat	norm:2/0+0xcc	50	a0569e44c53745d105bb4f1b307057ff9cdc5837		space
-Media/Event/Event/e066.dat	norm:2/0+0x100	50	e374ea810afeb3c4cdad946176aebc449040e470		space
-Media/Event/Event/e067.dat	norm:2/0+0xc0	68	2d6019b4d23ff3e5bd45cc6715a680b93ce6967f		space
-Media/Event/Event/e067.dat	norm:2/0+0x106	68	db34168700f5ab418502879a3224d57fc5306a4a		space
-Media/Event/Event/e067.dat	norm:2/0+0x14c	54	e972f39c858c1d5cabdbd3879a4e748375111129		space
-Media/Event/Event/e067.dat	norm:2/0+0x184	30	c1973bd7c5668685b3a05090b98035e2f5f0f0f0		space
-Media/Event/Event/e067.dat	norm:2/0+0x1a4	46	ee3bc1958bc7f28579357092f17fd521e5feb1f7		space
-Media/Event/Event/e067.dat	norm:2/0+0x1d8	16	c3de46576e10eb00689a5db39289c065a5db5c04		space
-Media/Event/Event/e068.dat	norm:2/0+0xc8	26	b867c5fef0cebb156eaa9d44de23883e0cd52979		space
-Media/Event/Event/e068.dat	norm:2/0+0xe4	66	bc70ae686c272d239d16a83b3c1c9bbd146f520d		space
-Media/Event/Event/e068.dat	norm:2/0+0x128	54	3bc90fc67e41e4f7f01e104e2041f39e85f88132		space
-Media/Event/Event/e068.dat	norm:2/0+0x160	68	48cdc3c67e6eca919c628b3944661ab313d85264		space
-Media/Event/Event/e068.dat	norm:2/0+0x1a6	16	7a0a2828e58e4c52a3939e3db98bc266d95e45e3		space
-Media/Event/Event/e068.dat	norm:2/0+0x1b8	44	8918d73858e1d478b6a2a09a5770681f08a71b41		space
-Media/Event/Event/e068.dat	norm:2/0+0x1e6	24	78dae3e0afdf5b56fe801752b5f2d447d04cc1ec		space
-Media/Event/Event/e068.dat	norm:2/0+0x204	46	067f239b67bd65da6e19f5c9794e4b1377d746d0		space
-Media/Event/Event/e068.dat	norm:2/0+0x234	34	b6e9359173cc4d530d2472a71617f5966b71fc29		space
-Media/Event/Event/e069.dat	norm:2/0+0x9c	14	f938eb51aef8a8385fa5bcb97062236c956422d4		space
-Media/Event/Event/e069.dat	norm:2/0+0xac	30	de9d3b1b409ffb6c5612a2b07af5fa4b45d4ef75		space
-Media/Event/Event/e069.dat	norm:2/0+0xcc	24	84e128ecafd3639ea0839d66a18f0ccc6e8a2750		space
-Media/Event/Event/e069.dat	norm:2/0+0xea	60	8bf3cb5bba2657ab779b7957674116e08f4520d3		space
-Media/Event/Event/e070.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1		space
-Media/Event/Event/e070.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808		space
-Media/Event/Event/e070.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b		space
-Media/Event/Event/e071.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1		space
-Media/Event/Event/e071.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808		space
-Media/Event/Event/e071.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b		space
-Media/Event/Event/e072.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1		space
-Media/Event/Event/e072.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808		space
-Media/Event/Event/e072.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b		space
-Media/Event/Event/e073.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1		space
-Media/Event/Event/e073.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808		space
-Media/Event/Event/e073.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b		space
-Media/Event/Event/e075.dat	norm:2/0+0x74	62	b4790bbdf2f78ef680d4dad3cf0574b050e2532d		space
-Media/Event/Event/e075.dat	norm:2/0+0xb4	26	f0f8709bdb17d23356f116cece7f494f4e52d6a7		space
-Media/Event/Event/e075.dat	norm:2/0+0xd0	66	c32fd2b449431163d3c62bd31727d78f93592356		space
-Media/Event/Event/e075.dat	norm:2/0+0x114	20	c99f9c775a35024e8580e370978dd5cfeeaa5655		space
-Media/Event/Event/e076.dat	norm:2/0+0xd0	66	c04f5ad3b47ebd8754d8f4eb01eb0f7cb3adccf3		space
-Media/Event/Event/e076.dat	norm:2/0+0x118	18	a8de6157bcd3a8f6e2f741c35e61b042412ac253		space
-Media/Event/Event/e076.dat	norm:2/0+0x130	44	79d61691859cd331a3415ce3c0bf68cb899a1e76		space
-Media/Event/Event/e077.dat	norm:2/0+0x74	56	86829327a1a0d27cea7cd4707d489b0d1baf511c		space
-Media/Event/Event/e077.dat	norm:2/0+0xae	32	7df0952a63b0c68afdb5e9bd1f449025a7821c34		space
-Media/Event/Event/e077.dat	norm:2/0+0xd0	44	f363701e7e8e6ee5700d12c6816ea5cc62b47d61		space
-Media/Event/Event/e077.dat	norm:2/0+0xfe	62	4b563a1d6d92275d7a6b42791507e8caa842d235		space
-Media/Event/Event/e078.dat	norm:2/0+0xa4	60	116087718c28d282901de28bc0db2bb6b4a491ee		space
-Media/Event/Event/e078.dat	norm:2/0+0xe2	32	f26d1d0eb4291eb1a5c5fa22f664a85620ce8a07		space
-Media/Event/Event/e078.dat	norm:2/0+0x108	52	7f336e21f17bcc699e159d519e25ed8f0f65a0de		space
-Media/Event/Event/e079.dat	norm:2/0+0xa0	34	bd4cfa581ff525786d0bf74f9614f4723e2049eb		space
-Media/Event/Event/e079.dat	norm:2/0+0xc4	50	cffbe88fc0b877d2ae72a791cdb634de470cc21f		space
-Media/Event/Event/e079.dat	norm:2/0+0xfc	28	173f0aa751d9bbb804c4dd6b847f7d611f9f40ed		space
-Media/Event/Event/e080.dat	norm:2/0+0xa0	24	68b57026f06101d0e6bdb0ef9bf36cbc136af307		space
-Media/Event/Event/e080.dat	norm:2/0+0xba	40	a4dea3048c1b161cb79e9f611408bf3a47f32e89		space
-Media/Event/Event/e080.dat	norm:2/0+0xe8	30	7316e5f195cfab2867cd255c37315974832304d5		space
-Media/Event/Event/e082.dat	norm:2/0+0xb4	62	05b977c4dd3df2728872007c11c3dc743c55bf86		space
-Media/Event/Event/e082.dat	norm:2/0+0xf4	28	b37b5efd68fed9e46c2bb28c8432135151951a32		space
-Media/Event/Event/e082.dat	norm:2/0+0x112	66	3652963324c8140397a2f2bd7ac686700eeab468		space
-Media/Event/Event/e082.dat	norm:2/0+0x15a	58	32263c5217909d182d531561c5b3d77289085e02		space
-Media/Event/Event/e082.dat	norm:2/0+0x196	48	209e1024162d514926ba051c6176637badc9778f		space
-Media/Event/Event/e083.dat	norm:2/0+0x6c	46	ce31c750b0ddb270e7b7097129ef2149dc4a2d5b		space
-Media/Event/Event/e083.dat	norm:2/0+0x9c	52	c2541a41ae60689674044244273b55e477ff7547		space
-Media/Event/Event/e083.dat	norm:2/0+0xd2	26	61bc7ada595008ec44b2060ff2196cf58323ddce		space
-Media/Event/Event/e084.dat	norm:2/0+0x5c	46	3263d416fa8127c7ed003e32ae5ad8f2da7f7e17		space
-Media/Event/Event/e085.dat	norm:2/0+0x64	30	b08593d765a891438de64a3826d830a1607f71c9		space
-Media/Event/Event/e085.dat	norm:2/0+0x84	64	366e4047f371ddcfc00ccb9da85fc67c9ee5989c		space
-Media/Event/Event/e091.dat	norm:2/0+0xa4	46	b64e22afc0e397041825e96e1d5bf22377c14814		space
-Media/Event/Event/e091.dat	norm:2/0+0xd4	26	f66f8535b90c20780e1256afeb89870e0a3f46ad		space
-Media/Event/Event/e091.dat	norm:2/0+0xf4	50	4b4b248388185ac0cb6088f36a3c5fbb016c56bb		space
-Media/Event/Event/e091.dat	norm:2/0+0x128	30	73ccc30c278125502ee8f317ef36da68dfa6d0fb		space
-Media/Event/Event/e095.dat	norm:2/0+0x74	64	35a64df97c4715a511e8b95639f638de01d08a47		space
-Media/Event/Event/e095.dat	norm:2/0+0xb6	32	2d4ec93d787ff357a27e5b72b280054661d3e713		space
-Media/Event/Event/e095.dat	norm:2/0+0xd8	56	b191dfd8b177f90c209e4beff366053d4526d43f		space
-Media/Event/Event/e095.dat	norm:2/0+0x112	54	a63960313e9e15711abc9af271509d657b9cb2f5		space
-Media/Event/Event/e100.dat	norm:2/0+0x64	36	6d0d52da898b205a3242e0e56f628528192d2e62		space
-Media/Event/Event/e100.dat	norm:2/0+0x8a	40	d7c8b177048940bb607459a39ac12b2eef0a90e5		space
-Media/Event/Event/e101.dat	norm:2/0+0x84	30	0138c3f4e24d4ea0e316470d2ad0497675064f53		space
-Media/Event/Event/e101.dat	norm:2/0+0xa4	28	63d92bf0f53e9309b0764a595ef35213a1fdede9		space
-Media/Event/Event/e101.dat	norm:2/0+0xc2	48	052c282feaa7afa4a9fd72843f285b3591c8d799		space
-Media/Event/Event/e101.dat	norm:2/0+0xf4	28	e0d09f185286cd259249fbf22ec2be6b3935997f		space
-Media/Event/Event/e101.dat	norm:2/0+0x112	48	0a9beaaa31531dd8286517c1f19ce88b744b7e84		space
-Media/Event/Event/e101.dat	norm:2/0+0x144	52	4c3c6e500b8a2f00015b397398f4555e7039f63a		space
-Media/Event/Event/e105.dat	norm:2/0+0x5c	66	17c834bf0d8088c44fd78b92a3c5753232a6b9ed		space
-Media/Event/Event/e113.dat	norm:2/0+0x68	56	879e8e86e5183ad6306ceba72c2c1afec42845d8		space
-Media/Event/Event/e113.dat	norm:2/0+0xa2	20	5cb4dc0fdcab4ce9a9ac29cccba0b9ed18e938c1		space
-Media/Event/Event/e114.dat	norm:2/0+0x68	42	fbbf30491001b571955e43071be91c49642b4b7d		space
-Media/Event/Event/e114.dat	norm:2/0+0x94	52	7964fff65f68ab5bb15e17da40e78818e3e8bbe7		space
-Media/Event/Event/e116.dat	norm:2/0+0xa4	24	68afd5acc2f1943038f976524a5bc6ac16ad88f5		space
-Media/Event/Event/e116.dat	norm:2/0+0xbe	54	5dfc00a3fb9907a9a28ca5ad8947a5611fa53db4		space
-Media/Event/Event/e116.dat	norm:2/0+0xfa	52	dd804ea785699a149a55f75fd6260223bf185370		space
-Media/Event/Event/e116.dat	norm:2/0+0x130	20	e7a5883d2976407007f76009acdab5bda4221c42		space
-Media/Event/Event/e117.dat	norm:2/0+0x5c	38	ee46a1f11900b0a4f7f7b0750311cadc256b447e		space
-Media/Event/Event/e118.dat	norm:2/0+0x64	40	8618a32296c2b8c13444e9c5810342850a143025		space
-Media/Event/Event/e118.dat	norm:2/0+0x8e	48	4dc68d93c7e602f09f4e571e4d676db0897da6bb		space
-Media/Event/Event/e119.dat	norm:2/0+0xb8	56	eecc76792df8a8a12977b357e1ff6777416b7175		space
-Media/Event/Event/e119.dat	norm:2/0+0xf2	48	3cb99d24664cf1f019cc3316b5c70efa428339b9		space
-Media/Event/Event/e119.dat	norm:2/0+0x124	58	a71de1ae7a51325cd129967df9c3d8144c362991		space
-Media/Event/Event/e119.dat	norm:2/0+0x160	32	30caf5f1a122bd9c0c7f3a71881c9428d2886600		space
-Media/Event/Event/e119.dat	norm:2/0+0x182	76	1ff3f28393db5ce6fd0934e1469420f701d96858		space
-Media/Event/Event/e119.dat	norm:2/0+0x1d0	64	97a62716e16f0912426f01f1b3a13f7f945dd18f		space
-Media/Event/Event/e119.dat	norm:2/0+0x212	58	6f24460da5b7ad631ffa0e64078707207c163aff		space
-Media/Event/Event/e119.dat	norm:2/0+0x24e	46	1c534ad19665cb0b4108048f22c5a6a85b95b99d		space
-Media/Event/Event/e119.dat	norm:2/0+0x27e	46	c6a3d4ae3c99c56863358c39bfc9e1850b28ec16		space
-Media/Event/Event/e119.dat	norm:2/0+0x2ae	46	91a09452e19191a2b6a54981e06ed799368514f1		space
-Media/Event/Event/e120.dat	norm:2/0+0x78	54	403fa24f25bb4ce2ad7396d4768d25cb6b2bbb19		space
-Media/Event/Event/e120.dat	norm:2/0+0xb0	16	3adc94afd293808f49b8570e14329b9da820a00a		space
-Media/Event/Event/e120.dat	norm:2/0+0xc2	56	8dce7d3b1a35c8973540fb40eebf4d9f3b4648b8		space
-Media/Event/Event/e120.dat	norm:2/0+0xfc	48	f54dcb67fbc0220bfcb87a45eefcaa9557cd83f9		space
-Media/Event/Event/e200.dat	norm:2/0+0x88	54	30cd791a853a5fda720fa5d74ad5971a9c5e30be		space
-Media/Event/Event/e200.dat	norm:2/0+0xc0	52	b9d7694c6a9451ee3e95806769d1ef04e4189b12		space
-Media/Event/Event/e200.dat	norm:2/0+0xf6	22	71b5cb76eccdf27b02a53141f9659f3f578bef45		space
-Media/Event/Event/e200.dat	norm:2/0+0x10e	58	a6b729ee2db5f163c32920976cd7170f799c7f9b		space
-Media/Event/Event/e200.dat	norm:2/0+0x14a	62	103b0481006349932fcf3b0ffed0e099048cca1c		space
-Media/Event/Event/e200.dat	norm:2/0+0x18a	32	cc0efc2584b530ce8a79878e4fd6854dca83786e		space
-Media/Event/Event/e201.dat	norm:2/0+0xa4	80	598e942336ab2482f712a7dfbee8589187fbc586		space
-Media/Event/Event/e201.dat	norm:2/0+0xf6	82	505cbfab5bd31c87f83f59f6ad57a6f1841b2176		space
-Media/Event/Event/e201.dat	norm:2/0+0x14a	22	a742e8554fd6249d653bd036af04d46a424b8f64		space
-Media/Event/Event/e201.dat	norm:2/0+0x162	82	4ae50c3f4c8f1910a34c1c37941b3fc7a370aa35		space
-Media/Event/Event/e201.dat	norm:2/0+0x1b6	28	6a49b89e688fd1c79d817c20764548ff8c158b31		space
-Media/Event/Event/e201.dat	norm:2/0+0x1d4	78	4cc0ae456067d1684b43f3ef1e82f3c30e3ba2b8		space
-Media/Event/Event/e201.dat	norm:2/0+0x224	86	207e8daaa116bb7f8bcedd5e246b0024f43ef44c		space
-Media/Event/Event/e201.dat	norm:2/0+0x27c	70	4b9d7a535d0eecb67e9663ae71ac5d6b6a521d6e		space
-Media/Event/Event/e201.dat	norm:2/0+0x2c4	26	1fd56fbb59b3691654b869468e31e6d2c550a829		space
-Media/Event/Event/e201.dat	norm:2/0+0x2e0	56	4377f5ccd4c1abb092300a274666b85001a0e8b5		space
-Media/Event/Event/e202.dat	norm:2/0+0x74	58	754cb65f777e9bffdb0b08a2dfd5f1818a118c64		space
-Media/Event/Event/e202.dat	norm:2/0+0xb0	38	eedb464ef7698b5d56f44faabff22c2b51bd19f7		space
-Media/Event/Event/e202.dat	norm:2/0+0xd8	74	ee8d805541f8b823c73d032a2673d116b5519f4e		space
-Media/Event/Event/e202.dat	norm:2/0+0x124	58	f2f689df55663e1806fe6cdc0039a35348150a57		space
-Media/Event/Event/e203.dat	norm:2/0+0x7c	30	40d1df5d3d0758f6430500a0cca48e45f6fc87db		space
-Media/Event/Event/e203.dat	norm:2/0+0x9c	46	49867288cf80e0c21c0a3ee64c64561d8de4c2be		space
-Media/Event/Event/e203.dat	norm:2/0+0xcc	56	5ded26fde355fd77d85b6b89efbd80f0655c586b		space
-Media/Event/Event/e203.dat	norm:2/0+0x106	66	f0dcead95f3326136fdd00297e6b75651e16912e		space
-Media/Event/Event/e204.dat	norm:2/0+0x70	38	4d051c4d39bc3bd8fe26f3ecdbc3881b117835a1		space
-Media/Event/Event/e204.dat	norm:2/0+0x98	34	0797737df7c2fd19916cb6e23a6b8a01a861c849		space
-Media/Event/Event/e204.dat	norm:2/0+0xbc	52	439a37d3be14e0ca4d7f7a531f0815cb2a6a0724		space
-Media/Event/Event/e204.dat	norm:2/0+0xf2	24	a27b176dff5685293a26ed62905046472d265612		space
-Media/Event/Event/e205.dat	norm:2/0+0x6c	48	2fcfebea0a6c52d6abe7f62d63265f15afb497aa		space
-Media/Event/Event/e205.dat	norm:2/0+0x9e	64	c531698962d37d3065d96cea4e898bf618e79c57		space
-Media/Event/Event/e206.dat	norm:2/0+0x74	78	849fc10e524a4efcabd3c2240efd89c9904b464e		space
-Media/Event/Event/e206.dat	norm:2/0+0xc4	74	305e8981d8a84c3463781e79e049f52f3f237943		space
-Media/Event/Event/e206.dat	norm:2/0+0x110	36	3a99f40fc1c35cbc43f037303bdb3c35caac3740		space
-Media/Event/Event/e210.dat	norm:2/0+0x70	20	3212af41817e8886248e4d3df81d083ccbc77f6d		space
-Media/Event/Event/e210.dat	norm:2/0+0x86	24	34d328bd8fb53beb20a6c4897a8d108eb90d90d6		space
-Media/Event/Event/e210.dat	norm:2/0+0xa0	58	ef28a83c4e162da00a797e172c945010a086baae		space
-Media/Event/Event/e211.dat	norm:2/0+0x78	82	92aa672448d4c69482decc4701ecaa8353bc7a1d		space
-Media/Event/Event/e211.dat	norm:2/0+0xcc	54	aec1cc72492b240843169981c8c0f3ab0bd3a8a3		space
-Media/Event/Event/e211.dat	norm:2/0+0x104	38	6a796e04a191fdb9b978f0e9fb819fd0aee14274		space
-Media/Event/Event/e211.dat	norm:2/0+0x12c	68	30432aba44bde5ff78b7d7cf7985a3f3029c2c8a		space
-Media/Event/Event/e212.dat	norm:2/0+0x80	66	baca5671ddb9fc907da02e837b374b2ae3826705		space
-Media/Event/Event/e212.dat	norm:2/0+0xc4	14	e75f9dd6b09d403a09c3896d0c4d7725529d6ea4		space
-Media/Event/Event/e212.dat	norm:2/0+0xd4	66	e8e802d845553cf64fe2b5f543aef437b944eadc		space
-Media/Event/Event/e212.dat	norm:2/0+0x118	60	d88520652ef68b3e28c40524a83d9b8c4afcb051		space
-Media/Event/Event/e213.dat	norm:2/0+0x74	42	38d82611f42cb362635d60943e93861113c43aae		space
-Media/Event/Event/e213.dat	norm:2/0+0xa0	64	39fb0155f00f22d1b00ef61fdc06c97fd4d38ce2		space
-Media/Event/Event/e213.dat	norm:2/0+0xe2	64	4f15a1ebd5da6f4eac8b08d68d54b3337103ea2c		space
-Media/Event/Event/e214.dat	norm:2/0+0x70	60	cb9a9743e510ec0ed847d89f8d354a3c70717a64		space
-Media/Event/Event/e214.dat	norm:2/0+0xae	58	d140197dd0cbf549d8062564c18f92eb717ad9b4		space
-Media/Event/Event/e214.dat	norm:2/0+0xea	14	107311a175c846a335f4647814eb13da198e38f3		space
-Media/Event/Event/e220.dat	norm:2/0+0x74	32	5e526dc276d55769e910bd930b2d7ac87bcd38c0		space
-Media/Event/Event/e220.dat	norm:2/0+0x96	13	101f74ebb9aa5658e8402bc8e697d4debb5ee23d		space
-Media/Event/Event/e220.dat	norm:2/0+0xa5	32	4ae3409e1da7c1c31bf1a5806797988a16e93cbe		space
-Media/Event/Event/e220.dat	norm:2/0+0xc7	48	ccd73dd26e0620196b33506d2325161b83407e56		space
-Media/Event/Event/e221.dat	norm:2/0+0x60	66	ab53b6468397282f685b8aed0a0ee19e005f56eb		space
-Media/Event/Event/e222.dat	norm:2/0+0x78	86	61e61ad993b902bd1740cc21b23b185c2e2f3b6f		space
-Media/Event/Event/e222.dat	norm:2/0+0xd0	20	81b2129881798eac7f31b2f9b85a7973294285ca		space
-Media/Event/Event/e222.dat	norm:2/0+0xe6	68	3d3741844d91dc28bd1f89395edaf2461a3a0968		space
-Media/Event/Event/e222.dat	norm:2/0+0x12c	68	c75fd861df3377d316ecab5cbacd53c843ed66a7		space
-Media/Event/Event/e223.dat	norm:2/0+0x6c	48	e13e73b7b30fa8efbc8c51fd8103e9e6c257e3f6		space
-Media/Event/Event/e223.dat	norm:2/0+0x9e	50	2a927336d04d1b7c07151c220f165cf67c2e7705		space
-Media/Event/Event/e223.dat	norm:2/0+0xd2	28	02092706a44c21fc3572e91d88fdcc67934bbc72		space
-Media/Event/Event/e230.dat	norm:2/0+0x8c	46	f75be5a08474cbe79d9b17df1dcd878f02b8bc5b		space
-Media/Event/Event/e230.dat	norm:2/0+0xbc	26	174c4d4b3e87f6bb4ff45c9fa512a0e94090ae78		space
-Media/Event/Event/e230.dat	norm:2/0+0xd8	66	55f8dd4bbf5f40e781244c2c352f437ba8eb244f		space
-Media/Event/Event/e230.dat	norm:2/0+0x11c	36	c0af862af1d634dee51c611506f345e484c07b8d		space
-Media/Event/Event/e230.dat	norm:2/0+0x142	34	ede85325804abdca7b72b8dc985f9d0509b97181		space
-Media/Event/Event/e230.dat	norm:2/0+0x166	60	09867e35dd4d734ba68058002f969c4f6dff2771		space
-Media/Event/Event/e230.dat	norm:2/0+0x1a4	50	1408697842775b73cd078ccd71a895b9d5ad5ed0		space
-Media/Event/Event/e231.dat	norm:2/0+0x6c	60	466504ec2e0c1e26ecfb3a4224f919c62d04850e		space
-Media/Event/Event/e231.dat	norm:2/0+0xaa	30	33d56ea1af11d1e88d0a9624b52d541c71054e84		space
-Media/Event/Event/e231.dat	norm:2/0+0xca	66	4652a5a48407f69b70a953416a2a5227dbc4938a		space
-Media/Event/Event/e232.dat	norm:2/0+0x6c	70	64a111a82e586dfeacdfc14016aab2f04e4a17e3		space
-Media/Event/Event/e232.dat	norm:2/0+0xb4	66	e0dbfe8b17ecc1b696bf5747d6a0f754fdeae1d5		space
-Media/Event/Event/e233.dat	norm:2/0+0x8c	66	10bebbf1e617467cff11778237ea9fe28103f544		space
-Media/Event/Event/e233.dat	norm:2/0+0xd0	70	8a21ddf2095e367f2d18fc23bc7a8e9eefedce5b		space
-Media/Event/Event/e233.dat	norm:2/0+0x118	76	62da8675c317511108ca52dd3cdcf70199b38186		space
-Media/Event/Event/e233.dat	norm:2/0+0x166	42	8fc55546b671c3885fa017abee6874ee946d037e		space
-Media/Event/Event/e233.dat	norm:2/0+0x192	76	9afe8ebb484b193a44361f354dbc43be93e03553		space
-Media/Event/Event/e233.dat	norm:2/0+0x1e0	54	b56b17a91a8a0c737c93699b76d04875673c8f9b		space
-Media/Event/Event/e240.dat	norm:2/0+0x88	56	fb7bad1e7fa2dc82195527396f481d575feb07d7		space
-Media/Event/Event/e240.dat	norm:2/0+0xc2	23	8caac7a7d77a624682ba55153772a039e404ea96		space
-Media/Event/Event/e240.dat	norm:2/0+0xdb	62	3551ed6c7290a322a20fdf583c320e804ed4fb4a		space
-Media/Event/Event/e240.dat	norm:2/0+0x11b	68	5f648af308d5686d3308d3341fb53badf3d0621f		space
-Media/Event/Event/e240.dat	norm:2/0+0x161	46	5f18f04224edbff97a38bf86d0f0248c8c12e262		space
-Media/Event/Event/e241.dat	norm:2/0+0x7c	72	96d1239c32a28195cd37a91a56bddd564d6d84c7		space
-Media/Event/Event/e241.dat	norm:2/0+0xc6	52	17c47d888777c72272b1f5aa0942ae0643ee1bfc		space
-Media/Event/Event/e241.dat	norm:2/0+0xfc	60	b620f8acd7cb349a26cc2e072f3fde41804576de		space
-Media/Event/Event/e241.dat	norm:2/0+0x13a	42	61d349c54f14a1b06b6a62cb798b70db4cf8adfc		space
-Media/Event/Event/e250.dat	norm:2/0+0x70	44	2ba65bc675ad0ee7fd4d6fa6a7b5a571e988aa3c		space
-Media/Event/Event/e250.dat	norm:2/0+0x9e	26	5291fb806a92d885f2c6c54eae6c28ed7c02abb2		space
-Media/Event/Event/e250.dat	norm:2/0+0xba	36	82b0df2b0125c854bf815f76783fa4acbd2d8c19		space
-Media/Event/Event/e251.dat	norm:2/0+0x5c	84	b1b859f49396f288d0c9f136481bdd9013f44e67		space
-Media/Event/Event/e252.dat	norm:2/0+0x70	70	8088e164d3c935acf7078239d86f0d06469b562d		space
-Media/Event/Event/e252.dat	norm:2/0+0xb8	80	9353ede835465f401001a156e53969e82886e1f7		space
-Media/Event/Event/e252.dat	norm:2/0+0x10a	52	d23f50840ddbedb029fa592e9a393e6cd75e1f48		space
-Media/Event/Event/e260.dat	norm:2/0+0x80	30	02bcec625263e6fe0362e018b125df078786b0f0		space
-Media/Event/Event/e260.dat	norm:2/0+0xa0	22	71b5cb76eccdf27b02a53141f9659f3f578bef45		space
-Media/Event/Event/e260.dat	norm:2/0+0xb8	52	d1290aeb327141a79b13e0624b6834f9a04300af		space
-Media/Event/Event/e260.dat	norm:2/0+0xee	42	df9b6a85bc09674a1963a4e197bfd55162c751a2		space
-Media/Event/Event/e260.dat	norm:2/0+0x11a	50	5b89de4d7bb34a51fe0e169a5e726e33792f3568		space
-Media/Event/Event/e261.dat	norm:2/0+0x64	51	ad89eac260ce40f341d54b9933d18f81e689bc76		space
-Media/Event/Event/e261.dat	norm:2/0+0x99	72	6d216039b74ab466deac831c2eef9e0d923ffe57		space
-Media/Event/Event/e262.dat	norm:2/0+0x68	84	feedb76ea350d102660f9ccdab3653a355398fed		space
-Media/Event/Event/e262.dat	norm:2/0+0xbe	74	d9e9acb11b8ef7a5c5b9ae9ad1c22ea14d490d1a		space
-Media/Event/Event/e263.dat	norm:2/0+0x6c	64	0a2f021e73d6ad8a6538aa80cd925165690d4807		space
-Media/Event/Event/e263.dat	norm:2/0+0xae	42	f859e0149f93385baa2b6dc6671c84c32a7964a1		space
-Media/Event/Event/e263.dat	norm:2/0+0xda	62	22b9ad2e7ffcd554cf2c2cb47586b15740897ab6		space
-Media/Event/Event/e264.dat	norm:2/0+0x60	80	98f75f6ee87bb282a07c8e71309a0e8ee703ef9d		space
-Media/Event/Event/e265.dat	norm:2/0+0x74	26	6efb52894a29e4a39c264fe3c340b02168d9c2c3		space
-Media/Event/Event/e265.dat	norm:2/0+0x90	52	25985367eea409743e5c9496a1fcbbebe04cb5da		space
-Media/Event/Event/e265.dat	norm:2/0+0xc6	20	aef6c5c814b1419362ba985f73cb086a5628a8fe		space
-Media/Event/Event/e265.dat	norm:2/0+0xdc	52	501b140dd19e727020a1d7fd9729f69852f3e910		space
-Media/Event/Event/e266.dat	norm:2/0+0x64	22	0268fc88b3ed41c9385ca964f05cfac08ebdb1c2		space
-Media/Event/Event/e266.dat	norm:2/0+0x7c	24	21b5c824908453fc044049e363732bd7ec3c0d96		space
-Media/Event/Event/e270.dat	norm:2/0+0x68	24	34d328bd8fb53beb20a6c4897a8d108eb90d90d6		space
-Media/Event/Event/e270.dat	norm:2/0+0x82	34	9aebc7a4e1465a7d872ffdd98bcf6d8455647c24		space
-Media/Event/Event/e271.dat	norm:2/0+0x6c	68	75862977a1f7061c5404d8d7cbdb1202e56d2c93		space
-Media/Event/Event/e271.dat	norm:2/0+0xb2	52	b8513e77ddb443997b079a7ceda2795a4fed86b4		space
-Media/Event/Event/e271.dat	norm:2/0+0xe8	34	c6f79e868acdf4a40262c7f19652c7e2bc6c4d94		space
-Media/Event/Event/e272.dat	norm:2/0+0x80	51	c10e22ef31f40e48d4e302c03ea2ce1e4a0d5a84		space
-Media/Event/Event/e272.dat	norm:2/0+0xb5	53	13e1c27d561930dd118de630155eb22cea18fbef		space
-Media/Event/Event/e272.dat	norm:2/0+0xec	23	72a0a6ac288e53818e4becebd14ff88cb10be340		space
-Media/Event/Event/e272.dat	norm:2/0+0x105	32	cdd39a73fc853c9b5161d0060606113ede389f3f		space
-Media/Event/Event/e272.dat	norm:2/0+0x127	56	c2613eb9f6091c74fc01d50dcd79acd996ec3f2a		space
-Media/Event/Event/e273.dat	norm:2/0+0x78	60	1c044ca35d3e887ceea7ce4128723af3b5741bca		space
-Media/Event/Event/e273.dat	norm:2/0+0xb6	56	511ca3d0ce96d968522e3bbe54b9f9182aa2af7e		space
-Media/Event/Event/e273.dat	norm:2/0+0xf0	32	5e562b26561dce4540b53092bc42a36ead733ac2		space
-Media/Event/Event/e274.dat	norm:2/0+0x64	54	29bb2106f4ef81a0690a8386f266a05d8ca29d1c		space
-Media/Event/Event/e274.dat	norm:2/0+0x9c	20	2668484d0ac5f48a155d0561282f047e0321da8b		space
-Media/Event/Event/e280.dat	norm:2/0+0x90	74	e3c38702b757213cf140ff8771f8849e160aef3d		space
-Media/Event/Event/e280.dat	norm:2/0+0xdc	52	42cfc50fc5f0b37122e2a863e52479594ecbca18		space
-Media/Event/Event/e280.dat	norm:2/0+0x112	44	dfa5ee1f2a3d3f23a7381def58c3581ad616f8b2		space
-Media/Event/Event/e280.dat	norm:2/0+0x140	30	4dc17158253fd7524f706820196fabd0e750efef		space
-Media/Event/Event/e280.dat	norm:2/0+0x160	66	4d60fc744fdf0f2ea48e7aecb4b8dff18cb097b8		space
-Media/Event/Event/e280.dat	norm:2/0+0x1a4	32	7d81878d1141232dee71bf49f86d12275a8b4b63		space
-Media/Event/Event/e281.dat	norm:2/0+0x90	60	4d849900039e29ea6f608380628179e9ad01c639		space
-Media/Event/Event/e281.dat	norm:2/0+0xce	72	abccdaacc42305e97f43b1bbf92a7ebdcc1b91dd		space
-Media/Event/Event/e281.dat	norm:2/0+0x118	24	cbd93b37650a970c6ad0d36d2b42bcee26e00d3f		space
-Media/Event/Event/e281.dat	norm:2/0+0x132	56	c5c72d399244460528a30ea34e2e8b0a97e23e2e		space
-Media/Event/Event/e281.dat	norm:2/0+0x16c	74	2f0a829a39dcd048c735b6fa5243cce41d65bf86		space
-Media/Event/Event/e281.dat	norm:2/0+0x1b8	16	ad13e4b9fe136ac0ca6050f7f45f9144242122fa		space
-Media/Event/Event/e290.dat	norm:2/0+0x7c	24	c0aa04e9b59fc6320b04b85346948d684104c91b		space
-Media/Event/Event/e290.dat	norm:2/0+0x96	60	5c914fdf8ee59cff50610ffa1961c6f2fedb2c2e		space
-Media/Event/Event/e290.dat	norm:2/0+0xd4	32	5d114eb9fdf795c46c36d492a8be7a1267cd241a		space
-Media/Event/Event/e290.dat	norm:2/0+0xf6	26	d3e0a876e242cac8a806e1b9e511f4bdef337cfe		space
-Media/Event/Event/e291.dat	norm:2/0+0x190	61	2edcfa9b9fcc1038755b4c7e03e0caa3b6473edb		space
-Media/Event/Event/e291.dat	norm:2/0+0x1cf	80	6bf7ed5f537ddfab0d0275e62738d94ca5a1e499		space
-Media/Event/Event/e291.dat	norm:2/0+0x221	68	376421feaad84e79b25844fed9648fd70f9d163e		space
-Media/Event/Event/e291.dat	norm:2/0+0x267	76	7d9a2e074cc66af0ce306c68e62953af4f76ac85		space
-Media/Event/Event/e291.dat	norm:2/0+0x2b5	48	47a011725fb5006d0299bfe494a4224548db4ca8		space
-Media/Event/Event/e291.dat	norm:2/0+0x2e7	48	bdc007765d8d209614a0e0ba8d0f7378d74a1011		space
-Media/Event/Event/e291.dat	norm:2/0+0x319	50	ec496a8ea2e840fdc09e01d907cecfc2b9f56e83		space
-Media/Event/Event/e291.dat	norm:2/0+0x34d	54	eec336e7ed18174cae51b532f2f98301945b883c		space
-Media/Event/Event/e291.dat	norm:2/0+0x385	66	1085129f28b8f89c16112b4407a9d8242e598681		space
-Media/Event/Event/e291.dat	norm:2/0+0x3c9	36	ab58f4027e02c0ec1e0cc6f68117c159fe75ddee		space
-Media/Event/Event/e291.dat	norm:2/0+0x3ef	40	86a9a39091f9c27e1d343287186c24af6699f4e2		space
-Media/Event/Event/e291.dat	norm:2/0+0x419	52	64243cc2aab14084f6d8ba63c807b28294a3d669		space
-Media/Event/Event/e291.dat	norm:2/0+0x44f	32	e6423b6502b4b1e1804b78fffccdd33ed55b9cac		space
-Media/Event/Event/e291.dat	norm:2/0+0x471	14	68e192f0b379ae2076ec46b0e979e68e1fd66d63		space
-Media/Event/Event/e291.dat	norm:2/0+0x481	74	5caf8c2be01019d5be509866d8f869173c8a9edb		space
-Media/Event/Event/e291.dat	norm:2/0+0x4cd	68	7cbab811ef6c7279ea5e78c2507625c24eeff4c9		space
-Media/Event/Event/e291.dat	norm:2/0+0x513	48	04939f86a4846f28a38536abfcda582939131fc1		space
-Media/Event/Event/e291.dat	norm:2/0+0x545	40	b9fcabb9b4a7018d8f23b23dd5e106440f74c409		space
-Media/Event/Event/e291.dat	norm:2/0+0x573	68	c9ed27cb16ee10c85786f032ce589e3ece7f20cf		space
-Media/Event/Event/e291.dat	norm:2/0+0x5b9	84	9458da49f02975e23c735d186839e0e26a1c971f		space
-Media/Event/Event/e291.dat	norm:2/0+0x60f	67	e63a336dec6769f067051f8add46cccae3b7314d		space
-Media/Event/Event/e291.dat	norm:2/0+0x654	12	2dc6b075a5c86025a90b84c60b54cc1e24fa1ea4		space
-Media/Event/Event/e291.dat	norm:2/0+0x666	32	5509bada0485fdfa34766130197e89122236ea31		space
+Media/Event/Event/e000.dat	norm:2/0+0x64	34	2bcb3f928f6c19531a1860bdb7b861e17485e3ba	사람과 차들의 집결지, 시부야 터미널.	space
+Media/Event/Event/e000.dat	norm:2/0+0x88	66	535216fd50ca8cd23e36c54024703916f4951e51	시부야 터미널을 뒤덮고 있는,$n수상한 그래피티를 덮어 써버려!	space
+Media/Event/Event/e001.dat	norm:2/0+0x80	69	bcf7f8798273a91aafdb56a61c8c0be257445863	자 쇼를 시작해볼까! 내가 관객이다.$n너의 엔진에 불을 붙여봐！	space
+Media/Event/Event/e001.dat	norm:2/0+0xc7	68	92619c7bb70238d18b3d327a4de86c96b2d8e54b	누군가가 거리의 여신이었던$n도겐자카의 석상을 훔쳐 달아났다.	space
+Media/Event/Event/e001.dat	norm:2/0+0x10d	32	3e5ab23be9a8ba367e9cb9fd4db4f03d830d8dee	소문으로 떠도는 그 뺀질이 짓인가?	space
+Media/Event/Event/e001.dat	norm:2/0+0x12f	72	054846b9975790441af7d611802db58bf94322c6	도겐자카를 그래피티로 가득 채워서$n소문의 그 뺀질이를 밖으로 유인해내!	space
+Media/Event/Event/e002.dat	norm:2/0+0x60	56	fd3ba020bccdd41c76ec80742cf45bbed052d343	소문의 그 뺀질이 녀석 납셨구만.$n인사라도 한번 건네볼까?	space
+Media/Event/Event/e003.dat	norm:2/0+0xb8	44	7aefeb86a59de5a2f108a5ef98b8dc98a8ba2ded	본부에서 각 국으로,$n스케이트 주행 중인 소년 확인.	space
+Media/Event/Event/e003.dat	norm:2/0+0xe6	58	3a1d5ab960050adfd707ae211ee2f4a607fce1a8	현재 “도겐자카” 부근을 이동 중.$n인근 국은 현장으로 급행하라.	space
+Media/Event/Event/e003.dat	norm:2/0+0x126	38	5ba58836a3897b7679cc05f2cfa307928c934da7	곧 경찰 녀석들이$n들이닥칠 거야.	space
+Media/Event/Event/e003.dat	norm:2/0+0x14e	50	cc3b2693e5377afb5743c3506249551de8c8efa9	그럼, 난 먼저 너희 차고에 가서$n신세 좀 지고 있을게.	space
+Media/Event/Event/e003.dat	norm:2/0+0x182	26	28fd9a68e111424a0fc321bd85aeede3d35bafee	경찰 녀석들 꽤 만만치 않거든.	space
+Media/Event/Event/e003.dat	norm:2/0+0x19e	56	21b79c5f038dc41ee561adda00918b85ee2bc25b	초짜라면 너도 차고로$n돌아가는 게 나을지도 몰라.	space
+Media/Event/Event/e004.dat	norm:2/0+0x6c	50	e06a81abe582b3b7c2646e4d25b263492aaa649e	헤이! 롯카쿠 그룹의 앞잡이들이$n튀어나왔다고!	space
+Media/Event/Event/e004.dat	norm:2/0+0xa0	52	1718a2a15c41d6c9aeef6030d70fd415f2bd4446	다들 네 사인을 받겠다고$n지독하게 쫓아오는데!	space
+Media/Event/Event/e004.dat	norm:2/0+0xd6	60	ad816ec2f312298e337a6032d4f2a39cadf3705c	녀석들의 하얀 셔츠에,$n그래피티 아트를 한 방 먹여줘라!	space
+Media/Event/Event/e008.dat	norm:2/0+0x64	48	a9060b0c71eb32e4c95b980ca04a42044cc3adcd	오오! 누가 그녀의 목을 훔쳐 달아난$n것인가?	space
+Media/Event/Event/e008.dat	norm:2/0+0x96	20	046a0faa912c5616c3d2b227455683caacba4ed2	불길한 예감이 드는데!	space
+Media/Event/Event/e009.dat	norm:2/0+0x5c	8	0b3c25d612415d82bc1ced81912600a429eb6be4	예이！	space
+Media/Event/Event/e010.dat	norm:2/0+0x68	52	18f773943d2074e7959bdb141b64032f67e38870	우왓! 포이즌 잼! 대낮부터$n대놓고 튀어나왔잖아.	space
+Media/Event/Event/e010.dat	norm:2/0+0x9e	52	f7e34b68a1a6390f1ece39f9ae861337f88fc8f9	수상한 그래피티는, 이 녀석들의$n짓이었던 거냐?!	space
+Media/Event/Event/e024.dat	norm:2/0+0xbc	18	f8fbd9eb0797080b70a9a6c3c1e0fa2a3ef74a6e	본부에서 각 국으로…	space
+Media/Event/Event/e024.dat	norm:2/0+0xd0	70	fed53dfde181e89a750af32f88dba793d8786dee	“시부야 터미널” 부근에서, 누군가$n스케이트로 주행 중이라는 통보 접수.	space
+Media/Event/Event/e024.dat	norm:2/0+0x118	42	b66539d7a11eec8096f3c6bb585599afd2fa03cc	부근 국은 현장으로 급행하라!$n반복한다…	space
+Media/Event/Event/e024.dat	norm:2/0+0x148	46	a023a808bf1e077355bc59c30584d8976bd0a8e6	음? 또 경찰 단속인가.$n요즘 부쩍 많아졌네.	space
+Media/Event/Event/e024.dat	norm:2/0+0x178	32	03f67caad84c346fced6e74bde754f5d0d732047	난 먼저 차고로 가 있을게.	space
+Media/Event/Event/e024.dat	norm:2/0+0x19a	56	bc9c88e0a65e4ba18439fa44500b2b7696a6597e	한판 붙을 생각이라면, 정신 나간 경부를$n조심해! 그럼 이만.	space
+Media/Event/Event/e025.dat	norm:2/0+0x6c	10	6045c08a9856829e105bbc0d127cf651aece2be9	하～아암.	space
+Media/Event/Event/e025.dat	norm:2/0+0x78	58	1df7eb0733e6a24b23de35819b1b44fa2d70c5a7	네 녀석들 쥐새끼 한 마리 잡는 데$n일일이 날 불러대고 그래.	space
+Media/Event/Event/e025.dat	norm:2/0+0xb4	28	d71bd3162b8bb160856fe91cfeb2253fc72eb84a	냉큼 냅다 잡아버려!	space
+Media/Event/Event/e026.dat	norm:2/0+0x5c	20	8e63e020e8064cf27f968ef17144370307d833c8	아 귀찮아죽겠네～. 쳇!	space
+Media/Event/Event/e027.dat	norm:2/0+0x64	54	559c7bf489fbc4f406509e310ce5b0767722599f	도쿄 스트리트의 중심가,$n“주오 거리”.	space
+Media/Event/Event/e027.dat	norm:2/0+0x9c	48	d0bf727b3f1de2907eaf60de9434e6245ed2d6b1	포이즌 잼의 그래피티를 전부$n덮어 칠해버려!	space
+Media/Event/Event/e028.dat	norm:2/0+0xa8	18	e801c26aef62c4fd48d0910483ffc1d9f7f8d7a2	기갑특대에서 본부로!	space
+Media/Event/Event/e028.dat	norm:2/0+0xbc	38	274dddec750838d1a9326777e92da1fdd9fab2a0	목표를 포착,$n지금부터 공격을 개시한다.	space
+Media/Event/Event/e028.dat	norm:2/0+0xe8	72	dced920ca669b53cce009703032313aa9fc5a0a7	거리의 게릴라 녀석들, 아주 전쟁터구만?$n도쿄엔 전차용 표지판 따윈 없다고!	space
+Media/Event/Event/e028.dat	norm:2/0+0x132	54	662ec4b3742defd005a96f0ee6311e1b1cfabb10	위험천만한 걸 매달고 있는,$n쇳덩어리를 날려버려!	space
+Media/Event/Event/e029.dat	norm:2/0+0x5c	16	ea51056a93ad070ad66a908493e343fac5e906ff	야, 이 꼬맹이 녀석!	space
+Media/Event/Event/e030.dat	norm:2/0+0x60	66	b8dd4d7c9e1d01fa1e6b9a99355ee380ee441b09	괴물 군 납셨네. 위험하니까$n먹이는 주지 마시길 바랍니다.	space
+Media/Event/Event/e031.dat	norm:2/0+0x5c	64	5219a08a1899c002c688561acdcbaae22c716766	크하하～. 얼간이 같은 녀석～.$n그렇게 쉽게 항복할 것 같냐고오.	space
+Media/Event/Event/e032.dat	norm:2/0+0x6c	56	b3c6ac97874925a5815342655b40616b2fa21a68	과거의 번영을 잊고,$n버려진 거리… “롯카쿠다이”.	space
+Media/Event/Event/e032.dat	norm:2/0+0xa6	58	482488f4e54841c87a9c3ed14be57057ae4d47db	포이즌 잼 녀석들은, 이 근처를$n자주 어슬렁거리고 있어.	space
+Media/Event/Event/e032.dat	norm:2/0+0xe2	64	a69f18bebc08baaafdcb94f027a81ee01222289c	이 거리를 그래피티로 가득 채워서,$n포이즌 잼을 찾아내라！！	space
+Media/Event/Event/e035.dat	norm:2/0+0x5c	18	12248a6c91d096530db3fcd14be12ef6d28fc1c8	하아아, 졸려…	space
+Media/Event/Event/e036.dat	norm:2/0+0x88	54	6ae2f5426e2d8c6986598e45265a1eddcde29d30	“９９번가”는 벤텐 타워를$n중심으로 하는 밤의 번화가.	space
+Media/Event/Event/e036.dat	norm:2/0+0xc0	68	96ca8e7a20da357ce2e6d84658b9870c51ca9bb5	뒷골목 거물들이 밥그릇 싸움을 벌이며,$n시도 때도 없이 항쟁이$n일어나는 위험한 거리다.	space
+Media/Event/Event/e036.dat	norm:2/0+0x106	38	5c3be6a8d0c13d69f5390901c148e5dec809f16a	최근엔 의문의 정전 소동도 있었지.	space
+Media/Event/Event/e036.dat	norm:2/0+0x12e	42	e3cfd742b37b93ae7154799af4725725d84d87b3	래피드 ９９는 여길 아지트 삼아 뛰고 있다고.	space
+Media/Event/Event/e036.dat	norm:2/0+0x15a	40	acbc8a7d64e10efe3b14d389f741a3f92c0c6d46	“９９번가”를 그래피티로 덮어버려!	space
+Media/Event/Event/e037.dat	norm:2/0+0x64	40	8618a32296c2b8c13444e9c5810342850a143025	중대장에서 전 대원에게…$n목표의 침입을 확인.	space
+Media/Event/Event/e037.dat	norm:2/0+0x8e	48	4dc68d93c7e602f09f4e571e4d676db0897da6bb	서치라이트로 발견하는 즉시,$n발포를 허가한다.	space
+Media/Event/Event/e038.dat	norm:2/0+0x5c	12	3c2d5e67f21ed20d80a4015409a000f6e3f5028d	히히히.	space
+Media/Event/Event/e039.dat	norm:2/0+0x64	34	d03e497c0e26cd77fb5031da7f8e2c3e3b115c93	９９번가를 지배하는, 래피드 ９９.	space
+Media/Event/Event/e039.dat	norm:2/0+0x88	54	004b8f9d4c85ec29195557d87bcfa75ce83f0dcc	나와바리를 털리고서, 더는 입 다물고 있을$n수 없게 된 모양이구만.$n	space
+Media/Event/Event/e040.dat	norm:2/0+0x64	40	e9dfbe4e9e9bfc8fe54f9467c7be045fa50efbff	하수 시설은 포이즌 잼의$n안방이나 다름없어!	space
+Media/Event/Event/e040.dat	norm:2/0+0x8e	34	3910d0a5c65f6b9abe808cedb655051a4f52a572	기습당하지 않도록, 조심해!	space
+Media/Event/Event/e041.dat	norm:2/0+0xac	60	6fcead360d2d41e6779cdefc3035f2e45b795c52	하하하. 여기에 빠진 놈은$n네 녀석으로 딱 ３０명째구만.	space
+Media/Event/Event/e041.dat	norm:2/0+0xea	38	7966d03544da818396e8dac394e0e7274541ae8b	거긴 어떻게 발버둥 쳐도$n못 나온다구～.	space
+Media/Event/Event/e041.dat	norm:2/0+0x116	42	1f188a0903893e4b825856dbc7e9d6f8e2e98890	３０명째 기념으로 건져 올려줄 수도$n있지만,	space
+Media/Event/Event/e041.dat	norm:2/0+0x142	52	9df95fb6bc53f0ad7ece9094313da84804557a19	그전에 너희가 어느 정도 수준인지,$n어디 한번 시험해봐야겠어.	space
+Media/Event/Event/e041.dat	norm:2/0+0x178	54	5c93e59edec06edfbd679c99480253a5b43e525e	그것도 못 하면, 어차피 더 가봤자$n소용없을 테니까 말야.	space
+Media/Event/Event/e042.dat	norm:2/0+0x5c	40	c9e63ced448eea80b3b29cd82346f14d8188a2fe	오케이.$n그럼, 잠깐 물러서 있어.	space
+Media/Event/Event/e043.dat	norm:2/0+0x6c	58	1d597cc4ab09af0b4972783731f8b322a1d3e248	포이즌 잼의 아지트로 가려면,$n게이트를 열 수밖에 없어!	space
+Media/Event/Event/e043.dat	norm:2/0+0xa8	60	c4182e628d3cd38e93258f5ff65eeaf4f43b38c9	그걸 위한 「스위치」가, 이 구역$n어딘가에 분명 있을 거야.	space
+Media/Event/Event/e043.dat	norm:2/0+0xe6	52	06502b83fe92c24730ec5bf7da844ad8ebb97a8f	모든 「스위치」를 찾아내서,$n게이트를 개방해라!	space
+Media/Event/Event/e045.dat	norm:2/0+0x60	42	2f06cccfed8879f1f695e649cde37b38bf689105	자 암흑의 문이 열렸다!$n노크는 필요 없다구.	space
+Media/Event/Event/e046.dat	norm:2/0+0x98	26	ed7532140569092e55eb1d48d76a3021ac6e1315	여긴 독거미 둥지의 중심.	space
+Media/Event/Event/e046.dat	norm:2/0+0xb4	48	d170a460a2443c01bad1ae384a690fe7fb7eaf8c	그물에 걸려든 사냥감이$n또 길을 잃고 헤매 들어온 모양이네.	space
+Media/Event/Event/e046.dat	norm:2/0+0xe6	26	a6eed10cfa56db29ad97f1f351cb8ff32f148ab9	찾고 계신 게 이건가 보지?	space
+Media/Event/Event/e046.dat	norm:2/0+0x102	32	68ff0d87a6cd1fa71554b563f8aa3d4569fa9d3a	오늘은 ＧＧ 해산 기념일이 되겠어.	space
+Media/Event/Event/e046.dat	norm:2/0+0x124	40	da3c94bd149c2c2a023b22e5e7e2c3ec431a9636	자 디너까지 시간은 넉넉하고,	space
+Media/Event/Event/e046.dat	norm:2/0+0x14e	60	b7c6d925b3c68d028137f01ec17b9354e7f2d5c3	훌륭한 요리사들도 있으니,$n정성껏 요리해 줄게.	space
+Media/Event/Event/e046.dat	norm:2/0+0x18c	22	7865474ca44b3653ff27373e8536898ae791d9c3	너희들의 피와 살로 말야!	space
+Media/Event/Event/e046.dat	norm:2/0+0x1a4	64	ea87e557a0f9815f78fae36f5a2180056fc77190	자, 가라, 하수도의 흉측한$n괴물들아！！ 밥 시간이다！！	space
+Media/Event/Event/e047.dat	norm:2/0+0x5c	24	530325010ad023a1f8cc9102bc8e490bf1cd50e8	쳇, 믿을 놈 하나 없다니까.	space
+Media/Event/Event/e048.dat	norm:2/0+0x6c	74	210cafcb75eea61564f0914f6b7995c5e922f088	“히카게 거리”의 러브 쇼커즈도,$n얼마 전, 노이즈 탱크의 하수인이 된	space
+Media/Event/Event/e048.dat	norm:2/0+0xb8	38	ba2ca05620df7331a2771e148c6a23873f2ae88a	이모털즈와 한바탕 붙었던 모양이야.	space
+Media/Event/Event/e048.dat	norm:2/0+0xe0	52	90a66b8b094ad5511ab9a1feea70f8a508840f16	이모털즈의 그래피티를 전부$n덮어 칠해버려!	space
+Media/Event/Event/e049.dat	norm:2/0+0x74	36	5dbdc84905f6d0383e657d618c6d6411fb3c2df5	롯카쿠 경찰 특제 진압 머신이다!	space
+Media/Event/Event/e049.dat	norm:2/0+0x9a	36	8b0c38452563ec57285f8538c2107baf2c324b20	위험천만한 고철 덩어리를 꺼내왔구만.	space
+Media/Event/Event/e049.dat	norm:2/0+0xc0	44	6f55fea4ade2dcfb5b459b9b382aabf89bc6e523	네가 고철이 되지 않도록 조심하라고!	space
+Media/Event/Event/e049.dat	norm:2/0+0xee	58	6b080b40fe999173189e2560facf16a98504815d	촌구석 머신에 너의 화려한$n페인트를 선사해 줘라.	space
+Media/Event/Event/e050.dat	norm:2/0+0xa0	68	c8f88708ac3c8265adf430fed1568f3e3bcb43fa	경부님, 그 기계는 아직 조정 중이며,$n동작 안정성 확인이 아직 끝나지…	space
+Media/Event/Event/e050.dat	norm:2/0+0xea	42	1204ec129dc1ad0e86c16b53170c7c655bfcf111	아 시끄러워!$n쓸데없는 소리 지껄이지 마!	space
+Media/Event/Event/e050.dat	norm:2/0+0x116	58	edf35d079216bf3b73b7e5e32e91f2e461b1b9d7	내가 ＯＫ라고 하면, 전부 오케이야!$n똑똑히 기억해 둬！！	space
+Media/Event/Event/e051.dat	norm:2/0+0xa0	22	e8654bb7fa452b158aa913500fd15def12f54e82	그그… 크으으…	space
+Media/Event/Event/e051.dat	norm:2/0+0xb8	36	9884647449107bc58d26927956e9794f15ff72f4	아직 겨우 시작일 뿐이라고!$n하하하.	space
+Media/Event/Event/e051.dat	norm:2/0+0xe2	58	8053c0bce66665a823f91905707b842c2aad4f87	크하하！ 겁먹은 문어처럼$n허겁지겁 도망치고 있잖아!	space
+Media/Event/Event/e051.dat	norm:2/0+0x11e	34	c3d102f7c37f0e8789631d68f0c12609902f0405	다음번에 올 땐 실망시키지 마라!	space
+Media/Event/Event/e052.dat	norm:2/0+0x68	70	569e43225a180f4c92b2a23c26827853919d4e58	노이즈 탱크에 조종당하는 이모털즈,$n이런 곳까지 세력을 넓혀 놨군.	space
+Media/Event/Event/e052.dat	norm:2/0+0xb0	54	2f2957c850931436344ad8838e9df49baa53de29	이모털즈의 그래피티를$n전부 덮어버려!	space
+Media/Event/Event/e053.dat	norm:2/0+0x98	58	a89cc24da1094860ef5b6bf24c92c63e1a084f02	항공기동대에서 본부, 목표를 포착.$n지금부터 공격을 개시한다.	space
+Media/Event/Event/e053.dat	norm:2/0+0xd8	58	cec070cf51af394a20410086c8a3e0a24ad1c76f	롯카쿠 경찰의 하얀 매미 녀석들을$n그래피티로 날려버려!	space
+Media/Event/Event/e055.dat	norm:2/0+0x70	56	d55b0ab2f238a9e80b7889e860c0f95671bbba68	고층 빌딩가에 있는 이모털즈의$n성역, “파라오 파크”.	space
+Media/Event/Event/e055.dat	norm:2/0+0xaa	56	134a7df4015204c3fd2d62d15bed94cbf0ea8f06	도쿄에 사는 억만장자 이집트인이$n만든 공중정원이다.	space
+Media/Event/Event/e055.dat	norm:2/0+0xe4	54	8019b5b74d18707b7e0b14d260637726e5e80904	이모털즈의 그래피티를 전부$n덮어 칠해버려!	space
+Media/Event/Event/e056.dat	norm:2/0+0x5c	58	95c3983d38ee27338f0ca429160b6d31865b99d2	크큭 크크크크큭, 크큭, 크크크크$n…죽인다!…	space
+Media/Event/Event/e057.dat	norm:2/0+0xa0	64	2e8a379dd968079702442bfeb74ecd1ef20d2c85	네 녀석들, 우리에게 맞서다니$n간이 배 밖으로 나왔군. 상대해 주마!	space
+Media/Event/Event/e057.dat	norm:2/0+0xe6	46	7a73c013121ab546e14d92eb252e8f40a434889b	미라 잡으려다 미라 되지 않게$n조심하라고!	space
+Media/Event/Event/e057.dat	norm:2/0+0x116	60	0ec2e594b4a521a896cd71d430950b3d6110626b	이집트 녀석들, 이모털즈의$n등짝에 그래피티를 먹여줘라!	space
+Media/Event/Event/e058.dat	norm:2/0+0x64	46	246d22e208670acc3f0f4a8d8acaf961ec9895a2	이모털즈 녀석들이 “국도０호”로$n도망쳤다고!	space
+Media/Event/Event/e058.dat	norm:2/0+0x94	18	34ad5a96eb6a01ea9e3de1975578f3cf99a5fd34	당연히 뒤쫓아갈 거지?	space
+Media/Event/Event/e059.dat	norm:2/0+0x5c	26	c01bf0611e72ce99904932e3f4f9dcaac2e63328	…“국도０호”…	space
+Media/Event/Event/e060.dat	norm:2/0+0xac	50	b7c07fa18ff2636240f0cf8b63384be82cc01400	와하하하하! 너희들이 찾고 있는 놈이$n바로 이 녀석이지!	space
+Media/Event/Event/e060.dat	norm:2/0+0xe0	46	550e928e1eaec034c1f07d9a2427c379a38bf87d	하지만 이 녀석은 이제부터 우리의$n제물이 될 운명이다!	space
+Media/Event/Event/e060.dat	norm:2/0+0x110	62	e49ccce7081f894e9ba2c66b91bcd4515494b123	너희들도 길동무로 삼아주마.$n제물은 많으면 많을수록 좋은 법!	space
+Media/Event/Event/e060.dat	norm:2/0+0x154	60	77d7c3f09cef9356512f94dafe82fdeaca3803a3	이모털즈의 등짝에 그래피티를 새겨서,$n요요를 구출해라!	space
+Media/Event/Event/e061.dat	norm:2/0+0x5c	18	3b0537073a9d740eff9012780f62b817beaa2025	아하하하하！	space
+Media/Event/Event/e062.dat	norm:2/0+0x7c	70	05210e1aab91c154e3906471b636272ab31b5d2a	도쿄 스트리트의 진정한 리더 자리를 건$n죽음의 구기 종목 「데스 볼」！！	space
+Media/Event/Event/e062.dat	norm:2/0+0xc4	65	865ad11c4a797642dd878f6ba8473a221769d97c	드디어 개막이다! 이런 때에도 나,$n“DJ 프로페서 K”가,	space
+Media/Event/Event/e062.dat	norm:2/0+0x107	68	dbd421ff8cf45b3e6502d4c8f6fdaf76fa6a8ab7	“롯카쿠 엑스포 경기장 예정지”에서$n생중계로 뜨겁게 전해준다구～！	space
+Media/Event/Event/e062.dat	norm:2/0+0x14d	22	efc45421c1f811dd95fd9b51363f0bf537292fa9	그럼, 신나게 즐겨보자고！！	space
+Media/Event/Event/e063.dat	norm:2/0+0x6c	21	cc74a80f45516532b574a925c40abf768bf0f39d	“ＧＧ”～WIN OUT！！	space
+Media/Event/Event/e063.dat	norm:2/0+0x83	64	55599a34997bb663d9e5177fb3fd7772742a2a8d	둠 라이더즈, 허무하게도 죽음의$n코너로 처박혀버렸구만!	space
+Media/Event/Event/e063.dat	norm:2/0+0xc5	26	2e2d8ca357e3792df5df03ffbee3b8938c3f3f6d	지옥에선 보험금 안 나온다구!	space
+Media/Event/Event/e064.dat	norm:2/0+0x6c	16	b52b44082d2bb1f5f9a068a42f6a093f9b609222	제２회전은 바로…	space
+Media/Event/Event/e064.dat	norm:2/0+0x7e	48	9f96da32152517abf5ef81ba734e46afd2c16d85	극악무도 이집트 붕대 녀석들,$n「이모털즈」！！！	space
+Media/Event/Event/e064.dat	norm:2/0+0xb0	28	fa87af759cdea704aeabeb7142918607e42cd4a8	VS… 또다시 등장한 「ＧＧ」！！	space
+Media/Event/Event/e065.dat	norm:2/0+0x6c	50	827e1f2e64166ef2a0c0d9357e0c6f4ebbc93939	“ＧＧ”～WIN ！！！$n마른오징어 녀석들 근성이 없구만.	space
+Media/Event/Event/e065.dat	norm:2/0+0xa0	56	8567b9dc5587142aeb8995a496af09ab8b86b9f6	과연 ５천 년이나 지나서, 뇌세포까지$n다 썩어버린 건가?	space
+Media/Event/Event/e066.dat	norm:2/0+0x78	52	a2da4b5eff756c175e4805aebc15a6174f8970f3	제３회전은 바로…$n사랑과 죽음의 선교사, 러브 쇼커즈!	space
+Media/Event/Event/e066.dat	norm:2/0+0xae	28	5de32715fab1832f2e5890a4e040d8cd1bb45e82	VS… 역시나 「ＧＧ」！！	space
+Media/Event/Event/e066.dat	norm:2/0+0xcc	50	a0569e44c53745d105bb4f1b307057ff9cdc5837	자, “ＧＧ”도 슬슬$n지친 기색이 보이기 시작했나?	space
+Media/Event/Event/e066.dat	norm:2/0+0x100	50	e374ea810afeb3c4cdad946176aebc449040e470	뭐, 그것 또한 노이즈 탱크 녀석들의$n노림수였을까.	space
+Media/Event/Event/e067.dat	norm:2/0+0xc0	68	2d6019b4d23ff3e5bd45cc6715a680b93ce6967f	오오앗! 갑작스러운 경기 중단！！$n롯카쿠 경찰에게 포위당해버렸다고!	space
+Media/Event/Event/e067.dat	norm:2/0+0x106	68	db34168700f5ab418502879a3224d57fc5306a4a	누가 찌른 건가? 불청객의$n난입으로 스타디움 안은 패닉 상태다!	space
+Media/Event/Event/e067.dat	norm:2/0+0x14c	54	e972f39c858c1d5cabdbd3879a4e748375111129	경찰 녀석들, 얌전히 관객이나$n하고 있을 것이지,	space
+Media/Event/Event/e067.dat	norm:2/0+0x184	30	c1973bd7c5668685b3a05090b98035e2f5f0f0f0	판을 아주 엎어버리려 드네!	space
+Media/Event/Event/e067.dat	norm:2/0+0x1a4	46	ee3bc1958bc7f28579357092f17fd521e5feb1f7	허겁지겁 도망치는 루디즈,$n꼴사납게 잡히지 마라!	space
+Media/Event/Event/e067.dat	norm:2/0+0x1d8	16	c3de46576e10eb00689a5db39289c065a5db5c04	아하하하하하！	space
+Media/Event/Event/e068.dat	norm:2/0+0xc8	26	b867c5fef0cebb156eaa9d44de23883e0cd52979	어느 친절하신 분의 신고 덕분에 말야.	space
+Media/Event/Event/e068.dat	norm:2/0+0xe4	66	bc70ae686c272d239d16a83b3c1c9bbd146f520d	너희 녀석들을 한꺼번에 쓸어버릴 절호의$n타이밍이잖냐, 아주 훌륭해!	space
+Media/Event/Event/e068.dat	norm:2/0+0x128	54	3bc90fc67e41e4f7f01e104e2041f39e85f88132	이번엔 준비 만전이다!$n지난번처럼은 안 될 거다.	space
+Media/Event/Event/e068.dat	norm:2/0+0x160	68	48cdc3c67e6eca919c628b3944661ab313d85264	죽음을 각오한 꼬리토끼는,$n죽음을 기다리며 「춤」을 춘다지.	space
+Media/Event/Event/e068.dat	norm:2/0+0x1a6	16	7a0a2828e58e4c52a3939e3db98bc266d95e45e3	하하하하하！！！	space
+Media/Event/Event/e068.dat	norm:2/0+0x1b8	44	8918d73858e1d478b6a2a09a5770681f08a71b41	자, 헛수고할 생각 마라!$n하하하핫!	space
+Media/Event/Event/e068.dat	norm:2/0+0x1e6	24	78dae3e0afdf5b56fe801752b5f2d447d04cc1ec	벌써 밤도 늦었으니 말이지～.	space
+Media/Event/Event/e068.dat	norm:2/0+0x204	46	067f239b67bd65da6e19f5c9794e4b1377d746d0	롯카쿠 경찰, 특제 진압 머신$n재등장이다!	space
+Media/Event/Event/e068.dat	norm:2/0+0x234	34	b6e9359173cc4d530d2472a71617f5966b71fc29	이번에야말로, 저 녀석을 박살 내버려!	space
+Media/Event/Event/e069.dat	norm:2/0+0x9c	14	f938eb51aef8a8385fa5bcb97062236c956422d4	헤헤헤헤…	space
+Media/Event/Event/e069.dat	norm:2/0+0xac	30	de9d3b1b409ffb6c5612a2b07af5fa4b45d4ef75	꼬, 꼬리토끼 따위…	space
+Media/Event/Event/e069.dat	norm:2/0+0xcc	24	84e128ecafd3639ea0839d66a18f0ccc6e8a2750	있을 리가 없잖아…	space
+Media/Event/Event/e069.dat	norm:2/0+0xea	60	8bf3cb5bba2657ab779b7957674116e08f4520d3	ＣＯＯＬ！ 물도 못 끓이는,$n고철 덩어리가 되어버렸구만!	space
+Media/Event/Event/e070.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1	공은 이미 울려 퍼졌다！	space
+Media/Event/Event/e070.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808	콘크리트 링에선 도전자들이$n이미 잔뜩 벼르고 있다고!	space
+Media/Event/Event/e070.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b	노이즈 탱크를 닥치는 대로,$n때려 부숴버려!	space
+Media/Event/Event/e071.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1	공은 이미 울려 퍼졌다！	space
+Media/Event/Event/e071.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808	콘크리트 링에선 도전자들이$n이미 잔뜩 벼르고 있다고!	space
+Media/Event/Event/e071.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b	노이즈 탱크를 닥치는 대로,$n때려 부숴버려!	space
+Media/Event/Event/e072.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1	공은 이미 울려 퍼졌다！	space
+Media/Event/Event/e072.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808	콘크리트 링에선 도전자들이$n이미 잔뜩 벼르고 있다고!	space
+Media/Event/Event/e072.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b	노이즈 탱크를 닥치는 대로,$n때려 부숴버려!	space
+Media/Event/Event/e073.dat	norm:2/0+0x6c	30	e74cdd2cd3acf7251c4e2e113e096acc1dee69c1	공은 이미 울려 퍼졌다！	space
+Media/Event/Event/e073.dat	norm:2/0+0x8c	64	d09555c4121f90e1d341b6208a89d7af4ec35808	콘크리트 링에선 도전자들이$n이미 잔뜩 벼르고 있다고!	space
+Media/Event/Event/e073.dat	norm:2/0+0xce	46	e73eb7c3b09a920a0b314acbd771a5c37b4adb9b	노이즈 탱크를 닥치는 대로,$n때려 부숴버려!	space
+Media/Event/Event/e075.dat	norm:2/0+0x74	62	b4790bbdf2f78ef680d4dad3cf0574b050e2532d	고대 용들의 포효가,$n빌딩 계곡 사이에 메아리친다…	space
+Media/Event/Event/e075.dat	norm:2/0+0xb4	26	f0f8709bdb17d23356f116cece7f494f4e52d6a7	공중 유원지, 상공 공룡 거리.	space
+Media/Event/Event/e075.dat	norm:2/0+0xd0	66	c32fd2b449431163d3c62bd31727d78f93592356	포이즌 잼의 정보에 따르면, 요요는$n여기서 기다리고 있을 거래.	space
+Media/Event/Event/e075.dat	norm:2/0+0x114	20	c99f9c775a35024e8580e370978dd5cfeeaa5655	요요를 찾아내라!	space
+Media/Event/Event/e076.dat	norm:2/0+0xd0	66	c04f5ad3b47ebd8754d8f4eb01eb0f7cb3adccf3	드디어 결판을 낼 때가 왔다구!$n배신자, 요요를 쓰러뜨려라!	space
+Media/Event/Event/e076.dat	norm:2/0+0x118	18	a8de6157bcd3a8f6e2f741c35e61b042412ac253	그 녀석은 가짜야.	space
+Media/Event/Event/e076.dat	norm:2/0+0x130	44	79d61691859cd331a3415ce3c0bf68cb899a1e76	스트리트에 지배 따윈 바라지 않아.$n혼돈이야말로 전부다.	space
+Media/Event/Event/e077.dat	norm:2/0+0x74	56	86829327a1a0d27cea7cd4707d489b0d1baf511c	너희들은, 왜 그리 스트리트$n따위에 집착하는 거냐?	space
+Media/Event/Event/e077.dat	norm:2/0+0xae	32	7df0952a63b0c68afdb5e9bd1f449025a7821c34	기계 두뇌인 나로선 이해할 수 없다.	space
+Media/Event/Event/e077.dat	norm:2/0+0xd0	44	f363701e7e8e6ee5700d12c6816ea5cc62b47d61	하지만, 내가 쓰러져도, 우리$n동맹이,	space
+Media/Event/Event/e077.dat	norm:2/0+0xfe	62	4b563a1d6d92275d7a6b42791507e8caa842d235	너희를 언제든 노리고$n있다는 사실을 잊지 마라. 쿨럭 쿨럭	space
+Media/Event/Event/e078.dat	norm:2/0+0xa4	60	116087718c28d282901de28bc0db2bb6b4a491ee	노이즈 탱크에게 세뇌당해버린$n둠 라이더즈가 나타났다!	space
+Media/Event/Event/e078.dat	norm:2/0+0xe2	32	f26d1d0eb4291eb1a5c5fa22f664a85620ce8a07	스타디움에서의 빚을 갚을 수 있을까?	space
+Media/Event/Event/e078.dat	norm:2/0+0x108	52	7f336e21f17bcc699e159d519e25ed8f0f65a0de	지난번처럼은 안 될 거다～,$n부릉릉릉～～～！！！	space
+Media/Event/Event/e079.dat	norm:2/0+0xa0	34	bd4cfa581ff525786d0bf74f9614f4723e2049eb	이런, 러브 쇼커즈가 나타났다!	space
+Media/Event/Event/e079.dat	norm:2/0+0xc4	50	cffbe88fc0b877d2ae72a791cdb634de470cc21f	얼마 전, 중단됐던 데이트의 다음을$n이어가고 싶은 모양이야!	space
+Media/Event/Event/e079.dat	norm:2/0+0xfc	28	173f0aa751d9bbb804c4dd6b847f7d611f9f40ed	자, 사신에게 키스를 하렴!	space
+Media/Event/Event/e080.dat	norm:2/0+0xa0	24	68b57026f06101d0e6bdb0ef9bf36cbc136af307	이모털즈가 나타났다고!	space
+Media/Event/Event/e080.dat	norm:2/0+0xba	40	a4dea3048c1b161cb79e9f611408bf3a47f32e89	몇 번을 쓰러뜨려도 붕대 걱정은 없는$n녀석들이지!	space
+Media/Event/Event/e080.dat	norm:2/0+0xe8	30	7316e5f195cfab2867cd255c37315974832304d5	나일강 바닥에 가라앉혀 주마!	space
+Media/Event/Event/e082.dat	norm:2/0+0xb4	62	05b977c4dd3df2728872007c11c3dc743c55bf86	이 건물은 이제 곧, 시한장치에$n의해… 콰광이다！！ 하하하.	space
+Media/Event/Event/e082.dat	norm:2/0+0xf4	28	b37b5efd68fed9e46c2bb28c8432135151951a32	불나방처럼 날아든 멍청한 녀석들.	space
+Media/Event/Event/e082.dat	norm:2/0+0x112	66	3652963324c8140397a2f2bd7ac686700eeab468	동료 따위의 시시한 것에 집착하니까$n언제까지나 얼간이인 거라구!	space
+Media/Event/Event/e082.dat	norm:2/0+0x15a	58	32263c5217909d182d531561c5b3d77289085e02	황금 코뿔소가 여기 “요새거주구”에$n시한폭탄을 설치해놨다고!	space
+Media/Event/Event/e082.dat	norm:2/0+0x196	48	209e1024162d514926ba051c6176637badc9778f	「스위치」를 찾아내서 시한장치를$n멈춰라！！！	space
+Media/Event/Event/e083.dat	norm:2/0+0x6c	46	ce31c750b0ddb270e7b7097129ef2149dc4a2d5b	이 테이프가 재생되고 있다는$n것은…	space
+Media/Event/Event/e083.dat	norm:2/0+0x9c	52	c2541a41ae60689674044244273b55e477ff7547	아무래도 “파란 장치”를 전부 정지시킨$n모양이군. 흥미로워.	space
+Media/Event/Event/e083.dat	norm:2/0+0xd2	26	61bc7ada595008ec44b2060ff2196cf58323ddce	땀 좀 더 흘려보시지!	space
+Media/Event/Event/e084.dat	norm:2/0+0x5c	46	3263d416fa8127c7ed003e32ae5ad8f2da7f7e17	철 지난 불꽃놀이로구만!$n크하하핫！	space
+Media/Event/Event/e085.dat	norm:2/0+0x64	30	b08593d765a891438de64a3826d830a1607f71c9	황금 코뿔소, 하늘에서 안녕하신가！！	space
+Media/Event/Event/e085.dat	norm:2/0+0x84	64	366e4047f371ddcfc00ccb9da85fc67c9ee5989c	시한장치가 해제된 걸 눈치챈$n모양이네. 녀석들을 전부 쓰러뜨려!	space
+Media/Event/Event/e091.dat	norm:2/0+0xa4	46	b64e22afc0e397041825e96e1d5bf22377c14814	히히히～, 좋아하는 굽기는 레어?$n미디엄?	space
+Media/Event/Event/e091.dat	norm:2/0+0xd4	26	f66f8535b90c20780e1256afeb89870e0a3f46ad	물론 웰던이겠지?	space
+Media/Event/Event/e091.dat	norm:2/0+0xf4	50	4b4b248388185ac0cb6088f36a3c5fbb016c56bb	“국도０호”를 불바다로 만들어버린,$n황금 코뿔소.	space
+Media/Event/Event/e091.dat	norm:2/0+0x128	30	73ccc30c278125502ee8f317ef36da68dfa6d0fb	위험한 불장난 녀석들을 쓰러뜨려라!	space
+Media/Event/Event/e095.dat	norm:2/0+0x74	64	35a64df97c4715a511e8b95639f638de01d08a47	어이이이！ 결국 황금 코뿔소 녀석들에게$n붙잡혀버렸다고오오！	space
+Media/Event/Event/e095.dat	norm:2/0+0xb6	32	2d4ec93d787ff357a27e5b72b280054661d3e713	이런 때라도, 끝까지 생중계다!	space
+Media/Event/Event/e095.dat	norm:2/0+0xd8	56	b191dfd8b177f90c209e4beff366053d4526d43f	황금 코뿔소는 흉흉한 살인 머신을$n가동해버렸다고!	space
+Media/Event/Event/e095.dat	norm:2/0+0x112	54	a63960313e9e15711abc9af271509d657b9cb2f5	이 녀석은 도대체 무슨 기계냐?$n이 정신 나간 머신을 멈춰라!	space
+Media/Event/Event/e100.dat	norm:2/0+0x64	36	6d0d52da898b205a3242e0e56f628528192d2e62	네 녀석들, 내 작품 제작을 방해하지 마라.	space
+Media/Event/Event/e100.dat	norm:2/0+0x8a	40	d7c8b177048940bb607459a39ac12b2eef0a90e5	너희들도$n이 작품에 참여시켜 주마.	space
+Media/Event/Event/e101.dat	norm:2/0+0x84	30	0138c3f4e24d4ea0e316470d2ad0497675064f53	크흐하하하하하하하～…	space
+Media/Event/Event/e101.dat	norm:2/0+0xa4	28	63d92bf0f53e9309b0764a595ef35213a1fdede9	잘 드드듣들어라 네 녀석들…	space
+Media/Event/Event/e101.dat	norm:2/0+0xc2	48	052c282feaa7afa4a9fd72843f285b3591c8d799	내 이이이름은,$n롯카쿠, 고지 지 다～.	space
+Media/Event/Event/e101.dat	norm:2/0+0xf4	28	e0d09f185286cd259249fbf22ec2be6b3935997f	아아득한 인간의 미래…	space
+Media/Event/Event/e101.dat	norm:2/0+0x112	48	0a9beaaa31531dd8286517c1f19ce88b744b7e84	너너너너희들들의$n미래의 여열열쇠를 쥔 쥐쥐,	space
+Media/Event/Event/e101.dat	norm:2/0+0x144	52	4c3c6e500b8a2f00015b397398f4555e7039f63a	나에게, 손에 안 들어오는 안드러오는$n것 따윈 없다！！！	space
+Media/Event/Event/e105.dat	norm:2/0+0x5c	66	17c834bf0d8088c44fd78b92a3c5753232a6b9ed	크하하하하～ 히히히히하$n크하하, 사요나라다아～.	space
+Media/Event/Event/e113.dat	norm:2/0+0x68	56	879e8e86e5183ad6306ceba72c2c1afec42845d8	자, １회전은 바로…$n바이커 군단 「둠 라이더즈」	space
+Media/Event/Event/e113.dat	norm:2/0+0xa2	20	5cb4dc0fdcab4ce9a9ac29cccba0b9ed18e938c1	VS… 「ＧＧ」！！	space
+Media/Event/Event/e114.dat	norm:2/0+0x68	42	fbbf30491001b571955e43071be91c49642b4b7d	패배한 자들에겐,$n이 녀석을 달아주도록 하지.	space
+Media/Event/Event/e114.dat	norm:2/0+0x94	52	7964fff65f68ab5bb15e17da40e78818e3e8bbe7	요요 님께 충성을 맹세하고,$n우리의 하수인이 되는 거다!	space
+Media/Event/Event/e116.dat	norm:2/0+0xa4	24	68afd5acc2f1943038f976524a5bc6ac16ad88f5	크하하핫. 애송이 녀석들!	space
+Media/Event/Event/e116.dat	norm:2/0+0xbe	54	5dfc00a3fb9907a9a28ca5ad8947a5611fa53db4	적어도 내 손톱의 먹잇감이$n되는 걸 감사히 여겨라!	space
+Media/Event/Event/e116.dat	norm:2/0+0xfa	52	dd804ea785699a149a55f75fd6260223bf185370	“주오 거리”를 패닉에$n빠뜨리고 있는 황금 코뿔소.	space
+Media/Event/Event/e116.dat	norm:2/0+0x130	20	e7a5883d2976407007f76009acdab5bda4221c42	변태 녀석을 쓰러뜨려라!	space
+Media/Event/Event/e117.dat	norm:2/0+0x5c	38	ee46a1f11900b0a4f7f7b0750311cadc256b447e	잘 있어라 도쿄!$nMY LOVER ！！！	space
+Media/Event/Event/e118.dat	norm:2/0+0x64	40	8618a32296c2b8c13444e9c5810342850a143025	중대장에서 전 대원에게…$n목표의 침입을 확인.	space
+Media/Event/Event/e118.dat	norm:2/0+0x8e	48	4dc68d93c7e602f09f4e571e4d676db0897da6bb	서치라이트로 발견하는 즉시,$n발포를 허가한다.	space
+Media/Event/Event/e119.dat	norm:2/0+0xb8	56	eecc76792df8a8a12977b357e1ff6777416b7175	오늘 이렇게 모여주셔서,$n진심으로 감사드립니다.	space
+Media/Event/Event/e119.dat	norm:2/0+0xf2	48	3cb99d24664cf1f019cc3316b5c70efa428339b9	그런데 말이죠,$n이 탑은 아직 미완성입니다.	space
+Media/Event/Event/e119.dat	norm:2/0+0x124	58	a71de1ae7a51325cd129967df9c3d8144c362991	이 탑은 여러분의 따뜻한$n아비규환으로 완성되는	space
+Media/Event/Event/e119.dat	norm:2/0+0x160	32	30caf5f1a122bd9c0c7f3a71881c9428d2886600	모두의 공동 프로젝트인 것입니다.	space
+Media/Event/Event/e119.dat	norm:2/0+0x182	76	1ff3f28393db5ce6fd0934e1469420f701d96858	자, 그런 시시한 미소는 집어치우고,$n더욱 공포에 질려 얼굴을 일그러뜨리세요!	space
+Media/Event/Event/e119.dat	norm:2/0+0x1d0	64	97a62716e16f0912426f01f1b3a13f7f945dd18f	아아 정말이지 흉측한 얼굴, 훌륭해!$n예술 그 자체로군요! 절망의 예술!	space
+Media/Event/Event/e119.dat	norm:2/0+0x212	58	6f24460da5b7ad631ffa0e64078707207c163aff	인간이란 죽음에 내몰려야만,$n삶에 집착하는 법!	space
+Media/Event/Event/e119.dat	norm:2/0+0x24e	46	1c534ad19665cb0b4108048f22c5a6a85b95b99d	그렇습니다,$n그 삶에 대한 집착의 에너지를！！	space
+Media/Event/Event/e119.dat	norm:2/0+0x27e	46	c6a3d4ae3c99c56863358c39bfc9e1850b28ec16	미래영겁토록$n이 탑에 아로새기는 겁니다.	space
+Media/Event/Event/e119.dat	norm:2/0+0x2ae	46	91a09452e19191a2b6a54981e06ed799368514f1	어설픈 웃음 따윈 시궁창에 버리세요!$n이히힛.	space
+Media/Event/Event/e120.dat	norm:2/0+0x78	54	403fa24f25bb4ce2ad7396d4768d25cb6b2bbb19	오늘의 인스트럭터는,$n제 사랑스러운 아들들인,	space
+Media/Event/Event/e120.dat	norm:2/0+0xb0	16	3adc94afd293808f49b8570e14329b9da820a00a	제로 비트！！	space
+Media/Event/Event/e120.dat	norm:2/0+0xc2	56	8dce7d3b1a35c8973540fb40eebf4d9f3b4648b8	반주는 DJ 빅 아티스트$n고지가 보내드립니다.	space
+Media/Event/Event/e120.dat	norm:2/0+0xfc	48	f54dcb67fbc0220bfcb87a45eefcaa9557cd83f9	자, 렛츠 댄스！！$n여러분도 다 함께～	space
+Media/Event/Event/e200.dat	norm:2/0+0x88	54	30cd791a853a5fda720fa5d74ad5971a9c5e30be	예에！！$n독설 길쭉이 천재 DJ 프로페서 K가 보내는,	space
+Media/Event/Event/e200.dat	norm:2/0+0xc0	52	b9d7694c6a9451ee3e95806769d1ef04e4189b12	여기는 도쿄 언더그라운드$n해적 라디오 방송,	space
+Media/Event/Event/e200.dat	norm:2/0+0xf6	22	71b5cb76eccdf27b02a53141f9659f3f578bef45	제트 셋 라디오！	space
+Media/Event/Event/e200.dat	norm:2/0+0x10e	58	a6b729ee2db5f163c32920976cd7170f799c7f9b	네 머리에 붙어 있는, 귀여운$n양쪽 귀로 침투해서,	space
+Media/Event/Event/e200.dat	norm:2/0+0x14a	62	103b0481006349932fcf3b0ffed0e099048cca1c	섹시 보이스와 고저스 사운드로,$n뇌를 마구 휘저어주마!	space
+Media/Event/Event/e200.dat	norm:2/0+0x18a	32	cc0efc2584b530ce8a79878e4fd6854dca83786e	코피 닦을 휴지 챙기는 거 잊지 마라!	space
+Media/Event/Event/e201.dat	norm:2/0+0xa4	80	598e942336ab2482f712a7dfbee8589187fbc586	도쿄는 롯카쿠 고지가 이끄는,$n롯카쿠 그룹이라는 거대 기업이$n쥐고 흔들고 있다.	space
+Media/Event/Event/e201.dat	norm:2/0+0xf6	82	505cbfab5bd31c87f83f59f6ad57a6f1841b2176	그 재력과 영향력을 이용해, 롯카쿠 고지는$n시장 자리까지 꿰차고 산업, 사회, 문화에까지	space
+Media/Event/Event/e201.dat	norm:2/0+0x14a	22	a742e8554fd6249d653bd036af04d46a424b8f64	참견질을 해대기 시작했지.	space
+Media/Event/Event/e201.dat	norm:2/0+0x162	82	4ae50c3f4c8f1910a34c1c37941b3fc7a370aa35	최근엔 롯카쿠 고지의 도쿄 지배욕이$n폭발해서, 롯카쿠법이라는 법까지 만들어내고,	space
+Media/Event/Event/e201.dat	norm:2/0+0x1b6	28	6a49b89e688fd1c79d817c20764548ff8c158b31	경찰까지 돈으로 매수해버렸어.	space
+Media/Event/Event/e201.dat	norm:2/0+0x1d4	78	4cc0ae456067d1684b43f3ef1e82f3c30e3ba2b8	이 법엔 기준도 뭣도 쥐뿔도 없어.$n그저 철부지의 억지 사기극일 뿐이지.	space
+Media/Event/Event/e201.dat	norm:2/0+0x224	86	207e8daaa116bb7f8bcedd5e246b0024f43ef44c	롯카쿠 녀석들은, 자기들 이익에 방해되는$n사상과 문화는 닥치는 대로 배제해버리고,	space
+Media/Event/Event/e201.dat	norm:2/0+0x27c	70	4b9d7a535d0eecb67e9663ae71ac5d6b6a521d6e	문화는 규제 일로를 걷고 있어. 하지만$n기운 빠진 녀석들은 이미 이 사기극에	space
+Media/Event/Event/e201.dat	norm:2/0+0x2c4	26	1fd56fbb59b3691654b869468e31e6d2c550a829	고분고분 놀아나고 있는 꼴이지.	space
+Media/Event/Event/e201.dat	norm:2/0+0x2e0	56	4377f5ccd4c1abb092300a274666b85001a0e8b5	물론, 이 방송에도 위험한 녀석들이$n시퍼렇게 눈에 불을 켜고 감시 중이다.	space
+Media/Event/Event/e202.dat	norm:2/0+0x74	58	754cb65f777e9bffdb0b08a2dfd5f1818a118c64	그런 살벌한 상황에도 굴하지 않고,$n거리를 뜨겁게 달구고 있는 자들은,	space
+Media/Event/Event/e202.dat	norm:2/0+0xb0	38	eedb464ef7698b5d56f44faabff22c2b51bd19f7	루디즈라고 불리는 젊은 크루들이다.	space
+Media/Event/Event/e202.dat	norm:2/0+0xd8	74	ee8d805541f8b823c73d032a2673d116b5519f4e	각자 자신들만의 팀을 꾸려서,$n도쿄 전체를 그래피티로 가득 채우고 있지.	space
+Media/Event/Event/e202.dat	norm:2/0+0x124	58	f2f689df55663e1806fe6cdc0039a35348150a57	그리고 자신들의 영역을 둘러싸고,$n치열하게 기싸움을 벌이고 있어.	space
+Media/Event/Event/e203.dat	norm:2/0+0x7c	30	40d1df5d3d0758f6430500a0cca48e45f6fc87db	지금 가장 핫한 팀, ＧＧ는,	space
+Media/Event/Event/e203.dat	norm:2/0+0x9c	46	49867288cf80e0c21c0a3ee64c64561d8de4c2be	삼시 세끼 밥보다 거짓말하기를 더 좋아하는$n요요.	space
+Media/Event/Event/e203.dat	norm:2/0+0xcc	56	5ded26fde355fd77d85b6b89efbd80f0655c586b	꼬신 남자를 １０분 만에 차버리는,$n청개구리 심보의 검.	space
+Media/Event/Event/e203.dat	norm:2/0+0x106	66	f0dcead95f3326136fdd00297e6b75651e16912e	그리고 리더이자 자칭 천재 콘으로$n이루어진 최강 트리오 팀이다!	space
+Media/Event/Event/e204.dat	norm:2/0+0x70	38	4d051c4d39bc3bd8fe26f3ecdbc3881b117835a1	요즘 들어 도쿄는 통 뒤숭숭해.	space
+Media/Event/Event/e204.dat	norm:2/0+0x98	34	0797737df7c2fd19916cb6e23a6b8a01a861c849	주오 거리 레코드점 피습 사건.	space
+Media/Event/Event/e204.dat	norm:2/0+0xbc	52	439a37d3be14e0ca4d7f7a531f0815cb2a6a0724	도겐자카를 배회하는,$n소문의 그 뺀질거리는 녀석.	space
+Media/Event/Event/e204.dat	norm:2/0+0xf2	24	a27b176dff5685293a26ed62905046472d265612	９９번가의 의문의 정전 사건.	space
+Media/Event/Event/e205.dat	norm:2/0+0x6c	48	2fcfebea0a6c52d6abe7f62d63265f15afb497aa	녀석들을 쫓는 롯카쿠 그룹의 충견,$n롯카쿠 경찰!	space
+Media/Event/Event/e205.dat	norm:2/0+0x9e	64	c531698962d37d3065d96cea4e898bf618e79c57	롯카쿠 엑스포 개최가 코앞으로 다가와서,$n이래저래 단속이 아주 극성이지.	space
+Media/Event/Event/e206.dat	norm:2/0+0x74	78	849fc10e524a4efcabd3c2240efd89c9904b464e	이 두근거림은 첫사랑 데이트 때 실수로$n엄마 팬티를 입고 나갔던$n그 시절 이후 처음이야！！	space
+Media/Event/Event/e206.dat	norm:2/0+0xc4	74	305e8981d8a84c3463781e79e049f52f3f237943	얌전히 차나 홀짝거리고 있을 때가 아니라고!$n이미 게임은 시작됐다,	space
+Media/Event/Event/e206.dat	norm:2/0+0x110	36	3a99f40fc1c35cbc43f037303bdb3c35caac3740	다음 룰렛을 돌릴 주인공은 바로 너희들이다!	space
+Media/Event/Event/e210.dat	norm:2/0+0x70	20	3212af41817e8886248e4d3df81d083ccbc77f6d	인축유해 채널,	space
+Media/Event/Event/e210.dat	norm:2/0+0x86	24	34d328bd8fb53beb20a6c4897a8d108eb90d90d6	제트 셋 라디오！！	space
+Media/Event/Event/e210.dat	norm:2/0+0xa0	58	ef28a83c4e162da00a797e172c945010a086baae	지하 왕국의 킹이란 바로 이 몸을 말하지.$n귀 구멍 파고 똑똑히 들어라!	space
+Media/Event/Event/e211.dat	norm:2/0+0x78	82	92aa672448d4c69482decc4701ecaa8353bc7a1d	글쎄 포이즌 잼의 그래피티엔 사람을$n웃다 지쳐 죽게 만드는 독이 들어있다더군.	space
+Media/Event/Event/e211.dat	norm:2/0+0xcc	54	aec1cc72492b240843169981c8c0f3ab0bd3a8a3	시부야 터미널에 이어서,$n주오 거리, 롯카쿠다이까지,	space
+Media/Event/Event/e211.dat	norm:2/0+0x104	38	6a796e04a191fdb9b978f0e9fb819fd0aee14274	연달아 포이즌 잼에게 털려버렸다고!	space
+Media/Event/Event/e211.dat	norm:2/0+0x12c	68	30432aba44bde5ff78b7d7cf7985a3f3029c2c8a	민폐 덩어리 괴물 녀석들 포이즌 잼,$n덩치뿐만 아니라 태도도 아주 거만해.	space
+Media/Event/Event/e212.dat	norm:2/0+0x80	66	baca5671ddb9fc907da02e837b374b2ae3826705	그리고 포이즌 잼에게 격렬한 적개심을$n불태우는 ９９번가의 걸즈 팀,	space
+Media/Event/Event/e212.dat	norm:2/0+0xc4	14	e75f9dd6b09d403a09c3896d0c4d7725529d6ea4	래피드 ９９！	space
+Media/Event/Event/e212.dat	norm:2/0+0xd4	66	e8e802d845553cf64fe2b5f543aef437b944eadc	어류를 유독 극혐하는 그녀들,$n포이즌 잼과는 견원지간이지.	space
+Media/Event/Event/e212.dat	norm:2/0+0x118	60	d88520652ef68b3e28c40524a83d9b8c4afcb051	９９번가에서 그녀들을 찾아내면,$n뭔가 정보를 얻을 수 있을지도 몰라.	space
+Media/Event/Event/e213.dat	norm:2/0+0x74	42	38d82611f42cb362635d60943e93861113c43aae	그리고 롯카쿠 경찰의 귀축 경부, 하야시!	space
+Media/Event/Event/e213.dat	norm:2/0+0xa0	64	39fb0155f00f22d1b00ef61fdc06c97fd4d38ce2	녀석은 동료들한테도 두려움을 사는,$n눈 돌아가면 위험한 사이코패스야!	space
+Media/Event/Event/e213.dat	norm:2/0+0xe2	64	4f15a1ebd5da6f4eac8b08d68d54b3337103ea2c	얼마 전에도 분을 못 이겨서$n순찰차 한 대를 폐차시켜 버렸지.	space
+Media/Event/Event/e214.dat	norm:2/0+0x70	60	cb9a9743e510ec0ed847d89f8d354a3c70717a64	녀석이 제일 좋아하는 민트 캔디를$n사러 갔던 부하가,	space
+Media/Event/Event/e214.dat	norm:2/0+0xae	58	d140197dd0cbf549d8062564c18f92eb717ad9b4	실수로 커피 맛을 사 와버린 게$n원인이었다나 봐!	space
+Media/Event/Event/e214.dat	norm:2/0+0xea	14	107311a175c846a335f4647814eb13da198e38f3	정말 구제불능이라니까!	space
+Media/Event/Event/e220.dat	norm:2/0+0x74	32	5e526dc276d55769e910bd930b2d7ac87bcd38c0	여러분의 라이프를 풍요롭게 해주는 방송,	space
+Media/Event/Event/e220.dat	norm:2/0+0x96	13	101f74ebb9aa5658e8402bc8e697d4debb5ee23d	JETSETRADIO!!	space
+Media/Event/Event/e220.dat	norm:2/0+0xa5	32	4ae3409e1da7c1c31bf1a5806797988a16e93cbe	래피드 ９９와의 승부에서 이긴 ＧＧ는	space
+Media/Event/Event/e220.dat	norm:2/0+0xc7	48	ccd73dd26e0620196b33506d2325161b83407e56	포이즌 잼의 아지트로 향하는$n루트를 알아냈다.	space
+Media/Event/Event/e221.dat	norm:2/0+0x60	66	ab53b6468397282f685b8aed0a0ee19e005f56eb	도쿄 지하 하수 시설, 입구는$n역시 롯카쿠다이에 있는 모양이야.	space
+Media/Event/Event/e222.dat	norm:2/0+0x78	86	61e61ad993b902bd1740cc21b23b185c2e2f3b6f	코가네초의 하수도는, 감상적인 소녀의$n연심처럼 복잡괴기한 미로로 되어 있어,	space
+Media/Event/Event/e222.dat	norm:2/0+0xd0	20	81b2129881798eac7f31b2f9b85a7973294285ca	침입자들을 헤매게 만들지.	space
+Media/Event/Event/e222.dat	norm:2/0+0xe6	68	3d3741844d91dc28bd1f89395edaf2461a3a0968	출구를 못 찾아서 “주인”의 먹이가$n되지 않도록 조심하라고!	space
+Media/Event/Event/e222.dat	norm:2/0+0x12c	68	c75fd861df3377d316ecab5cbacd53c843ed66a7	어, “주인”이 뭐냐고?$n서두르지 않아도, 싫어도 마주치게 될 거다.	space
+Media/Event/Event/e223.dat	norm:2/0+0x6c	48	e13e73b7b30fa8efbc8c51fd8103e9e6c257e3f6	포이즌 잼에는,$n아무래도 보스가 있는 모양이야.	space
+Media/Event/Event/e223.dat	norm:2/0+0x9e	50	2a927336d04d1b7c07151c220f165cf67c2e7705	녀석들을 지휘하는 보스라면,$n괴물 이상의 괴물 군인 걸까?	space
+Media/Event/Event/e223.dat	norm:2/0+0xd2	28	02092706a44c21fc3572e91d88fdcc67934bbc72	동물보호단체의 착해 빠진 사육사일까?	space
+Media/Event/Event/e230.dat	norm:2/0+0x8c	46	f75be5a08474cbe79d9b17df1dcd878f02b8bc5b	너의 귀를 기습 점령하는$n게릴라 라디오 프로그램,	space
+Media/Event/Event/e230.dat	norm:2/0+0xbc	26	174c4d4b3e87f6bb4ff45c9fa512a0e94090ae78	제트 셋 라디오！！！	space
+Media/Event/Event/e230.dat	norm:2/0+0xd8	66	55f8dd4bbf5f40e781244c2c352f437ba8eb244f	ＧＧ는 포이즌 잼의 아지트인,$n도쿄 지하 하수 시설로 파고들어,	space
+Media/Event/Event/e230.dat	norm:2/0+0x11c	36	c0af862af1d634dee51c611506f345e484c07b8d	지하의 거주민, 포이즌 잼을 쓰러뜨렸다.	space
+Media/Event/Event/e230.dat	norm:2/0+0x142	34	ede85325804abdca7b72b8dc985f9d0509b97181	보스인 큐브는 도망쳐버렸지만,	space
+Media/Event/Event/e230.dat	norm:2/0+0x166	60	09867e35dd4d734ba68058002f969c4f6dff2771	도겐자카의 여신상을 훔쳐 간 건$n역시나 포이즌 잼이었어.	space
+Media/Event/Event/e230.dat	norm:2/0+0x1a4	50	1408697842775b73cd078ccd71a895b9d5ad5ed0	제물로 삼기엔 너무 딱딱한데,$n대체 왜 그런 걸 훔친 거지?	space
+Media/Event/Event/e231.dat	norm:2/0+0x6c	60	466504ec2e0c1e26ecfb3a4224f919c62d04850e	이런, 임시 긴급 뉴스다!$n갑자기 ＧＧ의 멤버 요요가	space
+Media/Event/Event/e231.dat	norm:2/0+0xaa	30	33d56ea1af11d1e88d0a9624b52d541c71054e84	자취를 감춰버렸다고！！	space
+Media/Event/Event/e231.dat	norm:2/0+0xca	66	4652a5a48407f69b70a953416a2a5227dbc4938a	남겨둔 메모도, 협박 전화도 없어.$n도대체 어떻게 된 일이지?	space
+Media/Event/Event/e232.dat	norm:2/0+0x6c	70	64a111a82e586dfeacdfc14016aab2f04e4a17e3	한편, 노이즈 탱크라는 최근 나타난$n신생 팀이 급속도로 세력을 넓히고 있다!	space
+Media/Event/Event/e232.dat	norm:2/0+0xb4	66	e0dbfe8b17ecc1b696bf5747d6a0f754fdeae1d5	노이즈 탱크는 기계 몸을 가진$n위협적인 사이보그 팀이라더군.	space
+Media/Event/Event/e233.dat	norm:2/0+0x8c	66	10bebbf1e617467cff11778237ea9fe28103f544	원래 고층 빌딩가 주변을 구역으로$n삼고 있던 팀, 이모털즈.	space
+Media/Event/Event/e233.dat	norm:2/0+0xd0	70	8a21ddf2095e367f2d18fc23bc7a8e9eefedce5b	녀석들도 노이즈 탱크 녀석에게$n순식간에 깨지고, 지배하에 들어가 버렸어.	space
+Media/Event/Event/e233.dat	norm:2/0+0x118	76	62da8675c317511108ca52dd3cdcf70199b38186	노이즈 탱크는 이모털즈 외에도,$n스트리트 팀들을 차례차례 산하로 끌어들여,	space
+Media/Event/Event/e233.dat	norm:2/0+0x166	42	8fc55546b671c3885fa017abee6874ee946d037e	이상할 정도의 기세로 세력을 넓히는 중이라네.	space
+Media/Event/Event/e233.dat	norm:2/0+0x192	76	9afe8ebb484b193a44361f354dbc43be93e03553	녀석들이 요요의 행방불명과 무슨 관계가$n있다고 봐도 이상하지 않을 것 같아.	space
+Media/Event/Event/e233.dat	norm:2/0+0x1e0	54	b56b17a91a8a0c737c93699b76d04875673c8f9b	이모털즈를 쓰러뜨리면, 뭔가 정보를$n알아낼 수 있을지도 몰라.	space
+Media/Event/Event/e240.dat	norm:2/0+0x88	56	fb7bad1e7fa2dc82195527396f481d575feb07d7	FBI와 학부모회에 쫓기면서도 방송하는$n불온 라디오 프로그램,	space
+Media/Event/Event/e240.dat	norm:2/0+0xc2	23	8caac7a7d77a624682ba55153772a039e404ea96	제트 셋 라디오！！	space
+Media/Event/Event/e240.dat	norm:2/0+0xdb	62	3551ed6c7290a322a20fdf583c320e804ed4fb4a	ＧＧ 녀석들, 보기 좋게 이모털즈의 함정에$n빠져버리고 말았다고!	space
+Media/Event/Event/e240.dat	norm:2/0+0x11b	68	5f648af308d5686d3308d3341fb53badf3d0621f	설마 요요가 배신할 줄이야,$n이모털즈 녀석들도 제법 머리를 굴렸구만,	space
+Media/Event/Event/e240.dat	norm:2/0+0x161	46	5f18f04224edbff97a38bf86d0f0248c8c12e262	허울뿐인 왕가의 피는 아니었나 봐,$n크하하핫.	space
+Media/Event/Event/e241.dat	norm:2/0+0x7c	72	96d1239c32a28195cd37a91a56bddd564d6d84c7	９９번가 외곽에 위치한 롯카쿠 엑스포$n경기장 예정지로 끌려간 ＧＧ 일행.	space
+Media/Event/Event/e241.dat	norm:2/0+0xc6	52	17c47d888777c72272b1f5aa0942ae0643ee1bfc	이곳은 롯카쿠 엑스포를 위해$n건설 중이던 경기장이었는데,	space
+Media/Event/Event/e241.dat	norm:2/0+0xfc	60	b620f8acd7cb349a26cc2e072f3fde41804576de	노이즈 탱크 녀석들이 전원을 끌어와$n막무가내로 점거해버렸다.	space
+Media/Event/Event/e241.dat	norm:2/0+0x13a	42	61d349c54f14a1b06b6a62cb798b70db4cf8adfc	수상쩍은 의식이라도$n시작될 것 같은 으스스한 분위기인데…	space
+Media/Event/Event/e250.dat	norm:2/0+0x70	44	2ba65bc675ad0ee7fd4d6fa6a7b5a571e988aa3c	부모님이나 학교에선$n안 가르쳐주는, 비밀 교육 방송,	space
+Media/Event/Event/e250.dat	norm:2/0+0x9e	26	5291fb806a92d885f2c6c54eae6c28ed7c02abb2	JETSETRADIO!!	space
+Media/Event/Event/e250.dat	norm:2/0+0xba	36	82b0df2b0125c854bf815f76783fa4acbd2d8c19	그럼 교과서 ３２페이지를 펼쳐라!	space
+Media/Event/Event/e251.dat	norm:2/0+0x5c	84	b1b859f49396f288d0c9f136481bdd9013f44e67	요요의 대담하고도 무모한 계획은, 멍청한$n경찰 녀석들의 개입으로 중단되고 말았다.	space
+Media/Event/Event/e252.dat	norm:2/0+0x70	70	8088e164d3c935acf7078239d86f0d06469b562d	배신자 요요는, 처음부터 ＧＧ를$n함정에 빠뜨리려고 접근했던 걸까?	space
+Media/Event/Event/e252.dat	norm:2/0+0xb8	80	9353ede835465f401001a156e53969e82886e1f7	분노로 회로가 쇼트나 버린 노이즈 탱크.$n스트리트에서 날뛰기 시작했다고!	space
+Media/Event/Event/e252.dat	norm:2/0+0x10a	52	d23f50840ddbedb029fa592e9a393e6cd75e1f48	과연 누가 노이즈 탱크의 폭동을$n막아낼 수 있을 것인가!	space
+Media/Event/Event/e260.dat	norm:2/0+0x80	30	02bcec625263e6fe0362e018b125df078786b0f0	갤럭시 섹시 라디오 프로그램,	space
+Media/Event/Event/e260.dat	norm:2/0+0xa0	22	71b5cb76eccdf27b02a53141f9659f3f578bef45	제트 셋 라디오！	space
+Media/Event/Event/e260.dat	norm:2/0+0xb8	52	d1290aeb327141a79b13e0624b6834f9a04300af	은하 저편의 어느 행성에선,$n이 라디오를 수신해서,	space
+Media/Event/Event/e260.dat	norm:2/0+0xee	42	df9b6a85bc09674a1963a4e197bfd55162c751a2	지구를 침공할 계획을 세우고 있다더군.	space
+Media/Event/Event/e260.dat	norm:2/0+0x11a	50	5b89de4d7bb34a51fe0e169a5e726e33792f3568	요요의 정체는 바로,$n노이즈 탱크가 위장한 것이었다!	space
+Media/Event/Event/e261.dat	norm:2/0+0x64	51	ad89eac260ce40f341d54b9933d18f81e689bc76	노이즈 탱크는 바로,$n롯카쿠제 사이보그였던 것이다.	space
+Media/Event/Event/e261.dat	norm:2/0+0x99	72	6d216039b74ab466deac831c2eef9e0d923ffe57	요요를 납치하고, ＧＧ를$n함정에 빠뜨리기 위해,$n가짜 요요를 만들어냈던 모양이야.	space
+Media/Event/Event/e262.dat	norm:2/0+0x68	84	feedb76ea350d102660f9ccdab3653a355398fed	그리고 마침내, 루디즈 녀석들을 틀어막지$n못했던 무능한 롯카쿠 경찰을 대신해,	space
+Media/Event/Event/e262.dat	norm:2/0+0xbe	74	d9e9acb11b8ef7a5c5b9ae9ad1c22ea14d490d1a	황금 코뿔소라는 롯카쿠 그룹의 지하 조직이$n스트리트 소탕에 발 벗고 나섰다!	space
+Media/Event/Event/e263.dat	norm:2/0+0x6c	64	0a2f021e73d6ad8a6538aa80cd925165690d4807	황금 코뿔소란 롯카쿠 그룹 회장이자,$n도쿄의 시장이기도 한,	space
+Media/Event/Event/e263.dat	norm:2/0+0xae	42	f859e0149f93385baa2b6dc6671c84c32a7964a1	롯카쿠 고지가 규합한 아시아의 암살자 조직.	space
+Media/Event/Event/e263.dat	norm:2/0+0xda	62	22b9ad2e7ffcd554cf2c2cb47586b15740897ab6	아무튼 일만 골치 아파지면,$n불쑥 튀어나오는 해결사 녀석들이지.	space
+Media/Event/Event/e264.dat	norm:2/0+0x60	80	98f75f6ee87bb282a07c8e71309a0e8ee703ef9d	쓸모가 없어진 경찰 조직의 하야시 경부는$n해임당해서 분명 지금쯤 극대노 중일 거다.	space
+Media/Event/Event/e265.dat	norm:2/0+0x74	26	6efb52894a29e4a39c264fe3c340b02168d9c2c3	노이즈 탱크는 궤멸당했지만,	space
+Media/Event/Event/e265.dat	norm:2/0+0x90	52	25985367eea409743e5c9496a1fcbbebe04cb5da	노이즈 탱크에게$n세뇌 칩이 심어진 팀들이	space
+Media/Event/Event/e265.dat	norm:2/0+0xc6	20	aef6c5c814b1419362ba985f73cb086a5628a8fe	ＧＧ를 노리고 있다.	space
+Media/Event/Event/e265.dat	norm:2/0+0xdc	52	501b140dd19e727020a1d7fd9729f69852f3e910	진짜 요요는,$n도대체 어디에 갇혀 있는 걸까?	space
+Media/Event/Event/e266.dat	norm:2/0+0x64	22	0268fc88b3ed41c9385ca964f05cfac08ebdb1c2	황금 코뿔소 조직원들을 쓰러뜨리고,	space
+Media/Event/Event/e266.dat	norm:2/0+0x7c	24	21b5c824908453fc044049e363732bd7ec3c0d96	요요를 찾아내라！！	space
+Media/Event/Event/e270.dat	norm:2/0+0x68	24	34d328bd8fb53beb20a6c4897a8d108eb90d90d6	제트 셋 라디오！！	space
+Media/Event/Event/e270.dat	norm:2/0+0x82	34	9aebc7a4e1465a7d872ffdd98bcf6d8455647c24	관짝에 들어갈 때도$n라디오 챙기는 거 잊지 마라!	space
+Media/Event/Event/e271.dat	norm:2/0+0x6c	68	75862977a1f7061c5404d8d7cbdb1202e56d2c93	ＧＧ에 의해 구출된 건 이번에야말로$n진짜 요요… 맞겠지?	space
+Media/Event/Event/e271.dat	norm:2/0+0xb2	52	b8513e77ddb443997b079a7ceda2795a4fed86b4	그 녀석은 황금 코뿔소의 존재를 알고서,$n단독으로 조사하려다가	space
+Media/Event/Event/e271.dat	norm:2/0+0xe8	34	c6f79e868acdf4a40262c7f19652c7e2bc6c4d94	역으로 붙잡혀버렸다는구만.	space
+Media/Event/Event/e272.dat	norm:2/0+0x80	51	c10e22ef31f40e48d4e302c03ea2ce1e4a0d5a84	너희들한테 녀석들의 수상쩍은 정보를$n계속 퍼뜨려준 덕분에,	space
+Media/Event/Event/e272.dat	norm:2/0+0xb5	53	13e1c27d561930dd118de630155eb22cea18fbef	녀석들의 블랙리스트 １위를$n장식해버린 모양이야.	space
+Media/Event/Event/e272.dat	norm:2/0+0xec	23	72a0a6ac288e53818e4becebd14ff88cb10be340	１위를 장식하다니…	space
+Media/Event/Event/e272.dat	norm:2/0+0x105	32	cdd39a73fc853c9b5161d0060606113ede389f3f	초등학교 때 빨리 먹기 대회 이후 처음이네!	space
+Media/Event/Event/e272.dat	norm:2/0+0x127	56	c2613eb9f6091c74fc01d50dcd79acd996ec3f2a	이러고 있을 때가 아니지,$n어서 튈 준비나 해둬야겠어!	space
+Media/Event/Event/e273.dat	norm:2/0+0x78	60	1c044ca35d3e887ceea7ce4128723af3b5741bca	그리고 도쿄에, 묘하게 비트를 닮은$n이상한 녀석이 나타났다고.	space
+Media/Event/Event/e273.dat	norm:2/0+0xb6	56	511ca3d0ce96d968522e3bbe54b9f9182aa2af7e	열성 코스프레 팬이라기엔,$n옷 디자인이 좀 이상한데?	space
+Media/Event/Event/e273.dat	norm:2/0+0xf0	32	5e562b26561dce4540b53092bc42a36ead733ac2	황금 코뿔소와 무슨 관계가 있는 건가?	space
+Media/Event/Event/e274.dat	norm:2/0+0x64	54	29bb2106f4ef81a0690a8386f266a05d8ca29d1c	이대로 황금 코뿔소를 내버려 두면,$n정말 큰일 나겠어.	space
+Media/Event/Event/e274.dat	norm:2/0+0x9c	20	2668484d0ac5f48a155d0561282f047e0321da8b	누가 저 녀석들 좀 막아봐！！	space
+Media/Event/Event/e280.dat	norm:2/0+0x90	74	e3c38702b757213cf140ff8771f8849e160aef3d	도쿄의 여러분, 그리고 전 세계 여러분$n안녕하세요, 헬로, 니하오.	space
+Media/Event/Event/e280.dat	norm:2/0+0xdc	52	42cfc50fc5f0b37122e2a863e52479594ecbca18	여기는 DJ 빅 아티스트$n고지가 전해드리는,	space
+Media/Event/Event/e280.dat	norm:2/0+0x112	44	dfa5ee1f2a3d3f23a7381def58c3581ad616f8b2	스페셜 피버 깜짝 문화 방송,	space
+Media/Event/Event/e280.dat	norm:2/0+0x140	30	4dc17158253fd7524f706820196fabd0e750efef	롯카쿠 만세 라디오～！！	space
+Media/Event/Event/e280.dat	norm:2/0+0x160	66	4d60fc744fdf0f2ea48e7aecb4b8dff18cb097b8	자아, 오래 기다리셨습니다, 롯카쿠 엑스포,$n드디어 오늘 개최됩니다！！	space
+Media/Event/Event/e280.dat	norm:2/0+0x1a4	32	7d81878d1141232dee71bf49f86d12275a8b4b63	살짝 설레발이긴 하지만 말이죠.	space
+Media/Event/Event/e281.dat	norm:2/0+0x90	60	4d849900039e29ea6f608380628179e9ad01c639	오늘은 진정한 예술이란 무엇인가를,$n여러분께 보여드리도록 하겠습니다.	space
+Media/Event/Event/e281.dat	norm:2/0+0xce	72	abccdaacc42305e97f43b1bbf92a7ebdcc1b91dd	이 궁극의 예술의 탑의 이름은,$n“로모게 헤모 비리 호 팡”이라고 합니다.	space
+Media/Event/Event/e281.dat	norm:2/0+0x118	24	cbd93b37650a970c6ad0d36d2b42bcee26e00d3f	이름 따윈 아무래도 상관없어!	space
+Media/Event/Event/e281.dat	norm:2/0+0x132	56	c5c72d399244460528a30ea34e2e8b0a97e23e2e	도쿄의 미래, 우리들의 미래를$n연주하는 오브제인 것입니다.	space
+Media/Event/Event/e281.dat	norm:2/0+0x16c	74	2f0a829a39dcd048c735b6fa5243cce41d65bf86	이제 저를 막을 수는 없습니다.$n시부야 터미널로 지금 당장 오시길 바랍니다.	space
+Media/Event/Event/e281.dat	norm:2/0+0x1b8	16	ad13e4b9fe136ac0ca6050f7f45f9144242122fa	…반드시 와라!	space
+Media/Event/Event/e290.dat	norm:2/0+0x7c	24	c0aa04e9b59fc6320b04b85346948d684104c91b	오오우… 이런 젠장!	space
+Media/Event/Event/e290.dat	norm:2/0+0x96	60	5c914fdf8ee59cff50610ffa1961c6f2fedb2c2e	스트리트가 또다시 난리가$n나버렸잖아！！	space
+Media/Event/Event/e290.dat	norm:2/0+0xd4	32	5d114eb9fdf795c46c36d492a8be7a1267cd241a	아직도 안 올라탄 녀석은 누구냐?	space
+Media/Event/Event/e290.dat	norm:2/0+0xf6	26	d3e0a876e242cac8a806e1b9e511f4bdef337cfe	스트리트는 멈추지 않는다고!	space
+Media/Event/Event/e291.dat	norm:2/0+0x190	61	2edcfa9b9fcc1038755b4c7e03e0caa3b6473edb	그 남자의 야망은 꺾이고, 잔해의 탑은$n다시 원래의 잔해로 되돌아간다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x1cf	80	6bf7ed5f537ddfab0d0275e62738d94ca5a1e499	돈이라는 종이쪽지나 규제,$n법률의 사슬 따위론,$n사람들의 자유로운 마음을 묶어둘 수 없다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x221	68	376421feaad84e79b25844fed9648fd70f9d163e	그래피티 소울, 그것은 바로 도쿄의$n자유를 상징하는 힘이다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x267	76	7d9a2e074cc66af0ce306c68e62953af4f76ac85	그가 사람들을 억누르면 억누를수록,$n그 힘은 더욱더 거대해져 간다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x2b5	48	47a011725fb5006d0299bfe494a4224548db4ca8	그리고 그는,$n끝내 그 힘을 이겨내지 못했다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x2e7	48	bdc007765d8d209614a0e0ba8d0f7378d74a1011	스스로를 파멸로 이끌 씨앗에$n물을 주고 있었을 뿐이었다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x319	50	ec496a8ea2e840fdc09e01d907cecfc2b9f56e83	하지만,$n그의 존재 자체가, 사람들이 품은 욕망의,	space
+Media/Event/Event/e291.dat	norm:2/0+0x34d	54	eec336e7ed18174cae51b532f2f98301945b883c	찔리는 양심이 만들어낸$n환상에 불과했을지도 모른다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x385	66	1085129f28b8f89c16112b4407a9d8242e598681	어쩌면 도쿄 전체가,$n한낱 라디오 방송의$n지어낸 이야기일지도 모르지.	space
+Media/Event/Event/e291.dat	norm:2/0+0x3c9	36	ab58f4027e02c0ec1e0cc6f68117c159fe75ddee	그는 마지막에 그 해답을 찾았을까.	space
+Media/Event/Event/e291.dat	norm:2/0+0x3ef	40	86a9a39091f9c27e1d343287186c24af6699f4e2	진실을 갈구하는 마음은,$n그 진실마저 집어삼킨다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x419	52	64243cc2aab14084f6d8ba63c807b28294a3d669	라디오는 다시 잡음을 내보내고,$n텔레비전은 네모난 상자로 돌아간다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x44f	32	e6423b6502b4b1e1804b78fffccdd33ed55b9cac	평범한 일상이 이어지는 것처럼 보였다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x471	14	68e192f0b379ae2076ec46b0e979e68e1fd66d63	하지만 지금도 여전히,	space
+Media/Event/Event/e291.dat	norm:2/0+0x481	74	5caf8c2be01019d5be509866d8f869173c8a9edb	그 벽에 그려진 그래피티는,$n의미를 찾아서 거리를 끊임없이 떠돌며,	space
+Media/Event/Event/e291.dat	norm:2/0+0x4cd	68	7cbab811ef6c7279ea5e78c2507625c24eeff4c9	누군가의 뇌리에 얼룩처럼 새겨진다.$n인간은 이미지를 계속해서 좇는다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x513	48	04939f86a4846f28a38536abfcda582939131fc1	그리고 그곳에서부터$n또 새로운 이미지가 피어나며,	space
+Media/Event/Event/e291.dat	norm:2/0+0x545	40	b9fcabb9b4a7018d8f23b23dd5e106440f74c409	스트리트는 끝없이 이어져 간다…	space
+Media/Event/Event/e291.dat	norm:2/0+0x573	68	c9ed27cb16ee10c85786f032ce589e3ece7f20cf	결국에는, 롯카쿠 고지는$n사라졌고, 거리는 지켜졌다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x5b9	84	9458da49f02975e23c735d186839e0e26a1c971f	그렇다고 해서, 악당을 물리쳤다는 식의$n뻔한 영웅 심리 따윈 우리에겐 필요 없다.	space
+Media/Event/Event/e291.dat	norm:2/0+0x60f	67	e63a336dec6769f067051f8add46cccae3b7314d	거리로 뛰쳐나갈 때의 그 설렘을,$n다시 되찾았다는 것.	space
+Media/Event/Event/e291.dat	norm:2/0+0x654	12	2dc6b075a5c86025a90b84c60b54cc1e24fa1ea4	그걸로 충분해.	space
+Media/Event/Event/e291.dat	norm:2/0+0x666	32	5509bada0485fdfa34766130197e89122236ea31	자, 슬슬 라디오가 시작된다고!	space
