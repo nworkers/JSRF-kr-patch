@@ -227,6 +227,7 @@ If the requirement is a simple question or confirmation request, answer it direc
 ## 게임 데이터와 생성물 규칙
 
 * `roms/`, XBE, ISO, 게임 자산은 절대 커밋하지 않는다. 사용자가 자기 덤프를 제공한다.
+* 게임 화면 캡처는 커밋하지 않는다. 예외: 소개 사이트의 전후 비교용 장면만 `docs/screenshots/`에 작은 크기로 둔다(출처를 그 폴더의 `README.md`에 적는다, issue #23).
 * 덤프에서 **추출한 원문 문장**(일본어·영어)은 커밋하지 않는다. `work/`에 두고 로컬에서 다시 만든다. 패치 데이터에는 원문 대신 위치와 원문 해시만 적는다.
 * **패치된 결과물**(`out/`)은 커밋하지 않는다.
 * 코드 패치에 원본 명령 바이트를 넣지 않는다. 원래 바이트의 검증은 해시로 한다. 패치 데이터에는 우리가 쓴 코드·자료만 넣는다.
@@ -235,6 +236,7 @@ If the requirement is a simple question or confirmation request, answer it direc
 ## Game Data and Generated Output Rules
 
 * Never commit `roms/`, XBEs, ISOs or game assets. Users supply their own dump.
+* Game screen captures are not committed. Exception: only the before/after scenes of the introduction site, at small sizes, in `docs/screenshots/` (sources recorded in that folder's `README.md`, issue #23).
 * **Original text extracted** from the dump (Japanese and English) is never committed. It lives in `work/` and is rebuilt locally. Patch data records only the place and a hash of the original instead of the text.
 * **Patched output** (`out/`) is never committed.
 * Code patches carry no original instruction bytes; the original bytes are checked by hash. Patch data holds only code and data we wrote.
