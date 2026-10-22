@@ -25,7 +25,7 @@ Media/Event/TalkEvent/TE006.bin	off:0xa4	28	89fb964c6324493f0ed7314d6ac167297c11
 Media/Event/TalkEvent/TE006.bin	off:0xc2	54	7a5d80a15c4246ed413a9fea367ed6e1506da116	너, 아직 트레이닝 더 안 해도$n괜찮은 거냐?	space
 Media/Event/TalkEvent/TE006.bin	off:0xfa	30	aaf189a8750321444f6170bb88175dabfcfe39af	세상이 그렇게 만만치가 않다구!	space
 Media/Event/TalkEvent/TE007.bin	off:0x88	61	62af46a07270bd76fd1fd6de4c8221ce7ad6ab78	야 신입, 너 해적방송$n“JET SET RADIO” 알아?	space
-Media/Event/TalkEvent/TE007.bin	off:0xc7	65	b38dc80b47797927900f8de6528bb5632f11bba3	끝내주는 “DJ K”가 멈추지$n않고 쩌는 음악을 틀어대고,	space
+Media/Event/TalkEvent/TE007.bin	off:0xc7	65	b38dc80b47797927900f8de6528bb5632f11bba3	끝내주는 “DJ 프로페서 K”가 멈추지$n않고 쩌는 음악을 틀어대고,	space
 Media/Event/TalkEvent/TE007.bin	off:0x10a	46	7b7dcedb63ad1f6471786272015097783c3f3b76	스트리트의 핵심 정보들을$n흘려주기도 하거든.	space
 Media/Event/TalkEvent/TE007.bin	off:0x13a	70	e3eeef75f16d31d5b2b4f2ceb26134ef5e7fc3c6	스트리트에서 잘 나가고 싶으면,$n라디오에 귀를 쫑긋 세워두라고!$n	space
 Media/Event/TalkEvent/TE007.bin	off:0x182	66	8b89265eceb029493510c42de7d569983857667b	자, 슬슬 라디오 시작이다!$n그 팔뚝의 라디오 주파수 맞춰!	space
@@ -415,7 +415,7 @@ Media/Event/TalkEvent/TE158.bin	off:0xe6	40	4f3c3b5f0e2e9a58a2238aaa7e0d2316266e
 Media/Event/TalkEvent/TE158.bin	off:0x114	54	b0c5df6d1b7820869f6d4b663103bc35c6ab82e2	네가 그 말끝마다 추임새 넣는$n녀석이냐? 하하하.	space
 Media/Event/TalkEvent/TE158.bin	off:0x150	46	06d412c87adb29875aa022b9a04223e13ddc9f49	뭐, 네가 리더였어?$n하하하-.	space
 Media/Event/TalkEvent/TE158.bin	off:0x184	60	1966be34b854b798a5f6c4f7fb7f0f81b6198b7d	나 아직 상황 파악이 덜 된$n모양이네! 하하하.	space
-Media/Event/TalkEvent/TE159.bin	off:0x8c	49	87be0456d7d11073315c8147d21780e91f47efb8	“DJ K”가 표적이 됐다고～?!	space
+Media/Event/TalkEvent/TE159.bin	off:0x8c	49	87be0456d7d11073315c8147d21780e91f47efb8	“DJ 프로페서 K”가$n표적이 됐다고～?!	space
 Media/Event/TalkEvent/TE159.bin	off:0xbf	16	d0761559731857010c9b3840eb22c0c9c1538a9f	진짜일까나?!	space
 Media/Event/TalkEvent/TE159.bin	off:0xd5	56	22815636d7cf332e8ba22921f92bf9d19d066e9d	너 없는 사이에 말이지,$n엄청난 일이 있었다구! 후훗.	space
 Media/Event/TalkEvent/TE160.bin	off:0x64	40	55a7bd3e2a45a005684f66e855ad3be27f185e10	슬슬 황금 코뿔소도 본격적으로$n나오겠네.	space
@@ -596,7 +596,7 @@ Media/Event/TalkEvent/TE211.bin	off:0x64	38	5ae4baec2e062fd730740949bd01216ba400
 Media/Event/TalkEvent/TE211.bin	off:0x8c	36	ed04624a7e47d5f86c3c135ecb862094025a1896	그래도 저건 선을 너무 넘었잖아.	space
 Media/Event/TalkEvent/TE212.bin	off:0x64	26	4ff7859df1045fc75146a44b841db5354f31a0e4	뭐야 저 흉물 조각상은.	space
 Media/Event/TalkEvent/TE212.bin	off:0x80	38	9c7014e126565f2ac25b2f51aeaca37dfa5f6464	어쨌든 저 검은 녀석은 진짜 요주의야.	space
-Media/Event/TalkEvent/TE213.bin	off:0x88	54	4ca149a1bb25ea23e656ea1e76700b1b63a5f350	DJ K를 구해야 해! 이런 라디오는$n도저히 못 들어주겠어.	space
+Media/Event/TalkEvent/TE213.bin	off:0x88	54	4ca149a1bb25ea23e656ea1e76700b1b63a5f350	DJ-K를 구해야 해! 이런 라디오는$n도저히 못 들어주겠어.	space
 Media/Event/TalkEvent/TE213.bin	off:0xc4	50	543d0a6a4b70adabebdc0b95d939312dae0d6308	인기 없는 놈들이 꼭 무력으로$n강요하려 든다니까.	space
 Media/Event/TalkEvent/TE214.bin	off:0x64	52	4f59f43d023c6f52406f867e76408824d19eccd1	롯카쿠 고지의 유치한 소꿉놀이에$n어울려주긴 싫지만,	space
 Media/Event/TalkEvent/TE214.bin	off:0x9a	34	1b17d59a532920bda9aa2817c7b1e1d365104246	저 조형물은 진짜 눈에 거슬리네.	space

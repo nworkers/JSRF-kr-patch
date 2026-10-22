@@ -29,7 +29,7 @@
 | P4 시험 문장 | `TE014.bin`만 바뀐다(`72ef06…` → `ef4ad91efec7a607a2b984d3b32aabc8`, 공백 채움 없이 다시 만들어 1바이트 짧다). `default.xbe` `cbb44a11…`, `jetfont.dat` `fd1400c5…`, `mssn0110.bin` `8062445d…`는 v0.0.7과 같다 |
 | 긴 시험 문장 `long.tsv` | 4곳: 이벤트 34 → 61바이트, 대화 18 → 33, 미션 42 → 43(붙임), XBE 6 → 8(옮김), 경고 0. 출력: `default.xbe` `b0b95c85b71a70fd638054997a1e640e`(섹션 12개, `KRTEXT` VA `0x289000` 원시 `0x22D000` 크기 9, 머리 크기 `0xC34`, 이미지 크기 `0x279009`, 요약값 12개 모두 맞음), `e000.dat` `9b629a93…`, `TE014.bin` `757e044e…`, `mssn0110.bin` `665e7c6d…`, `jetfont.dat` `401a2efe…` |
 | `--iso` | `out/jsrf-kr-long.iso` `80a4a3ee2ef50d5e23cf4b37f7fcdb8f`. 커진 `default.xbe`는 이미지 끝(섹터 1,223,008)에 쓰였다. xiso 안의 바뀐 파일 5개가 출력 폴더와 같다 |
-| 화면 | **확인하지 않음.** 볼 화면은 [emulator-check.md](../guides/emulator-check.md) §5 |
+| 화면 | 머지 때는 확인하지 않음. **후속 확인(2026-10-22, Cxbx-Reloaded 585c49a)**: §7 |
 | `git status` | `roms/`, `out/`, `work/` 없음 |
 
 ## 4. 계획과 달라진 것
@@ -45,8 +45,25 @@
 
 ## 6. 다음
 
-* **화면 확인(이 issue의 후속)**: `long.tsv` 출력이 Cxbx-Reloaded·xemu에서 부팅하는지(섹션을 더한 XBE), 네 문장이 깨지지 않는지. 안 되면 XBE는 다른 빈 자리를 찾는 방법으로 바꾼다.
+* ~~화면 확인(이 issue의 후속)~~: Cxbx-Reloaded에서 확인함(§7). 남은 것: 이벤트 자막(`e000.dat`), xemu.
 * P6 번역.
+
+## 7. 후속: 화면 확인 (2026-10-22)
+
+`out/jsrf-kr-long`을 다시 만들었다. 출력 MD5는 §3과 같다(`default.xbe` `b0b95c85…`, `e000.dat` `9b629a93…`, `TE014.bin` `757e044e…`, `mssn0110.bin` `665e7c6d…`, `jetfont.dat` `401a2efe…`, xiso `80a4a3ee…`). Cxbx-Reloaded HDD 캐시에서 바뀌는 `Media` 파일 세 개를 먼저 뺐다. 그 가운데 `TE014.bin`·`mssn0110.bin`은 10/21에 P4 패치판으로 캐시된 것이었다. 백업은 `EmuDisk\cache-bak-20261022\`에 있다.
+
+| 시험 문장 | 결과(Cxbx-Reloaded 585c49a, `out/jsrf-kr-long/default.xbe`) |
+|---|---|
+| 부팅(섹션 `KRTEXT`를 더한 XBE) | **확인됨**: 실행된다 |
+| 저장하기(XBE, `KRTEXT`로 옮김) | **확인됨** |
+| 로보이 첫 대사(대화 페이지 다시 만들기, 18 → 33바이트) | **확인됨** |
+| 첫 미션 목표(미션 파일 끝에 붙임, 42 → 43바이트) | **확인됨** |
+| `e000` 이벤트 자막(이벤트 페이지 다시 만들기, 34 → 61바이트) | **미확인**: 실행 뒤 캐시에 `e000.dat`이 없었다. 게임이 그 파일을 읽지 않았으므로 그 이벤트까지 가지 않았다 |
+
+* 사용자 보고: "잘 된다". 캐시 시각으로 보면 대화(`TE014.bin` 00:30)와 미션(`mssn0110.bin` 00:29) 파일을 읽었다.
+* 결론: 섹션을 더하는 XBE 방식, 대화 페이지 다시 만들기, 미션 붙이기는 Cxbx-Reloaded에서 동작한다. 설계를 바꿀 필요가 없다.
+* 남은 것: 이벤트 자막 하나, xemu(HDD 이미지에 P4 캐시가 남아 있을 수 있어 깨끗한 HDD가 필요하다).
+* **추가(2026-10-23)**: 전체 번역 출력(issue #17, `KRTEXT`로 201곳 옮김)이 **xemu 0.8.139에서 부팅**하고 XBE 문구가 나온다([작업 로그 i017](20261022-i017-text-translation.md) §4). 섹션을 더하는 방식은 xemu에서도 동작한다.
 
 ---
 
@@ -81,7 +98,7 @@ Inputs: the Japanese dump `roms/Jet Set Radio Future` (`default.xbe` MD5 `d8490c
 | P4 test lines | only `TE014.bin` changes (`72ef06…` → `ef4ad91efec7a607a2b984d3b32aabc8`, rebuilt without padding, one byte shorter); `default.xbe` `cbb44a11…`, `jetfont.dat` `fd1400c5…` and `mssn0110.bin` `8062445d…` equal v0.0.7 |
 | long test lines `long.tsv` | 4 places: event 34 → 61 bytes, talk 18 → 33, mission 42 → 43 (appended), XBE 6 → 8 (moved), 0 warnings. Output: `default.xbe` `b0b95c85b71a70fd638054997a1e640e` (12 sections, `KRTEXT` VA `0x289000` raw `0x22D000` size 9, header size `0xC34`, image size `0x279009`, all 12 digests check), `e000.dat` `9b629a93…`, `TE014.bin` `757e044e…`, `mssn0110.bin` `665e7c6d…`, `jetfont.dat` `401a2efe…` |
 | `--iso` | `out/jsrf-kr-long.iso` `80a4a3ee2ef50d5e23cf4b37f7fcdb8f`; the grown `default.xbe` was written at the end of the image (sector 1,223,008); the five changed files inside the xiso equal the output folder |
-| screen | **not checked**; the screens to look at are in [emulator-check.md](../guides/emulator-check.md) §5 |
+| screen | not checked at the merge; **follow-up check (2026-10-22, Cxbx-Reloaded 585c49a)**: §7 |
 | `git status` | no `roms/`, `out/`, `work/` |
 
 ## 4. Deviations from the plan
@@ -97,5 +114,22 @@ Inputs: the Japanese dump `roms/Jet Set Radio Future` (`default.xbe` MD5 `d8490c
 
 ## 6. Next
 
-* **Screen check (a follow-up of this issue)**: whether the `long.tsv` output boots in Cxbx-Reloaded and xemu (the XBE with an added section) and the four lines show unbroken; if not, the XBE side switches to finding other free space.
+* ~~Screen check (a follow-up of this issue)~~: done in Cxbx-Reloaded (§7). Left: the event subtitle (`e000.dat`), xemu.
 * P6 translation.
+
+## 7. Follow-up: screen check (2026-10-22)
+
+`out/jsrf-kr-long` was rebuilt with the MD5s of §3 (`default.xbe` `b0b95c85…`, `e000.dat` `9b629a93…`, `TE014.bin` `757e044e…`, `mssn0110.bin` `665e7c6d…`, `jetfont.dat` `401a2efe…`, xiso `80a4a3ee…`). The three changed `Media` files were first taken out of the Cxbx-Reloaded HDD cache; `TE014.bin` and `mssn0110.bin` there were the P4-patched copies cached on 10/21. They are backed up in `EmuDisk\cache-bak-20261022\`.
+
+| Test line | Result (Cxbx-Reloaded 585c49a, `out/jsrf-kr-long/default.xbe`) |
+|---|---|
+| boot (the XBE with the added `KRTEXT` section) | **confirmed**: it runs |
+| 저장하기 (XBE, moved to `KRTEXT`) | **confirmed** |
+| Roboy's first line (talk page rebuilt, 18 → 33 bytes) | **confirmed** |
+| first mission objective (appended to the mission file, 42 → 43 bytes) | **confirmed** |
+| the `e000` event subtitle (event page rebuilt, 34 → 61 bytes) | **not checked**: `e000.dat` was not in the cache after the run, so the game never read it and that event was not reached |
+
+* The user reported "it works". The cache times show the talk (`TE014.bin` 00:30) and mission (`mssn0110.bin` 00:29) files were read.
+* Conclusion: adding an XBE section, rebuilding talk pages and appending mission strings work in Cxbx-Reloaded; the design needs no change.
+* Left: the one event subtitle, and xemu (its HDD image may still hold P4 caches, so a clean HDD is needed).
+* **Added (2026-10-23)**: the full translation output (issue #17, 201 places moved or appended) **boots in xemu 0.8.139** and shows the XBE text ([work log i017](20261022-i017-text-translation.md) §4); adding a section works in xemu too.

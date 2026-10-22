@@ -62,6 +62,15 @@ flowchart TD
    * 거리 NPC 및 크루 대화
    * `check_text.py` 검증 후 최종 보고
 
+## 4. 후속 보완: DJ 프로페서 K / DJ-K 표기 정위
+
+* **배경**: 원문 대화 및 이벤트에서 DJ Professor K가 등장할 때 풀네임(`ＤＪプロフェッサーＫ`)과 약칭(`DJ-K`), 시스템명(`ＤＪＫ`)이 혼용됨.
+* **정의**:
+  * `TE007.bin` (28행): 원문 `ちょっとイカス“DJプロフェッサーK”` -> `끝내주는 “DJ 프로페서 K”가 멈추지$n않고 쩌는 음악을 틀어대고,` (풀네임 반영)
+  * `TE159.bin` (418행): 원문 `“DJプロフェッサーK”が、$nネラわれてるって～？！` -> `“DJ 프로페서 K”가$n표적이 됐다고～?!` (풀네임 반영)
+  * `TE213.bin` (599행): 원문 `DJ-Kを助けなきゃね。` -> `DJ-K를 구해야 해! 이런 라디오는$n도저히 못 들어주겠어.` (원문 약칭 `DJ-K` 반영)
+
+
 ---
 
 # Design for Complete Game Text Translation (issue #17)
@@ -105,3 +114,12 @@ Based on the original text (Japanese and English) extracted in `work/text/`, tra
 ## 3. Stages and Reporting Plan
 
 Proceed sequentially by file, validating with `check_text.py` and reporting progress to the user at each stage.
+
+## 4. Follow-up Refinement: DJ Professor K and DJ-K Notation Alignment
+
+* **Background**: The original script uses the full name (`ＤＪプロフェッサーＫ`), abbreviation (`DJ-K`), and system name (`ＤＪＫ`) depending on context.
+* **Resolution**:
+  * `TE007.bin` (line 28): Original `ちょっとイカス“DJプロフェッサーK”` -> `끝내주는 “DJ 프로페서 K”가 멈추지$n않고 쩌는 음악을 틀어대고,` (use full name).
+  * `TE159.bin` (line 418): Original `“DJプロフェッサーK”が、$nネラわれてるって～？！` -> `“DJ 프로페서 K”가$n표적이 됐다고～?!` (use full name).
+  * `TE213.bin` (line 599): Original `DJ-Kを助けなきゃね。` -> `DJ-K를 구해야 해! 이런 라디오는$n도저히 못 들어주겠어.` (preserve original `DJ-K` abbreviation).
+
