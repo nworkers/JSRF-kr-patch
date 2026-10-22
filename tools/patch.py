@@ -1,27 +1,36 @@
-"""Build the Korean-patched game folder from the user's Japanese dump (design 20261021-i002).
+"""Build the Korean-patched game folder from the user's dump (designs 20261021-i002, 20261023-i020).
+
+The game runs in English mode: default.xbe is the US build from the same
+disc (language value 1), and the Korean is written into the Japanese places
+and then made to show in the English places the game reads.
 
   1. checks   the output is under out/ and empty; patch/manifest.json MD5s
-              (the Japanese default.xbe, jetfont.dat, every file the text
-              patches touch) match the dump. Nothing is written on a mismatch.
+              (the US default.xbe, jetfont.dat, every file the text patches
+              touch) match the dump. Nothing is written on a mismatch.
   2. font     new glyph table and jetfont.dat for the Hangul in the text
   3. text     each place in patch/text/*.tsv (jsrfkr.reinsert): event and
               talk pages rebuilt, mission strings in place or appended,
               XBE strings in place or moved to a new section KRTEXT; page
               buffer overruns stop, line width and line count warn
-  4. XBE      glyph table, patch/xbe/*.json, va: places, section digests
-  5. output   the whole dump folder copied, changed files written anew
+  4. XBE      glyph table, patch/xbe/*.json, va: places
+  5. English  event and talk language-1 blocks copied from the Korean
+              language 0, mission slot 1 pointed at the Korean slot-0 string,
+              English XBE slots of patch/xbe-en.tsv pointed at the Korean
+              (jsrfkr.english; --japanese-places skips this step); section digests
+  6. output   the whole dump folder copied, changed files written anew
               (--link: unchanged files hard-linked; editing them then edits
               the dump too); --iso also writes <out>.iso, a copy of the
-              user's xiso with the changed files overwritten at the same size
-  6. md5.txt  MD5 of every changed file (the same input gives the same values)
+              user's xiso with the changed files written in (its default.xbe,
+              the Japanese build on the disc, becomes the patched US build)
+  7. md5.txt  MD5 of every changed file (the same input gives the same values)
 
 --identity uses the original glyph table and no text or XBE patches (round
 trip: the output folder must equal the dump; check with
 tools/check_roundtrip.py --output). --update-manifest records the dump's MD5
-for every file the text patches touch (the Japanese default.xbe must match).
+for every file the text patches touch (the target default.xbe must match).
 
 usage: python -I tools/patch.py <game dir> <out dir under out/> [--text f|dir] [--iso xiso]
-                                [--link] [--identity]
+                                [--link] [--identity] [--japanese-places]
        python -I tools/patch.py <game dir> --update-manifest [--text f|dir]
 """
 import os
@@ -29,15 +38,16 @@ import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from jsrfkr import ROOT, pipeline, reinsert, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
+from jsrfkr import ROOT, english, pipeline, reinsert, textpatch, xbeedit, xbepatch, xiso  # noqa: E402
 from jsrfkr.digest import ManifestError, check_inputs, load_manifest, md5, md5_file, write_manifest  # noqa: E402
-from jsrfkr.xbe import Xbe  # noqa: E402
+from jsrfkr.xbe import JP_MD5, Xbe  # noqa: E402
 import build_font  # noqa: E402  (tools/font, on sys.path through jsrfkr)
 
 XBE = "default.xbe"
 JETFONT = "Media/Font/jetfont.dat"
 PATCH = os.path.join(ROOT, "patch")
 MANIFEST = os.path.join(PATCH, "manifest.json")
+EN_MAP = os.path.join(PATCH, "xbe-en.tsv")
 OUT_ROOT = os.path.join(ROOT, "out")
 
 
@@ -74,7 +84,7 @@ def update_manifest(game, rows):
     manifest = load_manifest(MANIFEST)
     target = manifest["target"]
     if md5_file(os.path.join(game, target["file"])) != target["md5"]:
-        raise SystemExit(f"{target['file']}: not the Japanese build the manifest targets")
+        raise SystemExit(f"{target['file']}: not the build the manifest targets ({target['md5']})")
     names = {XBE, JETFONT} | {r.file for r in rows}
     added = []
     for name in sorted(names):
@@ -98,7 +108,7 @@ def check_out(out):
         raise SystemExit(f"{out}: exists and is not an empty folder")
 
 
-def build_files(game, rows, xbe_patches, ident):
+def build_files(game, rows, xbe_patches, ident, english_places):
     """Changed files: dump path -> bytes."""
     x = Xbe(os.path.join(game, XBE))
     with open(os.path.join(game, JETFONT), "rb") as f:
@@ -122,7 +132,13 @@ def build_files(game, rows, xbe_patches, ident):
         result = reinsert.apply(changes, files, load, x, pipeline.single_widths(x))
         sections |= result.sections
         sections |= xbepatch.apply(xbe_patches, x, image)
-    except (textpatch.PatchError, xbepatch.XbePatchError, xbeedit.XbeEditError) as err:
+        en = None
+        if english_places and rows:
+            en = english.apply(rows, files, lambda n: os.path.getsize(os.path.join(game, n)), x,
+                               english.read_map(EN_MAP))
+            sections |= en.sections
+    except (textpatch.PatchError, xbepatch.XbePatchError, xbeedit.XbeEditError,
+            english.EnglishError) as err:
         raise SystemExit(str(err))
     xbeedit.fix_digests(image, sorted(sections))
     for d in result.done:
@@ -135,6 +151,9 @@ def build_files(game, rows, xbe_patches, ident):
     print(f"text: {len(rows)} places ({moved} appended or moved, {len(result.warnings)} warnings); "
           f"glyphs: {hangul} Hangul, kana kept: {font.keep_kana}; "
           f"XBE patches: {len(xbe_patches)}; XBE sections: {', '.join(sorted(sections))}")
+    if en:
+        print(f"English places: {en.scripts} message scripts, {en.commands} mission commands, "
+              f"{en.slots} XBE slots")
     return {name: bytes(data) for name, data in files.items()}
 
 
@@ -168,7 +187,8 @@ def write_output(game, out, files, link):
 def write_iso(src, dst, files, game):
     with xiso.Image(src) as img:
         for name in files:
-            if md5(img.read(name)) != md5_file(os.path.join(game, name)):
+            have = md5(img.read(name))
+            if have != md5_file(os.path.join(game, name)) and not (name == XBE and have == JP_MD5):
                 raise SystemExit(f"{src}: {name} differs from the dump folder")
     print(f"copying {src} -> {dst}")
     shutil.copyfile(src, dst)
@@ -185,6 +205,7 @@ def main():
     link = take_flag(args, "--link")
     update = take_flag(args, "--update-manifest")
     iso = take_opt(args, "--iso")
+    japanese_places = take_flag(args, "--japanese-places")
     text_path = take_opt(args, "--text", os.path.join(PATCH, "text"))
     if update:
         if len(args) != 1 or ident or link or iso:
@@ -211,7 +232,7 @@ def main():
     if rows:
         print(f"text from {os.path.relpath(text_path, ROOT)}:")
 
-    files = build_files(game, rows, xbe_patches, ident)
+    files = build_files(game, rows, xbe_patches, ident, not japanese_places)
     copied = write_output(game, out, files, link)
     lines = []
     for name in sorted(files):

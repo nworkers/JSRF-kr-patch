@@ -22,6 +22,7 @@ reJSRF에서 이어받은 사실은 [PLAN.md §3](../PLAN.md)과 reJSRF의 [text
 | [message-script.md](message-script.md) | 메시지 스크립트(이벤트 항목 `2/0`, 대화 이벤트 `TE###.bin`): 머리, 페이지 수, 페이지별 값, 분기 코드의 페이지 번호 인자, 길이가 바뀔 때 다시 계산할 것 | #11 |
 | [mission-files.md](mission-files.md) | 미션 파일: 로더와 재배치 함수 `0x4DB30`, 머리 구역 표, 명령 레코드, 문장 명령의 언어별 포인터 7칸, 긴 문장은 파일 끝에 붙이기 | #11 |
 | [xbe-strings.md](xbe-strings.md) | XBE `.rdata` 일본어 문자열 651개, `.data` 포인터 칸과 `push` 즉치 참조, 정렬 여백 | #11 |
+| [english-mode.md](english-mode.md) | 영어 모드: 언어 값(US판 `0x1FC724`), 미디어의 영어 자리, XBE 언어 표 55개와 특수 3곳(언어 0 칸 695 ↔ 영어 칸), 일본어 문자열의 참조 맥락, 그리기 차이 | #20 |
 
 ---
 
@@ -49,3 +50,4 @@ Facts carried over from reJSRF are in [PLAN.md §3](../PLAN.md) and reJSRF's [te
 | [message-script.md](message-script.md) | message scripts (event item `2/0`, talk events `TE###.bin`): header, page counts, per-page values, the page-number arguments of branch codes, what to recompute when a length changes | #11 |
 | [mission-files.md](mission-files.md) | mission files: loader and the relocation function `0x4DB30`, header section table, command records, the 7 per-language pointer slots of text commands, appending longer strings at the end | #11 |
 | [xbe-strings.md](xbe-strings.md) | the 651 Japanese `.rdata` strings of the XBE, their `.data` pointer-slot and `push` references, alignment slack | #11 |
+| [english-mode.md](english-mode.md) | English mode: the language value (US `0x1FC724`), English places in Media, 55 XBE language tables and 3 special places (695 language-0 slots ↔ English slots), the reference context of Japanese strings, drawing differences | #20 |

@@ -13,7 +13,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from jsrfkr import container  # noqa: E402
 from jsrfkr.digest import md5_file  # noqa: E402
-from jsrfkr.xbe import JP_MD5, fix_digests, load_checked  # noqa: E402
+from jsrfkr.xbe import US_MD5, fix_digests, load_checked  # noqa: E402
 
 
 def all_files(top):
@@ -46,7 +46,7 @@ def check_containers(game):
 
 
 def check_xbe(game):
-    x = load_checked(os.path.join(game, "default.xbe"), JP_MD5, "Japanese default.xbe")
+    x = load_checked(os.path.join(game, "default.xbe"), US_MD5, "default.xbe (US build, the patch base)")
     image = bytearray(x.data)
     fix_digests(x, image, [s.name for s in x.sections])
     same = bytes(image) == x.data

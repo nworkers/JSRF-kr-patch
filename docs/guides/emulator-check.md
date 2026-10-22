@@ -105,6 +105,19 @@ python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr-long --text pat
 * 볼 것: §4와 같다. 그리고 문장 끝이 잘리거나 뒤에 다른 글자가 붙지 않는지, 그 뒤의 대사·메뉴가 원래대로 이어지는지.
 * 확인한 뒤 결과(보였다/안 보였다, 에뮬레이터와 판)를 알려 주면 작업 로그와 분석 문서에 적는다.
 
+## 6. 영어 모드 출력 확인 (issue #20)
+
+v0.0.12부터 출력은 영어 모드로 동작한다. 바탕 XBE는 US판이고, 한국어는 게임이 영어 모드에서 읽는 자리에 쓴다([design i020](../design/20261023-i020-english-base.md)).
+
+```bash
+python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr-en --iso "roms/Jet Set Radio Future.iso"
+```
+
+* Cxbx-Reloaded: `out/jsrf-kr-en/default.xbe`(패치한 US판). xemu: `-dvd_path out/jsrf-kr-en.iso`(이미지의 `default.xbe`가 패치한 US판으로 바뀐다). reJSRF: US 빌드 `build\win32_x86\src\app\Release\rejsrf.exe out\jsrf-kr-en`.
+* 그림 자산(경고문, 로고, 타이틀, 메뉴 글자 그림)과 음성은 영어판이 정상이다.
+* 볼 것: 메뉴·세이브·일시정지 화면, 차고 대화, 미션 목표, 이벤트 자막이 한국어인지, 영어 문장이 남은 곳이 없는지(남으면 [english-mode §3](../analysis/english-mode.md)의 `push` 21개일 가능성이 높다), 그리기 배율이 다른 곳(그래피티 이름 등)에서 칸 밖으로 넘치지 않는지.
+* 영어 자리만 바뀌었는지는 화면 전에 정적으로 확인할 수 있다: `--japanese-places`로 따로 만든 출력과 `python -I tools/check_english.py <영어 모드 출력> <japanese-places 출력>`.
+
 ---
 
 # Checking the patched output in an emulator
@@ -186,3 +199,12 @@ Build the Japanese variant in the reJSRF repository ([reJSRF build guide](https:
 
 * Look for: as in §4, plus no clipped endings or stray characters after the text, and the following lines and menus continuing as before.
 * Report the results (shown or not, emulator and version) so they go into the work log and the analysis documents.
+
+## 6. Checking the English-mode output (issue #20)
+
+From v0.0.12 the output runs in English mode: the base XBE is the US build, and the Korean is written where the game reads its English text ([design i020](../design/20261023-i020-english-base.md)). Build with the command above.
+
+* Cxbx-Reloaded: `out/jsrf-kr-en/default.xbe` (the patched US build). xemu: `-dvd_path out/jsrf-kr-en.iso` (the image's `default.xbe` becomes the patched US build). reJSRF: the US build `build\win32_x86\src\app\Release\rejsrf.exe out\jsrf-kr-en`.
+* English picture assets (warning, logo, title, menu lettering) and English voices are expected.
+* Look for: menus, the save and pause screens, garage talk, mission objectives and event subtitles in Korean; no English left (if some is, it is most likely one of the 21 `push` strings of [english-mode §3](../analysis/english-mode.md)); nothing spilling out of its box where the drawing scale differs (graffiti names and so on).
+* That only the English places changed can be checked statically before the screen: build a second output with `--japanese-places` and run `python -I tools/check_english.py <English-mode output> <japanese-places output>`.

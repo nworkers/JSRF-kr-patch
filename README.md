@@ -1,6 +1,6 @@
 # JSRF-kr-patch
 
-Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드는 프로젝트입니다. 화면 문장(메뉴, 미션, 대사 자막)을 한국어로 바꾸고, 음성은 일본어 그대로 둡니다.
+Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드는 프로젝트입니다. 게임을 영어 모드로 실행하고 화면 문장(메뉴, 미션, 대사 자막)을 한국어로 바꿉니다. 음성과 그림 자산은 영어 모드의 원래 것(영어판) 그대로입니다.
 
 > **준비 중입니다.** 패치 도구는 있지만 아직 번역이 없습니다. 진행 계획은 [docs/PLAN.md](docs/PLAN.md)에 있습니다.
 
@@ -12,10 +12,10 @@ Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드
 
 | 파일 | 조건 |
 |---|---|
-| `default.xbe` | 일본판, MD5 `d8490cdb75bd47b36c62effdf1461ae0` |
+| `default.xbe` | US판, MD5 `f4e366bfdceee551a09f42219c90d84e` |
 | `Media/` | 같은 디스크의 `Media` 폴더 전체 |
 
-덤프는 `roms/` 아래에 두면 Git이 무시합니다. 다른 판(US, PAL)의 XBE는 지원하지 않습니다. 도구는 입력의 MD5를 검사하고 다르면 멈춥니다.
+덤프는 `roms/` 아래에 두면 Git이 무시합니다. 다른 디스크(US판 디스크, PAL)의 `Media`는 확인하지 않았습니다. 도구는 입력의 MD5를 검사하고 다르면 멈춥니다.
 
 ## 사용법
 
@@ -29,7 +29,7 @@ python -I tools/patch.py <덤프 폴더> out/<이름> [--iso <같은 디스크�
 
 ```mermaid
 flowchart LR
-    DUMP["your dump<br/>JP default.xbe + Media"] --> TOOL["tools/patch.py"]
+    DUMP["your dump<br/>US default.xbe + Media"] --> TOOL["tools/patch.py"]
     DATA["patch/<br/>manifest, Korean text,<br/>XBE patches, OFL font"] --> TOOL
     TOOL --> OUT["patched game folder"]
 ```
@@ -46,7 +46,7 @@ Jet Set Radio Future와 그 대본, 그림, 음성의 권리는 SEGA에 있습�
 
 # JSRF-kr-patch
 
-A **Korean patch** for the Japanese release of the Xbox game **Jet Set Radio Future**. On-screen text (menus, missions, dialogue subtitles) becomes Korean; voice stays Japanese.
+A **Korean patch** for the Japanese release of the Xbox game **Jet Set Radio Future**. The game runs in English mode and its on-screen text (menus, missions, dialogue subtitles) becomes Korean; voice and picture assets stay English mode's originals (English).
 
 > **In preparation.** The patcher exists, but there is no translation yet. The plan is in [docs/PLAN.md](docs/PLAN.md).
 
@@ -58,10 +58,10 @@ This repository and its releases contain no game executable, assets or original 
 
 | File | Requirement |
 |---|---|
-| `default.xbe` | Japanese release, MD5 `d8490cdb75bd47b36c62effdf1461ae0` |
+| `default.xbe` | US build, MD5 `f4e366bfdceee551a09f42219c90d84e` |
 | `Media/` | the whole `Media` folder from the same disc |
 
-Git ignores a dump kept under `roms/`. Other releases' XBEs (US, PAL) are not supported; the tool checks the input's MD5s and stops on a mismatch.
+Git ignores a dump kept under `roms/`. Other discs' `Media` (the US disc, PAL) have not been checked; the tool checks the input's MD5s and stops on a mismatch.
 
 ## Usage
 

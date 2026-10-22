@@ -6,19 +6,19 @@ The working rules here are based on the `AGENTS.md` of [nworkers/reJSRF](https:/
 
 ## 프로젝트 개요
 
-이 프로젝트는 Xbox 게임 Jet Set Radio Future(JSRF) **일본판** `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`)와 그 `Media`에 적용하는 **한국어 패치**를 만든다.
+이 프로젝트는 Xbox 게임 Jet Set Radio Future(JSRF)의 덤프(`default.xbe`와 `Media`)에 적용하는 **한국어 패치**를 만든다. 게임은 **영어 모드**로 동작한다: 바탕 XBE는 덤프의 `default.xbe`(US판, MD5 `f4e366bfdceee551a09f42219c90d84e`, 언어 값 1)이고, 한국어는 게임이 영어 모드에서 읽는 자리에 쓴다(issue #20, [design i020](docs/design/20261023-i020-english-base.md)).
 
 * 결과물은 **패치 도구와 패치 데이터**다. 사용자가 자기 덤프에 도구를 돌려 패치된 게임 폴더를 만든다. 원본 바이트는 저장소와 배포물에 넣지 않는다.
 * 이 저장소의 결과(바꾼 주소, 데이터 형식, 글꼴 방식)는 reJSRF가 참고해 런타임 방식으로 다시 구현한다. 두 저장소는 코드를 공유하지 않고 문서(`docs/handoff-rejsrf.md`)로 넘긴다.
-* 범위 밖: 한국어 음성. 음성은 일본어 그대로 두고 화면 문장(자막)만 번역한다.
+* 범위 밖: 한국어 음성. 음성은 바꾸지 않는다(게임이 고른 언어의 원래 음성, 영어 모드라 영어 음성). 화면 문장(자막)만 번역한다. 영어 모드의 그림 자산(로고, 타이틀, 경고문 등)은 영어판이고, 글자 그림은 P7에서 다룬다.
 
 ## Project Overview
 
-This project makes a **Korean patch** for the **Japanese** Jet Set Radio Future (JSRF) `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`) and its `Media`.
+This project makes a **Korean patch** applied to a dump of Jet Set Radio Future (JSRF) (`default.xbe` and `Media`). The game runs in **English mode**: the base XBE is the dump's `default.xbe` (the US build, MD5 `f4e366bfdceee551a09f42219c90d84e`, language value 1), and the Korean is written where the game reads its English text (issue #20, [design i020](docs/design/20261023-i020-english-base.md)).
 
 * The deliverable is **a patcher and patch data**: users run the tool on their own dump to make a patched game folder. No original bytes go into the repository or a release.
 * reJSRF takes this repository's results (changed addresses, data formats, the font approach) as reference and reimplements them at run time. The two repositories share no code; results pass through documents (`docs/handoff-rejsrf.md`).
-* Out of scope: Korean voice. Voice stays Japanese; only on-screen text (subtitles) is translated.
+* Out of scope: Korean voice. Voice is not changed (the original voice of the language the game uses; English in English mode); only on-screen text (subtitles) is translated. English mode's picture assets (logo, title, warning and so on) are the English ones; lettering pictures are P7.
 
 ---
 
@@ -208,7 +208,7 @@ If the requirement is a simple question or confirmation request, answer it direc
 
 ## 구현 규칙
 
-* 주소는 일본판 XBE의 가상 주소로 적고, US판 대응 주소와 대응을 확인한 방법(코드 비교, 바이트 패턴)을 함께 적는다.
+* 주소는 패치 바탕인 US판 XBE의 가상 주소로 적는다(`.rdata`·코드는 일본판과 같은 주소, `.data` 표는 다를 수 있다). 일본판에서 확인한 주소는 일본판 주소임을 밝히고, 대응을 확인한 방법(코드 비교, 바이트 패턴)을 함께 적는다.
 * 새 기능을 추가할 때는 테스트 전략 또는 최소 검증 절차(특히 왕복 시험)를 문서에 함께 남긴다.
 * 코드 수정이 있는 작업은 영향 범위에 맞는 검증을 수행하고, 불가능하면 이유를 작업 로그에 남긴다.
 * 소스 코드 주석은 영어로만 작성한다.
@@ -216,7 +216,7 @@ If the requirement is a simple question or confirmation request, answer it direc
 
 ## Implementation Rules
 
-* Addresses are written as virtual addresses of the Japanese XBE, with the US counterpart beside them and how the match was established (code comparison, byte pattern).
+* Addresses are written as virtual addresses of the US XBE the patch is based on (`.rdata` and code share the Japanese build's addresses; `.data` tables may differ). Addresses checked on the Japanese build say so, with how the match was established (code comparison, byte pattern).
 * When adding a feature, document the test strategy or minimum verification procedure (round trips in particular).
 * For tasks that modify code, run verification appropriate to the impact. If verification is impossible, record the reason in the work log.
 * Write source-code comments in English only.

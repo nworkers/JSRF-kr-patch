@@ -17,7 +17,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from jsrfkr import extract, mission, reinsert, xbeedit, xbetext  # noqa: E402
-from jsrfkr.xbe import JP_MD5, Xbe  # noqa: E402
+from jsrfkr.xbe import US_MD5, Xbe  # noqa: E402
 
 HEADER_END = 0x1000     # the XBE headers end before the first section's raw data
 
@@ -103,8 +103,8 @@ def main():
         raise SystemExit(__doc__)
     game = sys.argv[1]
     x = Xbe(os.path.join(game, extract.XBE))
-    if x.md5 != JP_MD5:
-        raise SystemExit(f"default.xbe: MD5 {x.md5} is not the Japanese build ({JP_MD5})")
+    if x.md5 != US_MD5:
+        raise SystemExit(f"default.xbe: MD5 {x.md5} is not the US build the patch is based on ({US_MD5})")
     units, _ = extract.units(game, x)
     ok = check_original(game, x, units)
     ok = check_moved(game, x, units) and ok

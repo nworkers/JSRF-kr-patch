@@ -2,7 +2,7 @@
   "format": 1,
   "target": {
     "file": "default.xbe",
-    "md5": "d8490cdb75bd47b36c62effdf1461ae0"
+    "md5": "f4e366bfdceee551a09f42219c90d84e"
   },
   "inputs": {
     "Media/Event/Event/e000.dat": "d237194410269e38b1f302cc699dce78",
@@ -570,6 +570,6 @@
     "Media/Mission/mssn3410.bin": "20701097aea66430196b7d0c16292132",
     "Media/Mission/mssn3411.bin": "33cc1a9f608c5f1c223321e03fa8dc30",
     "Media/Mission/mssn3412.bin": "854fde9be2dfe0f30388ab00ce817485",
-    "default.xbe": "d8490cdb75bd47b36c62effdf1461ae0"
+    "default.xbe": "f4e366bfdceee551a09f42219c90d84e"
   }
 }

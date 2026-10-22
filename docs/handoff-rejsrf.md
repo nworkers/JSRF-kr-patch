@@ -83,6 +83,18 @@
 * **이벤트 문장 자리(확인됨)**: `Media/Event/Event/e###.dat`의 항목 경로 `2/0`(맨 위 `MULT`의 항목 2 안의 `NORM` 항목 0), 117개 파일. 항목 앞쪽은 `u32` 값들이고 문장 한 줄이 항목 끝까지 간다. NUL 종료는 항목 길이에 들어가지 않고, 5개 항목은 패딩도 없다. reJSRF가 런타임에 문장을 바꿀 때는 항목 길이(연결의 `size`)를 기준으로 해야 한다(**추정**: 게임이 길이로 끝을 안다). `e###.bin`에는 문장이 없다.
 * 패치 데이터 형식(`patch/text/*.tsv`의 `off:`·`va:`·`norm:` 자리, `manifest.json`, `xbe/*.json`)은 reJSRF가 같은 문장을 런타임에 적용할 때 그대로 읽을 수 있게 정했다. 원문 대신 SHA-1이 있으므로, reJSRF는 그 자리의 원래 바이트를 해시로 확인한 뒤 바꾸면 된다.
 
+## P6-2 영문 모드 기반 (issue #20)
+
+근거: [analysis/english-mode.md](analysis/english-mode.md), [design/20261023-i020-english-base.md](design/20261023-i020-english-base.md)
+
+* **reJSRF US 빌드가 출력을 그대로 실행한다**: 출력의 `default.xbe`는 패치한 US판(언어 1)이다. reJSRF는 인증서로 US판을 알아보고 부팅한다(확인됨, `rejsrf.exe out/jsrf-kr-en`). 일본판 빌드는 이 패치에 필요 없다.
+* 런타임 방식으로 다시 구현할 때(US판 주소):
+  * 메시지 스크립트(이벤트 `e###.dat` `2/0`, 대화 `TE###.bin`): 언어 1 구간을 한국어 언어 0 구간으로 바꾼다(필드 0~4, 페이지별 값, 페이지를 복사).
+  * 미션: 문장 명령의 칸 1 포인터를 칸 0(한국어) 포인터와 같게.
+  * XBE: [patch/xbe-en.tsv](../patch/xbe-en.tsv)의 영어 칸 695개에 짝인 일본어 칸의 (패치 뒤) 값을 쓴다. 표 55개 + 특수 3곳(그래피티 이름 `0x226F40`/`0x227170`, `0x22D7E0` 9칸 2차원, `0x22D7B8` 8바이트 간격).
+  * 글리프 표·글꼴은 P3 그대로(US판도 `0x1F7088` 같은 바이트).
+* 영어 모드는 그리기 배율이 다른 곳이 있다(그래피티 이름 0.9 × 0.8). reJSRF의 언어 설정은 English(기본)이면 된다.
+
 ---
 
 # Handoff to reJSRF
@@ -169,3 +181,15 @@ Basis: [analysis/containers.md](analysis/containers.md), [design/20261021-i002-p
 * **The `MULT`/`NORM` container format (confirmed, round trip of 1,056 files)**: a 16-byte header (magic, count, 0, 0) followed by a chain of 16-byte links `(start, end, size, flag)`, relative to the container's header, each next link at the previous item's `end`. `MULT` items are blocks, `NORM` items data (zero-padded to 16 bytes; `flag` 1 for length 0). The "record headers with start and end offsets and a size" of reJSRF's `text-and-font.md` are these links.
 * **Where event text sits (confirmed)**: item path `2/0` of `Media/Event/Event/e###.dat` (`NORM` item 0 inside item 2 of the top-level `MULT`), 117 files. The item starts with `u32` values and one line of text runs to its end; the NUL terminator is not counted in the item length, and 5 items have no padding either. A run-time text replacement in reJSRF should go by the item length (the link's `size`) (**inferred**: the game finds the end by length). The `e###.bin` files hold no text.
 * The patch data format (`off:`, `va:` and `norm:` places in `patch/text/*.tsv`, `manifest.json`, `xbe/*.json`) is meant for reJSRF to read as it is when applying the same text at run time; with SHA-1 in place of the original text, reJSRF checks the original bytes at a place by hash before replacing them.
+
+## P6-2 English-mode base (issue #20)
+
+Basis: [analysis/english-mode.md](analysis/english-mode.md), [design/20261023-i020-english-base.md](design/20261023-i020-english-base.md)
+
+* **reJSRF's US build runs the output as it is**: the output's `default.xbe` is the patched US build (language 1); reJSRF identifies it by certificate and boots it (confirmed, `rejsrf.exe out/jsrf-kr-en`). No Japanese build is needed for this patch.
+* To reimplement at run time (US addresses):
+  * message scripts (events `e###.dat` `2/0`, talk `TE###.bin`): replace language 1 with the Korean language 0 (copy fields 0–4, per-page values, pages);
+  * missions: set each text command's slot-1 pointer to its slot-0 (Korean) pointer;
+  * XBE: write into the 695 English slots of [patch/xbe-en.tsv](../patch/xbe-en.tsv) the (patched) value of their Japanese slots; 55 tables + 3 special places (graffiti names `0x226F40`/`0x227170`, the 9-wide 2D array `0x22D7E0`, the 8-byte stride `0x22D7B8`);
+  * the glyph table and font as in P3 (the US build has the same bytes at `0x1F7088`).
+* English mode draws some text at other scales (graffiti names 0.9 × 0.8). reJSRF's language setting just needs to be English (the default).
