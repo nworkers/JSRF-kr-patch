@@ -13,7 +13,8 @@ language-0 strings), xbe (default.xbe .rdata strings). Tabs, newlines and
 backslashes inside text are written as \\t \\n \\\\.
 
 Every place is read back through the patcher's place resolution before
-anything is written; the default.xbe must be the Japanese build.
+anything is written; the default.xbe must be the US build (the patch base; its .rdata strings sit at the
+same addresses as the Japanese build's).
 
 usage: python -I tools/extract_text.py <game dir> [--out <folder under work/>]
 """
@@ -23,7 +24,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from jsrfkr import ROOT, extract  # noqa: E402
-from jsrfkr.xbe import JP_MD5, Xbe  # noqa: E402
+from jsrfkr.xbe import US_MD5, Xbe  # noqa: E402
 
 WORK_ROOT = os.path.join(ROOT, "work")
 WORK_COLUMNS = ("file", "where", "orig_len", "orig_sha1", "pad", "kind", "ref", "japanese", "english")
@@ -85,8 +86,8 @@ def main():
     if not os.path.isfile(xbe_path):
         raise SystemExit(f"{xbe_path}: not found (give the dump folder that holds default.xbe and Media)")
     x = Xbe(xbe_path)
-    if x.md5 != JP_MD5:
-        raise SystemExit(f"{xbe_path}: MD5 {x.md5} is not the Japanese default.xbe ({JP_MD5})")
+    if x.md5 != US_MD5:
+        raise SystemExit(f"{xbe_path}: MD5 {x.md5} is not the US default.xbe the patch is based on ({US_MD5})")
 
     by_group, census = extract.units(game, x)
     checked = extract.check(game, x, by_group)

@@ -23,7 +23,7 @@ from collections import Counter, OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from jsrfkr import ROOT, glossary, msgscript, pipeline, reinsert, screen, textpatch  # noqa: E402
-from jsrfkr.xbe import JP_MD5, Xbe  # noqa: E402
+from jsrfkr.xbe import US_MD5, Xbe  # noqa: E402
 
 JETFONT = "Media/Font/jetfont.dat"
 WORK = os.path.join(ROOT, "work", "text")
@@ -170,8 +170,8 @@ def main():
     except (OSError, textpatch.PatchError) as err:
         raise SystemExit(str(err))
     x = Xbe(os.path.join(game, "default.xbe"))
-    if x.md5 != JP_MD5:
-        raise SystemExit(f"default.xbe: MD5 {x.md5} is not the Japanese build ({JP_MD5})")
+    if x.md5 != US_MD5:
+        raise SystemExit(f"default.xbe: MD5 {x.md5} is not the US build the patch is based on ({US_MD5})")
     with open(os.path.join(game, JETFONT), "rb") as f:
         jetfont = f.read()
     translated = textpatch.translated(rows)
