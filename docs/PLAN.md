@@ -6,10 +6,10 @@
 
 ## 1. 목적과 범위
 
-* Jet Set Radio Future **일본판** `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`)와 그 `Media`에 적용하는 **한국어 패치**를 만든다.
+* Jet Set Radio Future의 `default.xbe`와 그 `Media`에 적용하는 **한국어 패치**를 만든다. 처음(P0~P6-1)에는 일본판 `default.xbe`(MD5 `d8490cdb75bd47b36c62effdf1461ae0`)를 대상으로 했고, P6-2(issue #20)부터 덤프의 US판 `default.xbe`(MD5 `f4e366bfdceee551a09f42219c90d84e`)를 바탕으로 영어 모드로 동작한다.
 * 결과물은 **패치 도구와 패치 데이터**다. 사용자가 자기 덤프에 도구를 돌려 패치된 게임 폴더를 만든다. 원본 바이트는 저장소와 배포물에 넣지 않는다.
 * 이 저장소의 결과(바꾼 주소, 데이터 형식, 글꼴 방식)를 reJSRF가 참고해 런타임 방식으로 다시 구현한다(§8). 두 저장소는 코드를 공유하지 않고 문서로 넘긴다.
-* 범위 밖: 한국어 음성. 음성은 일본어 그대로 두고 자막(화면 문장)만 번역한다.
+* 범위 밖: 한국어 음성. 음성은 바꾸지 않고(영어 모드라 영어 음성) 자막(화면 문장)만 번역한다.
 
 ```mermaid
 flowchart LR
@@ -136,10 +136,10 @@ Grounds: reJSRF's Korean patch review ([design i105](https://github.com/nworkers
 
 ## 1. Purpose and scope
 
-* Make a **Korean patch** for the **Japanese** Jet Set Radio Future `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`) and its `Media`.
+* Make a **Korean patch** for Jet Set Radio Future's `default.xbe` and its `Media`. At first (P0–P6-1) the target was the Japanese `default.xbe` (MD5 `d8490cdb75bd47b36c62effdf1461ae0`); from P6-2 (issue #20) the dump's US `default.xbe` (MD5 `f4e366bfdceee551a09f42219c90d84e`) is the base and the game runs in English mode.
 * The deliverable is **a patcher and patch data**: users run the tool on their own dump to make a patched game folder. No original bytes go into the repository or a release.
 * reJSRF takes this repository's results (changed addresses, data formats, the font approach) as reference and reimplements them at run time (§8). The two repositories share no code; results pass through documents.
-* Out of scope: Korean voice. Voice stays Japanese; only on-screen text (subtitles) is translated.
+* Out of scope: Korean voice. Voice is not changed (English in English mode); only on-screen text (subtitles) is translated.
 
 ## 2. Repository setup (the first task, issue #1)
 

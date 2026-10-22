@@ -1,6 +1,6 @@
 # JSRF-kr-patch
 
-Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드는 프로젝트입니다. 게임을 영어 모드로 실행하고 화면 문장(메뉴, 미션, 대사 자막)을 한국어로 바꿉니다. 음성과 그림 자산은 영어 모드의 원래 것(영어판) 그대로입니다.
+Xbox 게임 **Jet Set Radio Future**의 **한국어 패치**를 만드는 프로젝트입니다. 게임을 영어 모드로 실행하고 화면 문장(메뉴, 미션, 대사 자막)을 한국어로 바꿉니다. 음성과 그림 자산은 영어 모드의 원래 것(영어판) 그대로입니다.
 
 > **준비 중입니다.** 패치 도구는 있지만 아직 번역이 없습니다. 진행 계획은 [docs/PLAN.md](docs/PLAN.md)에 있습니다.
 
@@ -46,7 +46,7 @@ Jet Set Radio Future와 그 대본, 그림, 음성의 권리는 SEGA에 있습�
 
 # JSRF-kr-patch
 
-A **Korean patch** for the Japanese release of the Xbox game **Jet Set Radio Future**. The game runs in English mode and its on-screen text (menus, missions, dialogue subtitles) becomes Korean; voice and picture assets stay English mode's originals (English).
+A **Korean patch** for the Xbox game **Jet Set Radio Future**. The game runs in English mode and its on-screen text (menus, missions, dialogue subtitles) becomes Korean; voice and picture assets stay English mode's originals (English).
 
 > **In preparation.** The patcher exists, but there is no translation yet. The plan is in [docs/PLAN.md](docs/PLAN.md).
 

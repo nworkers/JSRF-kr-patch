@@ -1,8 +1,8 @@
 # AGENTS.md
 
-이 문서의 작업 규칙은 [nworkers/reJSRF](https://github.com/nworkers/reJSRF)의 `AGENTS.md`를 바탕으로 하고, 이 프로젝트의 성격(일본판 Jet Set Radio Future의 한국어 패치 도구)에 맞게 고쳤다. 고친 곳은 [docs/PLAN.md §2](docs/PLAN.md)에 있다.
+이 문서의 작업 규칙은 [nworkers/reJSRF](https://github.com/nworkers/reJSRF)의 `AGENTS.md`를 바탕으로 하고, 이 프로젝트의 성격(Jet Set Radio Future의 한국어 패치 도구)에 맞게 고쳤다. 고친 곳은 [docs/PLAN.md §2](docs/PLAN.md)에 있다.
 
-The working rules here are based on the `AGENTS.md` of [nworkers/reJSRF](https://github.com/nworkers/reJSRF), adapted to this project's nature (a Korean patch tool for the Japanese Jet Set Radio Future). The changes are listed in [docs/PLAN.md §2](docs/PLAN.md).
+The working rules here are based on the `AGENTS.md` of [nworkers/reJSRF](https://github.com/nworkers/reJSRF), adapted to this project's nature (a Korean patch tool for Jet Set Radio Future). The changes are listed in [docs/PLAN.md §2](docs/PLAN.md).
 
 ## 프로젝트 개요
 
