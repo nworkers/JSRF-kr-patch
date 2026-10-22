@@ -1,0 +1,153 @@
+name: Release
+
+# Issue #22 (design docs/design/20261023-i022-release.md §8): builds the release
+# packages and publishes them as a GitHub Release.
+#
+#   jsrf-kr-patch-v<VERSION>-windows-x64.zip   standalone executable (Nuitka 2.8.10)
+#   jsrf-kr-patch-v<VERSION>-linux-x64.tar.gz  standalone executable (Nuitka 2.8.10)
+#   jsrf-kr-patch-v<VERSION>-python.zip        Python-script edition
+#   SHA256SUMS.txt
+#
+# Tags are made locally and pushed by the user (AGENTS.md Git rules); pushing a
+# tag approves its release. A manual run republishes an existing tag, which
+# must contain tools/release.py (v0.0.13 and later).
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to publish, e.g. v0.0.13'
+        required: true
+
+permissions:
+  contents: write
+
+env:
+  TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
+jobs:
+  version:
+    name: Version and release notes gate
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: VERSION, tag and resolved issues
+        # Stops when VERSION and the tag disagree or the release notes lack
+        # their resolved-issue sections (design §4.1).
+        run: python -I tools/release.py notes --tag "$TAG"
+
+  binary:
+    name: Executable (${{ matrix.os }})
+    needs: version
+    strategy:
+      fail-fast: false
+      matrix:
+        # Linux builds on 22.04 for an older glibc, so the executable runs on more systems.
+        os: [windows-2022, ubuntu-22.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install patchelf
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y patchelf
+
+      - name: Install build tools
+        run: python -m pip install -r tools/release-requirements.txt
+
+      - name: Unit tests
+        run: python -I -m unittest discover -s tests
+
+      - name: Build and check the package
+        shell: bash
+        run: python -I tools/release.py binary dist --tag "$TAG"
+
+      - name: Upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: package-${{ matrix.os }}
+          path: dist/*
+          if-no-files-found: error
+
+  python:
+    name: Python edition
+    needs: version
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Unit tests
+        run: python -I -m unittest discover -s tests
+
+      - name: Build and check the package
+        run: python -I tools/release.py python dist --tag "$TAG"
+
+      - name: Upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: package-python
+          path: dist/*
+          if-no-files-found: error
+
+  publish:
+    name: Publish the release
+    needs: [binary, python]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ env.TAG }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Download packages
+        uses: actions/download-artifact@v8
+        with:
+          pattern: package-*
+          path: dist
+          merge-multiple: true
+
+      - name: Checksums
+        run: python -I tools/release.py sums dist
+
+      - name: Create or update the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          notes="docs/release-notes/$TAG.md"
+          if gh release view "$TAG" > /dev/null 2>&1; then
+              gh release upload "$TAG" dist/* --clobber
+          else
+              gh release create "$TAG" dist/* --title "JSRF-kr-patch $TAG" --notes-file "$notes" --verify-tag
+          fi

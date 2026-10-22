@@ -10,6 +10,11 @@ import sys
 
 TOOLS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT = os.path.dirname(TOOLS)
+# A standalone executable (Nuitka, design 20261023-i022 §8.3) unpacks the
+# modules and the patch/ folder side by side into one temporary folder.
+COMPILED = "__compiled__" in globals()
+if COMPILED:
+    ROOT = TOOLS
 for _sub in ("font", "analysis"):
     _path = os.path.join(TOOLS, _sub)
     if _path not in sys.path:

@@ -1,0 +1,81 @@
+name: CI
+
+# Issue #22: unit tests (no game data) and the three release packages, built
+# and self-checked on every push to main and every pull request. The packages
+# are kept as workflow artifacts; releases come from release.yml.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  python:
+    name: Unit tests and Python edition
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Unit tests
+        run: python -I -m unittest discover -s tests
+
+      - name: Release notes gate
+        run: python -I tools/release.py notes
+
+      - name: Build and check the package
+        run: python -I tools/release.py python dist
+
+      - name: Upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: package-python
+          path: dist/*
+          retention-days: 14
+
+  binary:
+    name: Executable (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-2022, ubuntu-22.04]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Install patchelf
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y patchelf
+
+      - name: Install build tools
+        run: python -m pip install -r tools/release-requirements.txt
+
+      - name: Build and check the package
+        shell: bash
+        run: python -I tools/release.py binary dist
+
+      - name: Upload
+        uses: actions/upload-artifact@v7
+        with:
+          name: package-${{ matrix.os }}
+          path: dist/*
+          retention-days: 14
