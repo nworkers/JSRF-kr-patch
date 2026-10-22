@@ -53,6 +53,20 @@ python -I tools/patch.py "roms/Jet Set Radio Future" out/jsrf-kr-poc --text patc
 | `original bytes do not match orig_sha1` | 그 자리의 원문이 패치 데이터가 기대한 것과 다르다 |
 | `exists and is not an empty folder` | 출력 폴더를 지우고 다시 실행한다 |
 
+## 6. 릴리스 묶음으로 쓰기 (issue #22)
+
+GitHub Release에는 세 가지 묶음이 있다. 어느 것이든 묶음과 덤프만 있으면 된다(저장소를 받을 필요가 없다). 각 묶음의 `README.md`에 사용법과 출처가 있다.
+
+| 묶음 | 실행 |
+|---|---|
+| `jsrf-kr-patch-v<버전>-windows-x64.zip` | `jsrf-kr-patch.exe "<덤프>" out\jsrf-kr --iso "<xiso>"` |
+| `jsrf-kr-patch-v<버전>-linux-x64.tar.gz` | `./jsrf-kr-patch "<덤프>" out/jsrf-kr --iso "<xiso>"` |
+| `jsrf-kr-patch-v<버전>-python.zip` | `python -I tools/patch.py "<덤프>" out/jsrf-kr --iso "<xiso>"`(Python 3.10 이상) |
+
+* 실행 파일은 Python이 필요 없고 패치 데이터가 안에 들어 있다. 출력은 현재 폴더의 `out/` 아래다.
+* `SHA256SUMS.txt`로 받은 파일을 확인할 수 있다.
+* 묶음을 직접 만들려면: `python -I tools/release.py python dist`, 실행 파일은 `pip install -r tools/release-requirements.txt` 뒤 `python -I tools/release.py binary dist`.
+
 ---
 
 # Applying the patch
@@ -96,3 +110,11 @@ How to run the patcher on your own dump to make a Korean-patched game folder (an
 | `not in the manifest` | a file the text patch touches is missing from `patch/manifest.json` (a problem on the patch-data side); fill it with `--update-manifest` |
 | `original bytes do not match orig_sha1` | the original text at that place is not what the patch data expects |
 | `exists and is not an empty folder` | delete the output folder and run again |
+
+## 6. Using a release package (issue #22)
+
+A GitHub Release carries three packages; any one of them plus the dump is enough (no repository checkout). Each package's `README.md` has the usage and sources. (Commands in the table above.)
+
+* The executables need no Python and carry the patch data inside; the output goes under `out/` in the current folder.
+* `SHA256SUMS.txt` verifies the downloads.
+* To build the packages yourself: `python -I tools/release.py python dist`; for the executable, `pip install -r tools/release-requirements.txt` and then `python -I tools/release.py binary dist`.
