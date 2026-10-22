@@ -14,7 +14,7 @@ flowchart LR
 ## 1. 준비
 
 * Python 3.10 이상(외부 패키지 필요 없음).
-* 일본판 디스크의 덤프: `default.xbe`는 같은 디스크에 함께 들어 있는 **US판 XBE**(`default_eng.xbe`를 `default.xbe`로 복사, MD5 `f4e366bfdceee551a09f42219c90d84e`), 그리고 `Media/` 전체. 게임은 영어 모드로 동작한다([design i020](../design/20261023-i020-english-base.md)). 저장소의 `roms/Jet Set Radio Future/`에 두면 Git이 무시한다.
+* 덤프: `default.xbe`(US판, MD5 `f4e366bfdceee551a09f42219c90d84e`)와 `Media/` 전체. 게임은 영어 모드로 동작한다([design i020](../design/20261023-i020-english-base.md)). 저장소의 `roms/Jet Set Radio Future/`에 두면 Git이 무시한다.
 * xemu용 출력이 필요하면 같은 디스크의 xiso(예: `roms/Jet Set Radio Future.iso`).
 * 디스크 여유: 출력 폴더 약 2.4GB, xiso를 만들면 약 2.5GB 더.
 
@@ -64,7 +64,7 @@ How to run the patcher on your own dump to make a Korean-patched game folder (an
 ## 1. Preparation
 
 * Python 3.10 or later (no external packages).
-* A dump of the Japanese disc: `default.xbe` is the **US XBE** shipped on the same disc (copy `default_eng.xbe` to `default.xbe`, MD5 `f4e366bfdceee551a09f42219c90d84e`), plus all of `Media/`. The game runs in English mode ([design i020](../design/20261023-i020-english-base.md)). Git ignores it under the repository's `roms/Jet Set Radio Future/`.
+* A dump: `default.xbe` (the US build, MD5 `f4e366bfdceee551a09f42219c90d84e`) and all of `Media/`. The game runs in English mode ([design i020](../design/20261023-i020-english-base.md)). Git ignores it under the repository's `roms/Jet Set Radio Future/`.
 * For xemu output, the same disc's xiso (for example `roms/Jet Set Radio Future.iso`).
 * Free disk: about 2.4 GB for the output folder, about 2.5 GB more with the xiso.
 

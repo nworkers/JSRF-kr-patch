@@ -6,9 +6,9 @@
 
 ## 1. 결과
 
-* 게임이 **영어 모드**로 동작하고, 메뉴·대화·미션·이벤트 문장이 한국어로 나온다. 바탕 XBE는 같은 디스크의 US판(`default_eng.xbe`, 언어 값 1)이다. Cxbx-Reloaded와 xemu에서 사용자가 확인했다("다 괜찮아 보인다", xemu 정상). reJSRF US 빌드는 출력을 그대로 부팅한다.
+* 게임이 **영어 모드**로 동작하고, 메뉴·대화·미션·이벤트 문장이 한국어로 나온다. 바탕 XBE는 덤프의 `default.xbe`(US판, 언어 값 1)이다. Cxbx-Reloaded와 xemu에서 사용자가 확인했다("다 괜찮아 보인다", xemu 정상). reJSRF US 빌드는 출력을 그대로 부팅한다.
 * 기존 번역 2,276줄은 고치지 않았다. 지금까지의 한국어 패치(일본어 자리)를 적용한 **위에** 영어 자리를 한국어로 맞춘다.
-* 사용자 결정: XBE는 US판 바탕(안 B), 영어 음성을 받아들인다(2-a). 작업 중 사용자가 덤프의 `default.xbe`를 US판으로 바꾸고 그것을 쓰라고 했다.
+* 사용자 결정: XBE는 US판 바탕(안 B), 영어 음성을 받아들인다(2-a). 덤프의 `default.xbe`(원래 US판)를 쓴다.
 
 ## 2. 한 일
 
@@ -42,7 +42,7 @@
 * 설계 §1의 "일본어 자리는 원문 그대로"를 분석 뒤 바꿨다(설계 §9).
 * 미션은 영어 문자열 자리에 쓰지 않고 칸 1 포인터를 한국어 문자열로 돌렸다(붙이는 문자열이 늘지 않는다). 메시지 스크립트는 영어 구간 자체를 한국어로 다시 썼다.
 * `push`로만 참조되는 21개는 화면 확인에서 문제가 보고되지 않아 따로 고치지 않았다(analysis english-mode §6에 미확정으로 남김).
-* 덤프의 `default.xbe`를 US판으로 두는 것은 사용자가 한 일이다. 일본판 디스크 덤프를 그대로 쓰는 사용자는 `default_eng.xbe`를 `default.xbe`로 복사해야 한다(README, 가이드에 적음).
+* 덤프의 원래 `default.xbe`는 US판이다(사용자 확인). 패치 도구와 문서의 입력 전제를 이에 맞췄다.
 
 ## 5. 다음
 
@@ -59,9 +59,9 @@ Period: 2026-10-23. Branch `i020-english-base` (from `main` `9b95ef3`, v0.0.11).
 
 ## 1. Result
 
-* The game runs in **English mode** and its menus, talk, missions and event text show in Korean. The base XBE is the same disc's US build (`default_eng.xbe`, language value 1). The user checked it in Cxbx-Reloaded and xemu ("all look fine", xemu works); reJSRF's US build boots the output as it is.
+* The game runs in **English mode** and its menus, talk, missions and event text show in Korean. The base XBE is the dump's `default.xbe` (the US build, language value 1). The user checked it in Cxbx-Reloaded and xemu ("all look fine", xemu works); reJSRF's US build boots the output as it is.
 * The 2,276 existing translations were not touched; the English places are made Korean **on top of** the patch so far (the Japanese places).
-* User decisions: the US XBE as the base (option B), English voices accepted (2-a). During the work the user replaced the dump's `default.xbe` with the US build and asked for it to be used.
+* User decisions: the US XBE as the base (option B), English voices accepted (2-a); the dump's `default.xbe` (originally the US build) is used.
 
 ## 2. Done
 
@@ -95,7 +95,7 @@ Period: 2026-10-23. Branch `i020-english-base` (from `main` `9b95ef3`, v0.0.11).
 * Design §1's "the Japanese places keep the original" was changed after the analysis (design §9).
 * Missions do not write into the English strings; slot-1 pointers are turned to the Korean strings (no extra appended strings). Message scripts have their English block itself rewritten in Korean.
 * The 21 `push`-only strings were left as they are since the screen check reported no problem (kept unresolved in analysis english-mode §6).
-* Putting the US build in the dump's `default.xbe` was done by the user; users with a plain Japanese disc dump copy `default_eng.xbe` to `default.xbe` (in the README and guides).
+* The dump's original `default.xbe` is the US build (the user's confirmation); the patcher's and documents' input premise follows it.
 
 ## 5. Next
 

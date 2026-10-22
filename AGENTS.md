@@ -6,7 +6,7 @@ The working rules here are based on the `AGENTS.md` of [nworkers/reJSRF](https:/
 
 ## 프로젝트 개요
 
-이 프로젝트는 Xbox 게임 Jet Set Radio Future(JSRF) **일본판 디스크**의 덤프에 적용하는 **한국어 패치**를 만든다. 게임은 **영어 모드**로 동작한다: 바탕 XBE는 같은 디스크에 들어 있는 US판(`default_eng.xbe`, MD5 `f4e366bfdceee551a09f42219c90d84e`, 언어 값 1)이고, 한국어는 게임이 영어 모드에서 읽는 자리에 쓴다(issue #20, [design i020](docs/design/20261023-i020-english-base.md)). 패치 도구는 덤프의 `default.xbe`가 이 US판이기를 요구한다.
+이 프로젝트는 Xbox 게임 Jet Set Radio Future(JSRF)의 덤프(`default.xbe`와 `Media`)에 적용하는 **한국어 패치**를 만든다. 게임은 **영어 모드**로 동작한다: 바탕 XBE는 덤프의 `default.xbe`(US판, MD5 `f4e366bfdceee551a09f42219c90d84e`, 언어 값 1)이고, 한국어는 게임이 영어 모드에서 읽는 자리에 쓴다(issue #20, [design i020](docs/design/20261023-i020-english-base.md)).
 
 * 결과물은 **패치 도구와 패치 데이터**다. 사용자가 자기 덤프에 도구를 돌려 패치된 게임 폴더를 만든다. 원본 바이트는 저장소와 배포물에 넣지 않는다.
 * 이 저장소의 결과(바꾼 주소, 데이터 형식, 글꼴 방식)는 reJSRF가 참고해 런타임 방식으로 다시 구현한다. 두 저장소는 코드를 공유하지 않고 문서(`docs/handoff-rejsrf.md`)로 넘긴다.
@@ -14,7 +14,7 @@ The working rules here are based on the `AGENTS.md` of [nworkers/reJSRF](https:/
 
 ## Project Overview
 
-This project makes a **Korean patch** applied to a dump of the **Japanese disc** of Jet Set Radio Future (JSRF). The game runs in **English mode**: the base XBE is the US build on the same disc (`default_eng.xbe`, MD5 `f4e366bfdceee551a09f42219c90d84e`, language value 1), and the Korean is written where the game reads its English text (issue #20, [design i020](docs/design/20261023-i020-english-base.md)). The patcher requires the dump's `default.xbe` to be that US build.
+This project makes a **Korean patch** applied to a dump of Jet Set Radio Future (JSRF) (`default.xbe` and `Media`). The game runs in **English mode**: the base XBE is the dump's `default.xbe` (the US build, MD5 `f4e366bfdceee551a09f42219c90d84e`, language value 1), and the Korean is written where the game reads its English text (issue #20, [design i020](docs/design/20261023-i020-english-base.md)).
 
 * The deliverable is **a patcher and patch data**: users run the tool on their own dump to make a patched game folder. No original bytes go into the repository or a release.
 * reJSRF takes this repository's results (changed addresses, data formats, the font approach) as reference and reimplements them at run time. The two repositories share no code; results pass through documents (`docs/handoff-rejsrf.md`).

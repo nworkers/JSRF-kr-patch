@@ -24,7 +24,7 @@ flowchart LR
 
 1. Python 3.10 이상. 외부 패키지는 필요 없다. 명령은 모두 **저장소 루트**에서 `python -I`로 실행한다.
 2. 일본판 디스크 덤프를 `roms/Jet Set Radio Future/`에 둔다(`default.xbe`와 `Media/`). Git은 이 폴더를 무시한다.
-3. `default.xbe`는 같은 디스크의 US판(`default_eng.xbe`를 복사)이고 MD5가 `f4e366bfdceee551a09f42219c90d84e`이어야 한다. 다르면 도구가 멈춘다. US판의 `.rdata` 문자열은 일본판과 같은 주소라 추출 자리와 번역 파일은 그대로다(issue #20).
+3. `default.xbe`(US판)의 MD5가 `f4e366bfdceee551a09f42219c90d84e`이어야 한다. 다르면 도구가 멈춘다. US판의 `.rdata` 문자열은 일본판과 같은 주소라 추출 자리와 번역 파일은 그대로다(issue #20).
 
 ## 1. ① 추출
 
@@ -146,7 +146,7 @@ python -I tools/check_reinsert.py "roms/Jet Set Radio Future"
 
 | 메시지 | 뜻과 할 일 |
 |---|---|
-| `MD5 … is not the US default.xbe the patch is based on` | 덤프의 `default.xbe`가 US판 원본이 아니다(`default_eng.xbe`를 복사했는지 본다) |
+| `MD5 … is not the US default.xbe the patch is based on` | 덤프의 `default.xbe`가 US판 원본이 아니다 |
 | `the output must be a folder under …work` | 추출 출력은 `work/` 아래만 된다(원문이 들어 있어서) |
 | `original bytes do not match orig_sha1` | 그 자리의 원문이 번역 파일이 기대한 것과 다르다. 덤프가 다르거나, 열을 잘못 고쳤다 |
 | `characters not in the glyph table: U+…` | 쓸 수 없는 글자다. 다른 글자로 바꾼다(§2.2) |
@@ -176,7 +176,7 @@ How to make the Korean text patch with this document and the repository's tools 
 
 1. Python 3.10 or later, no external packages. Run every command from the **repository root** with `python -I`.
 2. Put the Japanese disc dump in `roms/Jet Set Radio Future/` (`default.xbe` and `Media/`); Git ignores that folder.
-3. `default.xbe` must be the same disc's US build (a copy of `default_eng.xbe`) with MD5 `f4e366bfdceee551a09f42219c90d84e`; otherwise the tools stop. The US `.rdata` strings sit at the Japanese build's addresses, so the extracted places and translation files stay as they are (issue #20).
+3. `default.xbe` (the US build) must have MD5 `f4e366bfdceee551a09f42219c90d84e`; otherwise the tools stop. The US `.rdata` strings sit at the Japanese build's addresses, so the extracted places and translation files stay as they are (issue #20).
 
 ## 1. ① Extract
 
@@ -262,7 +262,7 @@ The translation files stay as they are; the tool in ③ puts each row in the way
 
 | Message | Meaning and what to do |
 |---|---|
-| `MD5 … is not the US default.xbe the patch is based on` | the dump's `default.xbe` is not the original US build (check that `default_eng.xbe` was copied) |
+| `MD5 … is not the US default.xbe the patch is based on` | the dump's `default.xbe` is not the original US build |
 | `the output must be a folder under …work` | extraction writes only under `work/` (it holds original text) |
 | `original bytes do not match orig_sha1` | the original at that place differs from what the translation file expects: another dump, or a column was edited by mistake |
 | `characters not in the glyph table: U+…` | an unusable character; replace it (§2.2) |

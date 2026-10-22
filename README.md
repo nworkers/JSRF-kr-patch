@@ -12,7 +12,7 @@ Xbox 게임 **Jet Set Radio Future** 일본판의 **한국어 패치**를 만드
 
 | 파일 | 조건 |
 |---|---|
-| `default.xbe` | 일본판 디스크에 함께 들어 있는 **US판 XBE**(`default_eng.xbe`), MD5 `f4e366bfdceee551a09f42219c90d84e`. 덤프에서 `default_eng.xbe`를 `default.xbe`로 복사해 둡니다 |
+| `default.xbe` | US판, MD5 `f4e366bfdceee551a09f42219c90d84e` |
 | `Media/` | 같은 디스크의 `Media` 폴더 전체 |
 
 덤프는 `roms/` 아래에 두면 Git이 무시합니다. 다른 디스크(US판 디스크, PAL)의 `Media`는 확인하지 않았습니다. 도구는 입력의 MD5를 검사하고 다르면 멈춥니다.
@@ -29,7 +29,7 @@ python -I tools/patch.py <덤프 폴더> out/<이름> [--iso <같은 디스크�
 
 ```mermaid
 flowchart LR
-    DUMP["your dump (Japanese disc)<br/>US default.xbe + Media"] --> TOOL["tools/patch.py"]
+    DUMP["your dump<br/>US default.xbe + Media"] --> TOOL["tools/patch.py"]
     DATA["patch/<br/>manifest, Korean text,<br/>XBE patches, OFL font"] --> TOOL
     TOOL --> OUT["patched game folder"]
 ```
@@ -58,7 +58,7 @@ This repository and its releases contain no game executable, assets or original 
 
 | File | Requirement |
 |---|---|
-| `default.xbe` | the **US XBE** shipped on the Japanese disc (`default_eng.xbe`), MD5 `f4e366bfdceee551a09f42219c90d84e`; copy `default_eng.xbe` to `default.xbe` in the dump |
+| `default.xbe` | US build, MD5 `f4e366bfdceee551a09f42219c90d84e` |
 | `Media/` | the whole `Media` folder from the same disc |
 
 Git ignores a dump kept under `roms/`. Other discs' `Media` (the US disc, PAL) have not been checked; the tool checks the input's MD5s and stops on a mismatch.
