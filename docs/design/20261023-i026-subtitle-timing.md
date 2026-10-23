@@ -48,18 +48,26 @@ flowchart TD
 
 **제안**: 안 1로 지금 증상(먼저 끝남, 시작 어긋남)을 고친다. 화면에서 중간 어긋남이 거슬리는 메시지가 있으면, 그 메시지만 안 2로 다시 나누는 후속 issue를 연다.
 
-## 3. 구현 (안 1)
+> **결정(2026-10-23, 사용자): 안 2를 계산으로 한다.** 화면으로 하나씩 확인하고 고치기는 어려우므로, 사람이 다시 나누는 대신 패치 도구가 자동으로 나누고 검증도 계산으로 한다. 번역 파일은 일본어 페이지 구조 그대로 두고(#13, #17 규칙 유지), 영어 구간을 만들 때만 다시 나눈다. 나눌 수 없는 메시지는 안 1로 처리한다.
 
-* `tools/jsrfkr/english.py`: `copy_language0()` 대신 `korean_with_english_timing(data)`(가칭). 원본 영어 구간의 필드 1~4와 페이지별 값을 먼저 읽어 두고, 언어 1 = 한국어 페이지 + 위 규칙의 시간 값으로 다시 만든다.
-* 이벤트(`e###.dat`)와 대화(`TE###.bin`)를 같은 함수로 처리하되, 대화는 이번에는 지금과 같게(일본어 시간 복사) 둔다. 옵션 하나로 나눈다.
-* 언어 0 구간은 지금과 같다(일본어 원문 그대로).
+## 3. 구현 (안 2, 계산)
+
+* `tools/jsrfkr/resplit.py`: 한 메시지의 한국어 페이지를 영어 페이지 수로 다시 나눈다.
+  1. **낱말**: 한국어 페이지를 띄어쓰기와 `$n`에서 낱말로 나눈다. 낱말 사이 틈마다 세기를 매긴다: 원래 페이지 끝 5, 문장 끝(`.` `!` `?` `。` `！` `？` `…`, 닫는 따옴표 앞) 4, 절 끝(쉼표·`、`·`:`, 줄바꿈, 연결 어미 -고 -서 -며 -면 -데 -만 -까 -록 -러 -게) 3, 조사 뒤(-은 -는 -이 -가 -을 -를 -에 -로 -와 -과 -도 -께 -테) 2, 그 밖 1.
+  2. **목표**: 영어 페이지마다 영어 글자 수의 누적 비율을 그 페이지 끝의 목표로 삼는다(영어 페이지 = 영어 음성의 한 줄).
+  3. **고르기**: 동적 계획법으로 나눌 곳을 고른다. 비용 = Σ(그 지점의 한국어 글자 누적 비율 − 목표의 절댓값) + 틈 비용(세기 5·4: 0, 3: 0.1, 2: 0.2, 1: 0.35). 한국어는 동사가 끝에 오므로 영어처럼 문장 중간에서 자르면 다른 영어 페이지의 뜻이 섞인다. 그래서 목표에서 0.35만큼 벗어나더라도 구절 안보다 문장·절 끝을 고른다. 모든 페이지가 창에 들어가야 한다(3줄, 한 줄 528픽셀, 페이지 버퍼 `0x100`, `screen.py`와 같은 규칙).
+  4. **줄 맞추기**: 페이지마다 가장 적은 줄 수로, 가장 긴 줄이 가장 짧아지게 `$n`을 다시 넣는다.
+  * 낱말과 순서는 바뀌지 않는다. 낱말 사이의 공백과 `$n`만 다시 쓴다.
+* `tools/jsrfkr/english.py` `english_timing()`: 이벤트의 언어 1 구간 = 영어 필드 1~4 + 영어 페이지별 값 + 한국어 페이지. 페이지 수가 같으면 한국어 페이지 그대로, 다르면 `resplit`, 나눌 수 없으면 한국어 페이지 그대로 두고 영어 시간 합을 일본어 값 비율로 나눈다(안 1). 대화 이벤트는 지금처럼 `copy_language0()`.
+* `tools/patch.py`: 1바이트 글자 폭(`pipeline.single_widths`)을 넘기고, 메시지 수(같음/다시 나눔/안 1)를 출력한다.
+* 언어 0 구간은 그대로다(일본어 원문).
 
 ## 4. 검증
 
-1. 단위 시험(게임 자료 없음): 합성 스크립트로 같은 페이지 수(영어 값 그대로), 다른 페이지 수(합이 같고 비율대로, `$e` 0), 필드 1~4가 영어 값인지.
-2. 덤프 전체: 이벤트 139개 메시지 모두 언어 1의 "필드 4 + 페이지별 값 합"이 원본 영어와 같다. 메시지 스크립트 368개가 다시 읽힌다(`msgscript.parse`).
+1. 단위 시험(게임 자료 없음): 낱말 틈의 세기, 줄 맞추기, 문장 끝에서 나누기, 낱말 보존, 창 한도, 나눌 수 없을 때 안 1, 같은 페이지 수(영어 값 그대로), 필드 1~4가 영어 값인지, 언어 0이 그대로인지.
+2. 덤프 전체(계산 검증): 이벤트 메시지 139개 모두 언어 1의 페이지 수·필드 1~4·페이지별 값이 원본 영어와 같다. 한국어 낱말 순서가 언어 0과 같다. 모든 페이지가 창 한도(`screen.check`) 안이다. 나눈 곳의 종류(문장·절·조사·그 밖)와 목표와의 차이를 센다.
 3. 왕복: `--identity`와 기존 왕복 시험(`check_roundtrip.py`, 단위 시험 73개)이 그대로 통과한다.
-4. 화면(사용자와 함께, Cxbx-Reloaded): 오프닝(`e000`, `e001`)과 `e024`, 가능하면 `e119`에서 자막 시작·끝이 영어 음성과 맞는지. 대화 이벤트 하나가 이전과 같은지.
+4. 화면(선택, 사용자가 플레이할 때): 오프닝(`e001`)과 `e024`에서 자막이 영어 음성과 함께 바뀌는지.
 
 ## 5. 남는 것
 
@@ -110,18 +118,26 @@ Grounds: [design i020](20261023-i020-english-base.md) §4, [analysis/message-scr
 
 **Proposal**: fix the present symptoms (early end, shifted start) with option 1. If page changes in a message still jar on screen, open a follow-up issue to re-split only those messages (option 2).
 
-## 3. Implementation (option 1)
+> **Decided (2026-10-23, user): option 2, by calculation.** Checking and fixing on screen one by one is hard, so instead of people re-splitting, the patcher splits automatically and the checks are computed. The translation files keep the Japanese page structure (the #13 and #17 rules stay); the re-split happens only when the English block is built. A message that cannot be laid out falls back to option 1.
 
-* `tools/jsrfkr/english.py`: replace `copy_language0()` with `korean_with_english_timing(data)` (working name): read the original English block's fields 1–4 and per-page values first, then rebuild language 1 = Korean pages + the timing above.
-* Events (`e###.dat`) and talk (`TE###.bin`) go through the same function, but talk keeps the present behaviour (Japanese timing copied) this time, chosen by one option.
-* Language 0 stays as now (the Japanese original).
+## 3. Implementation (option 2, by calculation)
+
+* `tools/jsrfkr/resplit.py` re-splits one message's Korean pages into the English page count:
+  1. **Words**: the Korean pages are split into words at spaces and `$n`; each gap gets a strength: end of an original page 5, sentence end (`.` `!` `?` `。` `！` `？` `…`, before closing quotes) 4, clause end (comma, `、`, `:`, line break, connective endings -고 -서 -며 -면 -데 -만 -까 -록 -러 -게) 3, after a particle (-은 -는 -이 -가 -을 -를 -에 -로 -와 -과 -도 -께 -테) 2, anything else 1.
+  2. **Targets**: the cumulative share of English letters at the end of each English page (one English page = one line of English voice).
+  3. **Choice**: dynamic programming picks the breaks. Cost = Σ |Korean letter share at the break − target| + gap cost (strength 5 and 4: 0, 3: 0.1, 2: 0.2, 1: 0.35). Korean puts the verb last, so an English-style mid-sentence break would mix in meaning from another English page; a break may move up to 0.35 off target to land on a sentence or clause end instead. Every page must fit the window (3 lines, 528 px per line, the `0x100` page buffer; the same rules as `screen.py`).
+  4. **Wrapping**: each page gets `$n` again with the fewest lines and the shortest longest line.
+  * Words and their order never change; only the spaces and `$n` between them are rewritten.
+* `english_timing()` in `tools/jsrfkr/english.py`: an event's language 1 = English fields 1–4 + English per-page values + Korean pages; the Korean pages as they are when the counts match, `resplit` when they do not, and if no layout fits, the Korean pages with the English total spread in proportion to the Japanese values (option 1). Talk events stay on `copy_language0()`.
+* `tools/patch.py` passes the single-byte glyph widths (`pipeline.single_widths`) and prints the message counts (same / re-split / option 1).
+* Language 0 stays as it is (the Japanese original).
 
 ## 4. Verification
 
-1. Unit tests (no game data): synthetic scripts for the same page count (English values as is), a different page count (same sum, proportional, `$e` 0), and fields 1–4 from English.
-2. Whole dump: for all 139 event messages, language 1's "field 4 + sum of per-page values" equals the original English; all 368 message scripts parse again (`msgscript.parse`).
+1. Unit tests (no game data): gap strengths, wrapping, breaking at a sentence end, words kept, window limits, option 1 when no layout fits, the same page count (English values as is), fields 1–4 from English, language 0 unchanged.
+2. Whole dump (computed): for all 139 event messages, language 1's page count, fields 1–4 and per-page values equal the original English; the Korean words are in language 0's order; every page is within the window limits (`screen.check`); the kinds of break (sentence, clause, particle, other) and the distance from the targets are counted.
 3. Round trip: `--identity` and the existing round-trip checks (`check_roundtrip.py`, the 73 unit tests) still pass.
-4. Screen (with the user, Cxbx-Reloaded): the opening (`e000`, `e001`) and `e024`, and `e119` if reachable — subtitles start and end with the English voice; one talk event behaves as before.
+4. Screen (optional, when the user plays): in the opening (`e001`) and `e024`, subtitles change along with the English voice.
 
 ## 5. Left open
 

@@ -62,9 +62,27 @@ flowchart TD
 
 text-renderer.md의 레코드 2,933개(정규식)에서 이벤트 134개는 진짜 문장 117개(= 항목 `2/0` 117개)와 2진 자료 17개다. 대화 5개는 분기 인자에 `0x00`이 있어 정규식에 걸린 5개 파일이고, 형식으로는 251개다.
 
-## 5. 미확정
+## 5. 언어마다 다른 시간 값 (확인됨, 정적, issue #26)
 
-* 머리 `[0]` `[2]` `[3]`, 필드 1~4, 페이지별 값의 정확한 뜻. 페이지를 나누거나 합칠 때 새 페이지의 값을 정하는 규칙(다음 issue에서 화면 확인).
+이벤트 117개(메시지 139개)에서 일본어 구간(언어 0)과 영어 구간(언어 1)을 비교했다.
+
+| 항목 | 영어 ≠ 일본어 |
+|---|---|
+| 페이지 수(필드 0) | 62개(영어가 많음 58, 적음 4) |
+| 페이지별 값의 합 | 영어/일본어 비율 중앙값 0.89, 범위 0.12~2.49 |
+| 필드 4(30·60 단위) | 21개(예: `e024` 메시지 1: 37 대 80) |
+| 필드 1 | 7개 |
+| 필드 2·3 | 0개 |
+
+* "필드 4 + 페이지별 값 합"이 일본어 쪽에서 60 이상 짧은 메시지가 15개다. 가장 큰 차이는 `e119`(2,123 대 4,090), `e281`(1,019 대 2,493), `e280`(985 대 2,139)이다.
+* 그래서 영어 모드에서 일본어 값을 쓰면 자막이 영어 음성보다 먼저 끝나거나 늦게 시작한다. 사용자가 이 증상을 보고했다(2026-10-23). 페이지별 값 = 페이지 표시 시간(프레임), 필드 4 = 시작 지연이라는 뜻은 **추정**이다(증상, `$e` 페이지 값 0과 맞음, 코드는 보지 않음).
+* 대화 이벤트도 언어별로 다르다(페이지 수 104개, 페이지별 값 107개). 다만 값이 대부분 30이고 버튼으로 넘기는 대화다.
+* `Z_ADX/MUSEN/ev###.adx`(영어)와 `MUSENJ/ev###.adx`(일본어) 116개씩은 번호가 이벤트 `e###`와 짝이 맞지 않는다. 길이와 페이지별 값 합의 비가 고르지 않아 무전 음성으로 보인다(**추정**). 이벤트 대사 음성 파일은 아직 찾지 않았다.
+* 패치는 영어 구간에 영어 시간 값을 쓰고, 페이지 수가 다른 메시지는 한국어를 영어 페이지 수로 다시 나눈다([design i026](../design/20261023-i026-subtitle-timing.md), `tools/jsrfkr/resplit.py`).
+
+## 6. 미확정
+
+* 머리 `[0]` `[2]` `[3]`, 필드 1~4, 페이지별 값의 정확한 뜻(§5의 추정을 코드나 화면으로 확인). 페이지를 나누거나 합칠 때 새 페이지의 값을 정하는 규칙(다음 issue에서 화면 확인).
 * `$bc` 인자(조건)와 분기 인자가 페이지 번호라는 것의 화면 확인.
 * 이 머리를 읽는 게임 코드의 주소(일본판·US판).
 
@@ -127,8 +145,26 @@ All values are little-endian `u32`.
 
 Of text-renderer.md's 2,933 (regex) records, the 134 event ones are 117 real texts (= the 117 `2/0` items) and 17 pieces of binary data. The 5 talk ones are the five files whose branch arguments contain `0x00`, which the regex caught; by format there are 251.
 
-## 5. Unresolved
+## 5. Timing values differ by language (confirmed, static, issue #26)
 
-* The exact meaning of head `[0]` `[2]` `[3]`, fields 1–4 and the per-page values; the rule for a new page's value when pages are split or merged (a screen check in the next issue).
+The Japanese (language 0) and English (language 1) blocks of the 117 events (139 messages) compared:
+
+| Item | English ≠ Japanese |
+|---|---|
+| page count (field 0) | 62 (English more 58, fewer 4) |
+| sum of per-page values | median English/Japanese 0.89, range 0.12–2.49 |
+| field 4 (30/60 steps) | 21 (for example `e024` message 1: 37 vs 80) |
+| field 1 | 7 |
+| fields 2, 3 | 0 |
+
+* In 15 messages "field 4 + sum of per-page values" is at least 60 shorter in Japanese; the largest differences are `e119` (2,123 vs 4,090), `e281` (1,019 vs 2,493) and `e280` (985 vs 2,139).
+* So with the Japanese values in English mode, subtitles end before the English voice or start late, as the user reported (2026-10-23). Per-page value = page display time (frames) and field 4 = start delay are **inferred** (they fit the symptom and the `$e` pages' 0; code not examined).
+* Talk events differ by language too (page counts 104, per-page values 107), but the values are mostly 30 and the pages advance by button.
+* The 116 `Z_ADX/MUSEN/ev###.adx` (English) and `MUSENJ/ev###.adx` (Japanese) files do not pair with the events `e###` by number; their lengths do not track the per-page sums, so they look like radio voices (**inferred**). The event dialogue voice files have not been located.
+* The patch writes the English timing into the English block, and re-splits the Korean into the English page count where the counts differ ([design i026](../design/20261023-i026-subtitle-timing.md), `tools/jsrfkr/resplit.py`).
+
+## 6. Unresolved
+
+* The exact meaning of head `[0]` `[2]` `[3]`, fields 1–4 and the per-page values (confirming §5's inference by code or screen); the rule for a new page's value when pages are split or merged (a screen check in the next issue).
 * The `$bc` argument (condition), and a screen check that branch arguments are page numbers.
 * The address of the game code that reads this header (Japanese and US builds).

@@ -13,8 +13,10 @@ and then made to show in the English places the game reads.
               XBE strings in place or moved to a new section KRTEXT; page
               buffer overruns stop, line width and line count warn
   4. XBE      glyph table, patch/xbe/*.json, va: places
-  5. English  event and talk language-1 blocks copied from the Korean
-              language 0, mission slot 1 pointed at the Korean slot-0 string,
+  5. English  event language-1 blocks: Korean pages with the English timing
+              (re-split into the English page count where it differs);
+              talk language-1 blocks copied from the Korean language 0;
+              mission slot 1 pointed at the Korean slot-0 string,
               English XBE slots of patch/xbe-en.tsv pointed at the Korean
               (jsrfkr.english; --japanese-places skips this step); section digests
   6. output   the whole dump folder copied, changed files written anew
@@ -144,7 +146,7 @@ def build_files(game, rows, xbe_patches, ident, english_places):
         en = None
         if english_places and rows:
             en = english.apply(rows, files, lambda n: os.path.getsize(os.path.join(game, n)), x,
-                               english.read_map(EN_MAP))
+                               english.read_map(EN_MAP), pipeline.single_widths(x))
             sections |= en.sections
     except (textpatch.PatchError, xbepatch.XbePatchError, xbeedit.XbeEditError,
             english.EnglishError) as err:
@@ -162,7 +164,8 @@ def build_files(game, rows, xbe_patches, ident, english_places):
           f"XBE patches: {len(xbe_patches)}; XBE sections: {', '.join(sorted(sections))}")
     if en:
         print(f"English places: {en.scripts} message scripts, {en.commands} mission commands, "
-              f"{en.slots} XBE slots")
+              f"{en.slots} XBE slots; event timing: {en.timing.same} same page count, "
+              f"{en.timing.resplit} re-split, {en.timing.spread} spread")
     return {name: bytes(data) for name, data in files.items()}
 
 

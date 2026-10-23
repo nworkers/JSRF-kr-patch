@@ -13,7 +13,7 @@ from jsrfkr.container import Block  # noqa: E402
 from jsrfkr.xbe import Xbe  # noqa: E402
 import fakexbe  # noqa: E402
 from test_mission import sample as mission_sample  # noqa: E402
-from test_msgscript import EVENT, TALK  # noqa: E402
+from test_msgscript import BI, EVENT, JA, TALK  # noqa: E402
 
 
 def row(file, where, orig):
@@ -46,8 +46,15 @@ class ScriptTest(unittest.TestCase):
         rows = [row(ev, f"norm:2/0+{p_ev.offset:#x}", p_ev.data), row(tk, f"off:{p_tk.offset:#x}", p_tk.data)]
         result = english.apply(rows, files, lambda n: 0, None, [])
         self.assertEqual(result.scripts, 2)
+        # Event: English timing (fields 1-4, values) kept; message 0 re-split
+        # from 2 pages into the English 3, message 1 has the same page count.
         s = msgscript.parse(container.parse(files[ev]).get((2, 0)))
-        self.assertEqual(block(s, 1), block(s, 0))
+        before = msgscript.parse(EVENT)
+        fields, values, pages = block(s, 1)
+        self.assertEqual(fields[1:], block(before, 1)[0][1:])
+        self.assertEqual(values, block(before, 1)[1])
+        self.assertEqual(pages, [[JA, BI, b"$e"], [b"$e"]])
+        self.assertEqual(result.timing, english.Timing(1, 1, 0))
         self.assertEqual(container.parse(files[ev]).get((0, 0)), b"a")
         s = msgscript.parse(files[tk])
         self.assertEqual(block(s, 1), block(s, 0))
