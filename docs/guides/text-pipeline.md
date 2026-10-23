@@ -125,6 +125,18 @@ python -I tools/patch.py "roms/Jet Set Radio Future" out/check-empty --link --te
 
 `text: 2276 untranslated rows` 가 나오고, 바뀐 파일은 글꼴 두 개(`default.xbe`, `Media/Font/jetfont.dat`)뿐이어야 한다. 확인한 뒤 `out/check-empty`를 지운다.
 
+### 3.2 이벤트 자막 시간 확인
+
+게임은 영어 모드로 돌기 때문에, 패치 도구가 이벤트 자막을 영어판의 페이지 수와 시간 값에 맞춰 자동으로 다시 나눈다([design i026](../design/20261023-i026-subtitle-timing.md)). 번역을 바꾼 뒤 아래 명령으로 확인한다.
+
+```bash
+python -I tools/check_timing.py "roms/Jet Set Radio Future"
+```
+
+* `problems: 0`이고 종료 코드가 0이어야 한다. `error:` 줄이 나오면 그 메시지의 번역을 짧게 하거나 문장을 끊는다(한 페이지가 창에 들어가지 않으면 다시 나눌 수 없다).
+* `re-split breaks` 줄의 `other`(구절 한가운데에서 나눈 곳)가 많아지면, 문장을 더 짧게 끊어 쓰면 줄어든다.
+* 나뉜 결과를 눈으로 보려면 `--review`를 붙인다. `work/text/timing-review.txt`에 영어와 한국어 페이지가 나란히 나온다(원문이 들어 있으므로 커밋하지 않는다).
+
 ## 4. 원문보다 긴 문장
 
 번역 파일은 그대로 쓰고, ③의 도구가 묶음에 맞게 알아서 넣는다. 따로 할 일은 없다.
@@ -244,6 +256,14 @@ How to make the Korean text patch with this document and the repository's tools 
 ### 3.1 Checking the tools themselves (optional)
 
 Before translating, you can see that the empty skeleton changes nothing (command above): it must print `text: 2276 untranslated rows`, and the only changed files must be the two font files (`default.xbe`, `Media/Font/jetfont.dat`). Delete `out/check-empty` afterwards.
+
+### 3.2 Checking cutscene subtitle timing
+
+The game runs in English mode, so the patcher re-splits event subtitles to the English version's page count and timing values ([design i026](../design/20261023-i026-subtitle-timing.md)). After changing translations, check with the command above (§3.2 of the Korean part):
+
+* It must print `problems: 0` and exit with 0. On an `error:` line, shorten that message's translation or break its sentences (a page that does not fit the window cannot be re-split).
+* If `other` (breaks inside a phrase) in the `re-split breaks` line grows, shorter sentences bring it down.
+* `--review` shows the result: `work/text/timing-review.txt` has the English and Korean pages side by side (it holds original text; do not commit it).
 
 ## 4. Text longer than the original
 

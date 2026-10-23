@@ -2,7 +2,10 @@
 
 Both folders must come from the same dump and text. Checks, printing no text:
   * event and talk scripts: language 0 identical in both; in the English-mode
-    output language 1 equals language 0 (fields, per-page values, pages)
+    output, talk language 1 equals language 0 (fields, per-page values, pages)
+    and event language 1 is what english.english_timing() makes of the
+    japanese-places script (English timing, Korean pages re-split; design
+    20261023-i026)
   * missions: the only differing bytes are slot-1 pointers, each now equal to
     its command's slot-0 pointer
   * default.xbe: the only differing u32s outside the header are English slots
@@ -19,7 +22,7 @@ import struct
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from jsrfkr import ROOT, container, english, mission, msgscript, reinsert  # noqa: E402
+from jsrfkr import ROOT, container, english, mission, msgscript, pipeline, reinsert  # noqa: E402
 from jsrfkr.xbe import Xbe  # noqa: E402
 
 EN_MAP = os.path.join(ROOT, "patch", "xbe-en.tsv")
@@ -36,14 +39,18 @@ def block(script, lang):
             [[p.data for p in msg] for msg in script.pages[lang]])
 
 
-def check_script(name, a, b):
-    if fnmatch.fnmatchcase(name, reinsert.EVENT):
+def check_script(name, a, b, single):
+    event = fnmatch.fnmatchcase(name, reinsert.EVENT)
+    if event:
         a, b = (container.parse(d).get(reinsert.EVENT_ITEM) for d in (a, b))
     sa, sb = msgscript.parse(a), msgscript.parse(b)
     out = []
     if block(sa, 0) != block(sb, 0):
         out.append(f"{name}: language 0 differs from the japanese-places output")
-    if block(sa, 1) != block(sa, 0):
+    if event:
+        if block(sa, 1) != block(msgscript.parse(english.english_timing(b, single)), 1):
+            out.append(f"{name}: language 1 is not the Korean with the English timing")
+    elif block(sa, 1) != block(sa, 0):
         out.append(f"{name}: language 1 is not a copy of language 0")
     return out, 0
 
@@ -110,6 +117,7 @@ def main():
     if names != changed_files(jp_out):
         raise SystemExit("the two outputs changed different files")
     x = Xbe(os.path.join(jp_out, "default.xbe"))      # section layout of the patched image
+    single = pipeline.single_widths(x)                 # the single-byte table is not patched
     problems = []
     counts = {"scripts": 0, "missions": 0, "slot-1 pointers": 0, "XBE slots": 0, "other": 0}
     for name in names:
@@ -118,7 +126,7 @@ def main():
         with open(os.path.join(jp_out, name), "rb") as f:
             b = f.read()
         if fnmatch.fnmatchcase(name, reinsert.EVENT) or fnmatch.fnmatchcase(name, reinsert.TALK):
-            p, _ = check_script(name, a, b)
+            p, _ = check_script(name, a, b, single)
             counts["scripts"] += 1
         elif fnmatch.fnmatchcase(name, reinsert.MISSION):
             p, n = check_mission(name, a, b)

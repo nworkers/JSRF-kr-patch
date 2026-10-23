@@ -9,10 +9,11 @@
 | `check_roundtrip.py` | 덤프의 `MULT`/`NORM` 파일 전체와 XBE 요약값 왕복, 패치 결과 폴더와 덤프 비교 | #2 |
 | `check_text.py` | **번역 검사**: 출력 없이 메모리에서 패치 과정을 돌려 진행률·모든 오류·경고·한글 음절 수를 보고, `--review`로 `work/text/review/` 검토 표(일본어·영어·한국어, 용어 힌트, 지킬 코드, 한도) | #15 |
 | `check_reinsert.py` | 재삽입 왕복: 모든 문장을 원문 그대로 넣으면 원본과 같은지, 미션·XBE 문자열을 일부러 모두 옮겨도 포인터·참조가 맞는지 | #13 |
-| `jsrfkr/` | 공용 모듈: `xbe`, `container`(`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso`(#2), `msgscript`(이벤트·대화 메시지 스크립트), `mission`(미션 파일 문장 명령), `xbetext`(XBE 문자열과 참조), `extract`(문장 단위)(#11), `reinsert`(길이가 바뀌는 문장 넣기), `xbeedit`(XBE 섹션 더하기), `screen`(줄 폭·페이지 검사)(#13), `pipeline`(글꼴·인코딩 공용 단계), `glossary`(용어집 읽기)(#15) | #2, #11, #13, #15 |
+| `jsrfkr/` | 공용 모듈: `xbe`, `container`(`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso`(#2), `msgscript`(이벤트·대화 메시지 스크립트), `mission`(미션 파일 문장 명령), `xbetext`(XBE 문자열과 참조), `extract`(문장 단위)(#11), `reinsert`(길이가 바뀌는 문장 넣기), `xbeedit`(XBE 섹션 더하기), `screen`(줄 폭·페이지 검사)(#13), `pipeline`(글꼴·인코딩 공용 단계), `glossary`(용어집 읽기)(#15), `resplit`(이벤트 자막을 영어 페이지 수로 다시 나누기)(#26) | #2, #11, #13, #15, #26 |
 | `font/` | 한국어 글꼴(A′): 글리프 표와 `jetfont.dat` 만들기([README](font/README.md)) | #6 |
 | `analysis/` | 분석 스크립트([README](analysis/README.md)) | #3 |
 | `check_english.py` | 영어 모드 출력과 `--japanese-places` 출력을 비교해 영어 자리만 바뀌었는지, 모두 한국어를 가리키는지, XBE 요약값이 맞는지 본다 | #20 |
+| `check_timing.py` | 영어 모드 이벤트 자막 시간: 모든 이벤트 메시지의 영어 구간이 영어 페이지 수·시간 값을 가졌는지, 한국어 낱말이 그대로인지, 페이지가 창에 들어가는지. 다시 나눈 곳의 종류(문장·절·조사·그 밖)를 센다. `--review`로 `work/text/timing-review.txt`(영어·한국어 페이지 나란히) | #26 |
 | `release.py` | 릴리스 묶음: `notes`(릴리스 노트의 해결된 issue 확인), `python`(Python판 zip), `binary`(Nuitka 실행 파일 묶음, `release-requirements.txt` 필요), `sums`. 묶음은 결정적이고, 만든 뒤 풀어서 스스로 점검한다. 워크플로 `.github/workflows/ci.yml`, `release.yml` | #22 |
 | `poc/` | 개념 증명 도구: reJSRF용 US XBE 폴더 포함([README](poc/README.md)) | #8 |
 
@@ -49,6 +50,7 @@ python -I tools/extract_text.py "roms/Jet Set Radio Future"
 python -I -m unittest discover -s tests
 python -I tools/check_roundtrip.py "roms/Jet Set Radio Future"
 python -I tools/check_reinsert.py "roms/Jet Set Radio Future"
+python -I tools/check_timing.py "roms/Jet Set Radio Future"
 python -I tools/patch.py "roms/Jet Set Radio Future" out/identity --identity
 python -I tools/check_roundtrip.py "roms/Jet Set Radio Future" --output out/identity
 ```
@@ -69,10 +71,11 @@ Standard library only (Python 3.10 or later; checked with 3.12). Run from the re
 | `check_roundtrip.py` | round trips of every `MULT`/`NORM` file in the dump and the XBE digests; compares a patched folder with the dump | #2 |
 | `check_text.py` | **translation check**: runs the patch steps in memory without output and reports progress, every error and warning and the Hangul syllable count; `--review` writes review tables to `work/text/review/` (Japanese, English, Korean, term hints, codes to keep, limits) | #15 |
 | `check_reinsert.py` | reinsertion round trips: every string put back unchanged equals the original, and moving all mission and XBE strings on purpose keeps every pointer and reference right | #13 |
-| `jsrfkr/` | shared modules: `xbe`, `container` (`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso` (#2); `msgscript` (event and talk message scripts), `mission` (mission-file text commands), `xbetext` (XBE strings and references), `extract` (text units) (#11); `reinsert` (text whose length changes), `xbeedit` (adding an XBE section), `screen` (line width and page checks) (#13); `pipeline` (shared font and encoding steps), `glossary` (reading the glossary) (#15) | #2, #11, #13, #15 |
+| `jsrfkr/` | shared modules: `xbe`, `container` (`MULT`/`NORM`), `encode`, `textpatch`, `xbepatch`, `digest`, `xiso` (#2); `msgscript` (event and talk message scripts), `mission` (mission-file text commands), `xbetext` (XBE strings and references), `extract` (text units) (#11); `reinsert` (text whose length changes), `xbeedit` (adding an XBE section), `screen` (line width and page checks) (#13); `pipeline` (shared font and encoding steps), `glossary` (reading the glossary) (#15); `resplit` (re-splitting cutscene subtitles into the English page count) (#26) | #2, #11, #13, #15, #26 |
 | `font/` | the Korean font (A′): building the glyph table and `jetfont.dat` ([README](font/README.md)) | #6 |
 | `analysis/` | analysis scripts ([README](analysis/README.md)) | #3 |
 | `check_english.py` | compares an English-mode output with a `--japanese-places` output: only English places changed, all pointing to Korean, XBE digests right | #20 |
+| `check_timing.py` | English-mode cutscene subtitle timing: every event message's English block has the English page count and timing values, the Korean words are unchanged, the pages fit the window; counts the kinds of re-split break (sentence, clause, particle, other); `--review` writes `work/text/timing-review.txt` (English and Korean pages side by side) | #26 |
 | `release.py` | release packages: `notes` (resolved issues in the release notes), `python` (Python-edition zip), `binary` (Nuitka executable package; needs `release-requirements.txt`), `sums`; packages are deterministic and self-checked after unpacking. Workflows `.github/workflows/ci.yml`, `release.yml` | #22 |
 | `poc/` | the proof-of-concept tool, including the US XBE folder for reJSRF ([README](poc/README.md)) | #8 |
 

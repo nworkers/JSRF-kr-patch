@@ -56,6 +56,7 @@ python -I tools/check_text.py "roms/Jet Set Radio Future" --review
    * **코드**(`codes` 열)는 같은 순서로 모두 둔다. `$n`(줄바꿈)만 위치·개수를 바꿔도 된다. `$r` `$e`를 더하거나 빼면 도구가 멈춘다. 자세한 표는 [text-pipeline.md](text-pipeline.md) §2.2.
    * **줄 폭**: 이벤트는 한 줄 528픽셀, 대화는 456픽셀(한글 약 22자, 19자), 한 페이지 3줄. 넘으면 경고만 나오지만 화면에서 잘릴 수 있다.
    * **길이**: 원문보다 길어도 된다. 다만 페이지 하나가 너무 길면(약 200바이트) 도구가 멈춘다.
+   * **이벤트 자막과 영어 음성**: 게임은 영어 모드로 돌아서, 패치 도구가 이벤트 자막을 영어판의 페이지 수와 시간에 맞춰 자동으로 다시 나눈다(issue #26). 번역은 지금처럼 일본어 페이지대로 쓰면 된다. 문장 끝, 쉼표, 연결 어미(-고, -서, -면) 뒤에서 나뉘므로, 한 문장을 너무 길게 이어 쓰지 않으면 자연스럽게 나뉜다.
    * **게임이 채우는 자리**: `%d` `%s`와, 원문에서 숫자나 이름이 들어갈 자리로 비워 둔 공백(예: 전각 공백 두 칸)은 **앞부분의 바이트 수를 원문과 같게** 둔다. 한글·전각 글자 = 2바이트, 영문·숫자·공백 = 1바이트.
    * **끝을 전각 공백으로 채운 원문**(그래피티 편집기 안내 등)은 번역도 원문 길이까지 전각 공백으로 채운다.
    * **문장 부호**: `！` `？` `…` `～` `「」` `“”`는 전각, 쉼표·마침표는 1바이트 `,` `.`. 쓸 수 있는 기호는 용어집 §7.
@@ -122,6 +123,7 @@ How to translate, check, patch and look at the game's text with this repository'
    * **Codes** (the `codes` column) all stay, in the same order; only `$n` (line break) may move or change in number. Adding or removing `$r` `$e` stops the tool; the full table is in [text-pipeline.md](text-pipeline.md) §2.2.
    * **Line width**: events 528 px per line, talk 456 px (about 22 and 19 Hangul), 3 lines per page; beyond that only a warning, but the line may be cut on screen.
    * **Length**: longer than the original is fine, but a page that is too long (about 200 bytes) stops the tool.
+   * **Cutscene subtitles and the English voice**: the game runs in English mode, so the patcher re-splits event subtitles to the English version's page count and timing (issue #26). Keep translating page by page as in the Japanese; pages break after sentence ends, commas and connective endings (-고, -서, -면), so lines that do not run one sentence on too long split naturally.
    * **Places the game fills**: `%d` `%s`, and spaces the original leaves for a number or name (two full-width spaces, for example), keep **the same byte count before them** as the original; Hangul and full-width characters are 2 bytes, Latin letters, digits and spaces 1.
    * **Originals padded with full-width spaces at the end** (graffiti editor hints and the like): pad the translation to the original length the same way.
    * **Punctuation**: `！` `？` `…` `～` `「」` `“”` full-width; commas and full stops single-byte `,` `.`; usable symbols in glossary §7.
